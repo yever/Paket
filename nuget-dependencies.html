@@ -160,16 +160,16 @@
 </tr>
 </table>
 
-<h4><a name="Use-exactly-this-version-constraint" class="anchor" href="#Use-exactly-this-version-constraint">"Use exactly this" version constraint</a></h4>
+<h4><a name="Use-exactly-this-version-constraint" class="anchor" href="#Use-exactly-this-version-constraint">"Use exactly this version" constraint</a></h4>
 
-<p>If your dependencies result in a version conflict you might want to instruct Paket to use a specific version. The <code>==</code> operator allows you to manually resolve the conflict.</p>
+<p>If your indirect dependencies result in a version conflict you might want to instruct Paket to use a specific version. The <code>==</code> operator allows you to manually resolve the conflict:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">nuget</span> <span class="i">Example</span> <span class="o">==</span> <span class="n">1.2</span><span class="o">.</span><span class="n">3</span></pre>
+<span class="i">nuget</span> <span class="i">Example</span> <span class="o">==</span> <span class="n">1.2</span><span class="o">.</span><span class="n">3</span> <span class="c">// take exactly this version</span></pre>
 </td>
 </tr>
 </table>
