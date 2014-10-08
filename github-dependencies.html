@@ -74,9 +74,28 @@
 
 <table class="pre"><tr><td><pre lang="batchfile">File:FsUnit.fs</pre></td></tr></table>
 
-<p>This will reference the linked file directly into your project.</p>
+<p>This will reference the linked file directly into your project.
+By default the linked file will be visible under <code>paket-files</code> folder in project.</p>
 
-<p><img src="img/github_reference.png" alt="alt text" title="GitHub file referenced in project" /></p>
+<p><img src="img/github_ref_default_link.png" alt="alt text" title="GitHub file referenced in project with default link" /></p>
+
+<p>You can specify custom folder for the file:</p>
+
+<table class="pre"><tr><td><pre lang="batchfile">File:FsUnit.fs Tests\FsUnit</pre></td></tr></table>
+
+<p><img src="img/github_ref_custom_link.png" alt="alt text" title="GitHub file referenced in project with custom link" /></p>
+
+<p>Or if you use <code>.</code> for the directory, the file will be placed under the root of the project:</p>
+
+<table class="pre"><tr><td><pre lang="batchfile">File:FsUnit.fs .</pre></td></tr></table>
+
+<p><img src="img/github_ref_root.png" alt="alt text" title="GitHub file referenced in project under root of project" /></p>
+
+<h2><a name="Recognizing-Build-Action" class="anchor" href="#Recognizing-Build-Action">Recognizing Build Action</a></h2>
+
+<p>Paket will recognize build action for referenced file based on the project type. 
+As example, for a <code>*.csproj</code> project file, it will use <code>Compile</code> Build Action if you reference <code>*.cs</code> file 
+and <code>Content</code> Build Action if you reference file with any other extension.</p>
 
 <h2><a name="Remote-dependencies" class="anchor" href="#Remote-dependencies">Remote dependencies</a></h2>
 
