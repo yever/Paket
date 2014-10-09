@@ -51,14 +51,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
-            DownloadSourceFiles (...)
+            CreateInstallModel (...)
           </code>
           <div class="tip" id="12">
-            <strong>Signature:</strong> (rootPath:string * sourceFiles:seq&lt;ResolvedSourceFile&gt;) -&gt; seq&lt;Async&lt;&#39;?6679 option&gt;&gt;<br />
-                          <strong>Type parameters:</strong> '?6679          </div>
+            <strong>Signature:</strong> (sources:PackageSource list * force:bool * package:ResolvedPackage) -&gt; Async&lt;ResolvedPackage * InstallModel&gt;<br />
+                      </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket/InstallProcess.fs#L41-41" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket/InstallProcess.fs#L112-112" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -69,10 +69,28 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
-            ExtractPackages (...)
+            DownloadSourceFile (rootPath, source)
           </code>
           <div class="tip" id="13">
-            <strong>Signature:</strong> (sources:PackageSource list * force:bool * packages:PackageResolution) -&gt; seq&lt;Async&lt;ResolvedPackage * FileInfo []&gt;&gt;<br />
+            <strong>Signature:</strong> (rootPath:string * source:ResolvedSourceFile) -&gt; Async&lt;unit&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket/InstallProcess.fs#L36-36" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
+            ExtractPackage (sources, force, package)
+          </code>
+          <div class="tip" id="14">
+            <strong>Signature:</strong> (sources:PackageSource list * force:bool * package:ResolvedPackage) -&gt; Async&lt;ResolvedPackage * FileInfo []&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -80,22 +98,22 @@
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Downloads and extracts all packages.</p>
+          <p>Downloads and extracts a package.</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
+          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
             Install (sources, force, hard, lockFile)
           </code>
-          <div class="tip" id="14">
+          <div class="tip" id="15">
             <strong>Signature:</strong> (sources:PackageSource list * force:bool * hard:bool * lockFile:LockFile) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket/InstallProcess.fs#L123-123" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket/InstallProcess.fs#L122-122" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
