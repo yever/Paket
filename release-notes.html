@@ -31,191 +31,39 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h4><a name="0-5-0-alpha015-09-10-2014" class="anchor" href="#0-5-0-alpha015-09-10-2014">0.5.0-alpha015 - 09.10.2014</a></h4>
-
-<ul>
-<li>Fix NRE in bootstrapper</li>
-<li>#### 0.5.0-alpha014 - 09.10.2014</li>
-<li>Parallelize install model computation</li>
-</ul>
-
-<h4><a name="0-5-0-alpha011-09-10-2014" class="anchor" href="#0-5-0-alpha011-09-10-2014">0.5.0-alpha011 - 09.10.2014</a></h4>
-
-<ul>
-<li>Replace known portable profiles</li>
-</ul>
-
-<h4><a name="0-5-0-alpha010-09-10-2014" class="anchor" href="#0-5-0-alpha010-09-10-2014">0.5.0-alpha010 - 09.10.2014</a></h4>
-
-<ul>
-<li>Keep order of sources - <a href="https://github.com/fsprojects/Paket/issues/233">https://github.com/fsprojects/Paket/issues/233</a></li>
-</ul>
-
-<h4><a name="0-5-0-alpha009-09-10-2014" class="anchor" href="#0-5-0-alpha009-09-10-2014">0.5.0-alpha009 - 09.10.2014</a></h4>
+<h4><a name="0-5-0-09-10-2014" class="anchor" href="#0-5-0-09-10-2014">0.5.0 - 09.10.2014</a></h4>
 
 <ul>
 <li>Bootstrapper will only download stable releases by default - <a href="http://fsprojects.github.io/Paket/bootstrapper.html">http://fsprojects.github.io/Paket/bootstrapper.html</a></li>
-</ul>
-
-<h4><a name="0-5-0-alpha008-09-10-2014" class="anchor" href="#0-5-0-alpha008-09-10-2014">0.5.0-alpha008 - 09.10.2014</a></h4>
-
-<ul>
-<li>Use default proxy in paket.exe and bootstrapper.exe - <a href="https://github.com/fsprojects/Paket/issues/226">https://github.com/fsprojects/Paket/issues/226</a></li>
-</ul>
-
-<h4><a name="0-5-0-alpha006-09-10-2014" class="anchor" href="#0-5-0-alpha006-09-10-2014">0.5.0-alpha006 - 09.10.2014</a></h4>
-
-<ul>
-<li>Detect <em>.</em> files</li>
-<li>Removed --dependencies-file option</li>
-<li>Signing the assembly</li>
-</ul>
-
-<h4><a name="0-5-0-alpha005-08-10-2014" class="anchor" href="#0-5-0-alpha005-08-10-2014">0.5.0-alpha005 - 08.10.2014</a></h4>
-
-<ul>
-<li>Trying new installer</li>
-</ul>
-
-<h4><a name="0-4-31-08-10-2014" class="anchor" href="#0-4-31-08-10-2014">0.4.31 - 08.10.2014</a></h4>
-
-<ul>
+<li>New installer model allows better compatibility with NuGet and should be much faster</li>
 <li>Supporting dot for references file - <a href="http://fsprojects.github.io/Paket/github-dependencies.html">http://fsprojects.github.io/Paket/github-dependencies.html</a></li>
-</ul>
-
-<h4><a name="0-4-29-07-10-2014" class="anchor" href="#0-4-29-07-10-2014">0.4.29 - 07.10.2014</a></h4>
-
-<ul>
-<li>Supporting pagination for long nuget feeds - <a href="https://github.com/fsprojects/Paket/issues/223">https://github.com/fsprojects/Paket/issues/223</a></li>
-</ul>
-
-<h4><a name="0-4-26-06-10-2014" class="anchor" href="#0-4-26-06-10-2014">0.4.26 - 06.10.2014</a></h4>
-
-<ul>
+<li>Supporting pagination for long NuGet feeds - <a href="https://github.com/fsprojects/Paket/issues/223">https://github.com/fsprojects/Paket/issues/223</a></li>
 <li>Create a "use exactly this version" operator in order to override package conflicts - <a href="http://fsprojects.github.io/Paket/nuget-dependencies.html#Use-exactly-this-version-constraint">http://fsprojects.github.io/Paket/nuget-dependencies.html#Use-exactly-this-version-constraint</a></li>
-</ul>
-
-<h4><a name="0-4-25-06-10-2014" class="anchor" href="#0-4-25-06-10-2014">0.4.25 - 06.10.2014</a></h4>
-
-<ul>
-<li>Throw if we don't get any versions</li>
-</ul>
-
-<h4><a name="0-4-23-06-10-2014" class="anchor" href="#0-4-23-06-10-2014">0.4.23 - 06.10.2014</a></h4>
-
-<ul>
-<li>BUGFIX: paket-files need to go to the top</li>
-</ul>
-
-<h4><a name="0-4-22-06-10-2014" class="anchor" href="#0-4-22-06-10-2014">0.4.22 - 06.10.2014</a></h4>
-
-<ul>
-<li>BUGFIX: Do not look for MinimalVisualStudioVersion when adding paket folder to solution - <a href="https://github.com/fsprojects/Paket/pull/221">https://github.com/fsprojects/Paket/pull/221</a></li>
-<li>BUGFIX: Fix path in content link</li>
-</ul>
-
-<h4><a name="0-4-21-06-10-2014" class="anchor" href="#0-4-21-06-10-2014">0.4.21 - 06.10.2014</a></h4>
-
-<ul>
-<li>Content none mode - <a href="http://fsprojects.github.io/Paket/dependencies-file.html#No-content-option">http://fsprojects.github.io/Paket/dependencies-file.html#No-content-option</a></li>
-<li>Allow source files in content</li>
+<li>New <code>content none</code> mode in paket.dependencies - <a href="http://fsprojects.github.io/Paket/dependencies-file.html#No-content-option">http://fsprojects.github.io/Paket/dependencies-file.html#No-content-option</a></li>
+<li>Allow source files in content folder of NuGet packages</li>
 <li>No -D needed for Linux installer - <a href="https://github.com/fsprojects/Paket/pull/210">https://github.com/fsprojects/Paket/pull/210</a></li>
-</ul>
-
-<h4><a name="0-4-20-02-10-2014" class="anchor" href="#0-4-20-02-10-2014">0.4.20 - 02.10.2014</a></h4>
-
-<ul>
-<li>Fix potential casing issue on windows</li>
-</ul>
-
-<h4><a name="0-4-19-01-10-2014" class="anchor" href="#0-4-19-01-10-2014">0.4.19 - 01.10.2014</a></h4>
-
-<ul>
 <li>Content files like <code>_._</code>, <code>*.transform</code> and <code>*.pp</code> are ignored - <a href="https://github.com/fsprojects/Paket/issues/207">https://github.com/fsprojects/Paket/issues/207</a></li>
-</ul>
-
-<h4><a name="0-4-16-30-09-2014" class="anchor" href="#0-4-16-30-09-2014">0.4.16 - 30.09.2014</a></h4>
-
-<ul>
-<li>paket convert-from-nuget adds .paket folder to the sln - <a href="https://github.com/fsprojects/Paket/issues/206">https://github.com/fsprojects/Paket/issues/206</a></li>
-</ul>
-
-<h4><a name="0-4-15-30-09-2014" class="anchor" href="#0-4-15-30-09-2014">0.4.15 - 30.09.2014</a></h4>
-
-<ul>
+<li>The <code>convert-from-nuget</code> command adds .paket folder to the sln - <a href="https://github.com/fsprojects/Paket/issues/206">https://github.com/fsprojects/Paket/issues/206</a></li>
 <li>Removed duplicate indirect dependencies from lock file - <a href="https://github.com/fsprojects/Paket/issues/200">https://github.com/fsprojects/Paket/issues/200</a></li>
-</ul>
-
-<h4><a name="0-4-14-30-09-2014" class="anchor" href="#0-4-14-30-09-2014">0.4.14 - 30.09.2014</a></h4>
-
-<ul>
-<li>Automatic retry with force flag if the package download failed</li>
-</ul>
-
-<h4><a name="0-4-13-30-09-2014" class="anchor" href="#0-4-13-30-09-2014">0.4.13 - 30.09.2014</a></h4>
-
-<ul>
-<li>paket convert-from-nuget sorts the dependencies file</li>
-</ul>
-
-<h4><a name="0-4-11-30-09-2014" class="anchor" href="#0-4-11-30-09-2014">0.4.11 - 30.09.2014</a></h4>
-
-<ul>
-<li>Support log4net</li>
-</ul>
-
-<h4><a name="0-4-10-29-09-2014" class="anchor" href="#0-4-10-29-09-2014">0.4.10 - 29.09.2014</a></h4>
-
-<ul>
+<li>If the package download failed Paket retries with force flag</li>
+<li>The <code>convert-from-nuget</code> commands sorts the dependencies file</li>
 <li>Use credentials from nuget.config on paket convert-from-nuget - <a href="https://github.com/fsprojects/Paket/issues/198">https://github.com/fsprojects/Paket/issues/198</a></li>
-</ul>
-
-<h4><a name="0-4-9-29-09-2014" class="anchor" href="#0-4-9-29-09-2014">0.4.9 - 29.09.2014</a></h4>
-
-<ul>
 <li>Deploy fixed targets file - <a href="https://github.com/fsprojects/Paket/issues/172">https://github.com/fsprojects/Paket/issues/172</a></li>
-</ul>
-
-<h4><a name="0-4-8-29-09-2014" class="anchor" href="#0-4-8-29-09-2014">0.4.8 - 29.09.2014</a></h4>
-
-<ul>
-<li>Executable libs are also added to project file</li>
-</ul>
-
-<h4><a name="0-4-7-29-09-2014" class="anchor" href="#0-4-7-29-09-2014">0.4.7 - 29.09.2014</a></h4>
-
-<ul>
-<li>Store source authentication options in paket.dependencies only</li>
-</ul>
-
-<h4><a name="0-4-6-29-09-2014" class="anchor" href="#0-4-6-29-09-2014">0.4.6 - 29.09.2014</a></h4>
-
-<ul>
-<li>Don't look for auth in cache</li>
-</ul>
-
-<h4><a name="0-4-5-29-09-2014" class="anchor" href="#0-4-5-29-09-2014">0.4.5 - 29.09.2014</a></h4>
-
-<ul>
 <li>New [--pre] and [--strict] modes for paket outdated - <a href="http://fsprojects.github.io/Paket/paket-outdated.html">http://fsprojects.github.io/Paket/paket-outdated.html</a></li>
-</ul>
-
-<h4><a name="0-4-3-29-09-2014" class="anchor" href="#0-4-3-29-09-2014">0.4.3 - 29.09.2014</a></h4>
-
-<ul>
-<li>Cache package source - Fixes issue with multiple sources</li>
-</ul>
-
-<h4><a name="0-4-2-29-09-2014" class="anchor" href="#0-4-2-29-09-2014">0.4.2 - 29.09.2014</a></h4>
-
-<ul>
-<li>New --no-auto-restore option for convert-from-nuget command - <a href="http://fsprojects.github.io/Paket/convert-from-nuget.html#Automated-process">http://fsprojects.github.io/Paket/convert-from-nuget.html#Automated-process</a></li>
-</ul>
-
-<h4><a name="0-4-1-29-09-2014" class="anchor" href="#0-4-1-29-09-2014">0.4.1 - 29.09.2014</a></h4>
-
-<ul>
-<li>Adding support for portable-net45+wp80+win8+wpa81</li>
+<li>New --no-auto-restore option for <code>convert-from-nuget</code> command - <a href="http://fsprojects.github.io/Paket/convert-from-nuget.html#Automated-process">http://fsprojects.github.io/Paket/convert-from-nuget.html#Automated-process</a></li>
+<li>Adding support for new portable profiles</li>
+<li>paket.exe is now signed</li>
+<li>Allow to reference .exe files from NuGet packages</li>
+<li>Use default proxy in paket.exe and bootstrapper.exe - <a href="https://github.com/fsprojects/Paket/issues/226">https://github.com/fsprojects/Paket/issues/226</a></li>
+<li>Keep order of sources in paket.dependencies - <a href="https://github.com/fsprojects/Paket/issues/233">https://github.com/fsprojects/Paket/issues/233</a></li>
+<li>BREAKING CHANGE: Removed --dependencies-file option - from now on it's always paket.dependencies</li>
+<li>BUGFIX: Bootstrapper will not throw NullReferenceException on broken paket.exe downloads</li>
+<li>BUGFIX: Authentication information will not be put in cache</li>
+<li>BUGFIX: Fixes cache issue when using multiple NuGet sources</li>
+<li>BUGFIX: Fixes potential casing issue on Windows</li>
+<li>BUGFIX: paket-files need to go to the top of a project file</li>
+<li>BUGFIX: Do not look for MinimalVisualStudioVersion when adding paket folder to solution - <a href="https://github.com/fsprojects/Paket/pull/221">https://github.com/fsprojects/Paket/pull/221</a></li>
+<li>COSMETICS: Throw better error message if we don't get any versions from NuGet source</li>
 </ul>
 
 <h4><a name="0-4-0-28-09-2014" class="anchor" href="#0-4-0-28-09-2014">0.4.0 - 28.09.2014</a></h4>
