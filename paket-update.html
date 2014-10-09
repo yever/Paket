@@ -36,15 +36,13 @@
 
 <p>Recomputes the dependency resolution, updates the <a href="lock-file.html"><code>paket.lock</code> file</a> and propagates any resulting package changes into all project files referencing updated packages.</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">$ paket update [--force] [--hard] [--dependencies-file FILE]</pre></td></tr></table>
+<table class="pre"><tr><td><pre lang="batchfile">$ paket update [--force] [--hard]</pre></td></tr></table>
 
 <p>Options:</p>
 
 <p><code>--force</code>: Forces the download and reinstallation of all packages.</p>
 
 <p><code>--hard</code>: Replaces package references within project files even if they are not yet adhering to to Paket's conventions (and hence considered manually managed). See <a href="convert-from-nuget.html">convert from NuGet</a>.</p>
-
-<p><code>--dependencies-file</code>: Use the specified file instead of <a href="dependencies-file.html"><code>paket.dependencies</code></a>.</p>
 
 
         </div>
