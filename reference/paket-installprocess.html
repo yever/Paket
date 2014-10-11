@@ -51,14 +51,32 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
-            Install (sources, force, hard, lockFile)
+            CreateInstallModel (...)
           </code>
           <div class="tip" id="12">
+            <strong>Signature:</strong> (sources:PackageSource list * force:bool * package:ResolvedPackage) -&gt; Async&lt;ResolvedPackage * InstallModel&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallProcess.fs#L68-68" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
+            Install (sources, force, hard, lockFile)
+          </code>
+          <div class="tip" id="13">
             <strong>Signature:</strong> (sources:PackageSource list * force:bool * hard:bool * lockFile:LockFile) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallProcess.fs#L69-69" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallProcess.fs#L97-97" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
