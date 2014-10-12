@@ -329,18 +329,19 @@ Caches calls into json file</p>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '33', 33)" onmouseover="showTip(event, '33', 33)">
-            GetVersions sources package
+            GetVersions (sources, packageName)
           </code>
           <div class="tip" id="33">
-            <strong>Signature:</strong> sources:seq&lt;PackageSource&gt; -&gt; package:string -&gt; SemVerInfo list<br />
+            <strong>Signature:</strong> (sources:seq&lt;PackageSource&gt; * packageName:string) -&gt; SemVerInfo list<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Nuget.fs#L423-423" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Nuget.fs#L424-424" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
+          <p>Allows to retrieve all version no. for a package from the given sources.</p>
+
         </td>
       </tr>
       <tr>
