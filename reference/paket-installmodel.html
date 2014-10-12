@@ -46,15 +46,33 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '197', 197)" onmouseover="showTip(event, '197', 197)">
+          <code onmouseout="hideTip(event, '196', 196)" onmouseover="showTip(event, '196', 196)">
             Frameworks
           </code>
-          <div class="tip" id="197">
+          <div class="tip" id="196">
             <strong>Signature:</strong> Map&lt;FrameworkIdentifier,InstallFiles&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L21-21" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L24-24" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '197', 197)" onmouseover="showTip(event, '197', 197)">
+            PackageName
+          </code>
+          <div class="tip" id="197">
+            <strong>Signature:</strong> string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L22-22" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -65,32 +83,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '198', 198)" onmouseover="showTip(event, '198', 198)">
-            PackageName
-          </code>
-          <div class="tip" id="198">
-            <strong>Signature:</strong> string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L19-19" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '199', 199)" onmouseover="showTip(event, '199', 199)">
             PackageVersion
           </code>
-          <div class="tip" id="199">
+          <div class="tip" id="198">
             <strong>Signature:</strong> SemVerInfo<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L20-20" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L23-23" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -108,15 +108,33 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '200', 200)" onmouseover="showTip(event, '200', 200)">
+          <code onmouseout="hideTip(event, '199', 199)" onmouseover="showTip(event, '199', 199)">
             AddFrameworkAssemblyReference(...)
           </code>
-          <div class="tip" id="200">
+          <div class="tip" id="199">
             <strong>Signature:</strong> (framework:FrameworkIdentifier * assemblyName:string) -&gt; InstallModel<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L56-56" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L71-71" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '200', 200)" onmouseover="showTip(event, '200', 200)">
+            AddFrameworkAssemblyReferences(...)
+          </code>
+          <div class="tip" id="200">
+            <strong>Signature:</strong> references:seq&lt;FrameworkAssemblyReference&gt; -&gt; InstallModel<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L77-77" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -127,14 +145,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '201', 201)" onmouseover="showTip(event, '201', 201)">
-            AddFrameworkAssemblyReferences(...)
+            AddReference(framework, lib, references)
           </code>
           <div class="tip" id="201">
-            <strong>Signature:</strong> references:seq&lt;FrameworkAssemblyReference&gt; -&gt; InstallModel<br />
+            <strong>Signature:</strong> (framework:FrameworkIdentifier * lib:string * references:NuspecReferences) -&gt; InstallModel<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L62-62" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L51-51" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -145,14 +163,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '202', 202)" onmouseover="showTip(event, '202', 202)">
-            AddReference(framework, lib, references)
+            AddReferences(libs)
           </code>
           <div class="tip" id="202">
-            <strong>Signature:</strong> (framework:FrameworkIdentifier * lib:string * references:NuspecReferences) -&gt; InstallModel<br />
+            <strong>Signature:</strong> libs:seq&lt;string&gt; -&gt; InstallModel<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L36-36" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L69-69" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -163,14 +181,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '203', 203)" onmouseover="showTip(event, '203', 203)">
-            AddReferences(libs)
+            AddReferences(libs, references)
           </code>
           <div class="tip" id="203">
-            <strong>Signature:</strong> libs:seq&lt;string&gt; -&gt; InstallModel<br />
+            <strong>Signature:</strong> (libs:seq&lt;string&gt; * references:NuspecReferences) -&gt; InstallModel<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L54-54" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L63-63" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -181,14 +199,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '204', 204)" onmouseover="showTip(event, '204', 204)">
-            AddReferences(libs, references)
+            FilterBlackList()
           </code>
           <div class="tip" id="204">
-            <strong>Signature:</strong> (libs:seq&lt;string&gt; * references:NuspecReferences) -&gt; InstallModel<br />
+            <strong>Signature:</strong> unit -&gt; InstallModel<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L48-48" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L81-81" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -199,14 +217,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '205', 205)" onmouseover="showTip(event, '205', 205)">
-            FilterBlackList()
+            GetFiles(framework)
           </code>
           <div class="tip" id="205">
-            <strong>Signature:</strong> unit -&gt; InstallModel<br />
+            <strong>Signature:</strong> framework:FrameworkIdentifier -&gt; seq&lt;string&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L66-66" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L35-35" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -217,14 +235,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '206', 206)" onmouseover="showTip(event, '206', 206)">
-            GetFiles(framework)
+            GetFrameworks()
           </code>
           <div class="tip" id="206">
-            <strong>Signature:</strong> framework:FrameworkIdentifier -&gt; Set&lt;string&gt;<br />
+            <strong>Signature:</strong> unit -&gt; seq&lt;FrameworkIdentifier&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L31-31" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L33-33" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -235,14 +253,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '207', 207)" onmouseover="showTip(event, '207', 207)">
-            GetFrameworks()
+            GetLibraryNames
           </code>
           <div class="tip" id="207">
-            <strong>Signature:</strong> unit -&gt; seq&lt;FrameworkIdentifier&gt;<br />
+            <strong>Signature:</strong> Lazy&lt;Set&lt;string&gt;&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L30-30" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L155-155" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -260,7 +278,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L137-137" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L155-155" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -271,14 +289,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '209', 209)" onmouseover="showTip(event, '209', 209)">
-            GetLibraryNames
+            GetReferences(framework)
           </code>
           <div class="tip" id="209">
-            <strong>Signature:</strong> Lazy&lt;Set&lt;string&gt;&gt;<br />
+            <strong>Signature:</strong> framework:FrameworkIdentifier -&gt; Set&lt;Reference&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L137-137" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L46-46" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -296,7 +314,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L129-129" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L147-147" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -314,7 +332,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L76-76" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L94-94" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -332,7 +350,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L90-90" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L108-108" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -350,7 +368,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L106-106" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L124-124" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -376,7 +394,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L144-144" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L165-165" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -394,7 +412,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L23-23" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L26-26" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
