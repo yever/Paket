@@ -130,7 +130,7 @@
             Add(libs, references)
           </code>
           <div class="tip" id="199">
-            <strong>Signature:</strong> (libs:seq&lt;string&gt; * references:References) -&gt; InstallModel<br />
+            <strong>Signature:</strong> (libs:seq&lt;string&gt; * references:NuspecReferences) -&gt; InstallModel<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -148,7 +148,7 @@
             Add(framework, lib, references)
           </code>
           <div class="tip" id="200">
-            <strong>Signature:</strong> (framework:FrameworkIdentifier * lib:string * references:References) -&gt; InstallModel<br />
+            <strong>Signature:</strong> (framework:FrameworkIdentifier * lib:string * references:NuspecReferences) -&gt; InstallModel<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -336,7 +336,7 @@
             CreateFromLibs(...)
           </code>
           <div class="tip" id="210">
-            <strong>Signature:</strong> (packageName:string * packageVersions:SemVerInfo * libs:seq&lt;string&gt; * references:References) -&gt; InstallModel<br />
+            <strong>Signature:</strong> (packageName:string * packageVersions:SemVerInfo * libs:seq&lt;string&gt; * nuspec:Nuspec) -&gt; InstallModel<br />
                       </div>
         </td>
         <td class="xmldoc">
