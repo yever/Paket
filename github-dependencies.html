@@ -86,7 +86,15 @@
 
 <p>If you want to reference the file in one of your project files then add an entry to the project's <a href="references-files.html"><code>paket.references</code> file.</a>:</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">File:FsUnit.fs</pre></td></tr></table>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">File</span><span class="o">:</span><span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span></pre>
+</td>
+</tr>
+</table>
 
 <p>This will reference the linked file directly into your project.
 By default the linked file will be visible under <code>paket-files</code> folder in project.</p>
@@ -95,15 +103,49 @@ By default the linked file will be visible under <code>paket-files</code> folder
 
 <p>You can specify custom folder for the file:</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">File:FsUnit.fs Tests\FsUnit</pre></td></tr></table>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">File</span><span class="o">:</span><span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span> <span class="i">Tests</span></pre>
+</td>
+</tr>
+</table>
 
 <p><img src="img/github_ref_custom_link.png" alt="alt text" title="GitHub file referenced in project with custom link" /></p>
 
 <p>Or if you use <code>.</code> for the directory, the file will be placed under the root of the project:</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">File:FsUnit.fs .</pre></td></tr></table>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">File</span><span class="o">:</span><span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span> <span class="o">.</span></pre>
+</td>
+</tr>
+</table>
 
 <p><img src="img/github_ref_root.png" alt="alt text" title="GitHub file referenced in project under root of project" /></p>
+
+<h2><a name="Referencing-a-GitHub-repository" class="anchor" href="#Referencing-a-GitHub-repository">Referencing a GitHub repository</a></h2>
+
+<p>You can also reference a complete <a href="http://www.github.com">github.com</a> repository by specifying the repository id in the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">github</span> <span class="i">hakimel</span><span class="o">/</span><span class="i">reveal</span><span class="o">.</span><span class="i">js</span>       <span class="c">// master branch</span>
+<span class="i">github</span> <span class="i">hakimel</span><span class="o">/</span><span class="i">reveal</span><span class="o">.</span><span class="i">js</span><span class="o">:</span><span class="n">2.6</span><span class="o">.</span><span class="n">2</span> <span class="c">// version 2.6.2</span></pre>
+</td>
+</tr>
+</table>
+
+<p>This will download the given repository and put it into your <code>paket-files</code> folder.</p>
 
 <h2><a name="Recognizing-Build-Action" class="anchor" href="#Recognizing-Build-Action">Recognizing Build Action</a></h2>
 
