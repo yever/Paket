@@ -53,12 +53,7 @@
 <ol>
 <li>Finds all <code>packages.config</code> files, generates a <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> in the solution root and replaces each <code>packages.config</code> with an equivalent <a href="references-files.html"><code>paket.references</code> file</a>.</li>
 <li>If there is a solution-level <code>packages.config</code>, then it will be removed and its dependencies will be included into the <a href="dependencies-file.html"><code>paket.dependencies</code></a>.</li>
-<li><p>If you use NuGet Package Restore (and have a <code>.nuget</code> directory with <code>nuget.targets</code> inside), then</p>
-<ul>
-<li>associated elements in all project files will be removed (<a href="http://docs.nuget.org/docs/workflows/migrating-to-automatic-package-restore#If_you_are_not_using_TFS">read more</a>).</li>
-<li>the <code>nuget.targets</code> file will be removed.</li>
-<li><p>the <a href="paket-init-auto-restore.html"><code>paket init-auto-restore</code></a> command will be invoked.</p></li>
-</ul></li>
+<li>If you use NuGet Package Restore (<a href="http://docs.nuget.org/docs/workflows/migrating-to-automatic-package-restore">MSBuild-Integrated or Automatic Visual Studio Package Restore</a>), then the <a href="paket-init-auto-restore.html"><code>paket init-auto-restore</code></a> command will be invoked.</li>
 <li><p>Next (unless <code>--no-install</code> is specified), the <a href="paket-install.html">paket install</a> process with the <code>--hard</code> flag will be executed. This will:</p>
 <ul>
 <li>analyze the dependencies.</li>
