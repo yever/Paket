@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>The <code>.paket</code> folder
+    <title>The .paket folder
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
@@ -32,11 +32,12 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="The-folder" class="anchor" href="#The-folder">The <code>.paket</code> folder</a></h1>
+<h1><a name="The-paket-folder" class="anchor" href="#The-paket-folder">The .paket folder</a></h1>
 
 <p>The <a href="https://github.com/fsprojects/Paket/tree/master/.paket"><code>.paket</code> folder</a> is used the same way a <code>.nuget</code> folder is used for the <a href="http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages">NuGet package restore</a>.</p>
 
-<p>Place this folder into the root of your solution. It will include the <code>paket.targets</code> and <code>paket.bootstrapper.exe</code> files. The <a href="http://fsprojects.github.io/Paket/bootstrapper.html">bootstrapper</a> will download the latest version of the <code>paket.exe</code> file (if it doesn't already exist) and it will be placed into the same folder.</p>
+<p>Place this folder into the root of your solution. It should include the <code>paket.targets</code> and <code>paket.bootstrapper.exe</code> files which can be downloaded from <a href="https://github.com/fsprojects/Paket/releases/latest">GitHub</a>. 
+The <a href="http://fsprojects.github.io/Paket/bootstrapper.html">bootstrapper</a> will always download the latest version of the <code>paket.exe</code> file and it will be placed into the same folder.</p>
 
 <p>Now, to install all the packages from the <code>paket.dependencies</code> files, just run the following command.</p>
 
