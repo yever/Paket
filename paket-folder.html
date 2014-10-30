@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>paket init-auto-restore
+    <title>The <code>.paket</code> folder
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
@@ -32,19 +32,23 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="paket-init-auto-restore" class="anchor" href="#paket-init-auto-restore">paket init-auto-restore</a></h1>
+<h1><a name="The-folder" class="anchor" href="#The-folder">The <code>.paket</code> folder</a></h1>
 
-<p>Enables automatic Package Restore in Visual Studio during the build process.</p>
+<p>The <a href="https://github.com/fsprojects/Paket/tree/master/.paket"><code>.paket</code> folder</a> is used the same way a <code>.nuget</code> folder is used for the <a href="http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages">NuGet package restore</a>.</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">$ paket init-auto-restore</pre></td></tr></table>
+<p>Place this folder into the root of your solution. It will include the <code>paket.targets</code> and <code>paket.bootstrapper.exe</code> files. The <a href="http://fsprojects.github.io/Paket/bootstrapper.html">bootstrapper</a> will download the latest version of the <code>paket.exe</code> file (if it doesn't already exist) and it will be placed into the same folder.</p>
 
-<p>The command:</p>
+<p>Now, to install all the packages from the <code>paket.dependencies</code> files, just run the following command.</p>
 
-<ul>
-<li>creates a <code>.paket</code> directory in your solution root</li>
-<li>downloads <code>paket.targets</code> and <code>paket.bootstrapper.exe</code> into it</li>
-<li>adds an <code>&lt;Import&gt;</code> statement for <code>paket.targets</code> to all projects under the working directory.</li>
-</ul>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="o">.</span><span class="i">paket</span><span class="o">/</span><span class="i">paket</span><span class="o">.</span><span class="i">exe</span> <span class="i">install</span></pre>
+</td>
+</tr>
+</table>
 
 
         </div>

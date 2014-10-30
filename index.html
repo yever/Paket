@@ -73,7 +73,9 @@ If you are already using NuGet for package restore in your solution then you can
 
 <table class="pre"><tr><td><pre lang="batchfile">$ paket install</pre></td></tr></table>
 
-<p>The <a href="paket-install.html"><code>paket install</code> command</a> will analyze your dependencies and generate a <a href="lock-file.html"><code>paket.lock</code> file</a> if it doesn't exist yet:</p>
+<p>The usage is to have a <a href="paket-folder.html"><code>.paket</code> folder</a> in the root of your solution to install packages.</p>
+
+<p>The <a href="paket-install.html"><code>paket install</code> command</a> will analyze your dependencies and automatically generate a <a href="lock-file.html"><code>paket.lock</code> file</a> if it doesn't exist yet:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l"> 1: </span>
@@ -117,7 +119,7 @@ If you are already using NuGet for package restore in your solution then you can
 </tr>
 </table>
 
-<p>You can place <a href="references-files.html"><code>paket.references</code> files</a> alongside your Visual Studio projects to have Paket automatically sync references for the packages noted in that file whenever an <code>install</code> or <code>update</code> takes place.</p>
+<p>You can place <a href="references-files.html"><code>paket.references</code> files</a> alongside your Visual Studio project files to have Paket automatically sync references for the packages noted in that file whenever an <code>install</code> or <code>update</code> takes place.</p>
 
 <p>All of the <a href="faq.html#Why-should-I-commit-the-lock-file">files involved should be committed</a> to your version control system.</p>
 
@@ -137,7 +139,7 @@ If you are already using NuGet for package restore in your solution then you can
 
 <p>Please see the <a href="https://github.com/fsprojects/Paket/blob/master/README.md">Quick contributing guide in the README</a> for contribution gudelines.</p>
 
-<p>The library is available under MIT license, which allows modification and redistribution for both commercial and non-commercial purposes. 
+<p>The library is available under MIT license, which allows modification and redistribution for both commercial and non-commercial purposes.
 For more information see the <a href="http://fsprojects.github.io/Paket/license.html">License file</a>.</p>
 
 <div class="tip" id="fs1">namespace Microsoft.FSharp.Core</div>
@@ -179,6 +181,7 @@ For more information see the <a href="http://fsprojects.github.io/Paket/license.
             <li><a href="./convert-from-nuget.html">paket convert-from-nuget</a></li>            
             <li><a href="./paket-init-auto-restore.html">paket init-auto-restore</a></li>
             <li class="divider"></li>
+            <li><a href="./paket-folder.html">.paket folder</a></li>       
             <li><a href="./bootstrapper.html">paket.bootstrapper.exe</a></li>            
           </ul>
         </div>
