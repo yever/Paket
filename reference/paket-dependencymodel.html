@@ -53,15 +53,53 @@
             CalcDependencies (...)
           </code>
           <div class="tip" id="10">
-            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * references:string list) -&gt; Map&lt;string,VersionRequirement&gt;<br />
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * projectFileName:string) -&gt; Map&lt;string,VersionRequirement&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/DependencyModel.fs#L4-4" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/DependencyModel.fs#L16-16" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Calculates the used dependencies for a project.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
+            CalcDependenciesForDirectPackages (...)
+          </code>
+          <div class="tip" id="11">
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * references:string list) -&gt; Map&lt;string,VersionRequirement&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/DependencyModel.fs#L7-7" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Calculates the used dependencies for the given direct references.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
+            CalcDependenciesForReferencesFile (...)
+          </code>
+          <div class="tip" id="12">
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * referencesFile:string) -&gt; Map&lt;string,VersionRequirement&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/DependencyModel.fs#L12-12" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Calculates the used dependencies for given references file.</p>
 
         </td>
       </tr>
