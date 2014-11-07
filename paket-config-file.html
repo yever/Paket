@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Convert your solution from NuGet
+    <title>paket.config file
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
@@ -32,53 +32,27 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="Convert-your-solution-from-NuGet" class="anchor" href="#Convert-your-solution-from-NuGet">Convert your solution from NuGet</a></h1>
+<h1><a name="paket-config-file" class="anchor" href="#paket-config-file">paket.config file</a></h1>
 
-<h2><a name="Manual-process" class="anchor" href="#Manual-process">Manual process</a></h2>
+<p>Allows to store global configuration values like NuGet credentials. It can be found in:</p>
 
-<p>If you are already using <code>NuGet.exe</code> for package restore then it should be easy to convert to Paket.</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">AppDataFolder</span> <span class="o">=</span> <span class="i">Environment</span><span class="o">.</span><span class="i">GetFolderPath</span>(<span class="i">Environment</span><span class="o">.</span><span class="i">SpecialFolder</span><span class="o">.</span><span class="i">ApplicationData</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">PaketConfigFolder</span> <span class="o">=</span> <span class="i">Path</span><span class="o">.</span><span class="i">Combine</span>(<span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">AppDataFolder</span>, <span class="s">&quot;</span><span class="s">Paket</span><span class="s">&quot;</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="i">PaketConfigFile</span> <span class="o">=</span> <span class="i">Path</span><span class="o">.</span><span class="i">Combine</span>(<span onmouseout="hideTip(event, 'fs2', 5)" onmouseover="showTip(event, 'fs2', 5)" class="i">PaketConfigFolder</span>, <span class="s">&quot;</span><span class="s">paket</span><span class="s">.</span><span class="s">config</span><span class="s">&quot;</span>)</pre>
+</td>
+</tr>
+</table>
 
-<ol>
-<li>Analyse your <code>packages.config</code> files and extract the referenced packages into a <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>.</li>
-<li>Convert each <code>packages.config</code> file to <a href="references-files.html"><code>paket.references</code></a> syntax. This is very easy - you just have to remove all the XML and keep the package names.</li>
-<li>Run <a href="paket-install.html">paket install</a> with the <code>--hard</code> flag. This will analyze the dependencies, generate a <a href="lock-file.html"><code>paket.lock</code> file</a>, remove all the old package references from your project files and replace them with equivalent <code>Reference</code>s in a syntax that can be managed automatically by Paket.</li>
-</ol>
-
-<div id="automatic"></div>
-
-<h2><a name="Automated-process" class="anchor" href="#Automated-process">Automated process</a></h2>
-
-<p>Paket can assist you with the conversion. The <code>paket convert-from-nuget</code> command:</p>
-
-<ol>
-<li>Finds all <code>packages.config</code> files, generates a <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> in the solution root and replaces each <code>packages.config</code> with an equivalent <a href="references-files.html"><code>paket.references</code> file</a>.</li>
-<li>If there is a solution-level <code>packages.config</code>, then it will be removed and its dependencies will be included into the <a href="dependencies-file.html"><code>paket.dependencies</code></a>.</li>
-<li>If you use NuGet Package Restore (<a href="http://docs.nuget.org/docs/workflows/migrating-to-automatic-package-restore">MSBuild-Integrated or Automatic Visual Studio Package Restore</a>), then the <a href="paket-init-auto-restore.html"><code>paket init-auto-restore</code></a> command will be invoked.</li>
-<li><p>Next (unless <code>--no-install</code> is specified), the <a href="paket-install.html">paket install</a> process with the <code>--hard</code> flag will be executed. This will:</p>
-<ul>
-<li>analyze the dependencies.</li>
-<li>generate a <a href="lock-file.html"><code>paket.lock</code> file</a>.</li>
-<li><p>remove all the old package references from your project files and install new references in Paket's syntax.</p></li>
-</ul></li>
-<li><p>If you specify <code>--force</code>, the conversion will attempt to infer additional dependencies from newly added / previously unprocessed <code>packages.config</code> files and</p>
-<ul>
-<li>add any newly discovered dependencies to the end of an existing <code>paket.dependencies</code> file.</li>
-<li>transfer/append references from the <code>packages.config</code> files into <code>paket.references</code> files alongside.</li>
-</ul></li>
-</ol>
-
-<div id="syntax"></div>
-
-<table class="pre"><tr><td><pre lang="batchfile">$ paket convert-from-nuget [--force] [--no-install] [--no-auto-restore]</pre></td></tr></table>
-
-<p>Options:</p>
-
-<p><code>--force</code>: Forces the conversion, even if a <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> or <a href="references-files.html"><code>paket.references</code></a> files are present.</p>
-
-<p><code>--no-install</code>: Skips <a href="paket-install.html"><code>paket install --hard</code></a> process afterward generation of dependencies / references files.</p>
-
-<p><code>--no-auto-restore</code>: Skips <a href="paket-init-auto-restore.html"><code>paket init-auto-restore</code></a> process afterward generation of dependencies / references files.</p>
-
+<div class="tip" id="fs1">val AppDataFolder : obj<br /><br />Full name: paketconfigfile.AppDataFolder</div>
+<div class="tip" id="fs2">val PaketConfigFolder : obj<br /><br />Full name: paketconfigfile.PaketConfigFolder</div>
+<div class="tip" id="fs3">val PaketConfigFile : obj<br /><br />Full name: paketconfigfile.PaketConfigFile</div>
 
         </div>
         <div class="span3">
