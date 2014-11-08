@@ -46,11 +46,9 @@
 <span class="l">5: </span>
 <span class="l">6: </span>
 <span class="l">7: </span>
-<span class="l">8: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="c">//</span>
 <span class="prep">#r</span> <span class="s">@&quot;</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">bin</span><span class="s">\</span><span class="s">Paket</span><span class="s">.</span><span class="s">Core</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span>
 
 <span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Paket</span>
@@ -183,14 +181,14 @@
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs10', 23)" onmouseover="showTip(event, 'fs10', 23)" class="i">paketDependencies</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs3', 24)" onmouseover="showTip(event, 'fs3', 24)" class="i">Dependencies</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 25)" onmouseover="showTip(event, 'fs4', 25)" class="i">Locate</span>(<span onmouseout="hideTip(event, 'fs11', 26)" onmouseover="showTip(event, 'fs11', 26)" class="i">System</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 27)" onmouseover="showTip(event, 'fs12', 27)" class="i">IO</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs13', 28)" onmouseover="showTip(event, 'fs13', 28)" class="i">Path</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 29)" onmouseover="showTip(event, 'fs14', 29)" class="i">Combine</span>(<span class="k">__SOURCE_DIRECTORY__</span>,<span class="s">&quot;</span><span class="s">.</span><span class="s">.</span><span class="s">&quot;</span>))
 <span class="fsi">found: D:\code\Paket\paket.dependencies</span>
 <span onmouseout="hideTip(event, 'fs10', 30)" onmouseover="showTip(event, 'fs10', 30)" class="i">paketDependencies</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs15', 31)" onmouseover="showTip(event, 'fs15', 31)" class="i">FindReferencesFor</span> <span class="s">&quot;</span><span class="s">UnionArgParser</span><span class="s">&quot;</span>
-<span class="fsi">val it : string list = [&quot;D:\code\Paket\src\Paket\paket.references&quot;]</span></pre>
+<span class="fsi">val it : string list = [&quot;D:\code\Paket\src\Paket\Paket.fsproj&quot;]</span></pre>
 </td>
 </tr>
 </table>
 
 <div class="tip" id="fs1">namespace Paket</div>
 <div class="tip" id="fs2">val dependencies : Dependencies<br /><br />Full name: Reference-from-repl.dependencies</div>
-<div class="tip" id="fs3">Multiple items<br />type Dependencies =<br />&#160;&#160;new : dependenciesFileName:string -&gt; Dependencies<br />&#160;&#160;member Add : package:string -&gt; unit<br />&#160;&#160;member Add : package:string * version:string -&gt; unit<br />&#160;&#160;member FindReferencesFor : packages:string list -&gt; (string * (string * string) list) list<br />&#160;&#160;member FindReferencesFor : package:string -&gt; string list<br />&#160;&#160;member GetDirectDependencies : unit -&gt; (string * string) list<br />&#160;&#160;member GetInstalledPackages : unit -&gt; (string * string) list<br />&#160;&#160;member GetInstalledVersion : packageName:string -&gt; string option<br />&#160;&#160;member GetLockFile : unit -&gt; LockFile<br />&#160;&#160;member Remove : package:string -&gt; unit<br />&#160;&#160;...<br /><br />Full name: Paket.Dependencies<br /><br />--------------------<br />new : dependenciesFileName:string -&gt; Dependencies</div>
+<div class="tip" id="fs3">Multiple items<br />type Dependencies =<br />&#160;&#160;new : dependenciesFileName:string -&gt; Dependencies<br />&#160;&#160;member Add : package:string -&gt; unit<br />&#160;&#160;member Add : package:string * version:string -&gt; unit<br />&#160;&#160;member FindReferencesFor : packages:seq&lt;string&gt; -&gt; seq&lt;string * string list&gt;<br />&#160;&#160;member FindReferencesFor : package:string -&gt; string list<br />&#160;&#160;member GetDirectDependencies : unit -&gt; (string * string) list<br />&#160;&#160;member GetInstalledPackages : unit -&gt; (string * string) list<br />&#160;&#160;member GetInstalledVersion : packageName:string -&gt; string option<br />&#160;&#160;member GetLockFile : unit -&gt; LockFile<br />&#160;&#160;member Remove : package:string -&gt; unit<br />&#160;&#160;...<br /><br />Full name: Paket.Dependencies<br /><br />--------------------<br />new : dependenciesFileName:string -&gt; Dependencies</div>
 <div class="tip" id="fs4">static member Dependencies.Locate : path:string -&gt; Dependencies</div>
 <div class="tip" id="fs5">member Dependencies.Add : package:string -&gt; unit<br />member Dependencies.Add : package:string * version:string -&gt; unit</div>
 <div class="tip" id="fs6">member Dependencies.GetInstalledVersion : packageName:string -&gt; string option</div>
@@ -202,7 +200,7 @@
 <div class="tip" id="fs12">namespace System.IO</div>
 <div class="tip" id="fs13">type Path =<br />&#160;&#160;static val DirectorySeparatorChar : char<br />&#160;&#160;static val AltDirectorySeparatorChar : char<br />&#160;&#160;static val VolumeSeparatorChar : char<br />&#160;&#160;static val InvalidPathChars : char[]<br />&#160;&#160;static val PathSeparator : char<br />&#160;&#160;static member ChangeExtension : path:string * extension:string -&gt; string<br />&#160;&#160;static member Combine : params paths:string[] -&gt; string + 3 overloads<br />&#160;&#160;static member GetDirectoryName : path:string -&gt; string<br />&#160;&#160;static member GetExtension : path:string -&gt; string<br />&#160;&#160;static member GetFileName : path:string -&gt; string<br />&#160;&#160;...<br /><br />Full name: System.IO.Path</div>
 <div class="tip" id="fs14">System.IO.Path.Combine(params paths: string []) : string<br />System.IO.Path.Combine(path1: string, path2: string) : string<br />System.IO.Path.Combine(path1: string, path2: string, path3: string) : string<br />System.IO.Path.Combine(path1: string, path2: string, path3: string, path4: string) : string</div>
-<div class="tip" id="fs15">member Dependencies.FindReferencesFor : packages:string list -&gt; (string * (string * string) list) list<br />member Dependencies.FindReferencesFor : package:string -&gt; string list</div>
+<div class="tip" id="fs15">member Dependencies.FindReferencesFor : packages:seq&lt;string&gt; -&gt; seq&lt;string * string list&gt;<br />member Dependencies.FindReferencesFor : package:string -&gt; string list</div>
 
         </div>
         <div class="span3">
