@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>paket restore
+    <title>paket find-refs
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
@@ -32,18 +32,68 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="paket-restore" class="anchor" href="#paket-restore">paket restore</a></h1>
+<h1><a name="paket-find-refs" class="anchor" href="#paket-find-refs">paket find-refs</a></h1>
 
-<p>Ensures that all dependencies in your <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> are present in the <code>packages</code> directory .</p>
+<p>Finds all <a href="references-file.html"><code>paket.references</code> files</a> that contain the given Nuget packages.</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">$ paket restore [--force] [--references-files REFERENCESFILE1 REFERENCESFILE2 ...]</pre></td></tr></table>
+<table class="pre"><tr><td><pre lang="batchfile">$ paket find-refs --packages PACKAGENAME1 PACKAGENAME1 ...</pre></td></tr></table>
 
-<p>Options:</p>
+<h2><a name="Sample" class="anchor" href="#Sample">Sample</a></h2>
 
-<p><code>--force</code>: Forces the download of all packages.</p>
+<p>.src/Paket/paket.references contains:</p>
 
-<p><code>--references-files</code>: Allows to restore all packages from the given <code>paket.references</code> files. If no <code>paket.references</code> file is given then all packages will be restored.</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">UnionArgParser</span>
+<span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Core</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Microsoft</span><span class="o">.</span><span class="i">Signed</span></pre>
+</td>
+</tr>
+</table>
 
+<p>.src/Paket.Core/paket.references contains:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span>
+<span class="i">DotNetZip</span>
+<span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">Core</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 4)" onmouseover="showTip(event, 'fs2', 4)" class="i">Microsoft</span><span class="o">.</span><span class="i">Signed</span></pre>
+</td>
+</tr>
+</table>
+
+<p>Now we run <code>paket find-refs --packages DotNetZip FSharp.Core.Microsoft.Signed</code>:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">DotNetZip</span>
+<span class="o">.</span><span class="i">src</span><span class="o">/</span><span class="i">Paket</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="i">Core</span><span class="o">/</span><span class="i">paket</span><span class="o">.</span><span class="i">references</span>
+
+<span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 6)" onmouseover="showTip(event, 'fs1', 6)" class="i">Core</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 7)" onmouseover="showTip(event, 'fs2', 7)" class="i">Microsoft</span><span class="o">.</span><span class="i">Signed</span>
+<span class="o">.</span><span class="i">src</span><span class="o">/</span><span class="i">Paket</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 8)" onmouseover="showTip(event, 'fs1', 8)" class="i">Core</span><span class="o">/</span><span class="i">paket</span><span class="o">.</span><span class="i">references</span>
+<span class="o">.</span><span class="i">src</span><span class="o">/</span><span class="i">Paket</span><span class="o">/</span><span class="i">paket</span><span class="o">.</span><span class="i">references</span></pre>
+</td>
+</tr>
+</table>
+
+<div class="tip" id="fs1">namespace Microsoft.FSharp.Core</div>
+<div class="tip" id="fs2">namespace Microsoft</div>
 
         </div>
         <div class="span3">
