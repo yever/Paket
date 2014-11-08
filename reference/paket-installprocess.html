@@ -54,7 +54,7 @@
             CreateInstallModel (...)
           </code>
           <div class="tip" id="31">
-            <strong>Signature:</strong> (sources:PackageSource list * force:bool * package:ResolvedPackage) -&gt; Async&lt;ResolvedPackage * InstallModel&gt;<br />
+            <strong>Signature:</strong> (root:string * sources:PackageSource list * force:bool * package:ResolvedPackage) -&gt; Async&lt;ResolvedPackage * InstallModel&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -69,10 +69,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '32', 32)" onmouseover="showTip(event, '32', 32)">
-            createModel (sources, force, lockFile)
+            createModel (...)
           </code>
           <div class="tip" id="32">
-            <strong>Signature:</strong> (sources:PackageSource list * force:bool * lockFile:LockFile) -&gt; (ResolvedPackage * InstallModel) []<br />
+            <strong>Signature:</strong> (root:string * sources:PackageSource list * force:bool * lockFile:LockFile) -&gt; (ResolvedPackage * InstallModel) []<br />
                       </div>
         </td>
         <td class="xmldoc">
