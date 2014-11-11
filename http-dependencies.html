@@ -34,7 +34,7 @@
           
 <h1><a name="GitHub-dependencies" class="anchor" href="#GitHub-dependencies">GitHub dependencies</a></h1>
 
-<p>Paket allows one to automatically manage the linking of files from <a href="http://www.github.com">github.com</a> into your projects.</p>
+<p>Paket allows one to automatically manage the linking of files from <a href="http://www.github.com">github.com</a> or <a href="https://gist.github.com/">gist.github.com</a> into your projects.</p>
 
 <h2><a name="Referencing-a-single-file" class="anchor" href="#Referencing-a-single-file">Referencing a single file</a></h2>
 
@@ -216,6 +216,46 @@ Let's look at a sample:</p>
 
 <p>As you can see Paket also resolved the Octokit dependency.</p>
 
+<h2><a name="Gist" class="anchor" href="#Gist">Gist</a></h2>
+
+<p>Gist works the same way. You can fetch single files or multi-file-gists as well:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">gist</span> <span class="i">Thorium</span><span class="o">/</span><span class="n">1972308</span> <span class="i">gistfile1</span><span class="o">.</span><span class="i">fs</span>
+<span class="i">gist</span> <span class="i">Thorium</span><span class="o">/</span><span class="n">6088882</span></pre>
+</td>
+</tr>
+</table>
+
+<p>If you run the <a href="paket-update.html"><code>paket update</code> command</a>, it will add a new section to your <a href="lock-file.html"><code>paket.lock</code> file</a>:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+<span class="l">7: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">GIST</span>
+  <span class="i">remote</span><span class="o">:</span> <span class="i">Thorium</span><span class="o">/</span><span class="n">1972308</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">gistfile1</span><span class="o">.</span><span class="i">fs</span>
+  <span class="i">remote</span><span class="o">:</span> <span class="i">Thorium</span><span class="o">/</span><span class="n">6088882</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">FULLPROJECT</span></pre>
+</td>
+</tr>
+</table>
+
 <div class="tip" id="fs1">namespace Microsoft</div>
 
         </div>
@@ -239,7 +279,7 @@ Let's look at a sample:</p>
             <li><a href="./references-files.html">paket.references</a></li>
             <li class="divider"></li>
             <li><a href="./nuget-dependencies.html">NuGet dependencies</a></li>
-            <li><a href="./github-dependencies.html">GitHub dependencies</a></li>
+            <li><a href="./http-dependencies.html">HTTP dependencies</a></li>
             <li class="divider"></li>
             <li><a href="./reference-from-repl.html">Using Paket form F# Interactive</a></li>
             <li class="divider"></li>

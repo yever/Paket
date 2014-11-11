@@ -31,9 +31,10 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h4><a name="0-13-0-alpha008-09-11-2014" class="anchor" href="#0-13-0-alpha008-09-11-2014">0.13.0-alpha008 - 09.11.2014</a></h4>
+<h4><a name="0-13-0-alpha009-09-11-2014" class="anchor" href="#0-13-0-alpha009-09-11-2014">0.13.0-alpha009 - 09.11.2014</a></h4>
 
 <ul>
+<li>New support for general HTTP dependencies - <a href="http://fsprojects.github.io/Paket/http-dependencies.html">http://fsprojects.github.io/Paket/http-dependencies.html</a></li>
 <li>New F# Interactive support - <a href="http://fsprojects.github.io/Paket/reference-from-repl.html">http://fsprojects.github.io/Paket/reference-from-repl.html</a></li>
 <li>New <code>paket find-refs</code> command - <a href="http://fsprojects.github.io/Paket/paket-find-refs.html">http://fsprojects.github.io/Paket/paket-find-refs.html</a></li>
 <li>Bootstrapper uses .NET 4.0</li>
@@ -131,7 +132,7 @@
 <h4><a name="0-7-0-14-10-2014" class="anchor" href="#0-7-0-14-10-2014">0.7.0 - 14.10.2014</a></h4>
 
 <ul>
-<li>Initial support for referencing full github projects - <a href="http://fsprojects.github.io/Paket/github-dependencies.html#Referencing-a-GitHub-repository">http://fsprojects.github.io/Paket/github-dependencies.html#Referencing-a-GitHub-repository</a></li>
+<li>Initial support for referencing full github projects - <a href="http://fsprojects.github.io/Paket/http-dependencies.html#Referencing-a-GitHub-repository">http://fsprojects.github.io/Paket/http-dependencies.html#Referencing-a-GitHub-repository</a></li>
 <li>Allow to use all branches in GitHub sources - <a href="https://github.com/fsprojects/Paket/pull/249">https://github.com/fsprojects/Paket/pull/249</a></li>
 <li>Initial support for frameworkAssemblies from nuspec - <a href="https://github.com/fsprojects/Paket/issues/241">https://github.com/fsprojects/Paket/issues/241</a></li>
 <li>Download github source files with correct encoding - <a href="https://github.com/fsprojects/Paket/pull/248">https://github.com/fsprojects/Paket/pull/248</a></li>
@@ -160,7 +161,7 @@
 <ul>
 <li>Bootstrapper will only download stable releases by default - <a href="http://fsprojects.github.io/Paket/bootstrapper.html">http://fsprojects.github.io/Paket/bootstrapper.html</a></li>
 <li>New installer model allows better compatibility with NuGet and should be much faster</li>
-<li>Supporting dot for references file - <a href="http://fsprojects.github.io/Paket/github-dependencies.html">http://fsprojects.github.io/Paket/github-dependencies.html</a></li>
+<li>Supporting dot for references file - <a href="http://fsprojects.github.io/Paket/http-dependencies.html">http://fsprojects.github.io/Paket/http-dependencies.html</a></li>
 <li>Supporting pagination for long NuGet feeds - <a href="https://github.com/fsprojects/Paket/issues/223">https://github.com/fsprojects/Paket/issues/223</a></li>
 <li>Create a "use exactly this version" operator in order to override package conflicts - <a href="http://fsprojects.github.io/Paket/nuget-dependencies.html#Use-exactly-this-version-constraint">http://fsprojects.github.io/Paket/nuget-dependencies.html#Use-exactly-this-version-constraint</a></li>
 <li>New <code>content none</code> mode in paket.dependencies - <a href="http://fsprojects.github.io/Paket/dependencies-file.html#No-content-option">http://fsprojects.github.io/Paket/dependencies-file.html#No-content-option</a></li>
@@ -193,7 +194,7 @@
 <h4><a name="0-4-0-28-09-2014" class="anchor" href="#0-4-0-28-09-2014">0.4.0 - 28.09.2014</a></h4>
 
 <ul>
-<li>Resolve dependencies for github modules - <a href="http://fsprojects.github.io/Paket/github-dependencies.html#Remote-dependencies">http://fsprojects.github.io/Paket/github-dependencies.html#Remote-dependencies</a></li>
+<li>Resolve dependencies for github modules - <a href="http://fsprojects.github.io/Paket/http-dependencies.html#Remote-dependencies">http://fsprojects.github.io/Paket/http-dependencies.html#Remote-dependencies</a></li>
 <li>New [--interactive] mode for paket simplify - <a href="http://fsprojects.github.io/Paket/paket-simplify.html">http://fsprojects.github.io/Paket/paket-simplify.html</a></li>
 <li>Don't use version in path for github files.</li>
 <li>Better error message when a package resolution conflict arises.</li>
@@ -223,7 +224,7 @@
 <h4><a name="0-2-0-17-09-2014" class="anchor" href="#0-2-0-17-09-2014">0.2.0 - 17.09.2014</a></h4>
 
 <ul>
-<li>Allow to directly link GitHub files - <a href="http://fsprojects.github.io/Paket/github-dependencies.html">http://fsprojects.github.io/Paket/github-dependencies.html</a></li>
+<li>Allow to directly link GitHub files - <a href="http://fsprojects.github.io/Paket/http-dependencies.html">http://fsprojects.github.io/Paket/http-dependencies.html</a></li>
 <li>Automatic NuGet conversion - <a href="http://fsprojects.github.io/Paket/convert-from-nuget.html">http://fsprojects.github.io/Paket/convert-from-nuget.html</a></li>
 <li>Cleaner syntax in paket.dependencies - <a href="https://github.com/fsprojects/Paket/pull/95">https://github.com/fsprojects/Paket/pull/95</a></li>
 <li>Strict mode - <a href="https://github.com/fsprojects/Paket/pull/104">https://github.com/fsprojects/Paket/pull/104</a></li>
@@ -278,7 +279,7 @@
             <li><a href="./references-files.html">paket.references</a></li>
             <li class="divider"></li>
             <li><a href="./nuget-dependencies.html">NuGet dependencies</a></li>
-            <li><a href="./github-dependencies.html">GitHub dependencies</a></li>
+            <li><a href="./http-dependencies.html">HTTP dependencies</a></li>
             <li class="divider"></li>
             <li><a href="./reference-from-repl.html">Using Paket form F# Interactive</a></li>
             <li class="divider"></li>
