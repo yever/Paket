@@ -58,7 +58,7 @@
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L94-94" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L119-119" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -77,7 +77,7 @@
                           <strong>Type parameters:</strong> 'T, 'R          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L158-158" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L188-188" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -96,7 +96,7 @@
                           <strong>Type parameters:</strong> 'T, 'R          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L141-141" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L171-171" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -108,14 +108,33 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
-            countBy(project stream)
+            concat(streams)
           </code>
           <div class="tip" id="4">
+            <strong>Signature:</strong> streams:&#39;?7028 -&gt; Stream&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> '?7028, 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L237-237" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Concatenates a collection of streams.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
+            countBy(project stream)
+          </code>
+          <div class="tip" id="5">
             <strong>Signature:</strong> project:(&#39;T -&gt; &#39;Key) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; Stream&lt;&#39;Key * int&gt;<br />
                           <strong>Type parameters:</strong> 'T, 'Key          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L419-419" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L482-482" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -126,15 +145,34 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
+          <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
+            empty
+          </code>
+          <div class="tip" id="6">
+            <strong>Signature:</strong> Stream&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L19-19" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>The empty stream.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
             exists(predicate stream)
           </code>
-          <div class="tip" id="5">
+          <div class="tip" id="7">
             <strong>Signature:</strong> predicate:(&#39;T -&gt; bool) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; bool<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L469-469" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L532-532" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -145,15 +183,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
+          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
             filter(predicate stream)
           </code>
-          <div class="tip" id="6">
+          <div class="tip" id="8">
             <strong>Signature:</strong> predicate:(&#39;T -&gt; bool) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; Stream&lt;&#39;T&gt;<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L148-148" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L178-178" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -164,15 +202,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
+          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
             find(predicate stream)
           </code>
-          <div class="tip" id="7">
+          <div class="tip" id="9">
             <strong>Signature:</strong> predicate:(&#39;T -&gt; bool) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; &#39;T<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L438-438" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L501-501" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -183,15 +221,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
             flatMap(f stream)
           </code>
-          <div class="tip" id="8">
+          <div class="tip" id="10">
             <strong>Signature:</strong> f:(&#39;T -&gt; Stream&lt;&#39;R&gt;) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; Stream&lt;&#39;R&gt;<br />
                           <strong>Type parameters:</strong> 'T, 'R          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L129-129" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L159-159" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -202,15 +240,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
+          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
             fold(folder state stream)
           </code>
-          <div class="tip" id="9">
+          <div class="tip" id="11">
             <strong>Signature:</strong> folder:(&#39;State -&gt; &#39;T -&gt; &#39;State) -&gt; state:&#39;State -&gt; stream:Stream&lt;&#39;T&gt; -&gt; &#39;State<br />
                           <strong>Type parameters:</strong> 'State, 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L258-258" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L321-321" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -221,15 +259,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
             foldBy(projection folder init source)
           </code>
-          <div class="tip" id="10">
+          <div class="tip" id="12">
             <strong>Signature:</strong> projection:(&#39;T -&gt; &#39;Key) -&gt; folder:(&#39;State -&gt; &#39;T -&gt; &#39;State) -&gt; init:(unit -&gt; &#39;State) -&gt; source:Stream&lt;&#39;T&gt; -&gt; Stream&lt;&#39;Key * &#39;State&gt;<br />
                           <strong>Type parameters:</strong> 'T, 'Key, 'State          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L378-378" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L441-441" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -240,15 +278,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
+          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
             forall(predicate stream)
           </code>
-          <div class="tip" id="11">
+          <div class="tip" id="13">
             <strong>Signature:</strong> predicate:(&#39;T -&gt; bool) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; bool<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L478-478" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L541-541" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -259,15 +297,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
+          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
             groupBy(projection source)
           </code>
-          <div class="tip" id="12">
+          <div class="tip" id="14">
             <strong>Signature:</strong> projection:(&#39;T -&gt; &#39;Key) -&gt; source:Stream&lt;&#39;T&gt; -&gt; Stream&lt;&#39;Key * seq&lt;&#39;T&gt;&gt;<br />
                           <strong>Type parameters:</strong> 'T, 'Key          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L400-400" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L463-463" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -278,15 +316,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
+          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
             iter(f stream)
           </code>
-          <div class="tip" id="13">
+          <div class="tip" id="15">
             <strong>Signature:</strong> f:(&#39;T -&gt; unit) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; unit<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L282-282" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L345-345" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -297,15 +335,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
+          <code onmouseout="hideTip(event, '16', 16)" onmouseover="showTip(event, '16', 16)">
             length(stream)
           </code>
-          <div class="tip" id="14">
+          <div class="tip" id="16">
             <strong>Signature:</strong> stream:Stream&lt;&#39;T&gt; -&gt; int<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L276-276" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L339-339" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -316,15 +354,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
+          <code onmouseout="hideTip(event, '17', 17)" onmouseover="showTip(event, '17', 17)">
             map(f stream)
           </code>
-          <div class="tip" id="15">
+          <div class="tip" id="17">
             <strong>Signature:</strong> f:(&#39;T -&gt; &#39;R) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; Stream&lt;&#39;R&gt;<br />
                           <strong>Type parameters:</strong> 'T, 'R          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L119-119" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L149-149" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -335,15 +373,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '16', 16)" onmouseover="showTip(event, '16', 16)">
+          <code onmouseout="hideTip(event, '18', 18)" onmouseover="showTip(event, '18', 18)">
             maxBy(projection source)
           </code>
-          <div class="tip" id="16">
+          <div class="tip" id="18">
             <strong>Signature:</strong> projection:(&#39;T -&gt; &#39;Key) -&gt; source:Stream&lt;&#39;T&gt; -&gt; &#39;T<br />
                           <strong>Type parameters:</strong> 'T, 'Key          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L336-336" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L399-399" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -354,15 +392,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '17', 17)" onmouseover="showTip(event, '17', 17)">
+          <code onmouseout="hideTip(event, '19', 19)" onmouseover="showTip(event, '19', 19)">
             minBy(projection source)
           </code>
-          <div class="tip" id="17">
+          <div class="tip" id="19">
             <strong>Signature:</strong> projection:(&#39;T -&gt; &#39;Key) -&gt; source:Stream&lt;&#39;T&gt; -&gt; &#39;T<br />
                           <strong>Type parameters:</strong> 'T, 'Key          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L356-356" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L419-419" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -373,15 +411,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '18', 18)" onmouseover="showTip(event, '18', 18)">
+          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
             ofArray(source)
           </code>
-          <div class="tip" id="18">
+          <div class="tip" id="20">
             <strong>Signature:</strong> source:&#39;T [] -&gt; Stream&lt;&#39;T&gt;<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L20-20" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L45-45" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -392,15 +430,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '19', 19)" onmouseover="showTip(event, '19', 19)">
+          <code onmouseout="hideTip(event, '21', 21)" onmouseover="showTip(event, '21', 21)">
             ofResizeArray(source)
           </code>
-          <div class="tip" id="19">
+          <div class="tip" id="21">
             <strong>Signature:</strong> source:ResizeArray&lt;&#39;T&gt; -&gt; Stream&lt;&#39;T&gt;<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L45-45" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L70-70" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -411,15 +449,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
+          <code onmouseout="hideTip(event, '22', 22)" onmouseover="showTip(event, '22', 22)">
             ofSeq(source)
           </code>
-          <div class="tip" id="20">
+          <div class="tip" id="22">
             <strong>Signature:</strong> source:seq&lt;&#39;T&gt; -&gt; Stream&lt;&#39;T&gt;<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L70-70" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L95-95" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -430,15 +468,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '21', 21)" onmouseover="showTip(event, '21', 21)">
+          <code onmouseout="hideTip(event, '23', 23)" onmouseover="showTip(event, '23', 23)">
             pick(chooser stream)
           </code>
-          <div class="tip" id="21">
+          <div class="tip" id="23">
             <strong>Signature:</strong> chooser:(&#39;T -&gt; &#39;R option) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; &#39;R<br />
                           <strong>Type parameters:</strong> 'T, 'R          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L460-460" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L523-523" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -450,15 +488,34 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '22', 22)" onmouseover="showTip(event, '22', 22)">
+          <code onmouseout="hideTip(event, '24', 24)" onmouseover="showTip(event, '24', 24)">
+            singleton(source)
+          </code>
+          <div class="tip" id="24">
+            <strong>Signature:</strong> source:&#39;T -&gt; Stream&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L28-28" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a singleton stream.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '25', 25)" onmouseover="showTip(event, '25', 25)">
             skip(n stream)
           </code>
-          <div class="tip" id="22">
+          <div class="tip" id="25">
             <strong>Signature:</strong> n:int -&gt; stream:Stream&lt;&#39;T&gt; -&gt; Stream&lt;&#39;T&gt;<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L194-194" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L224-224" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -469,15 +526,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '23', 23)" onmouseover="showTip(event, '23', 23)">
+          <code onmouseout="hideTip(event, '26', 26)" onmouseover="showTip(event, '26', 26)">
             sortBy(projection stream)
           </code>
-          <div class="tip" id="23">
+          <div class="tip" id="26">
             <strong>Signature:</strong> projection:(&#39;T -&gt; &#39;Key) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; Stream&lt;&#39;T&gt;<br />
                           <strong>Type parameters:</strong> 'T, 'Key          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L322-322" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L385-385" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -488,15 +545,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '24', 24)" onmouseover="showTip(event, '24', 24)">
+          <code onmouseout="hideTip(event, '27', 27)" onmouseover="showTip(event, '27', 27)">
             sum(stream)
           </code>
-          <div class="tip" id="24">
+          <div class="tip" id="27">
             <strong>Signature:</strong> stream:Stream&lt;^T&gt; -&gt; ^T<br />
                           <strong>Type parameters:</strong> ^T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L268-268" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L331-331" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -507,15 +564,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '25', 25)" onmouseover="showTip(event, '25', 25)">
+          <code onmouseout="hideTip(event, '28', 28)" onmouseover="showTip(event, '28', 28)">
             take(n stream)
           </code>
-          <div class="tip" id="25">
+          <div class="tip" id="28">
             <strong>Signature:</strong> n:int -&gt; stream:Stream&lt;&#39;T&gt; -&gt; Stream&lt;&#39;T&gt;<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L168-168" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L198-198" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -526,15 +583,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '26', 26)" onmouseover="showTip(event, '26', 26)">
+          <code onmouseout="hideTip(event, '29', 29)" onmouseover="showTip(event, '29', 29)">
             takeWhile(pred stream)
           </code>
-          <div class="tip" id="26">
+          <div class="tip" id="29">
             <strong>Signature:</strong> pred:(&#39;T -&gt; bool) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; Stream&lt;&#39;T&gt;<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L183-183" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L213-213" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -545,15 +602,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '27', 27)" onmouseover="showTip(event, '27', 27)">
+          <code onmouseout="hideTip(event, '30', 30)" onmouseover="showTip(event, '30', 30)">
             toArray(stream)
           </code>
-          <div class="tip" id="27">
+          <div class="tip" id="30">
             <strong>Signature:</strong> stream:Stream&lt;&#39;T&gt; -&gt; &#39;T []<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L314-314" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L377-377" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -564,15 +621,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '28', 28)" onmouseover="showTip(event, '28', 28)">
+          <code onmouseout="hideTip(event, '31', 31)" onmouseover="showTip(event, '31', 31)">
             toResizeArray(stream)
           </code>
-          <div class="tip" id="28">
+          <div class="tip" id="31">
             <strong>Signature:</strong> stream:Stream&lt;&#39;T&gt; -&gt; ResizeArray&lt;&#39;T&gt;<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L305-305" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L368-368" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -583,15 +640,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '29', 29)" onmouseover="showTip(event, '29', 29)">
+          <code onmouseout="hideTip(event, '32', 32)" onmouseover="showTip(event, '32', 32)">
             toSeq(stream)
           </code>
-          <div class="tip" id="29">
+          <div class="tip" id="32">
             <strong>Signature:</strong> stream:Stream&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt;<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L290-290" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L353-353" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -602,15 +659,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '30', 30)" onmouseover="showTip(event, '30', 30)">
+          <code onmouseout="hideTip(event, '33', 33)" onmouseover="showTip(event, '33', 33)">
             tryFind(predicate stream)
           </code>
-          <div class="tip" id="30">
+          <div class="tip" id="33">
             <strong>Signature:</strong> predicate:(&#39;T -&gt; bool) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; &#39;T option<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L426-426" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L489-489" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -621,15 +678,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '31', 31)" onmouseover="showTip(event, '31', 31)">
+          <code onmouseout="hideTip(event, '34', 34)" onmouseover="showTip(event, '34', 34)">
             tryPick(chooser stream)
           </code>
-          <div class="tip" id="31">
+          <div class="tip" id="34">
             <strong>Signature:</strong> chooser:(&#39;T -&gt; &#39;R option) -&gt; stream:Stream&lt;&#39;T&gt; -&gt; &#39;R option<br />
                           <strong>Type parameters:</strong> 'T, 'R          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L447-447" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L510-510" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -640,15 +697,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '32', 32)" onmouseover="showTip(event, '32', 32)">
+          <code onmouseout="hideTip(event, '35', 35)" onmouseover="showTip(event, '35', 35)">
             zipWith(f first second)
           </code>
-          <div class="tip" id="32">
+          <div class="tip" id="35">
             <strong>Signature:</strong> f:(&#39;T -&gt; &#39;S -&gt; &#39;R) -&gt; first:Stream&lt;&#39;T&gt; -&gt; second:Stream&lt;&#39;S&gt; -&gt; Stream&lt;&#39;R&gt;<br />
                           <strong>Type parameters:</strong> 'T, 'S, 'R          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L209-209" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L272-272" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
