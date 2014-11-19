@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Auth - Paket</title>
+    <title>Domain - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -34,49 +34,125 @@
 
 
 
-<h1>Auth</h1>
+<h1>Domain</h1>
 <div class="xmldoc">
 </div>
-  <h3>Record Fields</h3>
+
+<!-- Render nested types and modules, if there are any -->
+  <h2>Nested types and modules</h2>
+  <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="paket-domain-normalizedpackagename.html">NormalizedPackageName</a>
+          </td>
+          <td class="xmldoc"><p>Represents a normalized NuGet package name</p>
+</td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="paket-domain-packagename.html">PackageName</a>
+          </td>
+          <td class="xmldoc"><p>Represents a NuGet package name</p>
+</td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+  <h3>Functions and values</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Record Field</td><td>Description</td></tr>
+      <tr><td>Function or value</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '239', 239)" onmouseover="showTip(event, '239', 239)">
-            Password
+          <code onmouseout="hideTip(event, '62', 62)" onmouseover="showTip(event, '62', 62)">
+            NormalizedPackageName 
           </code>
-          <div class="tip" id="239">
-            <strong>Signature:</strong> string<br />
+          <div class="tip" id="62">
+            <strong>Signature:</strong> PackageName -&gt; NormalizedPackageName<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L13-13" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Domain.fs#L22-22" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
+          <p>Function to convert a NuGet package name into a normalized one</p>
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '240', 240)" onmouseover="showTip(event, '240', 240)">
-            Username
+          <code onmouseout="hideTip(event, '63', 63)" onmouseover="showTip(event, '63', 63)">
+            PackageName name
           </code>
-          <div class="tip" id="240">
-            <strong>Signature:</strong> string<br />
+          <div class="tip" id="63">
+            <strong>Signature:</strong> name:string -&gt; PackageName<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L12-12" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Domain.fs#L11-11" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
+          <p>Function to convert a string into a NuGet package name</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Active patterns</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Active pattern</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '64', 64)" onmouseover="showTip(event, '64', 64)">
+            ( |NormalizedPackageName| ) arg1
+          </code>
+          <div class="tip" id="64">
+            <strong>Signature:</strong> PackageName -&gt; NormalizedPackageName<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Domain.fs#L18-18" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Active recognizer to convert a NuGet package name into a normalized one</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '65', 65)" onmouseover="showTip(event, '65', 65)">
+            ( |PackageName| ) arg1
+          </code>
+          <div class="tip" id="65">
+            <strong>Signature:</strong> PackageName -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Domain.fs#L8-8" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Active recognizer to convert a NuGet package name into a string</p>
+
         </td>
       </tr>
     </tbody>
