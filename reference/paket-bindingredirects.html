@@ -68,33 +68,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '37', 37)" onmouseover="showTip(event, '37', 37)">
-            applyBindingRedirects (...)
-          </code>
-          <div class="tip" id="37">
-            <strong>Signature:</strong> bindingRedirects:seq&lt;BindingRedirect&gt; -&gt; configFilePath:string -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/BindingRedirects.fs#L62-62" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Applies a set of binding redirects to a single configuration file.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '38', 38)" onmouseover="showTip(event, '38', 38)">
             applyBindingRedirectsToFolder (...)
           </code>
-          <div class="tip" id="38">
-            <strong>Signature:</strong> bindingRedirects:seq&lt;BindingRedirect&gt; -&gt; rootPath:string -&gt; unit<br />
+          <div class="tip" id="37">
+            <strong>Signature:</strong> rootPath:string -&gt; bindingRedirects:seq&lt;BindingRedirect&gt; -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/BindingRedirects.fs#L68-68" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/BindingRedirects.fs#L81-81" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -105,19 +86,19 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '39', 39)" onmouseover="showTip(event, '39', 39)">
-            setRedirect doc bindingRedirect
+          <code onmouseout="hideTip(event, '38', 38)" onmouseover="showTip(event, '38', 38)">
+            getPublicKeyToken assembly
           </code>
-          <div class="tip" id="39">
-            <strong>Signature:</strong> doc:XDocument -&gt; bindingRedirect:BindingRedirect -&gt; XDocument<br />
+          <div class="tip" id="38">
+            <strong>Signature:</strong> assembly:Assembly -&gt; string option<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/BindingRedirects.fs#L32-32" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/BindingRedirects.fs#L89-89" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Updates the supplied MSBuild document with the supplied binding redirect.</p>
+          <p>Calculates the short form of the public key token for use with binding redirects, if it exists.</p>
 
         </td>
       </tr>
