@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>FrameworkGroup - Paket</title>
+    <title>TargetProfile - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -34,27 +34,27 @@
 
 
 
-<h1>FrameworkGroup</h1>
+<h1>TargetProfile</h1>
 <div class="xmldoc">
 </div>
-  <h3>Record Fields</h3>
+  <h3>Union Cases</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Record Field</td><td>Description</td></tr>
+      <tr><td>Union Case</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '297', 297)" onmouseover="showTip(event, '297', 297)">
-            Fallbacks
+          <code onmouseout="hideTip(event, '466', 466)" onmouseover="showTip(event, '466', 466)">
+            PortableProfile(...)
           </code>
-          <div class="tip" id="297">
-            <strong>Signature:</strong> InstallFiles<br />
+          <div class="tip" id="466">
+            <strong>Signature:</strong> string * FrameworkIdentifier list<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L67-67" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L184-184" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -64,95 +64,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '298', 298)" onmouseover="showTip(event, '298', 298)">
-            Frameworks
+          <code onmouseout="hideTip(event, '467', 467)" onmouseover="showTip(event, '467', 467)">
+            SinglePlatform(FrameworkIdentifier)
           </code>
-          <div class="tip" id="298">
-            <strong>Signature:</strong> Map&lt;FrameworkIdentifier,InstallFiles&gt;<br />
+          <div class="tip" id="467">
+            <strong>Signature:</strong> FrameworkIdentifier<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L66-66" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3>Instance members</h3>
-  <table class="table table-bordered member-list">
-    <thead>
-      <tr><td>Instance member</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '299', 299)" onmouseover="showTip(event, '299', 299)">
-            GetFiles(framework)
-          </code>
-          <div class="tip" id="299">
-            <strong>Signature:</strong> framework:FrameworkIdentifier -&gt; seq&lt;string&gt;<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L69-69" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '300', 300)" onmouseover="showTip(event, '300', 300)">
-            GetReferences(framework)
-          </code>
-          <div class="tip" id="300">
-            <strong>Signature:</strong> framework:FrameworkIdentifier -&gt; Set&lt;Reference&gt;<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L80-80" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '301', 301)" onmouseover="showTip(event, '301', 301)">
-            MergeWith(that)
-          </code>
-          <div class="tip" id="301">
-            <strong>Signature:</strong> that:FrameworkGroup -&gt; FrameworkGroup<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L94-94" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '302', 302)" onmouseover="showTip(event, '302', 302)">
-            ReplaceFramework(...)
-          </code>
-          <div class="tip" id="302">
-            <strong>Signature:</strong> (framework:FrameworkIdentifier * emptyReferencesF:(unit -&gt; InstallFiles) * mapReferencesF:(InstallFiles -&gt; InstallFiles)) -&gt; FrameworkGroup<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L88-88" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L183-183" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -170,15 +90,105 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '303', 303)" onmouseover="showTip(event, '303', 303)">
-            singleton(framework, libs)
+          <code onmouseout="hideTip(event, '468', 468)" onmouseover="showTip(event, '468', 468)">
+            FindPortableProfile(name)
           </code>
-          <div class="tip" id="303">
-            <strong>Signature:</strong> (framework:FrameworkIdentifier * libs:InstallFiles) -&gt; FrameworkGroup<br />
+          <div class="tip" id="468">
+            <strong>Signature:</strong> name:string -&gt; TargetProfile<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L85-85" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L267-267" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '469', 469)" onmouseover="showTip(event, '469', 469)">
+            KnownDotNetFrameworkProfiles
+          </code>
+          <div class="tip" id="469">
+            <strong>Signature:</strong> TargetProfile list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L186-186" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '470', 470)" onmouseover="showTip(event, '470', 470)">
+            KnownSilverlightProfiles
+          </code>
+          <div class="tip" id="470">
+            <strong>Signature:</strong> TargetProfile list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L203-203" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '471', 471)" onmouseover="showTip(event, '471', 471)">
+            KnownTargetProfiles
+          </code>
+          <div class="tip" id="471">
+            <strong>Signature:</strong> TargetProfile list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L214-214" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '472', 472)" onmouseover="showTip(event, '472', 472)">
+            KnownWindowsPhoneSilverlightProfiles
+          </code>
+          <div class="tip" id="472">
+            <strong>Signature:</strong> TargetProfile list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L208-208" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '473', 473)" onmouseover="showTip(event, '473', 473)">
+            KnownWindowsProfiles
+          </code>
+          <div class="tip" id="473">
+            <strong>Signature:</strong> TargetProfile list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L199-199" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
