@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>List - Paket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
+
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet"/>
+
+    <link type="text/css" rel="stylesheet" href="./../content/style.css" />
+    <script type="text/javascript" src="./../content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://github.com/fsprojects/Paket">github page</a></li>
+        </ul>
+        <h3 class="muted"><a href="./../index.html">Paket</a></h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="span9" id="main">
+          
+
+
+
+<h1>List</h1>
+<div class="xmldoc">
+<p>Additional functional operators on immutable lists.</p>
+</div>
+
+<!-- Render nested types and modules, if there are any -->
+
+  <h3>Functions and values</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Function or value</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1', 1)" onmouseover="showTip(event, '1', 1)">
+            choose2(chooser list1 list2)
+          </code>
+          <div class="tip" id="1">
+            <strong>Signature:</strong> chooser:(&#39;T1 -&gt; &#39;T2 -&gt; &#39;U option) -&gt; list1:&#39;T1 list -&gt; list2:&#39;T2 list -&gt; &#39;U list<br />
+                          <strong>Type parameters:</strong> 'T1, 'T2, 'U          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L305-305" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Applies the given function pairwise to the two lists.
+Returns the list comprised of the results x for each element where
+the function returns Some(x).</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
+            choosei(chooser list)
+          </code>
+          <div class="tip" id="2">
+            <strong>Signature:</strong> chooser:(int -&gt; &#39;T -&gt; &#39;U option) -&gt; list:&#39;T list -&gt; &#39;U list<br />
+                          <strong>Type parameters:</strong> 'T, 'U          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L269-269" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Applies the given function to each element of the list.
+Returns the list comprised of the results x for each element where
+the function returns Some(x). The integer index passed to the function
+indicates the index of the element being transformed.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
+            cons(list value)
+          </code>
+          <div class="tip" id="3">
+            <strong>Signature:</strong> list:&#39;T list -&gt; value:&#39;T -&gt; &#39;T list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L36-36" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>A curried "cons" operator.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
+            contains(value set)
+          </code>
+          <div class="tip" id="4">
+            <strong>Signature:</strong> value:&#39;T -&gt; set:&#39;T list -&gt; bool<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L134-134" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Determines if a given value is contained in a list.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
+            countWith(predicate list)
+          </code>
+          <div class="tip" id="5">
+            <strong>Signature:</strong> predicate:(&#39;T -&gt; bool) -&gt; list:&#39;T list -&gt; int64<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L647-647" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Returns the number of list elements matching a given predicate.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
+            distinct(list)
+          </code>
+          <div class="tip" id="6">
+            <strong>Signature:</strong> list:&#39;T list -&gt; &#39;T list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L747-747" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Returns a new list created by keeping only the first (earliest) instance of each element.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
+            dropLast(list)
+          </code>
+          <div class="tip" id="7">
+            <strong>Signature:</strong> list:&#39;T list -&gt; &#39;T list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L156-156" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Drops the last element of a list, returning the remaining list.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
+            exactlyOne(list)
+          </code>
+          <div class="tip" id="8">
+            <strong>Signature:</strong> list:&#39;T list -&gt; &#39;T<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L731-731" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Extracts the only item in a single-item list.
+An  is raised if the list is empty or contains more than one item.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
+            foldBackPairwise(folder list state)
+          </code>
+          <div class="tip" id="9">
+            <strong>Signature:</strong> folder:(&#39;T -&gt; &#39;T -&gt; &#39;State -&gt; &#39;State) -&gt; list:&#39;T list -&gt; state:&#39;State -&gt; &#39;State<br />
+                          <strong>Type parameters:</strong> 'T, 'State          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L442-442" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Applies a function to each element of the collection and the element which
+proceeds it, threading an accumulator argument through the computation.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+            foldPairwise(folder state list)
+          </code>
+          <div class="tip" id="10">
+            <strong>Signature:</strong> folder:(&#39;State -&gt; &#39;T -&gt; &#39;T -&gt; &#39;State) -&gt; state:&#39;State -&gt; list:&#39;T list -&gt; &#39;State<br />
+                          <strong>Type parameters:</strong> 'State, 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L407-407" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Applies a function to each element of the collection and the element which
+follows it, threading an accumulator argument through the computation.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
+            indexed(list)
+          </code>
+          <div class="tip" id="11">
+            <strong>Signature:</strong> list:&#39;T list -&gt; (int * &#39;T) list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L172-172" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a new list by combining each element of the list with it's index.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
+            intersperse(value list)
+          </code>
+          <div class="tip" id="12">
+            <strong>Signature:</strong> value:&#39;T -&gt; list:&#39;T list -&gt; &#39;T list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L669-669" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a new list by inserting a value between each pair of elements in a given list.
+If the specified list contains fewer than two (2) elements, the list is returned without being modified.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
+            last(list)
+          </code>
+          <div class="tip" id="13">
+            <strong>Signature:</strong> list:&#39;T list -&gt; &#39;T<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L144-144" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Returns the last element of a list.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
+            mapPartition(partitioner list)
+          </code>
+          <div class="tip" id="14">
+            <strong>Signature:</strong> partitioner:(&#39;T -&gt; Choice&lt;&#39;U1,&#39;U2&gt;) -&gt; list:&#39;T list -&gt; &#39;U1 list * &#39;U2 list<br />
+                          <strong>Type parameters:</strong> 'T, 'U1, 'U2          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L477-477" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Splits the collection into two (2) collections, containing the elements for which the given
+function returns Choice1Of2 or Choice2Of2, respectively. This function is similar to
+List.partition, but it allows the returned collections to have different types.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
+            mapPartition3(partitioner list)
+          </code>
+          <div class="tip" id="15">
+            <strong>Signature:</strong> partitioner:(&#39;T -&gt; Choice&lt;&#39;U1,&#39;U2,&#39;U3&gt;) -&gt; list:&#39;T list -&gt; &#39;U1 list * &#39;U2 list * &#39;U3 list<br />
+                          <strong>Type parameters:</strong> 'T, 'U1, 'U2, 'U3          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L515-515" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Splits the collection into two (3) collections, containing the elements for which the given
+function returns Choice1Of3, Choice2Of3, or Choice3Of3, respectively. This function is similar
+to List.partition, but it allows the returned collections to have different types.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '16', 16)" onmouseover="showTip(event, '16', 16)">
+            ofOption(value)
+          </code>
+          <div class="tip" id="16">
+            <strong>Signature:</strong> value:&#39;T option -&gt; &#39;T list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L70-70" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Builds a list from the given option value.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '17', 17)" onmouseover="showTip(event, '17', 17)">
+            ofSet(set)
+          </code>
+          <div class="tip" id="17">
+            <strong>Signature:</strong> set:Set&lt;&#39;T&gt; -&gt; &#39;T list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L119-119" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Builds a list that contains the elements of the set in order.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '18', 18)" onmouseover="showTip(event, '18', 18)">
+            ofString(str)
+          </code>
+          <div class="tip" id="18">
+            <strong>Signature:</strong> str:string -&gt; char list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L79-79" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Builds a list from the given string.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '19', 19)" onmouseover="showTip(event, '19', 19)">
+            optcons(list value)
+          </code>
+          <div class="tip" id="19">
+            <strong>Signature:</strong> list:&#39;T list -&gt; value:&#39;T option -&gt; &#39;T list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L44-44" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>A curried "optional-cons" operator.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
+            projectKeys(projection list)
+          </code>
+          <div class="tip" id="20">
+            <strong>Signature:</strong> projection:(&#39;T -&gt; &#39;Key) -&gt; list:&#39;T list -&gt; (&#39;Key * &#39;T) list<br />
+                          <strong>Type parameters:</strong> 'T, 'Key          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L200-200" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Applies a function to each element of the array, returning a new array whose elements are
+tuples of the original element and the function result for that element.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '21', 21)" onmouseover="showTip(event, '21', 21)">
+            projectValues(projection list)
+          </code>
+          <div class="tip" id="21">
+            <strong>Signature:</strong> projection:(&#39;Key -&gt; &#39;T) -&gt; list:&#39;Key list -&gt; (&#39;Key * &#39;T) list<br />
+                          <strong>Type parameters:</strong> 'Key, 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L186-186" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Applies a function to each element of the array, returning a new array whose elements are
+tuples of the original element and the function result for that element.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '22', 22)" onmouseover="showTip(event, '22', 22)">
+            revIntoArray(list)
+          </code>
+          <div class="tip" id="22">
+            <strong>Signature:</strong> list:&#39;T list -&gt; &#39;T []<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L213-213" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Converts a list into an array (similar to List.toArray) but copies the elements into
+the array from right-to-left, so there's no need to call List.rev before List.toArray.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '23', 23)" onmouseover="showTip(event, '23', 23)">
+            revMapIntoArray(mapping list)
+          </code>
+          <div class="tip" id="23">
+            <strong>Signature:</strong> mapping:(&#39;T -&gt; &#39;U) -&gt; list:&#39;T list -&gt; &#39;U []<br />
+                          <strong>Type parameters:</strong> 'T, 'U          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L243-243" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Applies the given function to each element of a list, and copies the results into an array from right-to-left so the
+produced array represents the mapped original list in reverse order.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '24', 24)" onmouseover="showTip(event, '24', 24)">
+            singleton(value)
+          </code>
+          <div class="tip" id="24">
+            <strong>Signature:</strong> value:&#39;T -&gt; &#39;T list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L63-63" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Create a list containing the given value.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '25', 25)" onmouseover="showTip(event, '25', 25)">
+            take(count list)
+          </code>
+          <div class="tip" id="25">
+            <strong>Signature:</strong> count:int -&gt; list:&#39;T list -&gt; &#39;T list * &#39;T list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L343-343" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Takes a specified number of items from a list, returning them (as a new list) along with the remaining list.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '26', 26)" onmouseover="showTip(event, '26', 26)">
+            takeArray(count list)
+          </code>
+          <div class="tip" id="26">
+            <strong>Signature:</strong> count:int -&gt; list:&#39;T list -&gt; &#39;T [] * &#39;T list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L373-373" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Takes a specified number of items from a list, returning them (in an array) along with the remaining list.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '27', 27)" onmouseover="showTip(event, '27', 27)">
+            toSet(list)
+          </code>
+          <div class="tip" id="27">
+            <strong>Signature:</strong> list:&#39;T list -&gt; Set&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L126-126" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Builds a set that contains the same elements as the given list.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '28', 28)" onmouseover="showTip(event, '28', 28)">
+            toString(list)
+          </code>
+          <div class="tip" id="28">
+            <strong>Signature:</strong> list:char list -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L95-95" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Builds a string from the given list.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '29', 29)" onmouseover="showTip(event, '29', 29)">
+            tryHead(list)
+          </code>
+          <div class="tip" id="29">
+            <strong>Signature:</strong> list:&#39;T list -&gt; &#39;T option<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L53-53" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Attempt to retrieve the first element of the list.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '30', 30)" onmouseover="showTip(event, '30', 30)">
+            unfold(generator state)
+          </code>
+          <div class="tip" id="30">
+            <strong>Signature:</strong> generator:(&#39;State -&gt; (&#39;T * &#39;State) option) -&gt; state:&#39;State -&gt; &#39;T list<br />
+                          <strong>Type parameters:</strong> 'State, 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L558-558" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Returns a list containing the elements generated by the given computation.
+The given initial state argument is passed to the element generator, which is applied
+repeatedly until a None value is returned.
+Each call to the element generator returns a new residual state.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '31', 31)" onmouseover="showTip(event, '31', 31)">
+            unfoldBack(generator state)
+          </code>
+          <div class="tip" id="31">
+            <strong>Signature:</strong> generator:(&#39;State -&gt; (&#39;T * &#39;State) option) -&gt; state:&#39;State -&gt; &#39;T list<br />
+                          <strong>Type parameters:</strong> 'State, 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L588-588" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Returns a list containing the elements generated by the given computation.
+The given initial state argument is passed to the element generator, which is applied
+repeatedly until a None value is returned.
+Each call to the element generator returns a new residual state.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '32', 32)" onmouseover="showTip(event, '32', 32)">
+            unzipWith(mapping list)
+          </code>
+          <div class="tip" id="32">
+            <strong>Signature:</strong> mapping:(&#39;T -&gt; &#39;U * &#39;V) -&gt; list:&#39;T list -&gt; &#39;U list * &#39;V list<br />
+                          <strong>Type parameters:</strong> 'T, 'U, 'V          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L616-616" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Applies the given function to each element of the list and creates two (2) lists
+from the components of the returned tuple.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '33', 33)" onmouseover="showTip(event, '33', 33)">
+            weave(list1 list2)
+          </code>
+          <div class="tip" id="33">
+            <strong>Signature:</strong> list1:&#39;T list -&gt; list2:&#39;T list -&gt; &#39;T list<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/List.fs#L695-695" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a new list by combining two lists together in an alternating fashion.
+If either list is empty, the other list is returned without modification.</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+        </div>
+        <div class="span3">
+          <img src="./../img/logo.png" alt="F# Project" style="width:150px;margin:10px" />
+          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+            <li class="nav-header">Paket</li>
+            <li><a href="./../index.html">Home page</a></li>
+            <li class="divider"></li>
+            <li><a href="https://github.com/fsprojects/Paket/releases/latest">Download</a></li>
+            <li><a href="http://github.com/fsprojects/Paket">Source Code on GitHub</a></li>
+            <li><a href="http://nuget.org/packages/Paket">Get Library via NuGet</a></li>
+            <li><a href="http://github.com/fsprojects/Paket/issues">Report an issue</a></li>
+            <li><a href="./../license.html">License</a></li>
+            <li><a href="./../release-notes.html">Release Notes</a></li>
+
+            <li class="nav-header">Documentation</li>
+            <li><a href="./../faq.html">FAQ</a></li>
+            <li><a href="./../dependencies-file.html">paket.dependencies</a></li>
+            <li><a href="./../lock-file.html">paket.lock</a></li>
+            <li><a href="./../references-files.html">paket.references</a></li>
+            <li class="divider"></li>
+            <li><a href="./../nuget-dependencies.html">NuGet dependencies</a></li>
+            <li><a href="./../github-dependencies.html">GitHub dependencies</a></li>
+            <li><a href="./../http-dependencies.html">HTTP dependencies</a></li>
+            <li class="divider"></li>
+            <li><a href="./../reference-from-repl.html">Using Paket from F# Interactive</a></li>
+            <li class="divider"></li>
+            <li><a href="./../reference/index.html">API Reference</a></li>
+
+            <li class="nav-header">Paket commands</li>
+            <li><a href="./../paket-restore.html">paket restore</a></li>
+            <li><a href="./../paket-install.html">paket install</a></li>
+            <li><a href="./../paket-update.html">paket update</a></li>
+            <li><a href="./../paket-add.html">paket add</a></li>
+            <li><a href="./../paket-remove.html">paket remove</a></li>
+            <li class="divider"></li>
+            <li><a href="./../paket-outdated.html">paket outdated</a></li>
+            <li><a href="./../paket-simplify.html">paket simplify</a></li>
+            <li><a href="./../convert-from-nuget.html">paket convert-from-nuget</a></li>            
+            <li><a href="./../paket-init-auto-restore.html">paket init-auto-restore</a></li>
+            <li><a href="./../paket-find-refs.html">paket find-refs</a></li>
+            <li class="divider"></li>
+            <li><a href="./../paket-folder.html">.paket folder</a></li>       
+            <li><a href="./../bootstrapper.html">paket.bootstrapper.exe</a></li>
+            <li><a href="./../paket-config-file.html">paket.config</a></li>            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="http://github.com/fsprojects/Paket"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"/></a>
+  </body>
+</html>
