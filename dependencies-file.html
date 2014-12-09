@@ -135,6 +135,26 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </tr>
 </table>
 
+<h2><a name="Redirects-option" class="anchor" href="#Redirects-option">Redirects option</a></h2>
+
+<p>This option tells paket to create AssemblyBindingRedirects for all referenced libraries.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">redirects</span> <span class="i">on</span>
+<span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+
+<span class="i">nuget</span> <span class="i">UnionArgParser</span> <span class="o">~&gt;</span> <span class="n">0.7</span></pre>
+</td>
+</tr>
+</table>
+
 
         </div>
         <div class="span3">

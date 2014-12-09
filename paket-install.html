@@ -36,13 +36,15 @@
 
 <p>Ensures that all dependencies in your <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> are present in the <code>packages</code> directory and referenced correctly in all projects.</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">$ paket install [--force] [--hard]</pre></td></tr></table>
+<table class="pre"><tr><td><pre lang="batchfile">$ paket install [--force] [--hard] [--redirects]</pre></td></tr></table>
 
 <p>Options:</p>
 
 <p><code>--force</code>: Forces the download and reinstallation of all packages.</p>
 
 <p><code>--hard</code>: Replaces package references within project files even if they are not yet adhering to Paket's conventions (and hence considered manually managed). See <a href="paket-convert-from-nuget.html">convert from NuGet</a>.</p>
+
+<p><code>--redirects</code>: Creates binding redirects for the NuGet packages.</p>
 
 
         </div>
