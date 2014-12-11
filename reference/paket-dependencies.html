@@ -157,7 +157,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PublicAPI.fs#L153-153" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PublicAPI.fs#L160-160" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -176,7 +176,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PublicAPI.fs#L135-135" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PublicAPI.fs#L142-142" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -188,9 +188,28 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '270', 270)" onmouseover="showTip(event, '270', 270)">
-            GetInstalledPackages()
+            GetDirectDependencies(referencesFile)
           </code>
           <div class="tip" id="270">
+            <strong>Signature:</strong> referencesFile:ReferencesFile -&gt; (string * string) list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PublicAPI.fs#L135-135" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Returns the installed versions of all direct dependencies which are referneced in the references file</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '271', 271)" onmouseover="showTip(event, '271', 271)">
+            GetInstalledPackages()
+          </code>
+          <div class="tip" id="271">
             <strong>Signature:</strong> unit -&gt; (string * string) list<br />
                       </div>
         </td>
@@ -206,10 +225,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '271', 271)" onmouseover="showTip(event, '271', 271)">
+          <code onmouseout="hideTip(event, '272', 272)" onmouseover="showTip(event, '272', 272)">
             GetInstalledVersion(packageName)
           </code>
-          <div class="tip" id="271">
+          <div class="tip" id="272">
             <strong>Signature:</strong> packageName:string -&gt; string option<br />
                       </div>
         </td>
@@ -225,10 +244,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '272', 272)" onmouseover="showTip(event, '272', 272)">
+          <code onmouseout="hideTip(event, '273', 273)" onmouseover="showTip(event, '273', 273)">
             InitAutoRestore()
           </code>
-          <div class="tip" id="272">
+          <div class="tip" id="273">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -244,10 +263,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '273', 273)" onmouseover="showTip(event, '273', 273)">
+          <code onmouseout="hideTip(event, '274', 274)" onmouseover="showTip(event, '274', 274)">
             Install(force, hard)
           </code>
-          <div class="tip" id="273">
+          <div class="tip" id="274">
             <strong>Signature:</strong> (force:bool * hard:bool) -&gt; unit<br />
                       </div>
         </td>
@@ -263,10 +282,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '274', 274)" onmouseover="showTip(event, '274', 274)">
+          <code onmouseout="hideTip(event, '275', 275)" onmouseover="showTip(event, '275', 275)">
             Install(...)
           </code>
-          <div class="tip" id="274">
+          <div class="tip" id="275">
             <strong>Signature:</strong> (force:bool * hard:bool * withBindingRedirects:bool) -&gt; unit<br />
                       </div>
         </td>
@@ -282,34 +301,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '275', 275)" onmouseover="showTip(event, '275', 275)">
+          <code onmouseout="hideTip(event, '276', 276)" onmouseover="showTip(event, '276', 276)">
             Remove(...)
           </code>
-          <div class="tip" id="275">
+          <div class="tip" id="276">
             <strong>Signature:</strong> (package:string * force:bool * hard:bool * interactive:bool * installAfter:bool) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PublicAPI.fs#L146-146" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Removes the given package from dependencies file.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '276', 276)" onmouseover="showTip(event, '276', 276)">
-            Remove(package)
-          </code>
-          <div class="tip" id="276">
-            <strong>Signature:</strong> package:string -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PublicAPI.fs#L143-143" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PublicAPI.fs#L153-153" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -321,9 +321,28 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '277', 277)" onmouseover="showTip(event, '277', 277)">
-            Restore(force, files)
+            Remove(package)
           </code>
           <div class="tip" id="277">
+            <strong>Signature:</strong> package:string -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PublicAPI.fs#L150-150" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Removes the given package from dependencies file.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '278', 278)" onmouseover="showTip(event, '278', 278)">
+            Restore(force, files)
+          </code>
+          <div class="tip" id="278">
             <strong>Signature:</strong> (force:bool * files:string list) -&gt; unit<br />
                       </div>
         </td>
@@ -339,10 +358,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '278', 278)" onmouseover="showTip(event, '278', 278)">
+          <code onmouseout="hideTip(event, '279', 279)" onmouseover="showTip(event, '279', 279)">
             Restore(files)
           </code>
-          <div class="tip" id="278">
+          <div class="tip" id="279">
             <strong>Signature:</strong> (files:string list) -&gt; unit<br />
                       </div>
         </td>
@@ -358,10 +377,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '279', 279)" onmouseover="showTip(event, '279', 279)">
+          <code onmouseout="hideTip(event, '280', 280)" onmouseover="showTip(event, '280', 280)">
             ShowOutdated(strict, includePrereleases)
           </code>
-          <div class="tip" id="279">
+          <div class="tip" id="280">
             <strong>Signature:</strong> (strict:bool * includePrereleases:bool) -&gt; unit<br />
                       </div>
         </td>
@@ -377,15 +396,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '280', 280)" onmouseover="showTip(event, '280', 280)">
+          <code onmouseout="hideTip(event, '281', 281)" onmouseover="showTip(event, '281', 281)">
             ShowReferencesFor(packages)
           </code>
-          <div class="tip" id="280">
+          <div class="tip" id="281">
             <strong>Signature:</strong> (packages:string list) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PublicAPI.fs#L150-150" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PublicAPI.fs#L157-157" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -396,10 +415,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '281', 281)" onmouseover="showTip(event, '281', 281)">
+          <code onmouseout="hideTip(event, '282', 282)" onmouseover="showTip(event, '282', 282)">
             Simplify(interactive)
           </code>
-          <div class="tip" id="281">
+          <div class="tip" id="282">
             <strong>Signature:</strong> interactive:bool -&gt; unit<br />
                       </div>
         </td>
@@ -415,10 +434,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '282', 282)" onmouseover="showTip(event, '282', 282)">
+          <code onmouseout="hideTip(event, '283', 283)" onmouseover="showTip(event, '283', 283)">
             Simplify()
           </code>
-          <div class="tip" id="282">
+          <div class="tip" id="283">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -434,10 +453,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '283', 283)" onmouseover="showTip(event, '283', 283)">
+          <code onmouseout="hideTip(event, '284', 284)" onmouseover="showTip(event, '284', 284)">
             Update(force, hard)
           </code>
-          <div class="tip" id="283">
+          <div class="tip" id="284">
             <strong>Signature:</strong> (force:bool * hard:bool) -&gt; unit<br />
                       </div>
         </td>
@@ -453,10 +472,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '284', 284)" onmouseover="showTip(event, '284', 284)">
+          <code onmouseout="hideTip(event, '285', 285)" onmouseover="showTip(event, '285', 285)">
             Update(...)
           </code>
-          <div class="tip" id="284">
+          <div class="tip" id="285">
             <strong>Signature:</strong> (force:bool * hard:bool * withBindingRedirects:bool) -&gt; unit<br />
                       </div>
         </td>
@@ -472,10 +491,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '285', 285)" onmouseover="showTip(event, '285', 285)">
+          <code onmouseout="hideTip(event, '286', 286)" onmouseover="showTip(event, '286', 286)">
             UpdatePackage(...)
           </code>
-          <div class="tip" id="285">
+          <div class="tip" id="286">
             <strong>Signature:</strong> (package:string * version:string option * force:bool * hard:bool) -&gt; unit<br />
                       </div>
         </td>
@@ -499,10 +518,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '286', 286)" onmouseover="showTip(event, '286', 286)">
+          <code onmouseout="hideTip(event, '287', 287)" onmouseover="showTip(event, '287', 287)">
             ConvertFromNuget(...)
           </code>
-          <div class="tip" id="286">
+          <div class="tip" id="287">
             <strong>Signature:</strong> (force:bool * installAfter:bool * initAutoRestore:bool * credsMigrationMode:string option) -&gt; unit<br />
                       </div>
         </td>
@@ -518,10 +537,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '287', 287)" onmouseover="showTip(event, '287', 287)">
+          <code onmouseout="hideTip(event, '288', 288)" onmouseover="showTip(event, '288', 288)">
             Create(path)
           </code>
-          <div class="tip" id="287">
+          <div class="tip" id="288">
             <strong>Signature:</strong> path:string -&gt; Dependencies<br />
                       </div>
         </td>
@@ -537,10 +556,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '288', 288)" onmouseover="showTip(event, '288', 288)">
+          <code onmouseout="hideTip(event, '289', 289)" onmouseover="showTip(event, '289', 289)">
             Create()
           </code>
-          <div class="tip" id="288">
+          <div class="tip" id="289">
             <strong>Signature:</strong> unit -&gt; Dependencies<br />
                       </div>
         </td>
@@ -556,10 +575,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '289', 289)" onmouseover="showTip(event, '289', 289)">
+          <code onmouseout="hideTip(event, '290', 290)" onmouseover="showTip(event, '290', 290)">
             Locate(path)
           </code>
-          <div class="tip" id="289">
+          <div class="tip" id="290">
             <strong>Signature:</strong> path:string -&gt; Dependencies<br />
                       </div>
         </td>
@@ -575,10 +594,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '290', 290)" onmouseover="showTip(event, '290', 290)">
+          <code onmouseout="hideTip(event, '291', 291)" onmouseover="showTip(event, '291', 291)">
             Locate()
           </code>
-          <div class="tip" id="290">
+          <div class="tip" id="291">
             <strong>Signature:</strong> unit -&gt; Dependencies<br />
                       </div>
         </td>
