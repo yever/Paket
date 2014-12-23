@@ -31,9 +31,10 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h4><a name="0-20-0-alpha003-22-12-2014" class="anchor" href="#0-20-0-alpha003-22-12-2014">0.20.0-alpha003 - 22.12.2014</a></h4>
+<h4><a name="0-20-0-alpha004-22-12-2014" class="anchor" href="#0-20-0-alpha004-22-12-2014">0.20.0-alpha004 - 22.12.2014</a></h4>
 
 <ul>
+<li>Selective restore runs sequentially - <a href="https://github.com/fsprojects/Paket/pull/469">https://github.com/fsprojects/Paket/pull/469</a></li>
 <li>Inherit selective depencies and store the result in <code>paket.lock</code> - <a href="https://github.com/fsprojects/Paket/pull/462">https://github.com/fsprojects/Paket/pull/462</a></li>
 <li>Don't add NuGet packages twice to a references file - <a href="https://github.com/fsprojects/Paket/pull/460">https://github.com/fsprojects/Paket/pull/460</a></li>
 <li>Fallback to config auth if environment variables are empty - <a href="https://github.com/fsprojects/Paket/pull/459">https://github.com/fsprojects/Paket/pull/459</a></li>
@@ -42,6 +43,7 @@
 <li><code>&gt;= 0</code> version range simplified to empty string - <a href="https://github.com/fsprojects/Paket/pull/449">https://github.com/fsprojects/Paket/pull/449</a></li>
 <li>Extend Public API for plugin</li>
 <li>Allow to extract PackageId</li>
+<li>BUGFIX: Use Max strategy for <code>paket outdated --ingore-constraints</code> - <a href="https://github.com/fsprojects/Paket/pull/463">https://github.com/fsprojects/Paket/pull/463</a></li>
 <li>BUGFIX: Don't delete downloaded github zip file</li>
 <li>BUGFIX: Don't touch framework assemblies if not needed</li>
 <li>BUGFIX: Check versions file synchronously</li>
