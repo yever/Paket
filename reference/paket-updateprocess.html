@@ -50,15 +50,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '105', 105)" onmouseover="showTip(event, '105', 105)">
+          <code onmouseout="hideTip(event, '107', 107)" onmouseover="showTip(event, '107', 107)">
             fixOldDependencies (...)
           </code>
-          <div class="tip" id="105">
+          <div class="tip" id="107">
             <strong>Signature:</strong> dependenciesFile:DependenciesFile -&gt; oldLockFile:LockFile -&gt; DependenciesFile<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L26-26" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L23-23" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -68,11 +68,29 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '106', 106)" onmouseover="showTip(event, '106', 106)">
+          <code onmouseout="hideTip(event, '108', 108)" onmouseover="showTip(event, '108', 108)">
+            SelectiveUpdate (...)
+          </code>
+          <div class="tip" id="108">
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * force:bool) -&gt; LockFile<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L55-55" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '109', 109)" onmouseover="showTip(event, '109', 109)">
             Update (...)
           </code>
-          <div class="tip" id="106">
-            <strong>Signature:</strong> (dependenciesFileName:string * forceResolution:bool * force:bool * hard:bool * withBindingRedirects:bool) -&gt; unit<br />
+          <div class="tip" id="109">
+            <strong>Signature:</strong> (dependenciesFileName:string * force:bool * hard:bool * withBindingRedirects:bool) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -87,38 +105,20 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '107', 107)" onmouseover="showTip(event, '107', 107)">
+          <code onmouseout="hideTip(event, '110', 110)" onmouseover="showTip(event, '110', 110)">
             UpdatePackage (...)
           </code>
-          <div class="tip" id="107">
+          <div class="tip" id="110">
             <strong>Signature:</strong> (dependenciesFileName:string * packageName:PackageName * newVersion:string option * force:bool * hard:bool) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L70-70" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L67-67" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Update a single package command</p>
 
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '108', 108)" onmouseover="showTip(event, '108', 108)">
-            updateWithModifiedDependenciesFile (...)
-          </code>
-          <div class="tip" id="108">
-            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * packageName:PackageName * force:bool) -&gt; LockFile<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L58-58" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
         </td>
       </tr>
     </tbody>
