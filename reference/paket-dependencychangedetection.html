@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Requirements - Paket</title>
+    <title>DependencyChangeDetection - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -34,47 +34,11 @@
 
 
 
-<h1>Requirements</h1>
+<h1>DependencyChangeDetection</h1>
 <div class="xmldoc">
 </div>
 
 <!-- Render nested types and modules, if there are any -->
-  <h2>Nested types and modules</h2>
-  <div>
-      <table class="table table-bordered type-list">
-    <thead>
-      <tr><td>Type</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td class="type-name">
-            <a href="paket-requirements-frameworkrestriction.html">FrameworkRestriction</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="paket-requirements-frameworkrestrictions.html">FrameworkRestrictions</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="paket-requirements-packagerequirement.html">PackageRequirement</a>
-          </td>
-          <td class="xmldoc"><p>Represents an unresolved package.</p>
-</td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="paket-requirements-packagerequirementsource.html">PackageRequirementSource</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
 
   <h3>Functions and values</h3>
   <table class="table table-bordered member-list">
@@ -85,33 +49,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '136', 136)" onmouseover="showTip(event, '136', 136)">
-            findMaxDotNetRestriction restrictions
+          <code onmouseout="hideTip(event, '63', 63)" onmouseover="showTip(event, '63', 63)">
+            findChanges (dependenciesFile, lockFile)
           </code>
-          <div class="tip" id="136">
-            <strong>Signature:</strong> restrictions:FrameworkRestriction list -&gt; FrameworkIdentifier<br />
+          <div class="tip" id="63">
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * lockFile:LockFile) -&gt; PackageName list * NormalizedPackageName list<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Requirements.fs#L17-17" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '137', 137)" onmouseover="showTip(event, '137', 137)">
-            optimizeRestrictions packages
-          </code>
-          <div class="tip" id="137">
-            <strong>Signature:</strong> packages:seq&lt;PackageName * VersionRequirement * FrameworkRestrictions&gt; -&gt; (PackageName * VersionRequirement * FrameworkRestriction list) list<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Requirements.fs#L29-29" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/DependencyChangeDetection.fs#L5-5" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
