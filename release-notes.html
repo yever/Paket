@@ -34,23 +34,23 @@
 <h4><a name="0-20-0-29-12-2014" class="anchor" href="#0-20-0-29-12-2014">0.20.0 - 29.12.2014</a></h4>
 
 <ul>
-<li><code>paket install</code> performs a selective update based on the changes in the dependencies file - <a href="https://github.com/fsprojects/Paket/pull/474">https://github.com/fsprojects/Paket/pull/474</a></li>
-<li>Paket.exe acuires a lock for all write processes - <a href="https://github.com/fsprojects/Paket/pull/469">https://github.com/fsprojects/Paket/pull/469</a></li>
-<li>New command to add credentials - <a href="https://github.com/fsprojects/Paket/pull/458">https://github.com/fsprojects/Paket/pull/458</a></li>
-<li>Inherit selective dependencies and store the result in <code>paket.lock</code> - <a href="https://github.com/fsprojects/Paket/pull/462">https://github.com/fsprojects/Paket/pull/462</a></li>
-<li>Don't add NuGet packages twice to a references file - <a href="https://github.com/fsprojects/Paket/pull/460">https://github.com/fsprojects/Paket/pull/460</a></li>
-<li>Fallback to config auth if environment variables are empty - <a href="https://github.com/fsprojects/Paket/pull/459">https://github.com/fsprojects/Paket/pull/459</a></li>
-<li>Remove parsing of invalid child element of ProjectReference - <a href="https://github.com/fsprojects/Paket/pull/453">https://github.com/fsprojects/Paket/pull/453</a></li>
-<li>Better handling for multiple files from same repository - <a href="https://github.com/fsprojects/Paket/pull/451">https://github.com/fsprojects/Paket/pull/451</a></li>
-<li><code>&gt;= 0</code> version range simplified to empty string - <a href="https://github.com/fsprojects/Paket/pull/449">https://github.com/fsprojects/Paket/pull/449</a></li>
+<li><code>paket install</code> performs a selective update based on the changes in the dependencies file - <a href="http://fsprojects.github.io/Paket/lock-file.html#Performing-updates">http://fsprojects.github.io/Paket/lock-file.html#Performing-updates</a></li>
+<li>Paket.exe acquires a lock for all write processes - <a href="https://github.com/fsprojects/Paket/pull/469">https://github.com/fsprojects/Paket/pull/469</a></li>
+<li>New command to add credentials - <a href="http://fsprojects.github.io/Paket/paket-config-file.html#Add-credentials">http://fsprojects.github.io/Paket/paket-config-file.html#Add-credentials</a></li>
+<li>Smarter conditional NuGet dependencies - <a href="https://github.com/fsprojects/Paket/pull/462">https://github.com/fsprojects/Paket/pull/462</a></li>
+<li>If environment auth variables are empty a fallback to the config is used- <a href="https://github.com/fsprojects/Paket/pull/459">https://github.com/fsprojects/Paket/pull/459</a></li>
+<li>Better handling for multiple files from same GitHub repository - <a href="https://github.com/fsprojects/Paket/pull/451">https://github.com/fsprojects/Paket/pull/451</a></li>
 <li>Extend Public API for plugin</li>
-<li>Paket.exe and paket.bootstrapper.exe have a logo - <a href="https://github.com/fsprojects/Paket/pull/473">https://github.com/fsprojects/Paket/pull/473</a></li>
+<li>BUGFIX: Remove parsing of invalid child element of ProjectReference - <a href="https://github.com/fsprojects/Paket/pull/453">https://github.com/fsprojects/Paket/pull/453</a></li>
+<li>BUGFIX: Don't add NuGet packages twice to a references file - <a href="https://github.com/fsprojects/Paket/pull/460">https://github.com/fsprojects/Paket/pull/460</a></li>
 <li>BUGFIX: Use Max strategy for <code>paket outdated --ingore-constraints</code> - <a href="https://github.com/fsprojects/Paket/pull/463">https://github.com/fsprojects/Paket/pull/463</a></li>
 <li>BUGFIX: Don't delete downloaded github zip file</li>
 <li>BUGFIX: Cannot install nuget packages from local TeamCity feeds due to proxy - <a href="https://github.com/fsprojects/Paket/pull/482">https://github.com/fsprojects/Paket/pull/482</a></li>
 <li>BUGFIX: Don't touch framework assemblies if not needed</li>
 <li>BUGFIX: Check versions file synchronously</li>
 <li>BUGFIX: Restore console color after handling exception - <a href="https://github.com/fsprojects/Paket/pull/467">https://github.com/fsprojects/Paket/pull/467</a></li>
+<li>COSMETICS: <code>&gt;= 0</code> version range simplified to empty string - <a href="https://github.com/fsprojects/Paket/pull/449">https://github.com/fsprojects/Paket/pull/449</a></li>
+<li>COSMETICS: Paket.exe and paket.bootstrapper.exe have a logo - <a href="https://github.com/fsprojects/Paket/pull/473">https://github.com/fsprojects/Paket/pull/473</a></li>
 </ul>
 
 <h4><a name="0-18-0-09-12-2014" class="anchor" href="#0-18-0-09-12-2014">0.18.0 - 09.12.2014</a></h4>
