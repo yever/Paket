@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Iterator - Paket</title>
+    <title>DependencyChangeDetection - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -34,27 +34,30 @@
 
 
 
-<h1>Iterator</h1>
+<h1>DependencyChangeDetection</h1>
 <div class="xmldoc">
 </div>
-  <h3>Record Fields</h3>
+
+<!-- Render nested types and modules, if there are any -->
+
+  <h3>Functions and values</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Record Field</td><td>Description</td></tr>
+      <tr><td>Function or value</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '155', 155)" onmouseover="showTip(event, '155', 155)">
-            Dispose
+          <code onmouseout="hideTip(event, '26', 26)" onmouseover="showTip(event, '26', 26)">
+            findChangesInDependenciesFile (...)
           </code>
-          <div class="tip" id="155">
-            <strong>Signature:</strong> unit -&gt; unit<br />
+          <div class="tip" id="26">
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * lockFile:LockFile) -&gt; Set&lt;NormalizedPackageName&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L8-8" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/DependencyChangeDetection.fs#L5-5" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -64,15 +67,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '156', 156)" onmouseover="showTip(event, '156', 156)">
-            TryAdvance
+          <code onmouseout="hideTip(event, '27', 27)" onmouseover="showTip(event, '27', 27)">
+            FixUnchangedDependencies (...)
           </code>
-          <div class="tip" id="156">
-            <strong>Signature:</strong> unit -&gt; bool<br />
+          <div class="tip" id="27">
+            <strong>Signature:</strong> dependenciesFile:DependenciesFile -&gt; oldLockFile:LockFile -&gt; DependenciesFile<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/nessos/Streams/src/Streams.Core/Streams.fs#L7-7" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/DependencyChangeDetection.fs#L46-46" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
