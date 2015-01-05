@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Constants - Paket</title>
+    <title>Rop - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -34,11 +34,28 @@
 
 
 
-<h1>Constants</h1>
+<h1>Rop</h1>
 <div class="xmldoc">
 </div>
 
 <!-- Render nested types and modules, if there are any -->
+  <h2>Nested types and modules</h2>
+  <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="paket-rop-ropresult-2.html">RopResult<'TSuccess, 'TMessage></a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
 
   <h3>Functions and values</h3>
   <table class="table table-bordered member-list">
@@ -49,15 +66,72 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
-            AccessLockFileName 
+          <code onmouseout="hideTip(event, '136', 136)" onmouseover="showTip(event, '136', 136)">
+            ( &lt;!&gt; ) 
           </code>
-          <div class="tip" id="14">
-            <strong>Signature:</strong> string<br />
-                      </div>
+          <div class="tip" id="136">
+            <strong>Signature:</strong> (&#39;?6650 -&gt; &#39;?6651) -&gt; RopResult&lt;&#39;?6650,&#39;?6652&gt; -&gt; RopResult&lt;&#39;?6651,&#39;?6652&gt;<br />
+                          <strong>Type parameters:</strong> '?6650, '?6651, '?6652          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L19-19" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L74-74" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>infix version of Rop.lift</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '137', 137)" onmouseover="showTip(event, '137', 137)">
+            ( &lt;*&gt; ) 
+          </code>
+          <div class="tip" id="137">
+            <strong>Signature:</strong> RopResult&lt;(&#39;?6654 -&gt; &#39;?6655),&#39;?6656&gt; -&gt; RopResult&lt;&#39;?6654,&#39;?6656&gt; -&gt; RopResult&lt;&#39;?6655,&#39;?6656&gt;<br />
+                          <strong>Type parameters:</strong> '?6654, '?6655, '?6656          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L77-77" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>infix version of Rop.apply</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '138', 138)" onmouseover="showTip(event, '138', 138)">
+            ( &gt;&gt;= ) result f
+          </code>
+          <div class="tip" id="138">
+            <strong>Signature:</strong> result:RopResult&lt;&#39;?6646,&#39;?6647&gt; -&gt; f:(&#39;?6646 -&gt; RopResult&lt;&#39;?6648,&#39;?6647&gt;) -&gt; RopResult&lt;&#39;?6648,&#39;?6647&gt;<br />
+                          <strong>Type parameters:</strong> '?6646, '?6647, '?6648          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L71-71" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>infix version of Rop.bind</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '139', 139)" onmouseover="showTip(event, '139', 139)">
+            apply f result
+          </code>
+          <div class="tip" id="139">
+            <strong>Signature:</strong> f:RopResult&lt;(&#39;?6626 -&gt; &#39;?6627),&#39;?6628&gt; -&gt; result:RopResult&lt;&#39;?6626,&#39;?6628&gt; -&gt; RopResult&lt;&#39;?6627,&#39;?6628&gt;<br />
+                          <strong>Type parameters:</strong> '?6626, '?6627, '?6628          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L29-29" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -67,15 +141,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
-            AppDataFolder 
+          <code onmouseout="hideTip(event, '140', 140)" onmouseover="showTip(event, '140', 140)">
+            bind f result
           </code>
-          <div class="tip" id="15">
-            <strong>Signature:</strong> string<br />
-                      </div>
+          <div class="tip" id="140">
+            <strong>Signature:</strong> f:(&#39;?6622 -&gt; RopResult&lt;&#39;?6623,&#39;?6624&gt;) -&gt; result:RopResult&lt;&#39;?6622,&#39;?6624&gt; -&gt; RopResult&lt;&#39;?6623,&#39;?6624&gt;<br />
+                          <strong>Type parameters:</strong> '?6622, '?6623, '?6624          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L39-39" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L22-22" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -85,15 +159,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '16', 16)" onmouseover="showTip(event, '16', 16)">
-            DefaultNugetStream 
+          <code onmouseout="hideTip(event, '141', 141)" onmouseover="showTip(event, '141', 141)">
+            collect xs
           </code>
-          <div class="tip" id="16">
-            <strong>Signature:</strong> string<br />
-                      </div>
+          <div class="tip" id="141">
+            <strong>Signature:</strong> xs:seq&lt;RopResult&lt;&#39;?6640,&#39;?6641&gt;&gt; -&gt; RopResult&lt;&#39;?6640 list,&#39;?6641&gt;<br />
+                          <strong>Type parameters:</strong> '?6640, '?6641          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L7-7" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L57-57" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -103,15 +177,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '17', 17)" onmouseover="showTip(event, '17', 17)">
-            DependenciesFileName 
+          <code onmouseout="hideTip(event, '142', 142)" onmouseover="showTip(event, '142', 142)">
+            either fSuccess fFailure _arg1
           </code>
-          <div class="tip" id="17">
-            <strong>Signature:</strong> string<br />
-                      </div>
+          <div class="tip" id="142">
+            <strong>Signature:</strong> fSuccess:(&#39;?6615 * &#39;?6616 list -&gt; &#39;?6617) -&gt; fFailure:(&#39;?6616 list -&gt; &#39;?6617) -&gt; _arg1:RopResult&lt;&#39;?6615,&#39;?6616&gt; -&gt; &#39;?6617<br />
+                          <strong>Type parameters:</strong> '?6615, '?6616, '?6617          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L13-13" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L11-11" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -121,15 +195,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '18', 18)" onmouseover="showTip(event, '18', 18)">
-            FullProjectSourceFileName 
+          <code onmouseout="hideTip(event, '143', 143)" onmouseover="showTip(event, '143', 143)">
+            fail msg
           </code>
-          <div class="tip" id="18">
-            <strong>Signature:</strong> string<br />
-                      </div>
+          <div class="tip" id="143">
+            <strong>Signature:</strong> msg:&#39;?6612 -&gt; RopResult&lt;&#39;?6613,&#39;?6612&gt;<br />
+                          <strong>Type parameters:</strong> '?6612, '?6613          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L34-34" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L9-9" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -139,15 +213,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '19', 19)" onmouseover="showTip(event, '19', 19)">
-            LockFileName 
+          <code onmouseout="hideTip(event, '144', 144)" onmouseover="showTip(event, '144', 144)">
+            failIfNone message _arg1
           </code>
-          <div class="tip" id="19">
-            <strong>Signature:</strong> string<br />
-                      </div>
+          <div class="tip" id="144">
+            <strong>Signature:</strong> message:&#39;?6643 -&gt; _arg1:&#39;?6644 option -&gt; RopResult&lt;&#39;?6644,&#39;?6643&gt;<br />
+                          <strong>Type parameters:</strong> '?6643, '?6644          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L10-10" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L66-66" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -157,34 +231,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
-            MagicUnlistingDate 
+          <code onmouseout="hideTip(event, '145', 145)" onmouseover="showTip(event, '145', 145)">
+            failureTee f result
           </code>
-          <div class="tip" id="20">
-            <strong>Signature:</strong> DateTime<br />
-                      </div>
+          <div class="tip" id="145">
+            <strong>Signature:</strong> f:(&#39;?6637 list -&gt; unit) -&gt; result:RopResult&lt;&#39;?6638,&#39;?6637&gt; -&gt; RopResult&lt;&#39;?6638,&#39;?6637&gt;<br />
+                          <strong>Type parameters:</strong> '?6637, '?6638          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L46-46" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>The magic unpublished date is 1900-01-01T00:00:00</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '21', 21)" onmouseover="showTip(event, '21', 21)">
-            PackagesFolderName 
-          </code>
-          <div class="tip" id="21">
-            <strong>Signature:</strong> string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L25-25" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L50-50" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -194,15 +249,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '22', 22)" onmouseover="showTip(event, '22', 22)">
-            PaketConfigFile 
+          <code onmouseout="hideTip(event, '146', 146)" onmouseover="showTip(event, '146', 146)">
+            lift f result
           </code>
-          <div class="tip" id="22">
-            <strong>Signature:</strong> string<br />
-                      </div>
+          <div class="tip" id="146">
+            <strong>Signature:</strong> f:(&#39;?6630 -&gt; &#39;?6631) -&gt; result:RopResult&lt;&#39;?6630,&#39;?6632&gt; -&gt; RopResult&lt;&#39;?6631,&#39;?6632&gt;<br />
+                          <strong>Type parameters:</strong> '?6630, '?6631, '?6632          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L43-43" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L39-39" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -212,15 +267,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '23', 23)" onmouseover="showTip(event, '23', 23)">
-            PaketConfigFolder 
+          <code onmouseout="hideTip(event, '147', 147)" onmouseover="showTip(event, '147', 147)">
+            mergeMessages msgs result
           </code>
-          <div class="tip" id="23">
-            <strong>Signature:</strong> string<br />
-                      </div>
+          <div class="tip" id="147">
+            <strong>Signature:</strong> msgs:&#39;?6619 list -&gt; result:RopResult&lt;&#39;?6620,&#39;?6619&gt; -&gt; RopResult&lt;&#39;?6620,&#39;?6619&gt;<br />
+                          <strong>Type parameters:</strong> '?6619, '?6620          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L41-41" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L15-15" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -230,15 +285,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '24', 24)" onmouseover="showTip(event, '24', 24)">
-            PaketFilesFolderName 
+          <code onmouseout="hideTip(event, '148', 148)" onmouseover="showTip(event, '148', 148)">
+            succeed x
           </code>
-          <div class="tip" id="24">
-            <strong>Signature:</strong> string<br />
-                      </div>
+          <div class="tip" id="148">
+            <strong>Signature:</strong> x:&#39;?6609 -&gt; RopResult&lt;&#39;?6609,&#39;?6610&gt;<br />
+                          <strong>Type parameters:</strong> '?6609, '?6610          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L22-22" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L7-7" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -248,69 +303,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '25', 25)" onmouseover="showTip(event, '25', 25)">
-            PaketVersionFileName 
+          <code onmouseout="hideTip(event, '149', 149)" onmouseover="showTip(event, '149', 149)">
+            successTee f result
           </code>
-          <div class="tip" id="25">
-            <strong>Signature:</strong> string<br />
-                      </div>
+          <div class="tip" id="149">
+            <strong>Signature:</strong> f:(&#39;?6634 * &#39;?6635 list -&gt; unit) -&gt; result:RopResult&lt;&#39;?6634,&#39;?6635&gt; -&gt; RopResult&lt;&#39;?6634,&#39;?6635&gt;<br />
+                          <strong>Type parameters:</strong> '?6634, '?6635          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L31-31" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '26', 26)" onmouseover="showTip(event, '26', 26)">
-            ProjectDefaultNameSpace 
-          </code>
-          <div class="tip" id="26">
-            <strong>Signature:</strong> string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L37-37" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '27', 27)" onmouseover="showTip(event, '27', 27)">
-            ReferencesFile 
-          </code>
-          <div class="tip" id="27">
-            <strong>Signature:</strong> string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L16-16" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '28', 28)" onmouseover="showTip(event, '28', 28)">
-            SolutionFolderProjectGuid 
-          </code>
-          <div class="tip" id="28">
-            <strong>Signature:</strong> string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Constants.fs#L28-28" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Rop.fs#L43-43" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
