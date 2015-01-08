@@ -53,11 +53,11 @@
             FindReferencesForPackage (...)
           </code>
           <div class="tip" id="41">
-            <strong>Signature:</strong> (dependenciesFileName:string * package:PackageName) -&gt; string list<br />
+            <strong>Signature:</strong> package:PackageName -&gt; environment:PaketEnv -&gt; RopResult&lt;string list,DomainMessage&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FindReferences.fs#L9-9" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FindReferences.fs#L28-28" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -68,14 +68,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '42', 42)" onmouseover="showTip(event, '42', 42)">
-            ShowReferencesFor (...)
+            ShowReferencesFor packages environment
           </code>
           <div class="tip" id="42">
-            <strong>Signature:</strong> (dependenciesFileName:string * packages:PackageName list) -&gt; unit<br />
+            <strong>Signature:</strong> packages:seq&lt;PackageName&gt; -&gt; environment:PaketEnv -&gt; RopResult&lt;unit,DomainMessage&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FindReferences.fs#L24-24" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FindReferences.fs#L34-34" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
