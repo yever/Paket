@@ -54,11 +54,11 @@
             FindOutdated (...)
           </code>
           <div class="tip" id="39">
-            <strong>Signature:</strong> (dependenciesFileName:string * strict:bool * includingPrereleases:bool) -&gt; (PackageName * SemVerInfo * SemVerInfo) list<br />
+            <strong>Signature:</strong> strict:bool -&gt; includingPrereleases:bool -&gt; environment:PaketEnv -&gt; RopResult&lt;(PackageName * SemVerInfo * SemVerInfo) list,DomainMessage&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FindOutdated.fs#L8-8" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FindOutdated.fs#L36-36" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -73,11 +73,11 @@
             ShowOutdated (...)
           </code>
           <div class="tip" id="40">
-            <strong>Signature:</strong> (dependenciesFileName:string * strict:bool * includingPrereleases:bool) -&gt; unit<br />
+            <strong>Signature:</strong> strict:bool -&gt; includingPrereleases:bool -&gt; environment:PaketEnv -&gt; RopResult&lt;unit,DomainMessage&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FindOutdated.fs#L41-41" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FindOutdated.fs#L58-58" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
