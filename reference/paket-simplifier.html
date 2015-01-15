@@ -68,7 +68,7 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '157', 157)" onmouseover="showTip(event, '157', 157)">
-            findIndirect (...)
+            findTransitive (...)
           </code>
           <div class="tip" id="157">
             <strong>Signature:</strong> (packages:PackageName list * flatLookup:Map&lt;NormalizedPackageName,&#39;?6576&gt; * failureF:(PackageName -&gt; &#39;?6578)) -&gt; RopResult&lt;seq&lt;&#39;?6577&gt;,&#39;?6578&gt;<br />
@@ -107,7 +107,7 @@
             removePackage (...)
           </code>
           <div class="tip" id="159">
-            <strong>Signature:</strong> (packageName:PackageName * indirectPackages:seq&lt;PackageName&gt; * fileName:string * interactive:bool) -&gt; bool<br />
+            <strong>Signature:</strong> (packageName:PackageName * transitivePackages:seq&lt;PackageName&gt; * fileName:string * interactive:bool) -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">

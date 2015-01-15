@@ -225,7 +225,7 @@
 <li>Build a merged install model with all packages - <a href="https://github.com/fsprojects/Paket/issues/297">https://github.com/fsprojects/Paket/issues/297</a></li>
 <li><code>paket update</code> command allows to set a version - <a href="http://fsprojects.github.io/Paket/paket-update.html#Updating-a-single-package">http://fsprojects.github.io/Paket/paket-update.html#Updating-a-single-package</a></li>
 <li><code>paket.targets</code> is compatible with specific references files - <a href="https://github.com/fsprojects/Paket/issues/301">https://github.com/fsprojects/Paket/issues/301</a></li>
-<li>BUGFIX: Paket no longer leaves indirect dependencies in lockfile after remove command - <a href="https://github.com/fsprojects/Paket/pull/306">https://github.com/fsprojects/Paket/pull/306</a></li>
+<li>BUGFIX: Paket no longer leaves transitive dependencies in lockfile after remove command - <a href="https://github.com/fsprojects/Paket/pull/306">https://github.com/fsprojects/Paket/pull/306</a></li>
 <li>BUGFIX: Don't use "global override" for selective update process - <a href="https://github.com/fsprojects/Paket/issues/310">https://github.com/fsprojects/Paket/issues/310</a></li>
 <li>BUGFIX: Allow spaces in quoted parameter parsing - <a href="https://github.com/fsprojects/Paket/pull/311">https://github.com/fsprojects/Paket/pull/311</a></li>
 </ul>
@@ -313,7 +313,7 @@
 <li>No -D needed for Linux installer - <a href="https://github.com/fsprojects/Paket/pull/210">https://github.com/fsprojects/Paket/pull/210</a></li>
 <li>Content files like <code>_._</code>, <code>*.transform</code> and <code>*.pp</code> are ignored - <a href="https://github.com/fsprojects/Paket/issues/207">https://github.com/fsprojects/Paket/issues/207</a></li>
 <li>The <code>convert-from-nuget</code> command adds .paket folder to the sln - <a href="https://github.com/fsprojects/Paket/issues/206">https://github.com/fsprojects/Paket/issues/206</a></li>
-<li>Removed duplicate indirect dependencies from lock file - <a href="https://github.com/fsprojects/Paket/issues/200">https://github.com/fsprojects/Paket/issues/200</a></li>
+<li>Removed duplicate transitive dependencies from lock file - <a href="https://github.com/fsprojects/Paket/issues/200">https://github.com/fsprojects/Paket/issues/200</a></li>
 <li>If the package download failed Paket retries with force flag</li>
 <li>The <code>convert-from-nuget</code> commands sorts the dependencies file</li>
 <li>Use credentials from nuget.config on paket convert-from-nuget - <a href="https://github.com/fsprojects/Paket/issues/198">https://github.com/fsprojects/Paket/issues/198</a></li>

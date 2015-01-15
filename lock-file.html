@@ -56,7 +56,7 @@
 
 <p>Here we <a href="dependencies-file.html">specify dependencies</a> on the default NuGet feed's <a href="https://www.nuget.org/packages/Castle.Windsor-log4net/"><code>Castle.Windsor-log4net</code></a> and <a href="https://www.nuget.org/packages/Rx-Main/"><code>Rx-Main</code></a> packages; both these packages have dependencies on further NuGet packages.</p>
 
-<p>The <code>paket.lock</code> file records the concrete dependency resolution of all direct <em>and indirect</em> dependencies of your project:</p>
+<p>The <code>paket.lock</code> file records the concrete dependency resolution of all direct <em>and transitive</em> dependencies of your project:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l"> 1: </span>
@@ -134,7 +134,7 @@
 
 <h2><a name="Performing-updates" class="anchor" href="#Performing-updates">Performing updates</a></h2>
 
-<p>If you make changes to <a href="dependencies-file.html"><code>paket.dependencies</code></a> or you want Paket to check for newer versions of the direct and indirect dependencies as specified in <a href="dependencies-file.html"><code>paket.dependencies</code></a>, run:</p>
+<p>If you make changes to <a href="dependencies-file.html"><code>paket.dependencies</code></a> or you want Paket to check for newer versions of the direct and transitive dependencies as specified in <a href="dependencies-file.html"><code>paket.dependencies</code></a>, run:</p>
 
 <ul>
 <li><a href="paket-outdated.html"><code>paket outdated</code></a> to check for new versions, and report what's available.</li>

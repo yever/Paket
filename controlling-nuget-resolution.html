@@ -46,7 +46,7 @@
 
 <p>Paket uses the definitions from <code>paket.dependencies</code> to compute the dependency graph.</p>
 
-<p>The resolution algorithm balances direct and indirect dependencies such that you will get the <em>latest matching versions</em> of direct dependencies (defined using the <a href="#dependencies"><code>nuget</code> statement</a>) and indirect dependencies (defined by your direct dependency's <a href="http://docs.nuget.org/docs/reference/nuspec-reference">nuspec</a>). Paket checks compatibility by comparing available versions to the constraints of either source, <code>paket.dependencies</code>, or <a href="http://docs.nuget.org/docs/reference/nuspec-reference">nuspec</a>.</p>
+<p>The resolution algorithm balances direct and transitive dependencies such that you will get the <em>latest matching versions</em> of direct dependencies (defined using the <a href="#dependencies"><code>nuget</code> statement</a>) and transitive dependencies (defined by your direct dependency's <a href="http://docs.nuget.org/docs/reference/nuspec-reference">nuspec</a>). Paket checks compatibility by comparing available versions to the constraints of either source, <code>paket.dependencies</code>, or <a href="http://docs.nuget.org/docs/reference/nuspec-reference">nuspec</a>.</p>
 
 <p>As stated above, the algorithm defaults to resolving the latest versions matching the constraints.</p>
 
@@ -60,7 +60,7 @@
 
 <p>This might be due to the fact that the <a href="http://docs.nuget.org/docs/reference/nuspec-reference">nuspec file format</a> requires you to pin the dependency version using double brackets: <code>&lt;dependency id="B" version="[1.2.3]" /&gt;</code>. Many package authors made the mistake of omitting the brackets, effectively specifying <code>&gt;= 1.2.3</code> when they wanted to specify <code>= 1.2.3</code>. Newer releases of <code>B</code> package might still work together with <code>A</code> using <a href="http://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx">assembly binding redirects</a>, a feature of .NET that the authors of Paket are not very fond of. Even if you are OK with binding redirects, what would happen after <code>B</code> <code>2.0</code> is released? If you assume that <code>B</code> follows <a href="http://semver.org">SemVer</a>, the <code>2.0</code> version, by definition, <strong>will</strong> have breaking changes. NuGet will allow the update regardless, giving the false impression that your app still works.</p>
 
-<p>To make your transition to Paket easier and to allow package authors to correct their version constraints you can have Paket behave like NuGet by using the <a href="nuget-dependencies.html#Paket-s-NuGet-style-dependency-resolution-for-indirect-dependencies">! prefix</a>.</p>
+<p>To make your transition to Paket easier and to allow package authors to correct their version constraints you can have Paket behave like NuGet by using the <a href="nuget-dependencies.html#Paket-s-NuGet-style-dependency-resolution-for-transitive-dependencies">! prefix</a>.</p>
 
 
         </div>

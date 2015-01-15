@@ -78,9 +78,9 @@
 <li>External HTTP-resource, e.g. <a href="http://www.fssnip.net/1n">1n</a> from <a href="http://www.fssnip.net/">FSSnip</a> -site.</li>
 </ul>
 
-<p>Paket uses this definition to compute a concrete dependency resolution, which also includes indirect dependencies. The resulting dependency graph is then persisted to the <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
+<p>Paket uses this definition to compute a concrete dependency resolution, which also includes transitive dependencies. The resulting dependency graph is then persisted to the <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
 
-<p>Only direct dependencies should be listed and you can use the <a href="paket-simplify.html"><code>paket simplify</code> command</a> to remove indirect dependencies.</p>
+<p>Only direct dependencies should be listed and you can use the <a href="paket-simplify.html"><code>paket simplify</code> command</a> to remove transitive dependencies.</p>
 
 <h2><a name="Sources" class="anchor" href="#Sources">Sources</a></h2>
 
@@ -94,7 +94,7 @@
 
 <h2><a name="Strict-references" class="anchor" href="#Strict-references">Strict references</a></h2>
 
-<p>Paket usually references all direct and indirect dependencies that are listed in your <a href="references-files.md">paket.references</a> files to your project file.
+<p>Paket usually references all direct and transitive dependencies that are listed in your <a href="references-files.md">paket.references</a> files to your project file.
 In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</em> dependencies.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
