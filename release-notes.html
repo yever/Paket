@@ -31,77 +31,23 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h4><a name="0-22-13-14-01-2015" class="anchor" href="#0-22-13-14-01-2015">0.22.13 - 14.01.2015</a></h4>
+<h4><a name="0-23-0-15-01-2015" class="anchor" href="#0-23-0-15-01-2015">0.23.0 - 15.01.2015</a></h4>
 
 <ul>
-<li>COSMETICS: <code>paket convert-from-nuget</code> warns if it can't find a NuGet feed - <a href="https://github.com/fsprojects/Paket/issues/548">https://github.com/fsprojects/Paket/issues/548</a></li>
-</ul>
-
-<h4><a name="0-22-12-14-01-2015" class="anchor" href="#0-22-12-14-01-2015">0.22.12 - 14.01.2015</a></h4>
-
-<ul>
+<li>Refactored <code>init</code> &amp; <code>init auto restore</code> to Railway Oriented Programming - <a href="https://github.com/fsprojects/Paket/pull/533">https://github.com/fsprojects/Paket/pull/533</a></li>
+<li>Refactored FindRefs to Railway Oriented Programming - <a href="https://github.com/fsprojects/Paket/pull/529">https://github.com/fsprojects/Paket/pull/529</a></li>
+<li>BUGFIX: paket.bootstrapper.exe and paket.exe use better proxy detection - <a href="https://github.com/fsprojects/Paket/pull/552">https://github.com/fsprojects/Paket/pull/552</a></li>
 <li>BUGFIX: <code>paket add</code> offered to add dependencies even when they are already added - <a href="https://github.com/fsprojects/Paket/issues/550">https://github.com/fsprojects/Paket/issues/550</a></li>
-</ul>
-
-<h4><a name="0-22-11-14-01-2015" class="anchor" href="#0-22-11-14-01-2015">0.22.11 - 14.01.2015</a></h4>
-
-<ul>
 <li>BUGFIX: Detect <code>Net20-client</code> - <a href="https://github.com/fsprojects/Paket/issues/547">https://github.com/fsprojects/Paket/issues/547</a></li>
-</ul>
-
-<h4><a name="0-22-10-13-01-2015" class="anchor" href="#0-22-10-13-01-2015">0.22.10 - 13.01.2015</a></h4>
-
-<ul>
 <li>BUGFIX: Give better error message when package is not found in a local feed - <a href="https://github.com/fsprojects/Paket/issues/545">https://github.com/fsprojects/Paket/issues/545</a></li>
-</ul>
-
-<h4><a name="0-22-9-09-01-2015" class="anchor" href="#0-22-9-09-01-2015">0.22.9 - 09.01.2015</a></h4>
-
-<ul>
 <li>BUGFIX: Don't download gists that are up-to-date - <a href="https://github.com/fsprojects/Paket/issues/513">https://github.com/fsprojects/Paket/issues/513</a></li>
-</ul>
-
-<h4><a name="0-22-8-09-01-2015" class="anchor" href="#0-22-8-09-01-2015">0.22.8 - 09.01.2015</a></h4>
-
-<ul>
 <li>BUGFIX: fix parsing of longer http links - <a href="https://github.com/fsprojects/Paket/pull/536">https://github.com/fsprojects/Paket/pull/536</a></li>
-</ul>
-
-<h4><a name="0-22-7-09-01-2015" class="anchor" href="#0-22-7-09-01-2015">0.22.7 - 09.01.2015</a></h4>
-
-<ul>
-<li>Refactored <code>init</code> &amp; <code>init auto restore</code> to Railwal Oriented Programming - <a href="https://github.com/fsprojects/Paket/pull/533">https://github.com/fsprojects/Paket/pull/533</a></li>
-</ul>
-
-<h4><a name="0-22-6-08-01-2015" class="anchor" href="#0-22-6-08-01-2015">0.22.6 - 08.01.2015</a></h4>
-
-<ul>
-<li>Refactored FindRefs to Railwal Oriented Programming - <a href="https://github.com/fsprojects/Paket/pull/529">https://github.com/fsprojects/Paket/pull/529</a></li>
-</ul>
-
-<h4><a name="0-22-5-08-01-2015" class="anchor" href="#0-22-5-08-01-2015">0.22.5 - 08.01.2015</a></h4>
-
-<ul>
-<li>COSMETICS: Config file is only saved when needed</li>
-</ul>
-
-<h4><a name="0-22-4-07-01-2015" class="anchor" href="#0-22-4-07-01-2015">0.22.4 - 07.01.2015</a></h4>
-
-<ul>
-<li>COSMETICS: Ignore completely empty lib folders</li>
-</ul>
-
-<h4><a name="0-22-2-06-01-2015" class="anchor" href="#0-22-2-06-01-2015">0.22.2 - 06.01.2015</a></h4>
-
-<ul>
 <li>BUGFIX: Detect correct <code>paket.references</code> filenames during convert-from-nuget</li>
 <li>BUGFIX: If no package source is found during convert-from-nuget we use the default NuGet feed</li>
-</ul>
-
-<h4><a name="0-22-1-05-01-2015" class="anchor" href="#0-22-1-05-01-2015">0.22.1 - 05.01.2015</a></h4>
-
-<ul>
-<li>Remove icon from bootstrapper to make impact smaller</li>
+<li>COSMETICS: Config file is only saved when needed</li>
+<li>COSMETICS: Ignore completely empty lib folders</li>
+<li>COSMETICS: <code>paket convert-from-nuget</code> warns if it can't find a NuGet feed - <a href="https://github.com/fsprojects/Paket/issues/548">https://github.com/fsprojects/Paket/issues/548</a></li>
+<li>COSMETICS: Remove icon from bootstrapper to make file size much smaller</li>
 </ul>
 
 <h4><a name="0-22-0-05-01-2015" class="anchor" href="#0-22-0-05-01-2015">0.22.0 - 05.01.2015</a></h4>

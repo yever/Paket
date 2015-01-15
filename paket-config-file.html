@@ -40,12 +40,14 @@
 <span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
+<span class="l">4: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">AppDataFolder</span> <span class="o">=</span> <span class="i">Environment</span><span class="o">.</span><span class="i">GetFolderPath</span>(<span class="i">Environment</span><span class="o">.</span><span class="i">SpecialFolder</span><span class="o">.</span><span class="i">ApplicationData</span>)
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">PaketConfigFolder</span> <span class="o">=</span> <span class="i">Path</span><span class="o">.</span><span class="i">Combine</span>(<span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">AppDataFolder</span>, <span class="s">&quot;</span><span class="s">Paket</span><span class="s">&quot;</span>)
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="i">PaketConfigFile</span> <span class="o">=</span> <span class="i">Path</span><span class="o">.</span><span class="i">Combine</span>(<span onmouseout="hideTip(event, 'fs2', 5)" onmouseover="showTip(event, 'fs2', 5)" class="i">PaketConfigFolder</span>, <span class="s">&quot;</span><span class="s">paket</span><span class="s">.</span><span class="s">config</span><span class="s">&quot;</span>)</pre>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="i">PaketConfigFile</span> <span class="o">=</span> <span class="i">Path</span><span class="o">.</span><span class="i">Combine</span>(<span onmouseout="hideTip(event, 'fs2', 5)" onmouseover="showTip(event, 'fs2', 5)" class="i">PaketConfigFolder</span>, <span class="s">&quot;</span><span class="s">paket</span><span class="s">.</span><span class="s">config</span><span class="s">&quot;</span>)
+</pre>
 </td>
 </tr>
 </table>
@@ -56,10 +58,12 @@
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
+<span class="l">2: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">paket</span> <span class="i">config</span> <span class="i">add</span><span class="o">-</span><span class="i">credentials</span> <span class="i">http</span><span class="o">:</span><span class="c">//myserver.com/myfeed</span></pre>
+<span class="i">paket</span> <span class="i">config</span> <span class="i">add</span><span class="o">-</span><span class="i">credentials</span> <span class="i">http</span><span class="o">:</span><span class="c">//myserver.com/myfeed</span>
+</pre>
 </td>
 </tr>
 </table>

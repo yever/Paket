@@ -80,7 +80,8 @@ In fact our current model would not be able to work consistently alongside an <c
 foreach ($fontFile in $project.ProjectItems.Item(&quot;fonts&quot;).ProjectItems)
 {
     $fontFile.Properties.Item(&quot;BuildAction&quot;).Value = 2;        
-}</pre></td></tr></table>
+}
+</pre></td></tr></table>
 
 <p>The reason is simply that even if we would support PowerShell on Windows we can't access the Visual Studio project system. Paket is a command line tool and doesn't run inside of Visual Studio.
 There is no reasonable way to make this work – and even NuGet.exe can't do it in command line mode.</p>

@@ -139,10 +139,10 @@ Until the user pressed y or n.</p>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '172', 172)" onmouseover="showTip(event, '172', 172)">
-            createWebClient auth
+            createWebClient (url, auth)
           </code>
           <div class="tip" id="172">
-            <strong>Signature:</strong> auth:Auth option -&gt; WebClient<br />
+            <strong>Signature:</strong> (url:string * auth:Auth option) -&gt; WebClient<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -157,27 +157,9 @@ Until the user pressed y or n.</p>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '173', 173)" onmouseover="showTip(event, '173', 173)">
-            defaultProxy 
-          </code>
-          <div class="tip" id="173">
-            <strong>Signature:</strong> WebProxy<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L73-73" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '174', 174)" onmouseover="showTip(event, '174', 174)">
             downloadFileSync url fileName client
           </code>
-          <div class="tip" id="174">
+          <div class="tip" id="173">
             <strong>Signature:</strong> url:string -&gt; fileName:string -&gt; client:WebClient -&gt; RopResult&lt;unit,DomainMessage&gt;<br />
                       </div>
         </td>
@@ -192,10 +174,10 @@ Until the user pressed y or n.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '175', 175)" onmouseover="showTip(event, '175', 175)">
+          <code onmouseout="hideTip(event, '174', 174)" onmouseover="showTip(event, '174', 174)">
             downloadStringSync url client
           </code>
-          <div class="tip" id="175">
+          <div class="tip" id="174">
             <strong>Signature:</strong> url:string -&gt; client:WebClient -&gt; RopResult&lt;string,DomainMessage&gt;<br />
                       </div>
         </td>
@@ -210,10 +192,10 @@ Until the user pressed y or n.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '176', 176)" onmouseover="showTip(event, '176', 176)">
+          <code onmouseout="hideTip(event, '175', 175)" onmouseover="showTip(event, '175', 175)">
             FindAllFiles (folder, pattern)
           </code>
-          <div class="tip" id="176">
+          <div class="tip" id="175">
             <strong>Signature:</strong> (folder:string * pattern:string) -&gt; FileInfo []<br />
                       </div>
         </td>
@@ -224,6 +206,24 @@ Until the user pressed y or n.</p>
             </a>
           <p>Gets all files with the given pattern</p>
 
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '176', 176)" onmouseover="showTip(event, '176', 176)">
+            getDefaultProxyFor url
+          </code>
+          <div class="tip" id="176">
+            <strong>Signature:</strong> url:string -&gt; WebProxy<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L73-73" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
         </td>
       </tr>
       <tr>
