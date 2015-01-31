@@ -302,6 +302,24 @@ It's also possible to provide login information for private NuGet feeds:
 </tr>
 </table>
 
+<h3><a name="Framework-restricitons" class="anchor" href="#Framework-restricitons">Framework restricitons</a></h3>
+
+<p>Sometimes you don't want to generate dependencies for older framework versions. You can control this in the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">nuget</span> <span class="i">Example</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">2.0</span> <span class="i">framework</span><span class="o">:</span> <span class="i">net35</span>, <span class="i">net40</span>  <span class="c">// .NET 3.5 and .NET 4.0</span>
+<span class="i">nuget</span> <span class="i">Example</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">2.0</span> <span class="i">framework</span><span class="o">:</span> <span class="o">&gt;</span><span class="o">=</span> <span class="i">net45</span>      <span class="c">// .NET 4.5 and above</span>
+</pre>
+</td>
+</tr>
+</table>
+
 <h3><a name="Paket-s-NuGet-style-dependency-resolution-for-transitive-dependencies" class="anchor" href="#Paket-s-NuGet-style-dependency-resolution-for-transitive-dependencies">Paket's NuGet-style dependency resolution for transitive dependencies</a></h3>
 
 <p>NuGet's dependency syntax led to a lot of incompatible packages on Nuget.org (<a href="controlling-nuget-resolution.html">read more</a>). To make your transition to Paket easier and to allow package authors to correct their version constraints you can have Paket behave like NuGet when resolving transitive dependencies (i.e. defaulting to lowest matching versions).</p>
