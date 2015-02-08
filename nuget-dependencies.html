@@ -46,7 +46,7 @@
 
 <h3><a name="NuGet-feeds" class="anchor" href="#NuGet-feeds">NuGet feeds</a></h3>
 
-<p>Paket supports NuGet feeds like those provided by <a href="http://www.nuget.org">nuget.org</a> or <a href="http://www.jetbrains.com/teamcity/">TeamCity</a>.</p>
+<p>Paket supports NuGet feeds like those provided by <a href="http://www.nuget.org">nuget.org</a>, <a href="https://www.myget.org/">MyGet</a> or <a href="http://www.jetbrains.com/teamcity/">TeamCity</a>.</p>
 
 <p>Please note that you need to specify all NuGet sources, including the default feed from <a href="http://www.nuget.org">nuget.org</a>. Paket does not take the current machine's NuGet Package Sources configuration (that you set up e.g. using Visual Studio) into account.</p>
 
@@ -92,7 +92,7 @@ It's also possible to provide login information for private NuGet feeds:
 
 <p><code>%PRIVATE_FEED_USER%</code> and <code>%PRIVATE_FEED_PASS%</code> will be expanded with the contents of your <code>PRIVATE_FEED_USER</code> and <code>PRIVATE_FEED_PASS</code> environment variables.</p>
 
-<p>The <a href="lock-file.html">paket.lock</a> will also reflect these settings.</p>
+<p>The <a href="lock-file.html"><code>paket.lock</code> file</a> will also reflect these settings.</p>
 
 <h3><a name="Path-sources" class="anchor" href="#Path-sources">Path sources</a></h3>
 
@@ -284,7 +284,7 @@ It's also possible to provide login information for private NuGet feeds:
 <td class="snippet"><pre class="fssnip">
 <span class="i">nuget</span> <span class="i">Example</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">1.2</span><span class="o">.</span><span class="n">3</span> <span class="i">alpha</span>      <span class="c">// at least 1.2.3 including alpha versions</span>
 <span class="i">nuget</span> <span class="i">Example</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">2</span> <span class="i">beta</span> <span class="i">rc</span>        <span class="c">// at least 2.0 including rc and beta versions</span>
-<span class="i">nuget</span> <span class="i">Example</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">3</span> <span class="i">rc</span>             <span class="c">// at least 3.0 but including rc versions </span>
+<span class="i">nuget</span> <span class="i">Example</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">3</span> <span class="i">rc</span>             <span class="c">// at least 3.0 but including rc versions</span>
 <span class="i">nuget</span> <span class="i">Example</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">3</span> <span class="i">prerelease</span>     <span class="c">// at least 3.0 but including all prerelease versions</span>
 </pre>
 </td>

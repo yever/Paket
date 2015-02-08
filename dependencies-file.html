@@ -39,26 +39,40 @@
 <p>To give you an overview, consider the following <code>paket.dependencies</code> file:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-<span class="l">6: </span>
-<span class="l">7: </span>
-<span class="l">8: </span>
-<span class="l">9: </span>
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
+<span class="c">// NuGet packages</span>
 <span class="i">nuget</span> <span class="i">NUnit</span> <span class="o">~&gt;</span> <span class="n">2.6</span><span class="o">.</span><span class="n">3</span>
 <span class="i">nuget</span> <span class="i">FAKE</span> <span class="o">~&gt;</span> <span class="n">3.4</span>
 <span class="i">nuget</span> <span class="i">DotNetZip</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">1.9</span>
 <span class="i">nuget</span> <span class="i">SourceLink</span><span class="o">.</span><span class="i">Fake</span>
+
+<span class="c">// Files from GitHub repositories</span>
 <span class="i">github</span> <span class="i">forki</span><span class="o">/</span><span class="i">FsUnit</span> <span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span>
+
+<span class="c">// Gist files</span>
 <span class="i">gist</span> <span class="i">Thorium</span><span class="o">/</span><span class="n">1972349</span> <span class="i">timestamp</span><span class="o">.</span><span class="i">fs</span>
+
+<span class="c">// HTTP resources</span>
 <span class="i">http</span> <span class="i">http</span><span class="o">:</span><span class="c">//www.fssnip.net/1n decrypt.fs</span>
 </pre>
 </td>
@@ -73,8 +87,8 @@
 <li><a href="http://dotnetzip.codeplex.com/">DotNetZip</a> with version which is at <a href="http://fsprojects.github.io/Paket/nuget-dependencies.html#Greater-than-or-equal-version-constraint">least 1.9</a></li>
 <li><a href="https://github.com/ctaggart/SourceLink">SourceLink.Fake</a> in the latest version</li>
 <li><a href="https://github.com/forki/FsUnit">FSUnit.fs</a> from GitHub.</li>
-<li>Gist number <a href="https://gist.github.com/Thorium/1972349">1972349</a> from GitHub Gist.</li>
-<li>External HTTP-resource, e.g. <a href="http://www.fssnip.net/1n">1n</a> from <a href="http://www.fssnip.net/">FSSnip</a> -site.</li>
+<li>Gist number <a href="https://gist.github.com/Thorium/1972349">1972349</a> from GitHub Gist</li>
+<li>External HTTP resource, e.g. <a href="http://www.fssnip.net/1n">1n</a> from <a href="http://www.fssnip.net/">FSSnip</a></li>
 </ul>
 
 <p>Paket uses this definition to compute a concrete dependency resolution, which also includes transitive dependencies. The resulting dependency graph is then persisted to the <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
@@ -93,7 +107,7 @@
 
 <h2><a name="Strict-references" class="anchor" href="#Strict-references">Strict references</a></h2>
 
-<p>Paket usually references all direct and transitive dependencies that are listed in your <a href="references-files.md">paket.references</a> files to your project file.
+<p>Paket usually references all direct and transitive dependencies that are listed in your <a href="references-files.md"><code>paket.references</code> files</a> to your project file.
 In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</em> dependencies.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
@@ -140,7 +154,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 
 <h2><a name="Redirects-option" class="anchor" href="#Redirects-option">Redirects option</a></h2>
 
-<p>This option tells paket to create AssemblyBindingRedirects for all referenced libraries.</p>
+<p>This option tells paket to create <a href="https://msdn.microsoft.com/en-us/library/433ysdt1(v=vs.110).aspx">Assembly Binding Redirects</a> for all referenced libraries.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
@@ -158,6 +172,10 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </td>
 </tr>
 </table>
+
+<h2><a name="Comments" class="anchor" href="#Comments">Comments</a></h2>
+
+<p>All lines starting with with <code>//</code> or <code>#</code> are considered comments.</p>
 
 
         </div>
