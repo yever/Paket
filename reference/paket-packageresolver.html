@@ -131,9 +131,27 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '105', 105)" onmouseover="showTip(event, '105', 105)">
-            cleanupNames model
+            calcOpenRequirements (...)
           </code>
           <div class="tip" id="105">
+            <strong>Signature:</strong> (exploredPackage:ResolvedPackage * versionToExplore:SemVerInfo * dependency:PackageRequirement * closed:Set&lt;PackageRequirement&gt; * stillOpen:Set&lt;PackageRequirement&gt;) -&gt; Set&lt;PackageRequirement&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L117-117" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '106', 106)" onmouseover="showTip(event, '106', 106)">
+            cleanupNames model
+          </code>
+          <div class="tip" id="106">
             <strong>Signature:</strong> model:PackageResolution -&gt; PackageResolution<br />
                       </div>
         </td>
@@ -148,15 +166,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '106', 106)" onmouseover="showTip(event, '106', 106)">
+          <code onmouseout="hideTip(event, '107', 107)" onmouseover="showTip(event, '107', 107)">
             Resolve (...)
           </code>
-          <div class="tip" id="106">
+          <div class="tip" id="107">
             <strong>Signature:</strong> (getVersionsF:(PackageSource list * PackageName -&gt; SemVerInfo list) * getPackageDetailsF:(PackageSource list -&gt; PackageName -&gt; SemVerInfo -&gt; PackageDetails) * rootDependencies:PackageRequirement list) -&gt; ResolvedPackages<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L122-122" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L148-148" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
