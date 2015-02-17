@@ -47,6 +47,13 @@
 
 <p><code>--hard</code>: Replaces package references within project files even if they are not yet adhering to to Paket's conventions (and hence considered manually managed). See <a href="paket-convert-from-nuget.html">convert from NuGet</a>.</p>
 
+<h2><a name="Adding-to-a-single-project" class="anchor" href="#Adding-to-a-single-project">Adding to a single project</a></h2>
+
+<p>It's also possible to add a package to a specified project only:</p>
+
+<table class="pre"><tr><td><pre lang="batchfile">$ paket add nuget PACKAGENAME [version VERSION] [project PROJECT] [--force] [--hard]
+</pre></td></tr></table>
+
 <p>See also <a href="paket-remove.html">paket remove</a>.</p>
 
 <h2><a name="Sample" class="anchor" href="#Sample">Sample</a></h2>
