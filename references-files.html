@@ -106,6 +106,23 @@
 </tr>
 </table>
 
+<h3><a name="Framework-restrictions" class="anchor" href="#Framework-restrictions">Framework restrictions</a></h3>
+
+<p>Sometimes you don't want to generate dependencies for older framework versions. You can control this in the <a href="nuget-dependencies.html#Framework-restrictions"><code>paket.dependencies</code> file</a> or via the <code>framework</code> switch:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span> <span class="i">framework</span><span class="o">:</span> <span class="i">net35</span>, <span class="i">net40</span>  <span class="c">// .NET 3.5 and .NET 4.0</span>
+<span class="i">DotNetZip</span> <span class="i">framework</span><span class="o">:</span> <span class="o">&gt;</span><span class="o">=</span> <span class="i">net45</span>      <span class="c">// .NET 4.5 and above</span>
+</pre>
+</td>
+</tr>
+</table>
+
 <h2><a name="File-name-conventions" class="anchor" href="#File-name-conventions">File name conventions</a></h2>
 
 <p>If Paket finds <code>paket.references</code> in a folder, the dependencies it specifies will be added to all MSBuild projects in that folder.</p>
