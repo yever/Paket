@@ -134,7 +134,7 @@
             calcOpenRequirements (...)
           </code>
           <div class="tip" id="106">
-            <strong>Signature:</strong> (exploredPackage:ResolvedPackage * versionToExplore:SemVerInfo * dependency:PackageRequirement * closed:Set&lt;PackageRequirement&gt; * stillOpen:Set&lt;PackageRequirement&gt;) -&gt; Set&lt;PackageRequirement&gt;<br />
+            <strong>Signature:</strong> (exploredPackage:ResolvedPackage * globalFrameworkRestrictions:FrameworkRestriction list * versionToExplore:SemVerInfo * dependency:PackageRequirement * closed:Set&lt;PackageRequirement&gt; * stillOpen:Set&lt;PackageRequirement&gt;) -&gt; Set&lt;PackageRequirement&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -170,7 +170,7 @@
             Resolve (...)
           </code>
           <div class="tip" id="108">
-            <strong>Signature:</strong> (getVersionsF:(PackageSource list * PackageName -&gt; SemVerInfo list) * getPackageDetailsF:(PackageSource list -&gt; PackageName -&gt; SemVerInfo -&gt; PackageDetails) * rootDependencies:PackageRequirement list) -&gt; ResolvedPackages<br />
+            <strong>Signature:</strong> (getVersionsF:(PackageSource list * PackageName -&gt; SemVerInfo list) * getPackageDetailsF:(PackageSource list -&gt; PackageName -&gt; SemVerInfo -&gt; PackageDetails) * globalFrameworkRestrictions:FrameworkRestriction list * rootDependencies:PackageRequirement list) -&gt; ResolvedPackages<br />
                       </div>
         </td>
         <td class="xmldoc">

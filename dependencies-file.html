@@ -105,7 +105,9 @@
 <li><a href="http-dependencies.html">HTTP</a> (any single file from any site without version control)</li>
 </ul>
 
-<h2><a name="Strict-references" class="anchor" href="#Strict-references">Strict references</a></h2>
+<h2><a name="Global-options" class="anchor" href="#Global-options">Global options</a></h2>
+
+<h3><a name="Strict-references" class="anchor" href="#Strict-references">Strict references</a></h3>
 
 <p>Paket usually references all direct and transitive dependencies that are listed in your <a href="references-files.md"><code>paket.references</code> files</a> to your project file.
 In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</em> dependencies.</p>
@@ -129,7 +131,28 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </tr>
 </table>
 
-<h2><a name="No-content-option" class="anchor" href="#No-content-option">No content option</a></h2>
+<h3><a name="Framework-restrictions" class="anchor" href="#Framework-restrictions">Framework restrictions</a></h3>
+
+<p>Sometimes you don't want to generate dependencies for older framework versions. You can control this in the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">framework</span><span class="o">:</span> <span class="i">net35</span>, <span class="i">net40</span>
+<span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+
+<span class="i">nuget</span> <span class="i">Example</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">2.0</span> <span class="c">// only .NET 3.5 and .NET 4.0</span>
+</pre>
+</td>
+</tr>
+</table>
+
+<h3><a name="No-content-option" class="anchor" href="#No-content-option">No content option</a></h3>
 
 <p>This option disables the installation of any content files:</p>
 
@@ -152,7 +175,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </tr>
 </table>
 
-<h2><a name="import_targets-settings" class="anchor" href="#import_targets-settings">import_targets settings</a></h2>
+<h3><a name="import_targets-settings" class="anchor" href="#import_targets-settings">import_targets settings</a></h3>
 
 <p>If you don't want to import <code>.targets</code> and <code>.props</code> files you can disable it via the <code>import_targets</code> switch:</p>
 
@@ -175,7 +198,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </tr>
 </table>
 
-<h2><a name="copy_local-settings" class="anchor" href="#copy_local-settings">copy_local settings</a></h2>
+<h3><a name="copy_local-settings" class="anchor" href="#copy_local-settings">copy_local settings</a></h3>
 
 <p>It's possible to influence the <code>Private</code> property for references via the <code>copy_local</code> switch:</p>
 
@@ -196,7 +219,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </tr>
 </table>
 
-<h2><a name="Redirects-option" class="anchor" href="#Redirects-option">Redirects option</a></h2>
+<h3><a name="Redirects-option" class="anchor" href="#Redirects-option">Redirects option</a></h3>
 
 <p>This option tells paket to create <a href="https://msdn.microsoft.com/en-us/library/433ysdt1(v=vs.110).aspx">Assembly Binding Redirects</a> for all referenced libraries.</p>
 
