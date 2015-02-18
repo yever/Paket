@@ -308,6 +308,25 @@ It's also possible to provide login information for private NuGet feeds:
 </tr>
 </table>
 
+<h2><a name="copy_local-settings" class="anchor" href="#copy_local-settings">copy_local settings</a></h2>
+
+<p>It's possible to influence the <code>Private</code> property for references in project files:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+
+<span class="i">nuget</span> <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span> <span class="i">copy_local</span><span class="o">:</span> <span class="k">false</span>
+</pre>
+</td>
+</tr>
+</table>
+
 <h2><a name="import_targets-settings" class="anchor" href="#import_targets-settings">import_targets settings</a></h2>
 
 <p>If you don't want to import <code>.targets</code> and <code>.props</code> files you can disable it via the <code>import_targets</code> switch:</p>
