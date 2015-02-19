@@ -121,7 +121,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">references</span> <span class="i">strict</span>
+<span class="i">references</span><span class="o">:</span> <span class="i">strict</span>
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span> <span class="o">~&gt;</span> <span class="n">6.0</span>
@@ -165,7 +165,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">content</span> <span class="i">none</span>
+<span class="i">content</span><span class="o">:</span> <span class="i">none</span>
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span class="i">jQuery</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">0</span> <span class="c">// we don&#39;t install jQuery content files</span>
@@ -188,7 +188,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">import_targets</span> <span class="k">false</span>
+<span class="i">import_targets</span><span class="o">:</span> <span class="k">false</span>
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span><span class="o">.</span><span class="i">Build</span> <span class="c">// we don&#39;t import .targets and .props</span>
@@ -210,7 +210,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">copy_local</span> <span class="k">false</span>
+<span class="i">copy_local</span><span class="o">:</span> <span class="k">false</span>
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span>
@@ -231,7 +231,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">redirects</span> <span class="i">on</span>
+<span class="i">redirects</span><span class="o">:</span> <span class="i">on</span>
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span class="i">UnionArgParser</span> <span class="o">~&gt;</span> <span class="n">0.7</span>
@@ -265,6 +265,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
             <li><a href="./dependencies-file.html">paket.dependencies</a></li>
             <li><a href="./lock-file.html">paket.lock</a></li>
             <li><a href="./references-files.html">paket.references</a></li>
+            <li><a href="./template-files.html">paket.template</a></li>
             <li class="divider"></li>
             <li><a href="./nuget-dependencies.html">NuGet dependencies</a></li>
             <li><a href="./github-dependencies.html">GitHub dependencies</a></li>
@@ -275,18 +276,19 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
             <li><a href="./reference/index.html">API Reference</a></li>
 
             <li class="nav-header">Paket commands</li>
-            <li><a href="./paket-init.html">paket init</a></li>
-            <li><a href="./paket-restore.html">paket restore</a></li>
-            <li><a href="./paket-install.html">paket install</a></li>
-            <li><a href="./paket-update.html">paket update</a></li>
             <li><a href="./paket-add.html">paket add</a></li>
-            <li><a href="./paket-remove.html">paket remove</a></li>
-            <li class="divider"></li>
-            <li><a href="./paket-outdated.html">paket outdated</a></li>
-            <li><a href="./paket-simplify.html">paket simplify</a></li>
-            <li><a href="./paket-convert-from-nuget.html">paket convert-from-nuget</a></li>            
             <li><a href="./paket-auto-restore.html">paket auto-restore</a></li>
-            <li><a href="./paket-find-refs.html">paket find-refs</a></li>
+            <li><a href="./paket-convert-from-nuget.html">paket convert-from-nuget</a></li>
+            <li><a href="./paket-find-refs.html">paket find-refs</a></li>            
+            <li><a href="./paket-init.html">paket init</a></li>          
+            <li><a href="./paket-install.html">paket install</a></li>
+            <li><a href="./paket-outdated.html">paket outdated</a></li>
+            <li><a href="./paket-pack.html">paket pack</a></li>
+            <li><a href="./paket-push.html">paket push</a></li>
+            <li><a href="./paket-remove.html">paket remove</a></li>
+            <li><a href="./paket-restore.html">paket restore</a></li>
+            <li><a href="./paket-simplify.html">paket simplify</a></li>            
+            <li><a href="./paket-update.html">paket update</a></li>
             <li class="divider"></li>
             <li><a href="./paket-folder.html">.paket folder</a></li>       
             <li><a href="./bootstrapper.html">paket.bootstrapper.exe</a></li>
