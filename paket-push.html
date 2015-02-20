@@ -34,18 +34,18 @@
           
 <h1><a name="paket-push" class="anchor" href="#paket-push">paket push</a></h1>
 
-<p>Push nupkg files beneath a directory</p>
+<p>Pushes all <code>.nupkg</code> files from the given directory.</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">$ paket push url https://nuget.org packagedir path/to/packages [apikey YourApiKey]
+<table class="pre"><tr><td><pre lang="batchfile">$ paket push packagedir path/to/packages [apikey YourApiKey] [url NuGetFeed]
 </pre></td></tr></table>
 
 <p>Options:</p>
 
-<p><code>url</code>: root url of the nuget repository you are pushing too</p>
-
-<p><code>packagedir</code>: a directory; every nupkg file in this directory or it's children will be pushed</p>
+<p><code>packagedir</code>: a directory; every <code>.nupkg</code> file in this directory or it's children will be pushed.</p>
 
 <p><code>apikey</code>: Optionally specify your API key on the command line. Otherwise uses the value of the <code>NugetApiKey</code> environment variable.</p>
+
+<p><code>url</code>: Optionally specify root url of the nuget repository you are pushing too. Defaults to <a href="https://nuget.org"><a href="https://nuget.org">https://nuget.org</a></a>.</p>
 
 
         </div>
