@@ -45,12 +45,11 @@ id Test.Paket.Package
   description
       description of this test package
   files
-      from src/Test.Paket.Package/bin/Debug
-      to lib
+      src/Test.Paket.Package/bin/Debug ==&gt; lib
 </pre></td></tr></table>
 
 <p>This template file will create a nupkg called <code>Test.Paket.Package.nupkg</code> with the
-contents of the <code>src/Test.Paket.Package/bin/Debug</code> directory in the lib directory
+contents of the <code>src/Test.Paket.Package/bin/Debug</code> directory in the <code>lib</code> directory
 of the package file.</p>
 
 <p>The <code>type</code> specifier must be the first line of the template file. It has two possible
@@ -157,15 +156,14 @@ to decide on the files and dependencies added.</p>
 
 <p>A files block looks like this:</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">  files
-    from relative/to/template/file
-    to folder/in/nupkg
-    from second/thing/to/pack
-    to folder/in/nupkg
+<table class="pre"><tr><td><pre lang="batchfile">files
+    relative/to/template/file ==&gt; folder/in/nupkg
+    second/thing/to/pack ==&gt; folder/in/nupkg
 </pre></td></tr></table>
 
-<p>If the from line specifies the path to a file, that file will be copied into the folder in the to line. If it
-refers to a directory, the contents of the directory will be copied into the to folder.</p>
+<p>If the source part refers to a file then it is copied into the target directory. If it
+refers to a directory, the contents of the directory will be copied into the target folder.
+If you omit the target folder, then the source is copied into the <code>lib</code> fodler of the package.</p>
 
 <p>There is currently no support for wild cards, exclusion filters or renaming during copying.</p>
 
