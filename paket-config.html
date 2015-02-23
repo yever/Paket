@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>HTTP dependencies
+    <title>paket config
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
@@ -32,60 +32,41 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="HTTP-dependencies" class="anchor" href="#HTTP-dependencies">HTTP dependencies</a></h1>
+<h1><a name="paket-config" class="anchor" href="#paket-config">paket config</a></h1>
 
-<p>Paket allows one to automatically manage the linking of files from HTTP resources into your projects.</p>
+<p>Allows to store global configuration values like NuGet credentials.</p>
 
-<h2><a name="Referencing-a-single-file" class="anchor" href="#Referencing-a-single-file">Referencing a single file</a></h2>
+<table class="pre"><tr><td><pre lang="batchfile">$ paket config [add-credentials &lt;string&gt;]
+</pre></td></tr></table>
 
-<p>You can reference a single file from a HTTP resource simply by specifying the url in the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>:</p>
+<p>Options:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">http</span> <span class="i">http</span><span class="o">:</span><span class="c">//www.fssnip.net/raw/1M/test1.fs</span>
-</pre>
-</td>
-</tr>
-</table>
+<p><code>add-credentials &lt;string&gt;</code>: Add credentials for the specified Nuget feed</p>
 
-<p>If you run the <a href="paket-update.html"><code>paket update</code> command</a>, it will add a new section to your <a href="lock-file.html"><code>paket.lock</code> file</a>:</p>
+<p>Paket will then ask for username and password.</p>
+
+<p>This credentials will be used if no username and password for the source are configured in the <a href="nuget-dependencies.html"><code>paket.dependencies</code> file</a>.</p>
+
+<p>The configuration file can be found in:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
-<span class="l">4: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">HTTP</span>
-  <span class="i">remote</span><span class="o">:</span> <span class="i">http</span><span class="o">:</span><span class="c">//www.fssnip.net/raw/1M/test1.fs</span>
-  <span class="i">specs</span><span class="o">:</span>
-    <span class="i">test1</span><span class="o">.</span><span class="i">fs</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">AppDataFolder</span> <span class="o">=</span> <span class="i">Environment</span><span class="o">.</span><span class="i">GetFolderPath</span>(<span class="i">Environment</span><span class="o">.</span><span class="i">SpecialFolder</span><span class="o">.</span><span class="i">ApplicationData</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">PaketConfigFolder</span> <span class="o">=</span> <span class="i">Path</span><span class="o">.</span><span class="i">Combine</span>(<span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">AppDataFolder</span>, <span class="s">&quot;Paket&quot;</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="i">PaketConfigFile</span> <span class="o">=</span> <span class="i">Path</span><span class="o">.</span><span class="i">Combine</span>(<span onmouseout="hideTip(event, 'fs2', 5)" onmouseover="showTip(event, 'fs2', 5)" class="i">PaketConfigFolder</span>, <span class="s">&quot;paket.config&quot;</span>)
 </pre>
 </td>
 </tr>
 </table>
 
-<p>If you want to reference the file in one of your project files then add an entry to the project's <a href="references-files.html"><code>paket.references</code> file.</a>:</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">File</span><span class="o">:</span><span class="i">test1</span><span class="o">.</span><span class="i">fs</span>
-</pre>
-</td>
-</tr>
-</table>
-
-<p>This will reference the linked file directly into your project.
-By default the linked file will be visible under <code>paket-files</code> folder in project.</p>
-
+<div class="tip" id="fs1">val AppDataFolder : obj<br /><br />Full name: paketconfig.AppDataFolder</div>
+<div class="tip" id="fs2">val PaketConfigFolder : obj<br /><br />Full name: paketconfig.PaketConfigFolder</div>
+<div class="tip" id="fs3">val PaketConfigFile : obj<br /><br />Full name: paketconfig.PaketConfigFile</div>
 
         </div>
         <div class="span3">

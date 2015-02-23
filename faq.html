@@ -90,7 +90,16 @@ There is no reasonable way to make this work – and even NuGet.exe can't do it 
 
 <h2><a name="I-m-already-using-NuGet-How-can-I-convert-to-Paket" class="anchor" href="#I-m-already-using-NuGet-How-can-I-convert-to-Paket">I'm already using NuGet. How can I convert to Paket?</a></h2>
 
-<p>The process is very easy and you can read more about it in the <a href="paket-convert-from-nuget.html">convert from NuGet</a> section.</p>
+<p>The process can be automated with <a href="paket-convert-from-nuget.html">paket convert-from-nuget</a> command.</p>
+
+<p>In case of the command's failure, you can fallback to manual approach:</p>
+
+<ol>
+<li>Analyse your <code>packages.config</code> files and extract the referenced packages into a paket.dependencies file.</li>
+<li>Convert each <code>packages.config</code> file to a paket.references file. This is very easy - you just have to remove all the XML and keep the package names.</li>
+<li>Run <a href="paket-install.html">paket install</a> with the <code>--hard</code> flag. This will analyze the dependencies, generate a paket.lock file, remove all the old package references from your project files and replace them with equivalent <code>Reference</code>s in a syntax that can be managed automatically by Paket.</li>
+<li>(Optional) Raise corresponding issue <a href="https://github.com/fsprojects/Paket/issues">here</a> so that we can make the comand even better.</li>
+</ol>
 
 <h2><a name="Why-should-I-commit-the-lock-file" class="anchor" href="#Why-should-I-commit-the-lock-file">Why should I commit the lock file?</a></h2>
 
@@ -139,6 +148,7 @@ There is no reasonable way to make this work – and even NuGet.exe can't do it 
             <li class="nav-header">Paket commands</li>
             <li><a href="./paket-add.html">paket add</a></li>
             <li><a href="./paket-auto-restore.html">paket auto-restore</a></li>
+            <li><a href="./paket-config.html">paket config</a></li>
             <li><a href="./paket-convert-from-nuget.html">paket convert-from-nuget</a></li>
             <li><a href="./paket-find-refs.html">paket find-refs</a></li>            
             <li><a href="./paket-init.html">paket init</a></li>          
@@ -153,7 +163,6 @@ There is no reasonable way to make this work – and even NuGet.exe can't do it 
             <li class="divider"></li>
             <li><a href="./paket-folder.html">.paket folder</a></li>       
             <li><a href="./bootstrapper.html">paket.bootstrapper.exe</a></li>
-            <li><a href="./paket-config-file.html">paket.config</a></li>            
           </ul>
         </div>
       </div>

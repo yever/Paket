@@ -34,17 +34,16 @@
           
 <h1><a name="paket-simplify" class="anchor" href="#paket-simplify">paket simplify</a></h1>
 
-<p>Simplifies your <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> by removing transitive dependencies.
-Does also simplify <a href="references-files.html"><code>paket.references</code> files</a>, unless <a href="dependencies-file.html#Strict-references">strict</a> mode is used.</p>
+<p>Simplifies your <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> by removing transitive dependencies.</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">$ paket simplify [-v] [--interactive]
+<table class="pre"><tr><td><pre lang="batchfile">$ paket simplify [--interactive|-i]
 </pre></td></tr></table>
 
 <p>Options:</p>
 
-<p><code>-v</code>: Verbose - output the difference in content before and after running simplify command.</p>
+<p><code>--interactive [-i]</code>: Asks to confirm to delete every transitive dependency from each of the files.</p>
 
-<p><code>--interactive</code>: Asks to confirm to delete every transitive dependency from each of the files. See <a href="paket-simplify.html#Interactive-mode">Interactive Mode</a>.</p>
+<p>Simplify will also affect <a href="references-files.html"><code>paket.references</code> files</a>, unless <a href="dependencies-file.html#Strict-references">strict</a> mode is used.</p>
 
 <h2><a name="Sample" class="anchor" href="#Sample">Sample</a></h2>
 
@@ -169,6 +168,7 @@ which will ask you to confirm before deleting a dependency from a file.</p>
             <li class="nav-header">Paket commands</li>
             <li><a href="./paket-add.html">paket add</a></li>
             <li><a href="./paket-auto-restore.html">paket auto-restore</a></li>
+            <li><a href="./paket-config.html">paket config</a></li>
             <li><a href="./paket-convert-from-nuget.html">paket convert-from-nuget</a></li>
             <li><a href="./paket-find-refs.html">paket find-refs</a></li>            
             <li><a href="./paket-init.html">paket init</a></li>          
@@ -183,7 +183,6 @@ which will ask you to confirm before deleting a dependency from a file.</p>
             <li class="divider"></li>
             <li><a href="./paket-folder.html">.paket folder</a></li>       
             <li><a href="./bootstrapper.html">paket.bootstrapper.exe</a></li>
-            <li><a href="./paket-config-file.html">paket.config</a></li>            
           </ul>
         </div>
       </div>

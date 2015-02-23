@@ -36,16 +36,16 @@
 
 <p>Pushes all <code>.nupkg</code> files from the given directory.</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">$ paket push packagedir path/to/packages [apikey YourApiKey] [url NuGetFeed]
+<table class="pre"><tr><td><pre lang="batchfile">$ paket push url &lt;string&gt; file &lt;string&gt; [apikey &lt;string&gt;]
 </pre></td></tr></table>
 
 <p>Options:</p>
 
-<p><code>packagedir</code>: a directory; every <code>.nupkg</code> file in this directory or it's children will be pushed.</p>
+<p><code>url &lt;string&gt;</code>: Url of the Nuget feed.</p>
 
-<p><code>apikey</code>: Optionally specify your API key on the command line. Otherwise uses the value of the <code>nugetkey</code> environment variable.</p>
+<p><code>file &lt;string&gt;</code>: Path to the package.</p>
 
-<p><code>url</code>: Optionally specify root url of the nuget repository you are pushing too. Defaults to <a href="https://nuget.org"><a href="https://nuget.org">https://nuget.org</a></a>.</p>
+<p><code>apikey &lt;string&gt;</code>: Optionally specify your API key on the command line. Otherwise uses the value of the <code>nugetkey</code> environment variable.</p>
 
 
         </div>
@@ -80,6 +80,7 @@
             <li class="nav-header">Paket commands</li>
             <li><a href="./paket-add.html">paket add</a></li>
             <li><a href="./paket-auto-restore.html">paket auto-restore</a></li>
+            <li><a href="./paket-config.html">paket config</a></li>
             <li><a href="./paket-convert-from-nuget.html">paket convert-from-nuget</a></li>
             <li><a href="./paket-find-refs.html">paket find-refs</a></li>            
             <li><a href="./paket-init.html">paket init</a></li>          
@@ -94,7 +95,6 @@
             <li class="divider"></li>
             <li><a href="./paket-folder.html">.paket folder</a></li>       
             <li><a href="./bootstrapper.html">paket.bootstrapper.exe</a></li>
-            <li><a href="./paket-config-file.html">paket.config</a></li>            
           </ul>
         </div>
       </div>
