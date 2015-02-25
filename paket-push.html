@@ -36,7 +36,7 @@
 
 <p>Pushes all <code>.nupkg</code> files from the given directory.</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">$ paket push url &lt;string&gt; file &lt;string&gt; [apikey &lt;string&gt;]
+<table class="pre"><tr><td><pre lang="batchfile">$ paket push url &lt;string&gt; file &lt;string&gt; [apikey &lt;string&gt;] [endpoint &lt;string&gt;]
 </pre></td></tr></table>
 
 <p>Options:</p>
@@ -46,6 +46,8 @@
 <p><code>file &lt;string&gt;</code>: Path to the package.</p>
 
 <p><code>apikey &lt;string&gt;</code>: Optionally specify your API key on the command line. Otherwise uses the value of the <code>nugetkey</code> environment variable.</p>
+
+<p><code>endpoint &lt;string&gt;</code>: Optionally specify a custom api endpoint to push to. Defaults to <code>/api/v2/package</code></p>
 
 
         </div>
