@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>DependencySet - Paket</title>
+    <title>RopResult<'TSuccess, 'TMessage> - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -34,68 +34,48 @@
 
 
 
-<h1>DependencySet</h1>
+<h1>RopResult<'TSuccess, 'TMessage></h1>
 <div class="xmldoc">
 </div>
-  <h3>Instance members</h3>
+  <h3>Union Cases</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Instance member</td><td>Description</td></tr>
+      <tr><td>Union Case</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '292', 292)" onmouseover="showTip(event, '292', 292)">
-            Count
+          <code onmouseout="hideTip(event, '208', 208)" onmouseover="showTip(event, '208', 208)">
+            Failure(&#39;TMessage list)
           </code>
-          <div class="tip" id="292">
-            <strong>Signature:</strong> int<br />
+          <div class="tip" id="208">
+            <strong>Signature:</strong> &#39;TMessage list<br />
                       </div>
         </td>
         <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/Rop.fs#L7-7" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
           
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '293', 293)" onmouseover="showTip(event, '293', 293)">
-            IsEmpty
+          <code onmouseout="hideTip(event, '209', 209)" onmouseover="showTip(event, '209', 209)">
+            Success(&#39;TSuccess,&#39;TMessage list)
           </code>
-          <div class="tip" id="293">
-            <strong>Signature:</strong> bool<br />
+          <div class="tip" id="209">
+            <strong>Signature:</strong> &#39;TSuccess * &#39;TMessage list<br />
                       </div>
         </td>
         <td class="xmldoc">
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '294', 294)" onmouseover="showTip(event, '294', 294)">
-            MaximumElement
-          </code>
-          <div class="tip" id="294">
-            <strong>Signature:</strong> PackageName * VersionRequirement * FrameworkRestrictions<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '295', 295)" onmouseover="showTip(event, '295', 295)">
-            MinimumElement
-          </code>
-          <div class="tip" id="295">
-            <strong>Signature:</strong> PackageName * VersionRequirement * FrameworkRestrictions<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/Rop.fs#L6-6" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
           
         </td>
       </tr>
