@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>LibFolder - Paket</title>
+    <title>Async - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -34,27 +34,30 @@
 
 
 
-<h1>LibFolder</h1>
+<h1>Async</h1>
 <div class="xmldoc">
 </div>
-  <h3>Record Fields</h3>
+
+<!-- Render nested types and modules, if there are any -->
+
+  <h3>Functions and values</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Record Field</td><td>Description</td></tr>
+      <tr><td>Function or value</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '516', 516)" onmouseover="showTip(event, '516', 516)">
-            Files
+          <code onmouseout="hideTip(event, '1', 1)" onmouseover="showTip(event, '1', 1)">
+            bind(f x)
           </code>
-          <div class="tip" id="516">
-            <strong>Signature:</strong> InstallFiles<br />
-                      </div>
+          <div class="tip" id="1">
+            <strong>Signature:</strong> f:(&#39;?7625 -&gt; Async&lt;&#39;?7626&gt;) -&gt; x:Async&lt;&#39;?7625&gt; -&gt; Async&lt;&#39;?7626&gt;<br />
+                          <strong>Type parameters:</strong> '?7625, '?7626          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L76-76" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L175-175" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -64,15 +67,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '517', 517)" onmouseover="showTip(event, '517', 517)">
-            Name
+          <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
+            map(f x)
           </code>
-          <div class="tip" id="517">
-            <strong>Signature:</strong> string<br />
-                      </div>
+          <div class="tip" id="2">
+            <strong>Signature:</strong> f:(&#39;?7628 -&gt; &#39;?7629) -&gt; x:Async&lt;&#39;?7628&gt; -&gt; Async&lt;&#39;?7629&gt;<br />
+                          <strong>Type parameters:</strong> '?7628, '?7629          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L74-74" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L176-176" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -82,41 +85,33 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '518', 518)" onmouseover="showTip(event, '518', 518)">
-            Targets
+          <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
+            ofAsyncResult(arg1)
           </code>
-          <div class="tip" id="518">
-            <strong>Signature:</strong> TargetProfile list<br />
-                      </div>
+          <div class="tip" id="3">
+            <strong>Signature:</strong> AsyncResult&lt;&#39;?7631,&#39;?7632&gt; -&gt; Async&lt;Result&lt;&#39;?7631,&#39;?7632&gt;&gt;<br />
+                          <strong>Type parameters:</strong> '?7631, '?7632          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L75-75" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L177-177" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
         </td>
       </tr>
-    </tbody>
-  </table>
-  <h3>Instance members</h3>
-  <table class="table table-bordered member-list">
-    <thead>
-      <tr><td>Instance member</td><td>Description</td></tr>
-    </thead>
-    <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '519', 519)" onmouseover="showTip(event, '519', 519)">
-            GetSinglePlatforms()
+          <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
+            singleton(value)
           </code>
-          <div class="tip" id="519">
-            <strong>Signature:</strong> unit -&gt; FrameworkIdentifier list<br />
-                      </div>
+          <div class="tip" id="4">
+            <strong>Signature:</strong> value:&#39;?7623 -&gt; Async&lt;&#39;?7623&gt;<br />
+                          <strong>Type parameters:</strong> '?7623          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L78-78" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L174-174" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>

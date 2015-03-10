@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>PlatformMatching - Paket</title>
+    <title>AsyncTrialBuilder - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -34,47 +34,53 @@
 
 
 
-<h1>PlatformMatching</h1>
+<h1>AsyncTrialBuilder</h1>
 <div class="xmldoc">
 </div>
-
-<!-- Render nested types and modules, if there are any -->
-  <h2>Nested types and modules</h2>
-  <div>
-      <table class="table table-bordered type-list">
-    <thead>
-      <tr><td>Type</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td class="type-name">
-            <a href="paket-platformmatching-pathpenalty.html">PathPenalty</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-  <h3>Functions and values</h3>
+  <h3>Constructors</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Function or value</td><td>Description</td></tr>
+      <tr><td>Constructor</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '144', 144)" onmouseover="showTip(event, '144', 144)">
-            comparePaths (arg1, arg2) (arg3, arg4)
+          <code onmouseout="hideTip(event, '212', 212)" onmouseover="showTip(event, '212', 212)">
+            new()
           </code>
-          <div class="tip" id="144">
-            <strong>Signature:</strong> (string * int) -&gt; (string * int) -&gt; int<br />
+          <div class="tip" id="212">
+            <strong>Signature:</strong> unit -&gt; AsyncTrialBuilder<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PlatformMatching.fs#L59-59" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L181-181" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Instance members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Instance member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '213', 213)" onmouseover="showTip(event, '213', 213)">
+            Bind(async, binder)
+          </code>
+          <div class="tip" id="213">
+            <strong>Signature:</strong> (async:Async&lt;&#39;a&gt; * binder:(&#39;a -&gt; AsyncResult&lt;&#39;b,&#39;c&gt;)) -&gt; AsyncResult&lt;&#39;b,&#39;c&gt;<br />
+                          <strong>Type parameters:</strong> 'a, 'b, 'c          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L215-215" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -84,15 +90,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '145', 145)" onmouseover="showTip(event, '145', 145)">
-            extractPlatforms path
+          <code onmouseout="hideTip(event, '214', 214)" onmouseover="showTip(event, '214', 214)">
+            Bind(result, binder)
           </code>
-          <div class="tip" id="145">
-            <strong>Signature:</strong> path:string -&gt; FrameworkIdentifier []<br />
-                      </div>
+          <div class="tip" id="214">
+            <strong>Signature:</strong> (result:Result&lt;&#39;a,&#39;c&gt; * binder:(&#39;a -&gt; AsyncResult&lt;&#39;b,&#39;c&gt;)) -&gt; AsyncResult&lt;&#39;b,&#39;c&gt;<br />
+                          <strong>Type parameters:</strong> 'a, 'c, 'b          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PlatformMatching.fs#L12-12" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L210-210" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -102,15 +108,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '146', 146)" onmouseover="showTip(event, '146', 146)">
-            findBestMatch paths targetProfile
+          <code onmouseout="hideTip(event, '215', 215)" onmouseover="showTip(event, '215', 215)">
+            Bind(asyncResult, binder)
           </code>
-          <div class="tip" id="146">
-            <strong>Signature:</strong> paths:string list -&gt; targetProfile:TargetProfile -&gt; string option<br />
-                      </div>
+          <div class="tip" id="215">
+            <strong>Signature:</strong> (asyncResult:AsyncResult&lt;&#39;a,&#39;c&gt; * binder:(&#39;a -&gt; AsyncResult&lt;&#39;b,&#39;c&gt;)) -&gt; AsyncResult&lt;&#39;b,&#39;c&gt;<br />
+                          <strong>Type parameters:</strong> 'a, 'c, 'b          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PlatformMatching.fs#L81-81" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L194-194" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -120,15 +126,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '147', 147)" onmouseover="showTip(event, '147', 147)">
-            getCondition targets
+          <code onmouseout="hideTip(event, '216', 216)" onmouseover="showTip(event, '216', 216)">
+            Delay(generator)
           </code>
-          <div class="tip" id="147">
-            <strong>Signature:</strong> targets:TargetProfile list -&gt; string<br />
-                      </div>
+          <div class="tip" id="216">
+            <strong>Signature:</strong> (generator:(unit -&gt; AsyncResult&lt;&#39;a,&#39;b&gt;)) -&gt; AsyncResult&lt;&#39;a,&#39;b&gt;<br />
+                          <strong>Type parameters:</strong> 'a, 'b          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PlatformMatching.fs#L121-121" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L191-191" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -138,15 +144,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '148', 148)" onmouseover="showTip(event, '148', 148)">
-            getPathPenalty path platform
+          <code onmouseout="hideTip(event, '217', 217)" onmouseover="showTip(event, '217', 217)">
+            Return(value)
           </code>
-          <div class="tip" id="148">
-            <strong>Signature:</strong> path:string -&gt; platform:FrameworkIdentifier -&gt; int<br />
-                      </div>
+          <div class="tip" id="217">
+            <strong>Signature:</strong> value:&#39;a -&gt; AsyncResult&lt;&#39;a,&#39;b&gt;<br />
+                          <strong>Type parameters:</strong> 'a, 'b          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PlatformMatching.fs#L35-35" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L183-183" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -156,15 +162,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '149', 149)" onmouseover="showTip(event, '149', 149)">
-            getPenalty requiredPlatforms path
+          <code onmouseout="hideTip(event, '218', 218)" onmouseover="showTip(event, '218', 218)">
+            ReturnFrom(asyncResult)
           </code>
-          <div class="tip" id="149">
-            <strong>Signature:</strong> requiredPlatforms:FrameworkIdentifier list -&gt; path:string -&gt; int<br />
-                      </div>
+          <div class="tip" id="218">
+            <strong>Signature:</strong> asyncResult:AsyncResult&lt;&#39;a,&#39;b&gt; -&gt; AsyncResult&lt;&#39;a,&#39;b&gt;<br />
+                          <strong>Type parameters:</strong> 'a, 'b          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PlatformMatching.fs#L53-53" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L189-189" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -174,15 +180,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '150', 150)" onmouseover="showTip(event, '150', 150)">
-            getPlatformPenalty (...)
+          <code onmouseout="hideTip(event, '219', 219)" onmouseover="showTip(event, '219', 219)">
+            TryFinally(asyncResult, compensation)
           </code>
-          <div class="tip" id="150">
-            <strong>Signature:</strong> targetPlatform:FrameworkIdentifier -&gt; packagePlatform:FrameworkIdentifier -&gt; int<br />
-                      </div>
+          <div class="tip" id="219">
+            <strong>Signature:</strong> (asyncResult:AsyncResult&lt;&#39;a,&#39;b&gt; * compensation:(unit -&gt; unit)) -&gt; AsyncResult&lt;&#39;a,&#39;b&gt;<br />
+                          <strong>Type parameters:</strong> 'a, 'b          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PlatformMatching.fs#L16-16" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L222-222" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -192,15 +198,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '151', 151)" onmouseover="showTip(event, '151', 151)">
-            getSupportedTargetProfiles paths
+          <code onmouseout="hideTip(event, '220', 220)" onmouseover="showTip(event, '220', 220)">
+            TryWith(asyncResult, catchHandler)
           </code>
-          <div class="tip" id="151">
-            <strong>Signature:</strong> paths:string list -&gt; Map&lt;string,TargetProfile list&gt;<br />
-                      </div>
+          <div class="tip" id="220">
+            <strong>Signature:</strong> (asyncResult:AsyncResult&lt;&#39;a,&#39;b&gt; * catchHandler:(exn -&gt; AsyncResult&lt;&#39;a,&#39;b&gt;)) -&gt; AsyncResult&lt;&#39;a,&#39;b&gt;<br />
+                          <strong>Type parameters:</strong> 'a, 'b          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PlatformMatching.fs#L96-96" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L220-220" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -210,15 +216,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '152', 152)" onmouseover="showTip(event, '152', 152)">
-            getTargetCondition target
+          <code onmouseout="hideTip(event, '221', 221)" onmouseover="showTip(event, '221', 221)">
+            Using(resource, binder)
           </code>
-          <div class="tip" id="152">
-            <strong>Signature:</strong> target:TargetProfile -&gt; string * string<br />
-                      </div>
+          <div class="tip" id="221">
+            <strong>Signature:</strong> (resource:&#39;T * binder:(&#39;T -&gt; AsyncResult&lt;&#39;a,&#39;b&gt;)) -&gt; AsyncResult&lt;&#39;a,&#39;b&gt;<br />
+                          <strong>Type parameters:</strong> 'T, 'a, 'b          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PlatformMatching.fs#L107-107" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L224-224" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -228,33 +234,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '153', 153)" onmouseover="showTip(event, '153', 153)">
-            maxPenalty 
+          <code onmouseout="hideTip(event, '222', 222)" onmouseover="showTip(event, '222', 222)">
+            Zero()
           </code>
-          <div class="tip" id="153">
-            <strong>Signature:</strong> int<br />
-                      </div>
+          <div class="tip" id="222">
+            <strong>Signature:</strong> unit -&gt; AsyncResult&lt;unit,&#39;b&gt;<br />
+                          <strong>Type parameters:</strong> 'b          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PlatformMatching.fs#L6-6" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '154', 154)" onmouseover="showTip(event, '154', 154)">
-            split path
-          </code>
-          <div class="tip" id="154">
-            <strong>Signature:</strong> path:string -&gt; string []<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PlatformMatching.fs#L8-8" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L190-190" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
