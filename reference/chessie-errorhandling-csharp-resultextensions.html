@@ -77,8 +77,8 @@
             Collect(values)
           </code>
           <div class="tip" id="246">
-            <strong>Signature:</strong> values:seq&lt;Result&lt;&#39;?7642,&#39;?7643&gt;&gt; -&gt; Result&lt;&#39;?7642 list,&#39;?7643&gt;<br />
-                          <strong>Type parameters:</strong> '?7642, '?7643          </div>
+            <strong>Signature:</strong> values:seq&lt;Result&lt;&#39;?7661,&#39;?7662&gt;&gt; -&gt; Result&lt;&#39;?7661 list,&#39;?7662&gt;<br />
+                          <strong>Type parameters:</strong> '?7661, '?7662          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L278-278" class="github-link">
@@ -116,7 +116,7 @@ If the sequence contains an error the error will be propagated.</p>
             Flatten(value)
           </code>
           <div class="tip" id="248">
-            <strong>Signature:</strong> value:Result&lt;seq&lt;Result&lt;&#39;a,&#39;b&gt;&gt;,&#39;b&gt; -&gt; Result&lt;&#39;a list,&#39;b&gt;<br />
+            <strong>Signature:</strong> value:Result&lt;seq&lt;Result&lt;&#39;a,&#39;b&gt;&gt;,&#39;b&gt; -&gt; Result&lt;seq&lt;&#39;a&gt;,&#39;b&gt;<br />
                           <strong>Type parameters:</strong> 'a, 'b          </div>
         </td>
         <td class="xmldoc">
@@ -136,8 +136,8 @@ If the sequence contains an error the error will be propagated.</p>
             Map(value, func)
           </code>
           <div class="tip" id="249">
-            <strong>Signature:</strong> (value:Result&lt;&#39;?7638,&#39;?7639&gt; * func:Func&lt;&#39;?7638,&#39;?7640&gt;) -&gt; Result&lt;&#39;?7640,&#39;?7639&gt;<br />
-                          <strong>Type parameters:</strong> '?7638, '?7639, '?7640          </div>
+            <strong>Signature:</strong> (value:Result&lt;&#39;?7657,&#39;?7658&gt; * func:Func&lt;&#39;?7657,&#39;?7659&gt;) -&gt; Result&lt;&#39;?7659,&#39;?7658&gt;<br />
+                          <strong>Type parameters:</strong> '?7657, '?7658, '?7659          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L272-272" class="github-link">
@@ -174,11 +174,11 @@ If the sequence contains an error the error will be propagated.</p>
             Select(o, f)
           </code>
           <div class="tip" id="251">
-            <strong>Signature:</strong> (o:Result&lt;&#39;?7657,&#39;?7658&gt; * f:Func&lt;&#39;?7657,&#39;?7659&gt;) -&gt; Result&lt;&#39;?7659,&#39;?7658&gt;<br />
-                          <strong>Type parameters:</strong> '?7657, '?7658, '?7659          </div>
+            <strong>Signature:</strong> (o:Result&lt;&#39;?7676,&#39;?7677&gt; * f:Func&lt;&#39;?7676,&#39;?7678&gt;) -&gt; Result&lt;&#39;?7678,&#39;?7677&gt;<br />
+                          <strong>Type parameters:</strong> '?7676, '?7677, '?7678          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L300-300" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L303-303" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -192,11 +192,11 @@ If the sequence contains an error the error will be propagated.</p>
             SelectMany(o, f, mapper)
           </code>
           <div class="tip" id="252">
-            <strong>Signature:</strong> (o:Result&lt;&#39;?7652,&#39;?7653&gt; * f:Func&lt;&#39;?7652,Result&lt;&#39;?7654,&#39;?7653&gt;&gt; * mapper:Func&lt;&#39;?7652,&#39;?7654,&#39;?7655&gt;) -&gt; Result&lt;&#39;?7655,&#39;?7653&gt;<br />
-                          <strong>Type parameters:</strong> '?7652, '?7653, '?7654, '?7655          </div>
+            <strong>Signature:</strong> (o:Result&lt;&#39;?7671,&#39;?7672&gt; * f:Func&lt;&#39;?7671,Result&lt;&#39;?7673,&#39;?7672&gt;&gt; * mapper:Func&lt;&#39;?7671,&#39;?7673,&#39;?7674&gt;) -&gt; Result&lt;&#39;?7674,&#39;?7672&gt;<br />
+                          <strong>Type parameters:</strong> '?7671, '?7672, '?7673, '?7674          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L294-294" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L297-297" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -210,11 +210,11 @@ If the sequence contains an error the error will be propagated.</p>
             SelectMany(o, f)
           </code>
           <div class="tip" id="253">
-            <strong>Signature:</strong> (o:Result&lt;&#39;?7648,&#39;?7649&gt; * f:Func&lt;&#39;?7648,Result&lt;&#39;?7650,&#39;?7649&gt;&gt;) -&gt; Result&lt;&#39;?7650,&#39;?7649&gt;<br />
-                          <strong>Type parameters:</strong> '?7648, '?7649, '?7650          </div>
+            <strong>Signature:</strong> (o:Result&lt;&#39;?7667,&#39;?7668&gt; * f:Func&lt;&#39;?7667,Result&lt;&#39;?7669,&#39;?7668&gt;&gt;) -&gt; Result&lt;&#39;?7669,&#39;?7668&gt;<br />
+                          <strong>Type parameters:</strong> '?7667, '?7668, '?7669          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L290-290" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L293-293" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
