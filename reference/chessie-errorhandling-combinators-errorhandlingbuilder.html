@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>FrameworkVersion - Paket</title>
+    <title>ErrorHandlingBuilder - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -34,28 +34,54 @@
 
 
 
-<h1>FrameworkVersion</h1>
+<h1>ErrorHandlingBuilder</h1>
 <div class="xmldoc">
-<p>The Framework version.</p>
+<p>Builder type for error handling computation expressions.</p>
 </div>
-  <h3>Union Cases</h3>
+  <h3>Constructors</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Union Case</td><td>Description</td></tr>
+      <tr><td>Constructor</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '480', 480)" onmouseover="showTip(event, '480', 480)">
-            V1
+          <code onmouseout="hideTip(event, '224', 224)" onmouseover="showTip(event, '224', 224)">
+            new()
           </code>
-          <div class="tip" id="480">
-            <strong>Signature:</strong> <br />
+          <div class="tip" id="224">
+            <strong>Signature:</strong> unit -&gt; ErrorHandlingBuilder<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L9-9" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L148-148" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Instance members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Instance member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '225', 225)" onmouseover="showTip(event, '225', 225)">
+            Bind(m, f)
+          </code>
+          <div class="tip" id="225">
+            <strong>Signature:</strong> (m:Result&lt;&#39;?7579,&#39;?7580&gt; * f:(&#39;?7579 -&gt; Result&lt;&#39;?7581,&#39;?7580&gt;)) -&gt; Result&lt;&#39;?7581,&#39;?7580&gt;<br />
+                          <strong>Type parameters:</strong> '?7579, '?7580, '?7581          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L150-150" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -65,15 +91,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '481', 481)" onmouseover="showTip(event, '481', 481)">
-            V1_1
+          <code onmouseout="hideTip(event, '226', 226)" onmouseover="showTip(event, '226', 226)">
+            Combine(a, b)
           </code>
-          <div class="tip" id="481">
-            <strong>Signature:</strong> <br />
-                      </div>
+          <div class="tip" id="226">
+            <strong>Signature:</strong> (a:Result&lt;&#39;?7588,&#39;?7589&gt; * b:(&#39;?7588 -&gt; Result&lt;&#39;?7590,&#39;?7589&gt;)) -&gt; Result&lt;&#39;?7590,&#39;?7589&gt;<br />
+                          <strong>Type parameters:</strong> '?7588, '?7589, '?7590          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L10-10" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L153-153" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -83,15 +109,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '482', 482)" onmouseover="showTip(event, '482', 482)">
-            V2
+          <code onmouseout="hideTip(event, '227', 227)" onmouseover="showTip(event, '227', 227)">
+            Delay(f)
           </code>
-          <div class="tip" id="482">
-            <strong>Signature:</strong> <br />
-                      </div>
+          <div class="tip" id="227">
+            <strong>Signature:</strong> f:&#39;?7592 -&gt; &#39;?7592<br />
+                          <strong>Type parameters:</strong> '?7592          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L11-11" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L154-154" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -101,15 +127,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '483', 483)" onmouseover="showTip(event, '483', 483)">
-            V3
+          <code onmouseout="hideTip(event, '228', 228)" onmouseover="showTip(event, '228', 228)">
+            For(s, body)
           </code>
-          <div class="tip" id="483">
-            <strong>Signature:</strong> <br />
-                      </div>
+          <div class="tip" id="228">
+            <strong>Signature:</strong> (s:seq&lt;&#39;?7605&gt; * body:(&#39;?7605 -&gt; Result&lt;unit,&#39;?7606&gt;)) -&gt; Result&lt;unit,&#39;?7606&gt;<br />
+                          <strong>Type parameters:</strong> '?7605, '?7606          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L12-12" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L177-177" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -119,15 +145,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '484', 484)" onmouseover="showTip(event, '484', 484)">
-            V3_5
+          <code onmouseout="hideTip(event, '229', 229)" onmouseover="showTip(event, '229', 229)">
+            Return(x)
           </code>
-          <div class="tip" id="484">
-            <strong>Signature:</strong> <br />
-                      </div>
+          <div class="tip" id="229">
+            <strong>Signature:</strong> x:&#39;?7583 -&gt; Result&lt;&#39;?7583,&#39;?7584&gt;<br />
+                          <strong>Type parameters:</strong> '?7583, '?7584          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L13-13" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L151-151" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -137,15 +163,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '485', 485)" onmouseover="showTip(event, '485', 485)">
-            V4
+          <code onmouseout="hideTip(event, '230', 230)" onmouseover="showTip(event, '230', 230)">
+            ReturnFrom(x)
           </code>
-          <div class="tip" id="485">
-            <strong>Signature:</strong> <br />
-                      </div>
+          <div class="tip" id="230">
+            <strong>Signature:</strong> x:&#39;?7586 -&gt; &#39;?7586<br />
+                          <strong>Type parameters:</strong> '?7586          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L15-15" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L152-152" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -155,15 +181,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '486', 486)" onmouseover="showTip(event, '486', 486)">
-            V4_5
+          <code onmouseout="hideTip(event, '231', 231)" onmouseover="showTip(event, '231', 231)">
+            Run(f)
           </code>
-          <div class="tip" id="486">
-            <strong>Signature:</strong> <br />
-                      </div>
+          <div class="tip" id="231">
+            <strong>Signature:</strong> (f:(unit -&gt; &#39;?7594)) -&gt; &#39;?7594<br />
+                          <strong>Type parameters:</strong> '?7594          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L16-16" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L155-155" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -173,15 +199,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '487', 487)" onmouseover="showTip(event, '487', 487)">
-            V4_5_1
+          <code onmouseout="hideTip(event, '232', 232)" onmouseover="showTip(event, '232', 232)">
+            TryFinally(body, compensation)
           </code>
-          <div class="tip" id="487">
-            <strong>Signature:</strong> <br />
-                      </div>
+          <div class="tip" id="232">
+            <strong>Signature:</strong> (body:(unit -&gt; &#39;?7598) * compensation:(unit -&gt; unit)) -&gt; &#39;?7598<br />
+                          <strong>Type parameters:</strong> '?7598          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L17-17" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L161-161" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -191,15 +217,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '488', 488)" onmouseover="showTip(event, '488', 488)">
-            V4_5_2
+          <code onmouseout="hideTip(event, '233', 233)" onmouseover="showTip(event, '233', 233)">
+            TryWith(body, handler)
           </code>
-          <div class="tip" id="488">
-            <strong>Signature:</strong> <br />
-                      </div>
+          <div class="tip" id="233">
+            <strong>Signature:</strong> (body:(unit -&gt; &#39;?7596) * handler:(exn -&gt; &#39;?7596)) -&gt; &#39;?7596<br />
+                          <strong>Type parameters:</strong> '?7596          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L18-18" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L156-156" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -209,15 +235,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '489', 489)" onmouseover="showTip(event, '489', 489)">
-            V4_5_3
+          <code onmouseout="hideTip(event, '234', 234)" onmouseover="showTip(event, '234', 234)">
+            Using(d, body)
           </code>
-          <div class="tip" id="489">
-            <strong>Signature:</strong> <br />
-                      </div>
+          <div class="tip" id="234">
+            <strong>Signature:</strong> (d:&#39;?7600 * body:(&#39;?7600 -&gt; &#39;?7601)) -&gt; &#39;?7601<br />
+                          <strong>Type parameters:</strong> '?7600, '?7601          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L19-19" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L166-166" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -227,15 +253,33 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '490', 490)" onmouseover="showTip(event, '490', 490)">
-            V4_Client
+          <code onmouseout="hideTip(event, '235', 235)" onmouseover="showTip(event, '235', 235)">
+            While(guard, body)
           </code>
-          <div class="tip" id="490">
-            <strong>Signature:</strong> <br />
-                      </div>
+          <div class="tip" id="235">
+            <strong>Signature:</strong> (guard:(unit -&gt; bool) * body:(unit -&gt; Result&lt;unit,&#39;?7603&gt;)) -&gt; Result&lt;unit,&#39;?7603&gt;<br />
+                          <strong>Type parameters:</strong> '?7603          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/FrameworkHandling.fs#L14-14" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L172-172" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '236', 236)" onmouseover="showTip(event, '236', 236)">
+            Zero()
+          </code>
+          <div class="tip" id="236">
+            <strong>Signature:</strong> unit -&gt; Result&lt;unit,&#39;?7577&gt;<br />
+                          <strong>Type parameters:</strong> '?7577          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L149-149" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
