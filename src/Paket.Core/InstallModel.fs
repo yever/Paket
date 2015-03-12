@@ -248,7 +248,7 @@ type InstallModel =
     
     member this.FilterReferences(references) =
         let inline mapF (files:InstallFiles) = {files with References = files.References |> Set.filter (fun reference -> Set.contains reference.ReferenceName references |> not) }
-        this.MapFiles mapF
+        this.MapFiles(fun files -> mapF files)
 
     member this.ApplyFrameworkRestrictions(restrictions:FrameworkRestrictions) =
         match restrictions with
