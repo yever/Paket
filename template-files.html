@@ -61,7 +61,7 @@ values:</p>
 </ul>
 
 <p>Matching project and template files must be in the same directory. If only one project is in the directory the template file
-can becalled <code>paket.template</code>, otherwise the name of the template file must be the name of the project file with ".paket.template" added to the end.</p>
+can be called <code>paket.template</code>, otherwise the name of the template file must be the name of the project file with ".paket.template" added to the end.</p>
 
 <p>For example:</p>
 
@@ -159,13 +159,12 @@ to decide on the files and dependencies added.</p>
 <table class="pre"><tr><td><pre lang="batchfile">files
     relative/to/template/file ==&gt; folder/in/nupkg
     second/thing/to/pack ==&gt; folder/in/nupkg
+    second/thing/**/file.* ==&gt; folder/in/nupkg
 </pre></td></tr></table>
 
 <p>If the source part refers to a file then it is copied into the target directory. If it
 refers to a directory, the contents of the directory will be copied into the target folder.
 If you omit the target folder, then the source is copied into the <code>lib</code> folder of the package.</p>
-
-<p>There is currently no support for wild cards, exclusion filters or renaming during copying.</p>
 
 <p>In a project template, the files included will be:</p>
 
