@@ -61,7 +61,7 @@ It needs to figure these out along the way by retrieving data from the <a href="
 <li>Given a concrete version of a package, what further dependencies are required?</li>
 </ul>
 
-<p>Answering these questions is a very expensive operation since it involves a HTTP request and therefore the resolver needs to minimize these requests.</p>
+<p>Answering these questions is a very expensive operation since it involves a HTTP request and therefore the resolver has to minimize these requests and only access the API when really needed.</p>
 
 <h2><a name="Basic-algorithm" class="anchor" href="#Basic-algorithm">Basic algorithm</a></h2>
 
