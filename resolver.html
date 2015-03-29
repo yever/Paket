@@ -38,16 +38,16 @@
 
 <p>Paket uses the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> to specify project dependencies.
 Usually only direct dependencies are specified and often a broad range of package versions is allowed.
-During <a href="paket-install.html"><code>paket install</code></a> Paket needs to figure out which concrete versions of the specified packages and their transisitve dependencies it needs to install.
+During <a href="paket-install.html"><code>paket install</code></a> Paket needs to figure out concrete versions of the specified packages and their transisitive dependencies.
 These versions are then persisted to the <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
 
-<p>In order to figure out the concrete versions it needs to solve the following constraint satisfaction problem:</p>
+<p>In order to figure out the concrete versions Paket needs to solve the following constraint satisfaction problem:</p>
 
 <ul>
 <li>Select the highest version for each of the packages in the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>, plus all their transitive dependencies, such that all version constraints are satisfied.</li>
 </ul>
 
-<p>Note: In general more than one solution to this problem can exist and the solver will take the first solution that it finds.</p>
+<p>Note: In general, more than one solution to this problem can exist and the solver will take the first solution that it finds.</p>
 
 <h2><a name="Getting-data" class="anchor" href="#Getting-data">Getting data</a></h2>
 
@@ -103,8 +103,8 @@ Every requirement specifies a version range and a resolver strategy for a packag
 
 <p>The algorithm works as a <a href="http://en.wikipedia.org/wiki/Depth-first_search">Depth-first search</a>.
 In every step it selects a requirement from the set of <code>open</code> requirements and checks if the requirement can be satisfied.
-If not conflict arises then a package version gets seletected and all it's dependencies are added to the <code>open</code> requirements.
-If the selected requirement results in a conflict then algorithm backtrack in the search tree and selects the next version.</p>
+If no conflict arises then a package version gets selected and all it's dependencies are added to the <code>open</code> requirements.
+If the selected requirement results in a conflict then the algorithm backtracks in the search tree and selects the next version.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l"> 1: </span>
@@ -170,11 +170,11 @@ If the selected requirement results in a conflict then algorithm backtrack in th
                 <span onmouseout="hideTip(event, 'fs28', 118)" onmouseover="showTip(event, 'fs28', 118)" class="f">getAllVersionsFromNuget</span> <span onmouseout="hideTip(event, 'fs54', 119)" onmouseover="showTip(event, 'fs54', 119)" class="i">currentRequirement</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 120)" onmouseover="showTip(event, 'fs17', 120)" class="i">Name</span>
 
         <span class="k">let</span> <span onmouseout="hideTip(event, 'fs56', 121)" onmouseover="showTip(event, 'fs56', 121)" class="i">compatibleVersions</span> <span class="o">=</span>
-            <span class="c">// consider only versions which match the current requirement</span>
+            <span class="c">// consider only versions, which match the current requirement</span>
             <span onmouseout="hideTip(event, 'fs55', 122)" onmouseover="showTip(event, 'fs55', 122)" class="i">availableVersions</span>
             <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs57', 123)" onmouseover="showTip(event, 'fs57', 123)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs58', 124)" onmouseover="showTip(event, 'fs58', 124)" class="f">filter</span> (<span onmouseout="hideTip(event, 'fs30', 125)" onmouseover="showTip(event, 'fs30', 125)" class="f">isInRange</span> <span onmouseout="hideTip(event, 'fs54', 126)" onmouseover="showTip(event, 'fs54', 126)" class="i">currentRequirement</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs59', 127)" onmouseover="showTip(event, 'fs59', 127)" class="i">VersionRequirement</span>)
 
-        <span class="k">let</span> <span onmouseout="hideTip(event, 'fs60', 128)" onmouseover="showTip(event, 'fs60', 128)" class="i">sortedVersions</span> <span class="o">=</span>                
+        <span class="k">let</span> <span onmouseout="hideTip(event, 'fs60', 128)" onmouseover="showTip(event, 'fs60', 128)" class="i">sortedVersions</span> <span class="o">=</span>
             <span class="k">match</span> <span onmouseout="hideTip(event, 'fs54', 129)" onmouseover="showTip(event, 'fs54', 129)" class="i">currentRequirement</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs61', 130)" onmouseover="showTip(event, 'fs61', 130)" class="i">ResolverStrategy</span> <span class="k">with</span>
             | <span onmouseout="hideTip(event, 'fs13', 131)" onmouseover="showTip(event, 'fs13', 131)" class="t">ResolverStrategy</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 132)" onmouseover="showTip(event, 'fs14', 132)" class="p">Max</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs57', 133)" onmouseover="showTip(event, 'fs57', 133)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs62', 134)" onmouseover="showTip(event, 'fs62', 134)" class="f">sort</span> <span onmouseout="hideTip(event, 'fs56', 135)" onmouseover="showTip(event, 'fs56', 135)" class="i">compatibleVersions</span> <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs57', 136)" onmouseover="showTip(event, 'fs57', 136)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs63', 137)" onmouseover="showTip(event, 'fs63', 137)" class="f">rev</span>
             | <span onmouseout="hideTip(event, 'fs13', 138)" onmouseover="showTip(event, 'fs13', 138)" class="t">ResolverStrategy</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs15', 139)" onmouseover="showTip(event, 'fs15', 139)" class="p">Min</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs57', 140)" onmouseover="showTip(event, 'fs57', 140)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs62', 141)" onmouseover="showTip(event, 'fs62', 141)" class="f">sort</span> <span onmouseout="hideTip(event, 'fs56', 142)" onmouseover="showTip(event, 'fs56', 142)" class="i">compatibleVersions</span>
@@ -205,9 +205,9 @@ If the selected requirement results in a conflict then algorithm backtrack in th
 
 <h3><a name="Sorting-package-requirements" class="anchor" href="#Sorting-package-requirements">Sorting package requirements</a></h3>
 
-<p>In order to make progress in the search tree the algorithm needs to determine which package is next.
-Paket uses a heuristic which tries to process packages with small version ranges and high conflict potential first.
-Therefor it orders the requirements based on:</p>
+<p>In order to make progress in the search tree the algorithm needs to determine the next package.
+Paket uses a heuristic, which tries to process packages with small version ranges and high conflict potential first.
+Therefor, it orders the requirements based on:</p>
 
 <ul>
 <li>Is the <a href="nuget-dependencies.html#Use-exactly-this-version-constraint">version pinned</a>?</li>
@@ -225,11 +225,11 @@ This heuristic influences the <a href="resolver.html#Sorting-package-requirement
 
 <h3><a name="Caching" class="anchor" href="#Caching">Caching</a></h3>
 
-<p>Since the HTTP requests to NuGet are very expensive Paket tries to cache as much as possible:</p>
+<p>Paket tries to cache as much as possible since HTTP requests to NuGet are very expensive:</p>
 
 <ul>
 <li>The function <code>getAllVersionsFromNuget</code> will only call the NuGet API once per package and Paket run.</li>
-<li>The function <code>getPackageDetails</code> will only call the NuGet API when the package details are not found in the RAM or on disk.</li>
+<li>The function <code>getPackageDetails</code> will only call the NuGet API if package details are not found in the RAM or on disk.</li>
 </ul>
 
 <p>The second caching improvement means that subsequent runs of <code>paket update</code> can get faster since package details are already stored on disk.</p>
