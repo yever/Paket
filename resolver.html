@@ -235,6 +235,13 @@ This heuristic influences the <a href="resolver.html#Sorting-package-requirement
 
 <p>The second caching improvement means that subsequent runs of <code>paket update</code> can get faster since package details are already stored on disk.</p>
 
+<h3><a name="Error-reporting" class="anchor" href="#Error-reporting">Error reporting</a></h3>
+
+<p>If the resolver can't find a valid solution, then it needs to report an error to the user.
+Since the search tree can be very large and might contain lots of different kinds of failures, reporting a good error message is difficult.</p>
+
+<p>Paket will only report the last conflict that can't resolve, if you need more information you can try the verbose by using the <code>-v</code> parameter.</p>
+
 <h2><a name="Further-reading" class="anchor" href="#Further-reading">Further reading</a></h2>
 
 <ul>
