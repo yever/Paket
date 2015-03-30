@@ -38,7 +38,7 @@
 
 <p>Paket uses the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> to specify project dependencies.
 Usually only direct dependencies are specified and often a broad range of package versions is allowed.
-During <a href="paket-install.html"><code>paket install</code></a> Paket needs to figure out concrete versions of the specified packages and their transisitive dependencies.
+During <a href="paket-install.html"><code>paket install</code></a> Paket needs to figure out concrete versions of the specified packages and their transitive dependencies.
 These versions are then persisted to the <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
 
 <p>In order to figure out the concrete versions Paket needs to solve the following constraint satisfaction problem:</p>
@@ -207,7 +207,7 @@ If the selected requirement results in a conflict then the algorithm backtracks 
 
 <p>In order to make progress in the search tree the algorithm needs to determine the next package.
 Paket uses a heuristic, which tries to process packages with small version ranges and high conflict potential first.
-Therefor, it orders the requirements based on:</p>
+Therefore, it orders the requirements based on:</p>
 
 <ul>
 <li>Is the <a href="nuget-dependencies.html#Use-exactly-this-version-constraint">version pinned</a>?</li>
