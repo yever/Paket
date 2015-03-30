@@ -103,9 +103,11 @@ Every requirement specifies a version range and a resolver strategy for a packag
 </table>
 
 <p>The algorithm works as a <a href="http://en.wikipedia.org/wiki/Depth-first_search">Depth-first search</a>.
-In every step it selects a requirement from the set of <code>open</code> requirements and checks if the requirement can be satisfied.
-If no conflict arises then a package version gets selected and all it's dependencies are added to the <code>open</code> requirements.
-If the selected requirement results in a conflict then the algorithm backtracks in the search tree and selects the next version.</p>
+In every step it selects a requirement from the set of <em>open</em> requirements and checks if the requirement can be satisfied.
+If no conflict arises then a package version gets selected and all it's dependencies are added to the <em>open</em> requirements.
+A set of <em>closed</em> requirements is maintained in order to prevent cycles in the search graph.</p>
+
+<p>If the selected requirement results in a conflict then the algorithm backtracks in the search tree and selects the next version.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l"> 1: </span>
