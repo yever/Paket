@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>paket outdated
+    <title>Testimonials
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
@@ -32,68 +32,20 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="paket-outdated" class="anchor" href="#paket-outdated">paket outdated</a></h1>
+<h1><a name="Testimonials" class="anchor" href="#Testimonials">Testimonials</a></h1>
 
-<p>Lists all dependencies that have newer versions available.</p>
+<h2><a name="GROSSWEBER" class="anchor" href="#GROSSWEBER">GROSSWEBER</a></h2>
 
-<table class="pre"><tr><td><pre lang="batchfile">$ paket outdated [--ignore-constraints] [--include-prereleases|--pre]
-</pre></td></tr></table>
+<p>For <a href="http://grossweber.com/en">GROSSWEBER</a>, Paket solves dependency resolution very elegantly.</p>
 
-<p>Options:</p>
+<p>We are fans command line tools that serve a single purpose, like <a href="http://grossweber.com/git">git</a>. Paket is such a tool that works extremely well when compared to other solutions available on the .NET platform. We use Paket not only to manage dependencies, but also to create our own NuGet packages. All in an easy-to-use, consistent, reliable and fast way. Anybody who has been working with dependency managers on other platforms like npm, bundler and pip will be pleased to find a similar workflow with Paket.</p>
 
-<p><code>--ignore-constraints</code>: Ignores the version requirement as in the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>.</p>
+<p>We love what we do and with love comes passion. This passion drives us to actively engage in our client projects and to design and develop as if they were our own. Spreading the word about Paket in our <a href="http://grossweber.com/trainings">trainings</a> comes naturally.</p>
 
-<p><code>--include-prereleases [--pre]</code>: Includes prereleases.</p>
+<p><a href="https://github.com/agross">@agross</a>, GROSSWEBER, Germany/Leipzig</p>
 
-<h2><a name="Sample" class="anchor" href="#Sample">Sample</a></h2>
+<p><img src="img/testimonials-grossweber.png" alt="alt text" title="GROSSWEBER likes Paket" /></p>
 
-<p>Consider the following <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>:</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
-
-<span class="i">nuget</span> <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Core</span>
-<span class="i">nuget</span> <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span>
-</pre>
-</td>
-</tr>
-</table>
-
-<p>and the following <a href="lock-file.html"><code>paket.lock</code> file</a>:</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-<span class="l">6: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">NUGET</span>
-  <span class="i">remote</span><span class="o">:</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
-  <span class="i">specs</span><span class="o">:</span>
-    <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 2)" onmouseover="showTip(event, 'fs1', 2)" class="i">Core</span> (<span class="n">2.0</span><span class="o">.</span><span class="n">0</span>)
-    <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span> (<span class="n">2.0</span><span class="o">.</span><span class="n">0</span>)
-      <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">Core</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">2.0</span><span class="o">.</span><span class="n">0</span>)
-</pre>
-</td>
-</tr>
-</table>
-
-<p>Now we run <code>paket outdated</code>:</p>
-
-<p><img src="img/paket-outdated.png" alt="alt text" title="paket outdated command" /></p>
-
-<div class="tip" id="fs1">namespace Microsoft.FSharp.Core</div>
 
         </div>
         <div class="span3">
