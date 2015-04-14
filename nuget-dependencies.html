@@ -111,6 +111,19 @@ It's also possible to provide login information for private NuGet feeds:
 </tr>
 </table>
 
+<p>As well Paket supports the source directory to be specified relative to the <code>paket.dependencies</code> file:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">source</span> <span class="i">ext</span><span class="o">/</span><span class="i">nugets</span>
+</pre>
+</td>
+</tr>
+</table>
+
 <h2><a name="Dependencies" class="anchor" href="#Dependencies">Dependencies</a></h2>
 
 <p>The dependencies of your project are defined by the <code>nuget &lt;package ID&gt; &lt;version constraint&gt;</code> statement.</p>
