@@ -36,7 +36,9 @@
 
 <p>Downloads the latest stable paket.exe from github.com.</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">$ paket.bootstrapper.exe [prerelease|version] [--prefer-nuget]
+<table class="pre"><tr><td class="lines"><span class="l">1: </span>
+</td>
+<td class="snippet"><pre lang="batchfile">$ paket.bootstrapper.exe [prerelease|version] [--prefer-nuget]
 </pre></td></tr></table>
 
 <p>Options:</p>
@@ -46,6 +48,8 @@
 <p><code>version</code>: Downloads the given version of paket.exe from github.com.</p>
 
 <p><code>--prefer-nuget</code>: Downloads the given version of paket.exe from nuget.org instead of github.com.</p>
+
+<p><code>--self</code>: Self updating the paket.bootstrapper.exe. When this option is used the download of paket.exe will be skipped.</p>
 
 <p>Environment Variables:</p>
 

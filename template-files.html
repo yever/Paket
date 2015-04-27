@@ -38,14 +38,23 @@
 
 <p>An example <code>paket.template</code> file might look like the following:</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">type file
+<table class="pre"><tr><td class="lines"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+<span class="l">7: </span>
+<span class="l">8: </span>
+</td>
+<td class="snippet"><pre lang="batchfile">type file
 id Test.Paket.Package
 version 1.0
 authors Michael Newton
 description
         description of this test package
 files
-    src/Test.Paket.Package/bin/Debug ==&gt; lib
+    src/Test.Paket.Package/bin/Debug ==> lib
 </pre></td></tr></table>
 
 <p>This template file will create a nupkg called <code>Test.Paket.Package.[Version].nupkg</code> with the
@@ -156,10 +165,15 @@ to decide on the files and dependencies added.</p>
 
 <p>A files block looks like this:</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">files
-    relative/to/template/file ==&gt; folder/in/nupkg
-    second/thing/to/pack ==&gt; folder/in/nupkg
-    second/thing/**/file.* ==&gt; folder/in/nupkg
+<table class="pre"><tr><td class="lines"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</td>
+<td class="snippet"><pre lang="batchfile">files
+    relative/to/template/file ==> folder/in/nupkg
+    second/thing/to/pack ==> folder/in/nupkg
+    second/thing/**/file.* ==> folder/in/nupkg
 </pre></td></tr></table>
 
 <p>If the source part refers to a file then it is copied into the target directory. If it
@@ -177,7 +191,11 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 
 <p>A references block looks like this:</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">references
+<table class="pre"><tr><td class="lines"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</td>
+<td class="snippet"><pre lang="batchfile">references
     filename1.dll
     filename2.dll
 </pre></td></tr></table>
@@ -188,7 +206,11 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 
 <p>A block with framework assembly references looks like this:</p>
 
-<table class="pre"><tr><td><pre lang="batchfile">frameworkAssemblies
+<table class="pre"><tr><td class="lines"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</td>
+<td class="snippet"><pre lang="batchfile">frameworkAssemblies
     System.Xml
     System.Xml.Linq     
 </pre></td></tr></table>
