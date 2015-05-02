@@ -37,6 +37,8 @@
 <h1>Trial</h1>
 <div class="xmldoc">
 <p>Basic combinators and operators for error handling.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -52,6 +54,8 @@
             <a href="chessie-errorhandling-trial-trialbuilder.html">TrialBuilder</a>
           </td>
           <td class="xmldoc"><p>Builder type for error handling computation expressions.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -83,6 +87,8 @@
           <p>Lifts a function into a Result and applies it on the given result.
 This is the infix operator version of ErrorHandling.lift</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -103,6 +109,8 @@ This is the infix operator version of ErrorHandling.lift</p>
           <p>If the wrapped function is a success and the given result is a success the function is applied on the value. 
 Otherwise the exisiting error messages are propagated.
 This is the infix operator version of ErrorHandling.apply</p>
+
+
 
         </td>
       </tr>
@@ -125,6 +133,8 @@ This is the infix operator version of ErrorHandling.apply</p>
 Otherwise the exisiting failure is propagated.
 This is the infix operator version of ErrorHandling.bind</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -144,6 +154,8 @@ This is the infix operator version of ErrorHandling.bind</p>
             </a>
           <p>If the wrapped function is a success and the given result is a success the function is applied on the value. 
 Otherwise the exisiting error messages are propagated.</p>
+
+
 
         </td>
       </tr>
@@ -165,6 +177,8 @@ Otherwise the exisiting error messages are propagated.</p>
           <p>If the result is a Success it executes the given function on the value.
 Otherwise the exisiting failure is propagated.</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -185,6 +199,8 @@ Otherwise the exisiting failure is propagated.</p>
           <p>Collects a sequence of Results and accumulates their values.
 If the sequence contains an error the error will be propagated.</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -203,6 +219,8 @@ If the sequence contains an error the error will be propagated.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Takes a Result and maps it with fSuccess if it is a Success otherwise it maps it with fFailure.</p>
+
+
 
         </td>
       </tr>
@@ -225,6 +243,8 @@ If the sequence contains an error the error will be propagated.</p>
 If the result is a Failure it executes the given failure function on the messages.
 Result is propagated unchanged.</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -243,6 +263,8 @@ Result is propagated unchanged.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Wraps a message in a Failure</p>
+
+
 
         </td>
       </tr>
@@ -263,6 +285,8 @@ Result is propagated unchanged.</p>
             </a>
           <p>Returns true if the result was not successful.</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -281,6 +305,8 @@ Result is propagated unchanged.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Converts an option into a Result.</p>
+
+
 
         </td>
       </tr>
@@ -320,6 +346,8 @@ Result is propagated unchanged.</p>
           <p>If the result is a Failure it executes the given function on the messages.
 Result is propagated unchanged.</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -338,6 +366,8 @@ Result is propagated unchanged.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Flattens a nested result given the Failure types are equal</p>
+
+
 
         </td>
       </tr>
@@ -358,6 +388,8 @@ Result is propagated unchanged.</p>
             </a>
           <p>Lifts a function into a Result container and applies it on the given result.</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -376,6 +408,8 @@ Result is propagated unchanged.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Promote a function to a monad/applicative, scanning the monadic/applicative arguments from left to right.</p>
+
+
 
         </td>
       </tr>
@@ -396,6 +430,8 @@ Result is propagated unchanged.</p>
             </a>
           <p>Appends the given messages with the messages in the given result.</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -415,6 +451,8 @@ Result is propagated unchanged.</p>
             </a>
           <p>Wraps a value in a Success</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -433,6 +471,8 @@ Result is propagated unchanged.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Wraps a value in a Success</p>
+
+
 
         </td>
       </tr>
@@ -454,6 +494,8 @@ Result is propagated unchanged.</p>
           <p>If the given result is a Success the wrapped value will be returned. 
 Otherwise the function throws an exception with Failure message of the result.</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -474,6 +516,8 @@ Otherwise the function throws an exception with Failure message of the result.</
           <p>If the result is a Success it executes the given function on the value and the messages.
 Result is propagated unchanged.</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -493,6 +537,8 @@ Result is propagated unchanged.</p>
             </a>
           <p>Wraps computations in an error handling computation expression.</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -511,6 +557,8 @@ Result is propagated unchanged.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Wraps a value in a Success and adds a message</p>
+
+
 
         </td>
       </tr>
@@ -538,6 +586,8 @@ Result is propagated unchanged.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Categorizes a result based on its state and the presence of extra messages</p>
+
+
 
         </td>
       </tr>
