@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>paket install
+    <title>paket find-package-versions
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
@@ -32,23 +32,43 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="paket-install" class="anchor" href="#paket-install">paket install</a></h1>
+<h1><a name="paket-find-package-versions" class="anchor" href="#paket-find-package-versions">paket find-package-versions</a></h1>
 
-<p>Ensures that all dependencies in your <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> are present in the <code>packages</code> directory and referenced correctly in all projects.</p>
+<p>EXERIMENTAL: Allows to search for package versions.</p>
 
 <table class="pre"><tr><td class="lines"><span class="l">1: </span>
 </td>
-<td class="snippet"><pre lang="batchfile">$ paket install [--force|-f] [--hard] [--redirects]
+<td class="snippet"><pre lang="batchfile">$ paket find-package-versions name <string> [max <int>] [--silent|-s]
 </pre></td></tr></table>
 
 <p>Options:</p>
 
-<p><code>--force [-f]</code>: Forces the download and reinstallation of all packages.</p>
+<p><code>name &lt;string&gt;</code>: Name of the Package</p>
 
-<p><code>--hard</code>: Replaces package references within project files even if they are not yet adhering to the Paket's conventions (and hence considered manually managed).</p>
+<p><code>max &lt;int&gt;</code>: Max. No. of results</p>
 
-<p><code>--redirects</code>: Creates binding redirects for the NuGet packages.</p>
+<p><code>--silent [-s]</code>: Doesn't trace other output than the search result</p>
 
+<h2><a name="Sample" class="anchor" href="#Sample">Sample</a></h2>
+
+<p>Running the command:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">paket</span> <span class="i">find</span><span class="o">-</span><span class="i">package</span><span class="o">-</span><span class="i">versions</span> <span class="i">name</span> <span class="i">FAKE</span> <span class="o">-</span><span class="i">s</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">max</span> <span class="n">10</span>
+</pre>
+</td>
+</tr>
+</table>
+
+<p>will result in:</p>
+
+<p><img src="img/paket-find-package-versions.png" alt="alt text" title="paket find-package-versions command" /></p>
+
+<div class="tip" id="fs1">val max : e1:&#39;T -&gt; e2:&#39;T -&gt; &#39;T (requires comparison)<br /><br />Full name: Microsoft.FSharp.Core.Operators.max</div>
 
         </div>
         <div class="span3">
