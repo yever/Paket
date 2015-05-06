@@ -38,12 +38,14 @@
 
 <table class="pre"><tr><td class="lines"><span class="l">1: </span>
 </td>
-<td class="snippet"><pre lang="batchfile">$ paket show-installed-packages [--all] [--silent|-s]
+<td class="snippet"><pre lang="batchfile">$ paket show-installed-packages [--all] [project <string>] [--silent|-s]
 </pre></td></tr></table>
 
 <p>Options:</p>
 
 <p><code>--all</code>: Shows all installed packages (incl. transitive dependencies).</p>
+
+<p><code>project &lt;string&gt;</code>: Show only packages that are installed in the given project.</p>
 
 <p><code>--silent [-s]</code>: Doesn't trace other output than installed packages</p>
 

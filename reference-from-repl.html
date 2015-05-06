@@ -196,7 +196,7 @@
 <div class="tip" id="fs5">member Dependencies.Add : package:string -&gt; unit<br />member Dependencies.Add : package:string * version:string -&gt; unit<br />member Dependencies.Add : package:string * version:string * force:bool * hard:bool * interactive:bool * installAfter:bool -&gt; unit</div>
 <div class="tip" id="fs6">member Dependencies.GetInstalledVersion : packageName:string -&gt; string option</div>
 <div class="tip" id="fs7">member Dependencies.Remove : package:string -&gt; unit<br />member Dependencies.Remove : package:string * force:bool * hard:bool * interactive:bool * installAfter:bool -&gt; unit</div>
-<div class="tip" id="fs8">member Dependencies.GetInstalledPackages : unit -&gt; (string * string) list</div>
+<div class="tip" id="fs8">member Dependencies.GetInstalledPackages : unit -&gt; (string * string) list<br />member Dependencies.GetInstalledPackages : referencesFile:ReferencesFile -&gt; (string * string) list</div>
 <div class="tip" id="fs9">member Dependencies.GetDirectDependencies : unit -&gt; (string * string) list<br />member Dependencies.GetDirectDependencies : referencesFile:ReferencesFile -&gt; (string * string) list</div>
 <div class="tip" id="fs10">val paketDependencies : Dependencies<br /><br />Full name: Reference-from-repl.paketDependencies</div>
 <div class="tip" id="fs11">namespace System</div>
