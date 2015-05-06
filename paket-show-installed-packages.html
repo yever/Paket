@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>remove</title>
+    <title>paket show-installed-packages
+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -31,16 +32,39 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h2><a name="Removing-from-a-single-project" class="anchor" href="#Removing-from-a-single-project">Removing from a single project</a></h2>
+<h1><a name="paket-show-installed-packages" class="anchor" href="#paket-show-installed-packages">paket show-installed-packages</a></h1>
 
-<p>It's also possible to remove a package from a specified project only:</p>
+<p>EXERIMENTAL: Shows all installed top-level packages.</p>
 
 <table class="pre"><tr><td class="lines"><span class="l">1: </span>
 </td>
-<td class="snippet"><pre lang="batchfile">$ paket remove nuget PACKAGENAME [project PROJECT] [--force] [--hard]
+<td class="snippet"><pre lang="batchfile">$ paket show-installed-packages [--all] [--silent|-s]
 </pre></td></tr></table>
 
-<p>See also <a href="paket-add.html">paket add</a>.</p>
+<p>Options:</p>
+
+<p><code>--all</code>: Shows all installed packages (incl. transitive dependencies).</p>
+
+<p><code>--silent [-s]</code>: Doesn't trace other output than installed packages</p>
+
+<h2><a name="Sample" class="anchor" href="#Sample">Sample</a></h2>
+
+<p>Running the command:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">paket</span> <span class="i">show</span><span class="o">-</span><span class="i">installed</span><span class="o">-</span><span class="i">packages</span> <span class="o">--</span><span class="i">all</span> <span class="o">-</span><span class="i">s</span>
+</pre>
+</td>
+</tr>
+</table>
+
+<p>will result in:</p>
+
+<p><img src="img/paket-show-installed-packages.png" alt="alt text" title="paket show-installed-packages command" /></p>
 
 
         </div>
