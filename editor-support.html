@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>The .paket folder
+    <title>Editor support
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
@@ -32,25 +32,34 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="The-paket-folder" class="anchor" href="#The-paket-folder">The .paket folder</a></h1>
+<h1><a name="Editor-support" class="anchor" href="#Editor-support">Editor support</a></h1>
 
-<p>The <a href="https://github.com/fsprojects/Paket/tree/master/.paket"><code>.paket</code> folder</a> is used the same way a <code>.nuget</code> folder is used for the <a href="http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages">NuGet package restore</a>.</p>
+<h2><a name="Atom" class="anchor" href="#Atom">Atom</a></h2>
 
-<p>Place this folder into the root of your solution. It should include the <code>paket.targets</code> and <code>paket.bootstrapper.exe</code> files which can be downloaded from <a href="https://github.com/fsprojects/Paket/releases/latest">GitHub</a>. 
-The <a href="http://fsprojects.github.io/Paket/bootstrapper.html">bootstrapper</a> will always download the latest version of the <code>paket.exe</code> file and it will be placed into the same folder.</p>
+<p>Project site: <a href="https://github.com/hmemcpy/Paket.VisualStudio
+Status:">https://github.com/hmemcpy/Paket.VisualStudio
+Status:</a> In Development
+Features:
+  * Paket commands available in Atom`s Command Palette</p>
 
-<p>Now, to install all the packages from the <code>paket.dependencies</code> files, just run the following command.</p>
+<p><img src="img/paket-add-atom.png" alt="alt text" title="paket add command in Atom" /></p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="o">.</span><span class="i">paket</span><span class="o">/</span><span class="i">paket</span><span class="o">.</span><span class="i">exe</span> <span class="i">install</span>
-</pre>
-</td>
-</tr>
-</table>
+<h2><a name="Emacs" class="anchor" href="#Emacs">Emacs</a></h2>
+
+<p>Project site: <a href="https://github.com/zzdtri/paket.el
+Status:">https://github.com/zzdtri/paket.el
+Status:</a> In Development
+Features:
+  * <code>paket.dependencies</code> buffer supports commands like add, remove, install, ...</p>
+
+<h2><a name="Visual-Studio" class="anchor" href="#Visual-Studio">Visual Studio</a></h2>
+
+<p>Project site: <a href="https://github.com/Krzysztof-Cieslak/FSharp.Atom
+Status:">https://github.com/Krzysztof-Cieslak/FSharp.Atom
+Status:</a> In Development
+Features:
+  <em> Solution Explorer Extensions for Paket files
+  </em> Syntax highlighting in <code>paket.dependencies</code></p>
 
 
         </div>
