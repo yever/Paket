@@ -34,7 +34,7 @@
           
 <h1><a name="GitHub-dependencies" class="anchor" href="#GitHub-dependencies">GitHub dependencies</a></h1>
 
-<p>Paket allows one to automatically manage the linking of files from <a href="http://www.github.com">github.com</a> or <a href="https://gist.github.com/">gist.github.com</a> into your projects.</p>
+<p>Paket allows you to automatically manage the linking of files from <a href="http://www.github.com">github.com</a> or <a href="https://gist.github.com/">gist.github.com</a> into your projects.</p>
 
 <h2><a name="Referencing-a-single-file" class="anchor" href="#Referencing-a-single-file">Referencing a single file</a></h2>
 
@@ -51,7 +51,7 @@
 </tr>
 </table>
 
-<p>If you run the <a href="paket-update.html"><code>paket update</code> command</a>, it will add a new section to your <a href="lock-file.html"><code>paket.lock</code> file</a>:</p>
+<p>If you run the <a href="paket-update.html"><code>paket update</code> command</a>, it will download the file to a sub folder in <code>paket-files</code> and also add a new section to your <a href="lock-file.html"><code>paket.lock</code> file</a>:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
@@ -100,8 +100,7 @@
 </tr>
 </table>
 
-<p>This will reference the linked file directly into your project.
-By default the linked file will be visible under <code>paket-files</code> folder in project.</p>
+<p>and run <a href="paket-install.html"><code>paket install</code> command</a>. This will reference the linked file directly into your project and by default, be visible under <code>paket-files</code> folder in project.</p>
 
 <p><img src="img/github_ref_default_link.png" alt="alt text" title="GitHub file referenced in project with default link" /></p>
 
