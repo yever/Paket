@@ -38,7 +38,8 @@
 
 <p>An example <code>paket.template</code> file might look like the following:</p>
 
-<table class="pre"><tr><td class="lines"><span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
@@ -46,8 +47,9 @@
 <span class="l">6: </span>
 <span class="l">7: </span>
 <span class="l">8: </span>
+</pre>
 </td>
-<td class="snippet"><pre lang="batchfile">type file
+<td class="snippet"><pre class="fssnip" lang="batchfile">type file
 id Test.Paket.Package
 version 1.0
 authors Michael Newton
@@ -165,12 +167,14 @@ to decide on the files and dependencies added.</p>
 
 <p>A files block looks like this:</p>
 
-<table class="pre"><tr><td class="lines"><span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
+</pre>
 </td>
-<td class="snippet"><pre lang="batchfile">files
+<td class="snippet"><pre class="fssnip" lang="batchfile">files
     relative/to/template/file ==> folder/in/nupkg
     second/thing/to/pack ==> folder/in/nupkg
     second/thing/**/file.* ==> folder/in/nupkg
@@ -191,11 +195,13 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 
 <p>A references block looks like this:</p>
 
-<table class="pre"><tr><td class="lines"><span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
+</pre>
 </td>
-<td class="snippet"><pre lang="batchfile">references
+<td class="snippet"><pre class="fssnip" lang="batchfile">references
     filename1.dll
     filename2.dll
 </pre></td></tr></table>
@@ -206,11 +212,13 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 
 <p>A block with framework assembly references looks like this:</p>
 
-<table class="pre"><tr><td class="lines"><span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
+</pre>
 </td>
-<td class="snippet"><pre lang="batchfile">frameworkAssemblies
+<td class="snippet"><pre class="fssnip" lang="batchfile">frameworkAssemblies
     System.Xml
     System.Xml.Linq     
 </pre></td></tr></table>

@@ -76,14 +76,16 @@ If you want to know more about Paket's resolver algorithm, then you can read <a 
 We know that this might cause you some manual work for some of the currently available NuGet packages, but we think these install scripts cause more harm than good.
 In fact our current model would not be able to work consistently alongside an <code>install.ps1</code> script like the following from <code>FontAwesome.4.1.0</code>:</p>
 
-<table class="pre"><tr><td class="lines"><span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
 <span class="l">5: </span>
 <span class="l">6: </span>
+</pre>
 </td>
-<td class="snippet"><pre lang="batchfile">param($installPath, $toolsPath, $package, $project)
+<td class="snippet"><pre class="fssnip" lang="batchfile">param($installPath, $toolsPath, $package, $project)
 
 foreach ($fontFile in $project.ProjectItems.Item("fonts").ProjectItems)
 {
