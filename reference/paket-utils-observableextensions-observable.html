@@ -50,14 +50,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '218', 218)" onmouseover="showTip(event, '218', 218)">
-            flatten(a)
+            distinct(a)
           </code>
           <div class="tip" id="218">
-            <strong>Signature:</strong> a:IObservable&lt;&#39;?7509&gt; -&gt; IObservable&lt;&#39;a&gt;<br />
-                          <strong>Type parameters:</strong> '?7509, 'a          </div>
+            <strong>Signature:</strong> a:IObservable&lt;&#39;a&gt; -&gt; IObservable&lt;&#39;a&gt;<br />
+                          <strong>Type parameters:</strong> 'a          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L419-419" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L433-433" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -68,14 +68,32 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '219', 219)" onmouseover="showTip(event, '219', 219)">
-            guard(f e)
+            flatten(a)
           </code>
           <div class="tip" id="219">
+            <strong>Signature:</strong> a:IObservable&lt;&#39;?7511&gt; -&gt; IObservable&lt;&#39;a&gt;<br />
+                          <strong>Type parameters:</strong> '?7511, 'a          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L427-427" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '220', 220)" onmouseover="showTip(event, '220', 220)">
+            guard(f e)
+          </code>
+          <div class="tip" id="220">
             <strong>Signature:</strong> f:(unit -&gt; unit) -&gt; e:IObservable&lt;&#39;Args&gt; -&gt; IObservable&lt;&#39;Args&gt;<br />
                           <strong>Type parameters:</strong> 'Args          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L373-373" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L375-375" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -90,33 +108,15 @@ operation after 'let!' attaches handler)</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '220', 220)" onmouseover="showTip(event, '220', 220)">
+          <code onmouseout="hideTip(event, '221', 221)" onmouseover="showTip(event, '221', 221)">
             ofAsync(a)
           </code>
-          <div class="tip" id="220">
+          <div class="tip" id="221">
             <strong>Signature:</strong> a:Async&lt;&#39;a&gt; -&gt; IObservable&lt;&#39;a&gt;<br />
                           <strong>Type parameters:</strong> 'a          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L402-402" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '221', 221)" onmouseover="showTip(event, '221', 221)">
-            ofAsyncWithToken(token a)
-          </code>
-          <div class="tip" id="221">
-            <strong>Signature:</strong> token:CancellationToken -&gt; a:Async&lt;&#39;a&gt; -&gt; IObservable&lt;&#39;a&gt;<br />
-                          <strong>Type parameters:</strong> 'a          </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L412-412" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L408-408" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -127,14 +127,14 @@ operation after 'let!' attaches handler)</p>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '222', 222)" onmouseover="showTip(event, '222', 222)">
-            ofSeq(s)
+            ofAsyncWithToken(token a)
           </code>
           <div class="tip" id="222">
-            <strong>Signature:</strong> s:seq&lt;&#39;?7503&gt; -&gt; IObservable&lt;&#39;?7503&gt;<br />
-                          <strong>Type parameters:</strong> '?7503          </div>
+            <strong>Signature:</strong> token:CancellationToken -&gt; a:Async&lt;&#39;a&gt; -&gt; IObservable&lt;&#39;a&gt;<br />
+                          <strong>Type parameters:</strong> 'a          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L397-397" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L419-419" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -145,14 +145,32 @@ operation after 'let!' attaches handler)</p>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '223', 223)" onmouseover="showTip(event, '223', 223)">
-            sample(milliseconds source)
+            ofSeq(s)
           </code>
           <div class="tip" id="223">
+            <strong>Signature:</strong> s:seq&lt;&#39;?7503&gt; -&gt; IObservable&lt;&#39;?7503&gt;<br />
+                          <strong>Type parameters:</strong> '?7503          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L399-399" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '224', 224)" onmouseover="showTip(event, '224', 224)">
+            sample(milliseconds source)
+          </code>
+          <div class="tip" id="224">
             <strong>Signature:</strong> milliseconds:int -&gt; source:IObservable&lt;&#39;T&gt; -&gt; IObservable&lt;&#39;T&gt;<br />
                           <strong>Type parameters:</strong> 'T          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L378-378" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L380-380" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>

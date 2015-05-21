@@ -31,95 +31,27 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h4><a name="1-4-18-20-05-2015" class="anchor" href="#1-4-18-20-05-2015">1.4.18 - 20.05.2015</a></h4>
+<h4><a name="1-5-0-alpha001-21-05-2015" class="anchor" href="#1-5-0-alpha001-21-05-2015">1.5.0-alpha001 - 21.05.2015</a></h4>
 
 <ul>
+<li>Property tests for dependencies files parser - <a href="https://github.com/fsprojects/Paket/pull/807">https://github.com/fsprojects/Paket/pull/807</a></li>
 <li>EXPERIMENTAL: Query NuGet feeds in parallel</li>
-</ul>
-
-<h4><a name="1-4-16-20-05-2015" class="anchor" href="#1-4-16-20-05-2015">1.4.16 - 20.05.2015</a></h4>
-
-<ul>
-<li>Create easy data extraction for C# interop with sources</li>
-</ul>
-
-<h4><a name="1-4-15-19-05-2015" class="anchor" href="#1-4-15-19-05-2015">1.4.15 - 19.05.2015</a></h4>
-
-<ul>
-<li>Work around issue with CustomAssemblyAttributes during <code>paket pack</code> - <a href="https://github.com/fsprojects/Paket/issues/827">https://github.com/fsprojects/Paket/issues/827</a></li>
-</ul>
-
-<h4><a name="1-4-14-15-05-2015" class="anchor" href="#1-4-14-15-05-2015">1.4.14 - 15.05.2015</a></h4>
-
-<ul>
-<li>Allow to specify the directory for <code>Convert to NuGet</code> in PublicAPI</li>
-</ul>
-
-<h4><a name="1-4-13-13-05-2015" class="anchor" href="#1-4-13-13-05-2015">1.4.13 - 13.05.2015</a></h4>
-
-<ul>
-<li>Expose project Guids</li>
-</ul>
-
-<h4><a name="1-4-11-12-05-2015" class="anchor" href="#1-4-11-12-05-2015">1.4.11 - 12.05.2015</a></h4>
-
-<ul>
-<li>Allow simplify on concrete dependencies file.</li>
-</ul>
-
-<h4><a name="1-4-9-12-05-2015" class="anchor" href="#1-4-9-12-05-2015">1.4.9 - 12.05.2015</a></h4>
-
-<ul>
+<li>Allow to specify the directory for <code>convert-to-nuget</code> in PublicAPI</li>
+<li>Expose project Guids from project files</li>
+<li>Allow simplify on concrete dependencies file</li>
 <li>Allow to specify a concrete template file for <code>paket pack</code></li>
-</ul>
-
-<h4><a name="1-4-8-12-05-2015" class="anchor" href="#1-4-8-12-05-2015">1.4.8 - 12.05.2015</a></h4>
-
-<ul>
-<li>BUGFIX: Fix dates after creating a package</li>
-</ul>
-
-<h4><a name="1-4-7-12-05-2015" class="anchor" href="#1-4-7-12-05-2015">1.4.7 - 12.05.2015</a></h4>
-
-<ul>
 <li>Add overload in PublicAPI for default Restore</li>
-<li>BUGFIX: Fix dates in local nuget packages</li>
-</ul>
-
-<h4><a name="1-4-6-12-05-2015" class="anchor" href="#1-4-6-12-05-2015">1.4.6 - 12.05.2015</a></h4>
-
-<ul>
-<li>Fix local path issue on Mono</li>
-</ul>
-
-<h4><a name="1-4-5-12-05-2015" class="anchor" href="#1-4-5-12-05-2015">1.4.5 - 12.05.2015</a></h4>
-
-<ul>
 <li>Better tracing during "update package"</li>
-</ul>
-
-<h4><a name="1-4-4-12-05-2015" class="anchor" href="#1-4-4-12-05-2015">1.4.4 - 12.05.2015</a></h4>
-
-<ul>
 <li>Allow to register trace functions</li>
-</ul>
-
-<h4><a name="1-4-3-12-05-2015" class="anchor" href="#1-4-3-12-05-2015">1.4.3 - 12.05.2015</a></h4>
-
-<ul>
-<li>Always trim package names</li>
-</ul>
-
-<h4><a name="1-4-2-09-05-2015" class="anchor" href="#1-4-2-09-05-2015">1.4.2 - 09.05.2015</a></h4>
-
-<ul>
-<li>Always show default nuget stream in completion</li>
-</ul>
-
-<h4><a name="1-4-1-09-05-2015" class="anchor" href="#1-4-1-09-05-2015">1.4.1 - 09.05.2015</a></h4>
-
-<ul>
 <li>Allow to specify a source feed for Find-Packages and Find-Package-Versions command</li>
+<li>BUGFIX: Fix dates in local nuget packages</li>
+<li>BUGFIX: NullReferenceException in <code>convert-from-nuget</code> - <a href="https://github.com/fsprojects/Paket/pull/831">https://github.com/fsprojects/Paket/pull/831</a></li>
+<li>BUGFIX: <code>Convert-from-nuget</code> quotes source feeds - <a href="https://github.com/fsprojects/Paket/pull/833">https://github.com/fsprojects/Paket/pull/833</a></li>
+<li>BUGFIX: Observable.ofAsync fires OnCompleted - <a href="https://github.com/fsprojects/Paket/pull/835">https://github.com/fsprojects/Paket/pull/835</a></li>
+<li>BUGFIX: Work around issue with CustomAssemblyAttributes during <code>paket pack</code> - <a href="https://github.com/fsprojects/Paket/issues/827">https://github.com/fsprojects/Paket/issues/827</a></li>
+<li>BUGFIX: Fix dates after creating a package</li>
+<li>BUGFIX: Always trim package names from command line</li>
+<li>BUGFIX: Always show default nuget stream in completion</li>
 </ul>
 
 <h4><a name="1-4-0-08-05-2015" class="anchor" href="#1-4-0-08-05-2015">1.4.0 - 08.05.2015</a></h4>
