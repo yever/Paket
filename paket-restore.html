@@ -40,14 +40,16 @@
 <span class="l">1: </span>
 </pre>
 </td>
-<td class="snippet"><pre class="fssnip" lang="batchfile">$ paket restore [--force|-f] [--references-files <string> ...]
+<td class="snippet"><pre class="fssnip" lang="batchfile">$ paket restore [--force|-f] [--only-referenced] [--references-files <string> ...]
 </pre></td></tr></table>
 
 <p>Options:</p>
 
 <p><code>--force [-f]</code>: Forces the download of all packages.</p>
 
-<p><code>--references-files &lt;string&gt; ...</code>: Allows to restore all packages from the given <a href="references-files.html"><code>paket.references</code> files</a>. If no <a href="references-files.html"><code>paket.references</code> file</a> is given then all packages will be restored.</p>
+<p><code>--only-referenced</code>: Allows to restore packages that are referenced in <a href="references-files.html"><code>paket.references</code> files</a>, instead of all packages in paket.dependencies.</p>
+
+<p><code>--references-files &lt;string&gt; ...</code>: Allows to restore all packages from the given <a href="references-files.html"><code>paket.references</code> files</a>. This implies --only-referenced.</p>
 
 
         </div>

@@ -74,7 +74,7 @@
             createModel (...)
           </code>
           <div class="tip" id="79">
-            <strong>Signature:</strong> (root:string * sources:PackageSource list * force:bool * lockFile:LockFile) -&gt; (ResolvedPackage * InstallModel) []<br />
+            <strong>Signature:</strong> (root:string * sources:PackageSource list * force:bool * lockFile:LockFile * packages:Set&lt;NormalizedPackageName&gt;) -&gt; (ResolvedPackage * InstallModel) []<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -99,7 +99,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallProcess.fs#L137-137" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallProcess.fs#L138-138" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -128,14 +128,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '82', 82)" onmouseover="showTip(event, '82', 82)">
-            Install (...)
+            Install (sources, options, lockFile)
           </code>
           <div class="tip" id="82">
-            <strong>Signature:</strong> (sources:PackageSource list * force:bool * hard:bool * withBindingRedirects:bool * lockFile:LockFile) -&gt; unit<br />
+            <strong>Signature:</strong> (sources:PackageSource list * options:SmartInstallOptions * lockFile:LockFile) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallProcess.fs#L279-279" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallProcess.fs#L293-293" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -152,11 +152,11 @@
             InstallIntoProjects (...)
           </code>
           <div class="tip" id="83">
-            <strong>Signature:</strong> (sources:PackageSource list * force:bool * hard:bool * withBindingRedirects:bool * lockFile:LockFile * projects:seq&lt;ProjectFile * ReferencesFile&gt;) -&gt; unit<br />
+            <strong>Signature:</strong> (sources:PackageSource list * options:SmartInstallOptions * lockFile:LockFile * projects:(ProjectFile * ReferencesFile) list) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallProcess.fs#L150-150" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallProcess.fs#L151-151" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
