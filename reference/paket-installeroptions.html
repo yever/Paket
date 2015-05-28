@@ -36,10 +36,11 @@
 
 <h1>InstallerOptions</h1>
 <div class="xmldoc">
-<p>Force     - Force the download and reinstallation of all packages
-Hard      - Replace package references within project files even if they are not yet adhering
-            to the Paket's conventions (and hence considered manually managed)
-Redirects - Create binding redirects for the NuGet packages</p>
+<p>Force          - Force the download and reinstallation of all packages
+Hard           - Replace package references within project files even if they are not yet adhering
+                 to the Paket's conventions (and hence considered manually managed)
+Redirects      - Create binding redirects for the NuGet packages
+OnlyReferenced - Only install packages that are referenced in paket.references files.</p>
 
 
 </div>
@@ -52,28 +53,10 @@ Redirects - Create binding redirects for the NuGet packages</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '579', 579)" onmouseover="showTip(event, '579', 579)">
+          <code onmouseout="hideTip(event, '581', 581)" onmouseover="showTip(event, '581', 581)">
             Force
           </code>
-          <div class="tip" id="579">
-            <strong>Signature:</strong> bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ProcessOptions.fs#L9-9" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '580', 580)" onmouseover="showTip(event, '580', 580)">
-            Hard
-          </code>
-          <div class="tip" id="580">
+          <div class="tip" id="581">
             <strong>Signature:</strong> bool<br />
                       </div>
         </td>
@@ -88,15 +71,51 @@ Redirects - Create binding redirects for the NuGet packages</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '581', 581)" onmouseover="showTip(event, '581', 581)">
-            Redirects
+          <code onmouseout="hideTip(event, '582', 582)" onmouseover="showTip(event, '582', 582)">
+            Hard
           </code>
-          <div class="tip" id="581">
+          <div class="tip" id="582">
             <strong>Signature:</strong> bool<br />
                       </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ProcessOptions.fs#L11-11" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '583', 583)" onmouseover="showTip(event, '583', 583)">
+            OnlyReferenced
+          </code>
+          <div class="tip" id="583">
+            <strong>Signature:</strong> bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ProcessOptions.fs#L13-13" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '584', 584)" onmouseover="showTip(event, '584', 584)">
+            Redirects
+          </code>
+          <div class="tip" id="584">
+            <strong>Signature:</strong> bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ProcessOptions.fs#L12-12" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -114,15 +133,15 @@ Redirects - Create binding redirects for the NuGet packages</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '582', 582)" onmouseover="showTip(event, '582', 582)">
+          <code onmouseout="hideTip(event, '585', 585)" onmouseover="showTip(event, '585', 585)">
             createLegacyOptions(...)
           </code>
-          <div class="tip" id="582">
+          <div class="tip" id="585">
             <strong>Signature:</strong> (force:bool * hard:bool * redirects:bool) -&gt; InstallerOptions<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ProcessOptions.fs#L18-18" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ProcessOptions.fs#L21-21" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -132,15 +151,15 @@ Redirects - Create binding redirects for the NuGet packages</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '583', 583)" onmouseover="showTip(event, '583', 583)">
+          <code onmouseout="hideTip(event, '586', 586)" onmouseover="showTip(event, '586', 586)">
             Default
           </code>
-          <div class="tip" id="583">
+          <div class="tip" id="586">
             <strong>Signature:</strong> InstallerOptions<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ProcessOptions.fs#L13-13" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ProcessOptions.fs#L15-15" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
