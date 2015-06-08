@@ -34,13 +34,15 @@
           
 <h1><a name="paket-bootstrapper-exe" class="anchor" href="#paket-bootstrapper-exe">paket.bootstrapper.exe</a></h1>
 
-<p>Downloads the latest stable paket.exe from github.com.</p>
+<p>Downloads the latest stable paket.exe from github.com. If the download from github.com fails it tries to download the version from nuget.org instead.</p>
+
+<p><code>Ctrl+C</code> interrupts the download process. The return value of the bootstrapper is 0 when a paket.exe already exists, so that any subsequent scripts can continue.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
 </pre>
 </td>
-<td class="snippet"><pre class="fssnip" lang="batchfile">$ paket.bootstrapper.exe [prerelease|version] [--prefer-nuget] [-s]
+<td class="snippet"><pre class="fssnip" lang="batchfile">$ paket.bootstrapper.exe [prerelease|version] [--prefer-nuget] [--self] [-s]
 </pre></td></tr></table>
 
 <p>Options:</p>
@@ -49,9 +51,9 @@
 
 <p><code>version</code>: Downloads the given version of paket.exe from github.com.</p>
 
-<p><code>--prefer-nuget</code>: Downloads the given version of paket.exe from nuget.org instead of github.com.</p>
+<p><code>--prefer-nuget</code>: Downloads the given version of paket.exe from nuget.org instead of github.com. Uses github.com as fallback, when nuget.org fails</p>
 
-<p><code>--self</code>: Self updating the paket.bootstrapper.exe. When this option is used the download of paket.exe will be skipped.</p>
+<p><code>--self</code>: Self updating the paket.bootstrapper.exe. When this option is used the download of paket.exe will be skipped. (Can be combined with <code>--prefer-nuget</code>)</p>
 
 <p><code>-s</code>: If this flag is set the bootstrapper will not perform any output.</p>
 
