@@ -36,12 +36,10 @@
 
 <p>Allows to store global configuration values like NuGet credentials.</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip" lang="batchfile">$ paket config [add-credentials <string>]
-</pre></td></tr></table>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket config [add-credentials <string>]
+</code></pre></td></tr></table>
 
 <p>Options:</p>
 
@@ -53,18 +51,14 @@
 
 <p>The configuration file can be found in:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">AppDataFolder</span> <span class="o">=</span> <span class="i">Environment</span><span class="o">.</span><span class="i">GetFolderPath</span>(<span class="i">Environment</span><span class="o">.</span><span class="i">SpecialFolder</span><span class="o">.</span><span class="i">ApplicationData</span>)
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">AppDataFolder</span> <span class="o">=</span> <span class="i">Environment</span><span class="o">.</span><span class="i">GetFolderPath</span>(<span class="i">Environment</span><span class="o">.</span><span class="i">SpecialFolder</span><span class="o">.</span><span class="i">ApplicationData</span>)
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">PaketConfigFolder</span> <span class="o">=</span> <span class="i">Path</span><span class="o">.</span><span class="i">Combine</span>(<span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">AppDataFolder</span>, <span class="s">&quot;Paket&quot;</span>)
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="i">PaketConfigFile</span> <span class="o">=</span> <span class="i">Path</span><span class="o">.</span><span class="i">Combine</span>(<span onmouseout="hideTip(event, 'fs2', 5)" onmouseover="showTip(event, 'fs2', 5)" class="i">PaketConfigFolder</span>, <span class="s">&quot;paket.config&quot;</span>)
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 

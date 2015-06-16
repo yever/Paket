@@ -69,8 +69,7 @@ The algorithm needs to evaluate the package dependency graph along the way by re
 <p>Starting from the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> we have a set of package requirements. 
 Every requirement specifies a version range and a resolver strategy for a package:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l"> 1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
 <span class="l"> 3: </span>
 <span class="l"> 4: </span>
@@ -82,10 +81,8 @@ Every requirement specifies a version range and a resolver strategy for a packag
 <span class="l">10: </span>
 <span class="l">11: </span>
 <span class="l">12: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">type</span> <span onmouseout="hideTip(event, 'fs10', 16)" onmouseover="showTip(event, 'fs10', 16)" class="t">PackageRequirementSource</span> <span class="o">=</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">type</span> <span onmouseout="hideTip(event, 'fs10', 16)" onmouseover="showTip(event, 'fs10', 16)" class="t">PackageRequirementSource</span> <span class="o">=</span>
 | <span onmouseout="hideTip(event, 'fs11', 17)" onmouseover="showTip(event, 'fs11', 17)" class="p">DependenciesFile</span> <span class="k">of</span> <span onmouseout="hideTip(event, 'fs1', 18)" onmouseover="showTip(event, 'fs1', 18)" class="t">string</span>
 | <span onmouseout="hideTip(event, 'fs12', 19)" onmouseover="showTip(event, 'fs12', 19)" class="p">Package</span> <span class="k">of</span> <span onmouseout="hideTip(event, 'fs2', 20)" onmouseover="showTip(event, 'fs2', 20)" class="t">PackageName</span> <span class="o">*</span> <span onmouseout="hideTip(event, 'fs3', 21)" onmouseover="showTip(event, 'fs3', 21)" class="t">SemVerInfo</span> 
 
@@ -97,8 +94,7 @@ Every requirement specifies a version range and a resolver strategy for a packag
       <span onmouseout="hideTip(event, 'fs19', 30)" onmouseover="showTip(event, 'fs19', 30)" class="i">ResolverStrategy</span> <span class="o">:</span> <span onmouseout="hideTip(event, 'fs19', 31)" onmouseover="showTip(event, 'fs19', 31)" class="t">ResolverStrategy</span>
       <span onmouseout="hideTip(event, 'fs20', 32)" onmouseover="showTip(event, 'fs20', 32)" class="i">Parent</span><span class="o">:</span> <span onmouseout="hideTip(event, 'fs10', 33)" onmouseover="showTip(event, 'fs10', 33)" class="t">PackageRequirementSource</span>
       <span onmouseout="hideTip(event, 'fs21', 34)" onmouseover="showTip(event, 'fs21', 34)" class="i">Sources</span> <span class="o">:</span> <span onmouseout="hideTip(event, 'fs8', 35)" onmouseover="showTip(event, 'fs8', 35)" class="t">PackageSource</span> <span onmouseout="hideTip(event, 'fs6', 36)" onmouseover="showTip(event, 'fs6', 36)" class="t">list</span> }
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
@@ -109,8 +105,7 @@ A set of <em>closed</em> requirements is maintained in order to prevent cycles i
 
 <p>If the selected requirement results in a conflict then the algorithm backtracks in the search tree and selects the next version.</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l"> 1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
 <span class="l"> 3: </span>
 <span class="l"> 4: </span>
@@ -153,10 +148,8 @@ A set of <em>closed</em> requirements is maintained in order to prevent cycles i
 <span class="l">41: </span>
 <span class="l">42: </span>
 <span class="l">43: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span class="k">rec</span> <span onmouseout="hideTip(event, 'fs51', 94)" onmouseover="showTip(event, 'fs51', 94)" class="f">step</span>(<span onmouseout="hideTip(event, 'fs40', 95)" onmouseover="showTip(event, 'fs40', 95)" class="i">selectedPackageVersions</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs24', 96)" onmouseover="showTip(event, 'fs24', 96)" class="t">Set</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs9', 97)" onmouseover="showTip(event, 'fs9', 97)" class="t">ResolvedPackage</span><span class="o">&gt;</span>,
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span class="k">rec</span> <span onmouseout="hideTip(event, 'fs51', 94)" onmouseover="showTip(event, 'fs51', 94)" class="f">step</span>(<span onmouseout="hideTip(event, 'fs40', 95)" onmouseover="showTip(event, 'fs40', 95)" class="i">selectedPackageVersions</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs24', 96)" onmouseover="showTip(event, 'fs24', 96)" class="t">Set</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs9', 97)" onmouseover="showTip(event, 'fs9', 97)" class="t">ResolvedPackage</span><span class="o">&gt;</span>,
              <span onmouseout="hideTip(event, 'fs52', 98)" onmouseover="showTip(event, 'fs52', 98)" class="i">closedRequirements</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs24', 99)" onmouseover="showTip(event, 'fs24', 99)" class="t">Set</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs16', 100)" onmouseover="showTip(event, 'fs16', 100)" class="t">PackageRequirement</span><span class="o">&gt;</span>,
              <span onmouseout="hideTip(event, 'fs53', 101)" onmouseover="showTip(event, 'fs53', 101)" class="i">openRequirements</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs24', 102)" onmouseover="showTip(event, 'fs24', 102)" class="t">Set</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs16', 103)" onmouseover="showTip(event, 'fs16', 103)" class="t">PackageRequirement</span><span class="o">&gt;</span>) <span class="o">=</span>
 
@@ -199,8 +192,7 @@ A set of <em>closed</em> requirements is maintained in order to prevent cycles i
         <span class="c">// we are done - return the selected versions</span>
         <span onmouseout="hideTip(event, 'fs48', 175)" onmouseover="showTip(event, 'fs48', 175)" class="t">Resolution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs49', 176)" onmouseover="showTip(event, 'fs49', 176)" class="p">Ok</span>(<span onmouseout="hideTip(event, 'fs40', 177)" onmouseover="showTip(event, 'fs40', 177)" class="i">selectedPackageVersions</span>)
    
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 

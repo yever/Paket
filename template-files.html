@@ -38,8 +38,7 @@
 
 <p>An example <code>paket.template</code> file might look like the following:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
@@ -47,9 +46,8 @@
 <span class="l">6: </span>
 <span class="l">7: </span>
 <span class="l">8: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip" lang="batchfile">type file
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="batchfile">type file
 id Test.Paket.Package
 version 1.0
 authors Michael Newton
@@ -57,7 +55,7 @@ description
         description of this test package
 files
     src/Test.Paket.Package/bin/Debug ==> lib
-</pre></td></tr></table>
+</code></pre></td></tr></table>
 
 <p>This template file will create a nupkg called <code>Test.Paket.Package.[Version].nupkg</code> with the
 contents of the <code>src/Test.Paket.Package/bin/Debug</code> directory in the <code>lib</code> directory
@@ -76,16 +74,12 @@ can be called <code>paket.template</code>, otherwise the name of the template fi
 
 <p>For example:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">Paket</span><span class="o">.</span><span class="i">Project</span><span class="o">.</span><span class="i">fsproj</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">Paket</span><span class="o">.</span><span class="i">Project</span><span class="o">.</span><span class="i">fsproj</span>
 <span class="i">Paket</span><span class="o">.</span><span class="i">Project</span><span class="o">.</span><span class="i">fsproj</span><span class="o">.</span><span class="i">paket</span><span class="o">.</span><span class="i">template</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
@@ -98,8 +92,7 @@ name (case insensitive), or in an indented block following a line containing not
 
 <p>For example:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
@@ -107,10 +100,8 @@ name (case insensitive), or in an indented block following a line containing not
 <span class="l">6: </span>
 <span class="l">7: </span>
 <span class="l">8: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">description</span> <span class="i">This</span> <span class="i">is</span> <span class="i">a</span> <span class="i">valid</span> <span class="i">description</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">description</span> <span class="i">This</span> <span class="i">is</span> <span class="i">a</span> <span class="i">valid</span> <span class="i">description</span>
 
 <span class="i">DESCRIPTION</span>
   <span class="i">So</span> <span class="i">is</span> <span class="i">this</span>
@@ -118,8 +109,7 @@ name (case insensitive), or in an indented block following a line containing not
 
 <span class="i">description</span> <span class="i">This</span> <span class="i">would</span>
   <span class="i">cause</span> <span class="i">an</span> <span class="i">error</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
@@ -167,18 +157,16 @@ to decide on the files and dependencies added.</p>
 
 <p>A files block looks like this:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip" lang="batchfile">files
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="batchfile">files
     relative/to/template/file ==> folder/in/nupkg
     second/thing/to/pack ==> folder/in/nupkg
     second/thing/**/file.* ==> folder/in/nupkg
-</pre></td></tr></table>
+</code></pre></td></tr></table>
 
 <p>If the source part refers to a file then it is copied into the target directory. If it
 refers to a directory, the contents of the directory will be copied into the target folder.
@@ -195,16 +183,14 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 
 <p>A references block looks like this:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip" lang="batchfile">references
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="batchfile">references
     filename1.dll
     filename2.dll
-</pre></td></tr></table>
+</code></pre></td></tr></table>
 
 <p>If you omit the references block then all libraries in the packages will get referenced.</p>
 
@@ -212,16 +198,14 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 
 <p>A block with framework assembly references looks like this:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip" lang="batchfile">frameworkAssemblies
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="batchfile">frameworkAssemblies
     System.Xml
     System.Xml.Linq     
-</pre></td></tr></table>
+</code></pre></td></tr></table>
 
 <p>If you omit the references block then all libraries in the packages will get referenced.</p>
 
@@ -229,20 +213,16 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 
 <p>A dependency block looks like this:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">dependencies</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">dependencies</span>
   <span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Core</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">4.3</span><span class="o">.</span><span class="n">1</span>
   <span class="i">Other</span><span class="o">.</span><span class="i">Dep</span> <span class="o">~&gt;</span> <span class="n">2.5</span>
   <span class="i">Any</span><span class="o">.</span><span class="i">Version</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
@@ -250,18 +230,14 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 
 <p>It's possible to use <code>CURRENTVERSION</code> as a placeholder for the current version of the package:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">dependencies</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">dependencies</span>
   <span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 2)" onmouseover="showTip(event, 'fs1', 2)" class="i">Core</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">4.3</span><span class="o">.</span><span class="n">1</span>
   <span class="i">Other</span><span class="o">.</span><span class="i">Dep</span> <span class="o">~&gt;</span> <span class="i">CURRENTVERSION</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 

@@ -35,6 +35,9 @@
 
 
 <h1>SemVer</h1>
+<p>
+  <span>Namespace: Paket</span><br />
+</p>
 <div class="xmldoc">
 <p>Parser which allows to deal with <a href="http://semver.org/">Semantic Versioning</a> (SemVer).</p>
 
@@ -52,10 +55,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '196', 196)" onmouseover="showTip(event, '196', 196)">
+          <code onmouseout="hideTip(event, '195', 195)" onmouseover="showTip(event, '195', 195)">
             Parse version
           </code>
-          <div class="tip" id="196">
+          <div class="tip" id="195">
             <strong>Signature:</strong> version:string -&gt; SemVerInfo<br />
                       </div>
         </td>
@@ -69,22 +72,18 @@ according to the rules described in the <a href="http://semver.org/">SemVer docs
 
 <h2>Sample</h2>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
 <span class="l">5: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">parse</span> <span class="s">&quot;1.0.0-rc.1&quot;</span>     <span class="o">&lt;</span> <span class="i">parse</span> <span class="s">&quot;1.0.0&quot;</span>          <span class="c">// true</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">parse</span> <span class="s">&quot;1.0.0-rc.1&quot;</span>     <span class="o">&lt;</span> <span class="i">parse</span> <span class="s">&quot;1.0.0&quot;</span>          <span class="c">// true</span>
 <span class="i">parse</span> <span class="s">&quot;1.2.3-alpha&quot;</span>    <span class="o">&gt;</span> <span class="i">parse</span> <span class="s">&quot;1.2.2&quot;</span>          <span class="c">// true</span>
 <span class="i">parse</span> <span class="s">&quot;1.2.3-alpha2&quot;</span>   <span class="o">&gt;</span> <span class="i">parse</span> <span class="s">&quot;1.2.3-alpha&quot;</span>    <span class="c">// true</span>
 <span class="i">parse</span> <span class="s">&quot;1.2.3-alpha002&quot;</span> <span class="o">&gt;</span> <span class="i">parse</span> <span class="s">&quot;1.2.3-alpha1&quot;</span>   <span class="c">// true</span>
 <span class="i">parse</span> <span class="s">&quot;1.5.0-beta.2&quot;</span>   <span class="o">&gt;</span> <span class="i">parse</span> <span class="s">&quot;1.5.0-rc.1&quot;</span>     <span class="c">// false</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 

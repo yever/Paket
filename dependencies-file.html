@@ -38,8 +38,7 @@
 
 <p>To give you an overview, consider the following <code>paket.dependencies</code> file:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l"> 1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
 <span class="l"> 3: </span>
 <span class="l"> 4: </span>
@@ -55,10 +54,8 @@
 <span class="l">14: </span>
 <span class="l">15: </span>
 <span class="l">16: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="c">// NuGet packages</span>
 <span class="i">nuget</span> <span class="i">NUnit</span> <span class="o">~&gt;</span> <span class="n">2.6</span><span class="o">.</span><span class="n">3</span>
@@ -74,8 +71,7 @@
 
 <span class="c">// HTTP resources</span>
 <span class="i">http</span> <span class="i">http</span><span class="o">:</span><span class="c">//www.fssnip.net/1n decrypt.fs</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
@@ -112,22 +108,18 @@
 <p>Paket usually references all direct and transitive dependencies that are listed in your <a href="references-files.md"><code>paket.references</code> files</a> to your project file.
 In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</em> dependencies.</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
 <span class="l">5: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">references</span><span class="o">:</span> <span class="i">strict</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">references</span><span class="o">:</span> <span class="i">strict</span>
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span> <span class="o">~&gt;</span> <span class="n">6.0</span>
 <span class="i">nuget</span> <span class="i">UnionArgParser</span> <span class="o">~&gt;</span> <span class="n">0.7</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
@@ -135,20 +127,16 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 
 <p>Sometimes you don't want to generate dependencies for older framework versions. You can control this in the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">framework</span><span class="o">:</span> <span class="i">net35</span>, <span class="i">net40</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">framework</span><span class="o">:</span> <span class="i">net35</span>, <span class="i">net40</span>
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span class="i">Example</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">2.0</span> <span class="c">// only .NET 3.5 and .NET 4.0</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
@@ -156,22 +144,18 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 
 <p>This option disables the installation of any content files:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
 <span class="l">5: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">content</span><span class="o">:</span> <span class="i">none</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">content</span><span class="o">:</span> <span class="i">none</span>
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span class="i">jQuery</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">0</span> <span class="c">// we don&#39;t install jQuery content files</span>
 <span class="i">nuget</span> <span class="i">UnionArgParser</span> <span class="o">~&gt;</span> <span class="n">0.7</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
@@ -179,22 +163,18 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 
 <p>If you don't want to import <code>.targets</code> and <code>.props</code> files you can disable it via the <code>import_targets</code> switch:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
 <span class="l">5: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">import_targets</span><span class="o">:</span> <span class="k">false</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">import_targets</span><span class="o">:</span> <span class="k">false</span>
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span><span class="o">.</span><span class="i">Build</span> <span class="c">// we don&#39;t import .targets and .props</span>
 <span class="i">nuget</span> <span class="i">UnionArgParser</span> <span class="o">~&gt;</span> <span class="n">0.7</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
@@ -202,20 +182,16 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 
 <p>It's possible to influence the <code>Private</code> property for references via the <code>copy_local</code> switch:</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">copy_local</span><span class="o">:</span> <span class="k">false</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">copy_local</span><span class="o">:</span> <span class="k">false</span>
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
@@ -223,20 +199,16 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 
 <p>This option tells paket to create <a href="https://msdn.microsoft.com/en-us/library/433ysdt1(v=vs.110).aspx">Assembly Binding Redirects</a> for all referenced libraries.</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="i">redirects</span><span class="o">:</span> <span class="i">on</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">redirects</span><span class="o">:</span> <span class="i">on</span>
 <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span class="i">UnionArgParser</span> <span class="o">~&gt;</span> <span class="n">0.7</span>
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
