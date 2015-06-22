@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>find-refs</title>
+    <title>[after-command]
+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -55,59 +56,15 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h2><a name="Sample" class="anchor" href="#Sample">Sample</a></h2>
+<h1><a name="header" class="anchor" href="#header">[after-command]</a></h1>
 
-<p><em>.src/Paket/paket.references</em> contains:</p>
+<p>If the paket.dependencies file has been changed since the last update of the paket.lock file (e.g. added dependencies or changed version requirements),
+Paket will update the paket.lock file to make it match paket.dependencies again.</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-<span class="l">2: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">UnionArgParser</span>
-<span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Core</span>
-</code></pre></td>
-</tr>
-</table>
+<p>Unlike <a href="paket-update.html"><code>paket update</code></a>, <a href="paket-install.html"><code>paket install</code></a> will only look for
+new versions of dependencies that have been modified in paket.dependencies,
+and use the version from paket.lock for all other dependencies.</p>
 
-<p><em>.src/Paket.Core/paket.references</em> contains:</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span>
-<span class="i">DotNetZip</span>
-<span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 2)" onmouseover="showTip(event, 'fs1', 2)" class="i">Core</span>
-</code></pre></td>
-</tr>
-</table>
-
-<p>Now we run</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">paket find-refs DotNetZip FSharp.Core
-</code></pre></td></tr></table>
-
-<p>and paket gives the following output:</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-<span class="l">6: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">DotNetZip</span>
-<span class="o">.</span><span class="i">src</span><span class="o">/</span><span class="i">Paket</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">Core</span><span class="o">/</span><span class="i">Paket</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 4)" onmouseover="showTip(event, 'fs1', 4)" class="i">Core</span><span class="o">.</span><span class="i">fsproj</span>
-
-<span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="i">Core</span>
-<span class="o">.</span><span class="i">src</span><span class="o">/</span><span class="i">Paket</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 6)" onmouseover="showTip(event, 'fs1', 6)" class="i">Core</span><span class="o">/</span><span class="i">Paket</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 7)" onmouseover="showTip(event, 'fs1', 7)" class="i">Core</span><span class="o">.</span><span class="i">fsproj</span>
-<span class="o">.</span><span class="i">src</span><span class="o">/</span><span class="i">Paket</span><span class="o">/</span><span class="i">Paket</span><span class="o">.</span><span class="i">fsproj</span>
-</code></pre></td>
-</tr>
-</table>
-
-<div class="tip" id="fs1">namespace Microsoft.FSharp.Core</div>
 
         </div>
         <div class="span3">

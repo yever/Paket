@@ -19,6 +19,30 @@
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style type="text/css">
+      table.pre td.lines {
+        vertical-align: top;
+      }
+      pre.fssnip code[lang=batchfile],
+      pre.fssnip code[lang=msh] {
+        display: inline-block;
+        white-space: pre-wrap;       /* CSS 3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        word-break: keep-all;
+        padding-left: 2em;
+        text-indent: -2em;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function() {
+        $("code[lang='batchfile'], code[lang='msh']").each(function() {
+          $(this).html($(this).html().replace(/ &lt;/g, "&nbsp;&lt;"))
+        })
+      })
+    </script>
   </head>
   <body>
     <div class="container">
@@ -38,12 +62,12 @@
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket add nuget <string> [version <string>] [project <string>] [--force|-f] [--interactive|-i] [--hard] [--redirects] [--no-install]
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket add nuget &lt;string&gt; [version &lt;string&gt;] [project &lt;string&gt;] [--force|-f] [--interactive|-i] [--hard] [--redirects] [--no-install]
 </code></pre></td></tr></table>
 
-<p>Options:</p>
+<h3><a name="Options" class="anchor" href="#Options">Options:</a></h3>
 
-<p><code>nuget &lt;string&gt;</code>: Nuget package id.</p>
+<p><code>nuget &lt;string&gt;</code>: NuGet package id.</p>
 
 <p><code>version &lt;string&gt;</code>: Allows to specify version of the package.</p>
 
@@ -65,7 +89,7 @@
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket add nuget PACKAGENAME [version VERSION] [project PROJECT] [--force] [--hard]
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">$ paket add nuget PACKAGENAME [version VERSION] [project PROJECT] [--force] [--hard]
 </code></pre></td></tr></table>
 
 <p>See also <a href="paket-remove.html">paket remove</a>.</p>
@@ -85,7 +109,7 @@
 </tr>
 </table>
 
-<p>Now we run <code>paket add nuget xunit --interactive</code> install the package:</p>
+<p>Now we run <code>paket add nuget xunit --interactive</code> to install the package:</p>
 
 <p><img src="img/interactive-add.png" alt="alt text" title="Interactive paket add" /></p>
 

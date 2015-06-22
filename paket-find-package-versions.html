@@ -19,6 +19,30 @@
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style type="text/css">
+      table.pre td.lines {
+        vertical-align: top;
+      }
+      pre.fssnip code[lang=batchfile],
+      pre.fssnip code[lang=msh] {
+        display: inline-block;
+        white-space: pre-wrap;       /* CSS 3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        word-break: keep-all;
+        padding-left: 2em;
+        text-indent: -2em;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function() {
+        $("code[lang='batchfile'], code[lang='msh']").each(function() {
+          $(this).html($(this).html().replace(/ &lt;/g, "&nbsp;&lt;"))
+        })
+      })
+    </script>
   </head>
   <body>
     <div class="container">
@@ -38,18 +62,18 @@
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket find-package-versions name <string> [source <string>] [max <int>] [--silent|-s]
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket find-package-versions name &lt;string&gt; [source &lt;string&gt;] [max &lt;int&gt;] [--silent|-s]
 </code></pre></td></tr></table>
 
-<p>Options:</p>
+<h3><a name="Options" class="anchor" href="#Options">Options:</a></h3>
 
-<p><code>name &lt;string&gt;</code>: Name of the Package</p>
+<p><code>name &lt;string&gt;</code>: Name of the Package.</p>
 
 <p><code>source &lt;string&gt;</code>: Allows to specify the package source feed.</p>
 
-<p><code>max &lt;int&gt;</code>: Max. No. of results</p>
+<p><code>max &lt;int&gt;</code>: Maximum number of results.</p>
 
-<p><code>--silent [-s]</code>: Doesn't trace other output than the search result</p>
+<p><code>--silent [-s]</code>: Doesn't trace other output than the search result.</p>
 
 <h2><a name="Sample" class="anchor" href="#Sample">Sample</a></h2>
 
@@ -57,16 +81,13 @@
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">paket</span> <span class="i">find</span><span class="o">-</span><span class="i">package</span><span class="o">-</span><span class="i">versions</span> <span class="i">name</span> <span class="i">FAKE</span> <span class="o">-</span><span class="i">s</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">max</span> <span class="n">10</span>
-</code></pre></td>
-</tr>
-</table>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket find-package-versions name FAKE -s max 10
+</code></pre></td></tr></table>
 
 <p>will result in:</p>
 
 <p><img src="img/paket-find-package-versions.png" alt="alt text" title="paket find-package-versions command" /></p>
 
-<div class="tip" id="fs1">val max : e1:&#39;T -&gt; e2:&#39;T -&gt; &#39;T (requires comparison)<br /><br />Full name: Microsoft.FSharp.Core.Operators.max</div>
 
         </div>
         <div class="span3">

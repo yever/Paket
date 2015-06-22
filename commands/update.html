@@ -18,6 +18,30 @@
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style type="text/css">
+      table.pre td.lines {
+        vertical-align: top;
+      }
+      pre.fssnip code[lang=batchfile],
+      pre.fssnip code[lang=msh] {
+        display: inline-block;
+        white-space: pre-wrap;       /* CSS 3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        word-break: keep-all;
+        padding-left: 2em;
+        text-indent: -2em;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function() {
+        $("code[lang='batchfile'], code[lang='msh']").each(function() {
+          $(this).html($(this).html().replace(/ &lt;/g, "&nbsp;&lt;"))
+        })
+      })
+    </script>
   </head>
   <body>
     <div class="container">
@@ -31,20 +55,53 @@
       <div class="row">
         <div class="span9" id="main">
           
+<h2><a name="Updating-all-packages" class="anchor" href="#Updating-all-packages">Updating all packages</a></h2>
+
+<p>If you do not specify a package, then all packages from paket.dependencies are updated.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="batchfile">paket update [--force|-f] [--hard] [--redirects] [--no-install]
+</code></pre></td></tr></table>
+
+<p>First, the current <a href="lock-file.html"><code>paket.lock</code> file</a> is deleted. <code>paket update</code> then recomputes the current dependency resolution,
+as explained under <a href="http://fsprojects.github.io/Paket/resolver.html">Package resolution algorithm</a>, and writes it to paket.lock.
+It then proceeds to download the packages and to install them into the projects.</p>
+
+<p>Please see <a href="paket-install.html"><code>paket install</code></a> if you want to keep the current versions from your paket.lock file.</p>
+
+<h3><a name="Options" class="anchor" href="#Options">Options:</a></h3>
+
+<p><code>--force [-f]</code>: Forces the download and reinstallation of all packages.</p>
+
+<p><code>--hard</code>: Replaces package references within project files even if they are not yet adhering to the Paket's conventions (and hence considered manually managed). See <a href="paket-convert-from-nuget.html">convert from NuGet</a>.</p>
+
+<p><code>--redirects</code>: Creates binding redirects for the NuGet packages.</p>
+
+<p><code>--no-install</code>: Skips paket install --hard process afterward generation of <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
+
 <h2><a name="Updating-a-single-package" class="anchor" href="#Updating-a-single-package">Updating a single package</a></h2>
 
 <p>It's also possible to update only a single package and to keep all other dependencies fixed:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket update nuget PACKAGENAME [version VERSION] [--force] [--hard]   
+<td class="snippet"><pre class="fssnip"><code lang="batchfile">paket update nuget PACKAGENAME [version VERSION] [--force|-f] [--hard] [--redirects] [--no-install]
 </code></pre></td></tr></table>
 
-<p>Options:</p>
+<h3><a name="Options-1" class="anchor" href="#Options-1">Options:</a></h3>
 
-<p><code>--force</code>: Forces the download and reinstallation of all packages.</p>
+<p><code>nuget &lt;string&gt;</code>: Nuget package id</p>
 
-<p><code>--hard</code>: Replaces package references within project files even if they are not yet adhering to to Paket's conventions (and hence considered manually managed). See <a href="paket-convert-from-nuget.html">convert from NuGet</a>.</p>
+<p><code>version &lt;string&gt;</code>: Allows to specify version of the package.</p>
+
+<p><code>--force [-f]</code>: Forces the download and reinstallation of all packages.</p>
+
+<p><code>--hard</code>: Replaces package references within project files even if they are not yet adhering to the Paket's conventions (and hence considered manually managed). See <a href="paket-convert-from-nuget.html">convert from NuGet</a>.</p>
+
+<p><code>--redirects</code>: Creates binding redirects for the NuGet packages.</p>
+
+<p><code>--no-install</code>: Skips paket install --hard process afterward generation of <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
 
 
         </div>

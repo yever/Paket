@@ -18,6 +18,30 @@
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style type="text/css">
+      table.pre td.lines {
+        vertical-align: top;
+      }
+      pre.fssnip code[lang=batchfile],
+      pre.fssnip code[lang=msh] {
+        display: inline-block;
+        white-space: pre-wrap;       /* CSS 3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        word-break: keep-all;
+        padding-left: 2em;
+        text-indent: -2em;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function() {
+        $("code[lang='batchfile'], code[lang='msh']").each(function() {
+          $(this).html($(this).html().replace(/ &lt;/g, "&nbsp;&lt;"))
+        })
+      })
+    </script>
   </head>
   <body>
     <div class="container">
@@ -31,6 +55,15 @@
       <div class="row">
         <div class="span9" id="main">
           
+<h4><a name="1-17-0-22-06-2015" class="anchor" href="#1-17-0-22-06-2015">1.17.0 - 22.06.2015</a></h4>
+
+<ul>
+<li>Tab completion for installed packages in Paket.PowerShell - <a href="https://github.com/fsprojects/Paket/pull/892">https://github.com/fsprojects/Paket/pull/892</a></li>
+<li>BUGFIX: Find-package-versions did not work - <a href="https://github.com/fsprojects/Paket/issues/886">https://github.com/fsprojects/Paket/issues/886</a></li>
+<li>BUGFIX: Find-packages did not work - <a href="https://github.com/fsprojects/Paket/issues/888">https://github.com/fsprojects/Paket/issues/888</a> <a href="https://github.com/fsprojects/Paket/issues/889">https://github.com/fsprojects/Paket/issues/889</a></li>
+<li>COSMETICS: Improved the documentation for the commands - <a href="https://github.com/fsprojects/Paket/pull/891">https://github.com/fsprojects/Paket/pull/891</a></li>
+</ul>
+
 <h4><a name="1-16-0-21-06-2015" class="anchor" href="#1-16-0-21-06-2015">1.16.0 - 21.06.2015</a></h4>
 
 <ul>

@@ -19,6 +19,30 @@
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style type="text/css">
+      table.pre td.lines {
+        vertical-align: top;
+      }
+      pre.fssnip code[lang=batchfile],
+      pre.fssnip code[lang=msh] {
+        display: inline-block;
+        white-space: pre-wrap;       /* CSS 3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        word-break: keep-all;
+        padding-left: 2em;
+        text-indent: -2em;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function() {
+        $("code[lang='batchfile'], code[lang='msh']").each(function() {
+          $(this).html($(this).html().replace(/ &lt;/g, "&nbsp;&lt;"))
+        })
+      })
+    </script>
   </head>
   <body>
     <div class="container">
@@ -34,14 +58,21 @@
           
 <h1><a name="paket-install" class="anchor" href="#paket-install">paket install</a></h1>
 
-<p>Ensures that all dependencies in your <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> are present in the <code>packages</code> directory and referenced correctly in all projects.</p>
+<p>Download the dependencies specified by the <a href="dependencies-file.html"><code>paket.dependencies</code></a> or <a href="lock-file.html"><code>paket.lock</code> file</a> into the <code>packages/</code> directory and update projects.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket install [--force|-f] [--hard] [--redirects] [--only-referenced]
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket install [--force|-f] [--hard] [--redirects] [--only-referenced]
 </code></pre></td></tr></table>
 
-<p>Options:</p>
+<p>If the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> has been changed since the last update of the <a href="lock-file.html"><code>paket.lock</code> file</a> (e.g. added dependencies or changed version requirements),
+Paket will update the <a href="lock-file.html"><code>paket.lock</code> file</a> to make it match <a href="dependencies-file.html"><code>paket.dependencies</code></a> again.</p>
+
+<p>Unlike <a href="paket-update.html"><code>paket update</code></a>, <a href="paket-install.html"><code>paket install</code></a> will only look for
+new versions of dependencies that have been modified in <a href="dependencies-file.html"><code>paket.dependencies</code></a>,
+and use the version from <a href="lock-file.html"><code>paket.lock</code></a> for all other dependencies.</p>
+
+<h3><a name="Options" class="anchor" href="#Options">Options:</a></h3>
 
 <p><code>--force [-f]</code>: Forces the download and reinstallation of all packages.</p>
 
@@ -49,7 +80,7 @@
 
 <p><code>--redirects</code>: Creates binding redirects for the NuGet packages.</p>
 
-<p><code>--only-referenced</code>: Only install packages that are referenced in <a href="references-files.html"><code>paket.references</code> files</a>, instead of all packages in paket.dependencies.</p>
+<p><code>--only-referenced</code>: Only install packages that are referenced in <a href="references-files.html"><code>paket.references</code> files</a>, instead of all packages in <a href="dependencies-file.html"><code>paket.dependencies</code></a>.</p>
 
 
         </div>

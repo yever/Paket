@@ -19,6 +19,30 @@
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style type="text/css">
+      table.pre td.lines {
+        vertical-align: top;
+      }
+      pre.fssnip code[lang=batchfile],
+      pre.fssnip code[lang=msh] {
+        display: inline-block;
+        white-space: pre-wrap;       /* CSS 3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        word-break: keep-all;
+        padding-left: 2em;
+        text-indent: -2em;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function() {
+        $("code[lang='batchfile'], code[lang='msh']").each(function() {
+          $(this).html($(this).html().replace(/ &lt;/g, "&nbsp;&lt;"))
+        })
+      })
+    </script>
   </head>
   <body>
     <div class="container">
@@ -38,18 +62,18 @@
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket push url <string> file <string> [apikey <string>] [endpoint <string>]
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket push url &lt;string&gt; file &lt;string&gt; [apikey &lt;string&gt;] [endpoint &lt;string&gt;]
 </code></pre></td></tr></table>
 
-<p>Options:</p>
+<h3><a name="Options" class="anchor" href="#Options">Options:</a></h3>
 
-<p><code>url &lt;string&gt;</code>: Url of the Nuget feed.</p>
+<p><code>url &lt;string&gt;</code>: Url of the NuGet feed.</p>
 
 <p><code>file &lt;string&gt;</code>: Path to the package.</p>
 
 <p><code>apikey &lt;string&gt;</code>: Optionally specify your API key on the command line. Otherwise uses the value of the <code>nugetkey</code> environment variable.</p>
 
-<p><code>endpoint &lt;string&gt;</code>: Optionally specify a custom api endpoint to push to. Defaults to <code>/api/v2/package</code></p>
+<p><code>endpoint &lt;string&gt;</code>: Optionally specify a custom api endpoint to push to. Defaults to <code>/api/v2/package</code>.</p>
 
 
         </div>

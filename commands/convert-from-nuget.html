@@ -18,6 +18,30 @@
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style type="text/css">
+      table.pre td.lines {
+        vertical-align: top;
+      }
+      pre.fssnip code[lang=batchfile],
+      pre.fssnip code[lang=msh] {
+        display: inline-block;
+        white-space: pre-wrap;       /* CSS 3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        word-break: keep-all;
+        padding-left: 2em;
+        text-indent: -2em;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function() {
+        $("code[lang='batchfile'], code[lang='msh']").each(function() {
+          $(this).html($(this).html().replace(/ &lt;/g, "&nbsp;&lt;"))
+        })
+      })
+    </script>
   </head>
   <body>
     <div class="container">
@@ -55,18 +79,18 @@
 <h2><a name="Migrating-NuGet-source-credentials" class="anchor" href="#Migrating-NuGet-source-credentials">Migrating NuGet source credentials</a></h2>
 
 <p>If you are using authorized NuGet feeds, convert-from-nuget command will automatically migrate the credentials for you.
-Following are valid modes for <code>--creds-migration</code> option:</p>
+Following are valid modes for the <code>--creds-migration</code> option:</p>
 
 <ol>
-<li><code>encrypt</code> -  Encrypt your credentials and save in <a href="paket-config-file.html">paket configuration file</a>.</li>
-<li><code>plaintext</code> - Include your credentials in plaintext in paket.dependencies file. See <a href="nuget-dependencies.html#plaintext-credentials">example</a></li>
-<li><code>selective</code> - Use this switch, if you're using more than one authorized NuGet feed, and want to apply different mode for each of them.</li>
+<li><code>encrypt</code> -  Encrypt your credentials and save them in the <a href="paket-config-file.html">paket configuration file</a>.</li>
+<li><code>plaintext</code> - Include your credentials in plaintext in the paket.dependencies file. See <a href="nuget-dependencies.html#plaintext-credentials">example</a>.</li>
+<li><code>selective</code> - Use this switch if you're using more than one authorized NuGet feed, and you want to apply different modes for each of them.</li>
 </ol>
 
 <h2><a name="Simplify-direct-dependencies" class="anchor" href="#Simplify-direct-dependencies">Simplify direct dependencies</a></h2>
 
 <p>After converting your solution from NuGet, you may end up with many transitive dependencies in your Paket files.
-Consider using <a href="paket-simplify.html"><code>paket simplify</code></a> to remove unnecessary transitive dependencies from your paket.dependencies file and paket.references files.</p>
+Consider using <a href="paket-simplify.html"><code>paket simplify</code></a> to remove unnecessary transitive dependencies from your paket.dependencies and paket.references files.</p>
 
 
         </div>
