@@ -76,7 +76,7 @@
 <span class="i">version</span> <span class="n">1.0</span>
 <span class="i">authors</span> <span class="i">Michael</span> <span class="i">Newton</span>
 <span class="i">description</span>
-        <span class="i">description</span> <span class="k">of</span> <span class="i">this</span> <span class="i">test</span> <span class="i">package</span>
+    <span class="i">description</span> <span class="k">of</span> <span class="i">this</span> <span class="i">test</span> <span class="i">package</span>
 <span class="i">files</span>
     <span class="i">src</span><span class="o">/</span><span class="i">Test</span><span class="o">.</span><span class="i">Paket</span><span class="o">.</span><span class="i">Package</span><span class="o">/</span><span class="i">bin</span><span class="o">/</span><span class="i">Debug</span> <span class="o">==&gt;</span> <span class="i">lib</span>
 </code></pre></td>
@@ -188,11 +188,13 @@ to decide on the files and dependencies added.</p>
 <span class="l">3: </span>
 <span class="l">4: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">files
-    relative/to/template/file ==> folder/in/nupkg
-    second/thing/to/pack ==> folder/in/nupkg
-    second/thing/**/file.* ==> folder/in/nupkg
-</code></pre></td></tr></table>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">files</span>
+    <span class="i">relative</span><span class="o">/</span><span class="k">to</span><span class="o">/</span><span class="i">template</span><span class="o">/</span><span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">file</span> <span class="o">==&gt;</span> <span class="i">folder</span><span class="o">/</span><span class="k">in</span><span class="o">/</span><span class="i">nupkg</span>
+    <span class="i">second</span><span class="o">/</span><span class="i">thing</span><span class="o">/</span><span class="k">to</span><span class="o">/</span><span class="i">pack</span> <span class="o">==&gt;</span> <span class="i">folder</span><span class="o">/</span><span class="k">in</span><span class="o">/</span><span class="i">nupkg</span>
+    <span class="i">second</span><span class="o">/</span><span class="i">thing</span><span class="o">/**/</span><span onmouseout="hideTip(event, 'fs1', 4)" onmouseover="showTip(event, 'fs1', 4)" class="i">file</span><span class="o">.</span><span class="o">*</span> <span class="o">==&gt;</span> <span class="i">folder</span><span class="o">/</span><span class="k">in</span><span class="o">/</span><span class="i">nupkg</span>
+</code></pre></td>
+</tr>
+</table>
 
 <p>If the source part refers to a file then it is copied into the target directory. If it
 refers to a directory, the contents of the directory will be copied into the target folder.
@@ -207,13 +209,15 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 <span class="l">5: </span>
 <span class="l">6: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">files
-    relative/to/template/file ==> folder/in/nupkg
-    second/thing/**/file.* ==> folder/in/nupkg
-    !second/thing/**/file.zip
-    ../outside/file.* ==> folder/in/nupkg/other
-    !../outside/file.zip
-</code></pre></td></tr></table>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">files</span>
+    <span class="i">relative</span><span class="o">/</span><span class="k">to</span><span class="o">/</span><span class="i">template</span><span class="o">/</span><span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="i">file</span> <span class="o">==&gt;</span> <span class="i">folder</span><span class="o">/</span><span class="k">in</span><span class="o">/</span><span class="i">nupkg</span>
+    <span class="i">second</span><span class="o">/</span><span class="i">thing</span><span class="o">/**/</span><span onmouseout="hideTip(event, 'fs1', 6)" onmouseover="showTip(event, 'fs1', 6)" class="i">file</span><span class="o">.</span><span class="o">*</span> <span class="o">==&gt;</span> <span class="i">folder</span><span class="o">/</span><span class="k">in</span><span class="o">/</span><span class="i">nupkg</span>
+    <span class="o">!</span><span class="i">second</span><span class="o">/</span><span class="i">thing</span><span class="o">/**/</span><span onmouseout="hideTip(event, 'fs1', 7)" onmouseover="showTip(event, 'fs1', 7)" class="i">file</span><span class="o">.</span><span class="i">zip</span>
+    <span class="o">.</span><span class="o">./</span><span class="i">outside</span><span class="o">/</span><span onmouseout="hideTip(event, 'fs1', 8)" onmouseover="showTip(event, 'fs1', 8)" class="i">file</span><span class="o">.</span><span class="o">*</span> <span class="o">==&gt;</span> <span class="i">folder</span><span class="o">/</span><span class="k">in</span><span class="o">/</span><span class="i">nupkg</span><span class="o">/</span><span class="i">other</span>
+    <span class="o">!../</span><span class="i">outside</span><span class="o">/</span><span onmouseout="hideTip(event, 'fs1', 9)" onmouseover="showTip(event, 'fs1', 9)" class="i">file</span><span class="o">.</span><span class="i">zip</span>
+</code></pre></td>
+</tr>
+</table>
 
 <p>The pattern needs to match file-names, excluding directories like <code>!second</code> won't have an effect, please use <code>!second/*.*</code> instead.</p>
 
@@ -232,10 +236,12 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 <span class="l">2: </span>
 <span class="l">3: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">references
-    filename1.dll
-    filename2.dll
-</code></pre></td></tr></table>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">references</span>
+    <span class="i">filename1</span><span class="o">.</span><span class="i">dll</span>
+    <span class="i">filename2</span><span class="o">.</span><span class="i">dll</span>
+</code></pre></td>
+</tr>
+</table>
 
 <p>If you omit the references block then all libraries in the packages will get referenced.</p>
 
@@ -247,10 +253,12 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 <span class="l">2: </span>
 <span class="l">3: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">frameworkAssemblies
-    System.Xml
-    System.Xml.Linq
-</code></pre></td></tr></table>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">frameworkAssemblies</span>
+    <span onmouseout="hideTip(event, 'fs3', 10)" onmouseover="showTip(event, 'fs3', 10)" class="i">System</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 11)" onmouseover="showTip(event, 'fs4', 11)" class="i">Xml</span>
+    <span onmouseout="hideTip(event, 'fs3', 12)" onmouseover="showTip(event, 'fs3', 12)" class="i">System</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 13)" onmouseover="showTip(event, 'fs4', 13)" class="i">Xml</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 14)" onmouseover="showTip(event, 'fs5', 14)" class="i">Linq</span>
+</code></pre></td>
+</tr>
+</table>
 
 <p>If you omit the references block then all libraries in the packages will get referenced.</p>
 
@@ -264,7 +272,7 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 <span class="l">4: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">dependencies</span>
-  <span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">Core</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">4.3</span><span class="o">.</span><span class="n">1</span>
+  <span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 15)" onmouseover="showTip(event, 'fs6', 15)" class="i">Core</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">4.3</span><span class="o">.</span><span class="n">1</span>
   <span class="i">Other</span><span class="o">.</span><span class="i">Dep</span> <span class="o">~&gt;</span> <span class="n">2.5</span>
   <span class="i">Any</span><span class="o">.</span><span class="i">Version</span>
 </code></pre></td>
@@ -280,7 +288,7 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 <span class="l">3: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">dependencies</span>
-  <span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="i">Core</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">4.3</span><span class="o">.</span><span class="n">1</span>
+  <span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 16)" onmouseover="showTip(event, 'fs6', 16)" class="i">Core</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">4.3</span><span class="o">.</span><span class="n">1</span>
   <span class="i">Other</span><span class="o">.</span><span class="i">Dep</span> <span class="o">~&gt;</span> <span class="i">CURRENTVERSION</span>
 </code></pre></td>
 </tr>
@@ -295,7 +303,10 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 
 <div class="tip" id="fs1">type file<br /><br />Full name: templatefiles.file</div>
 <div class="tip" id="fs2">val id : x:&#39;T -&gt; &#39;T<br /><br />Full name: Microsoft.FSharp.Core.Operators.id</div>
-<div class="tip" id="fs3">namespace Microsoft.FSharp.Core</div>
+<div class="tip" id="fs3">namespace System</div>
+<div class="tip" id="fs4">namespace System.Xml</div>
+<div class="tip" id="fs5">namespace Microsoft.FSharp.Linq</div>
+<div class="tip" id="fs6">namespace Microsoft.FSharp.Core</div>
 
         </div>
         <div class="span3">
