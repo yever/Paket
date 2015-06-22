@@ -196,6 +196,25 @@ to decide on the files and dependencies added.</p>
 refers to a directory, the contents of the directory will be copied into the target folder.
 If you omit the target folder, then the source is copied into the <code>lib</code> folder of the package.</p>
 
+<p>Excluding certain files looks like this:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="batchfile">files
+    relative/to/template/file ==> folder/in/nupkg
+    second/thing/**/file.* ==> folder/in/nupkg
+    !second/thing/**/file.zip
+    ../outside/file.* ==> folder/in/nupkg/other
+    !../outside/file.zip
+</code></pre></td></tr></table>
+
+<p>The pattern needs to match file-names, excluding directories like <code>!second</code> won't have an effect, please use <code>!second/*.*</code> instead.</p>
+
 <p>In a project template, the files included will be:</p>
 
 <ul>
@@ -228,7 +247,7 @@ If you omit the target folder, then the source is copied into the <code>lib</cod
 </pre></td>
 <td class="snippet"><pre class="fssnip"><code lang="batchfile">frameworkAssemblies
     System.Xml
-    System.Xml.Linq     
+    System.Xml.Linq
 </code></pre></td></tr></table>
 
 <p>If you omit the references block then all libraries in the packages will get referenced.</p>
