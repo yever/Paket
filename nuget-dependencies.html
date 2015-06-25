@@ -376,6 +376,21 @@ It's also possible to provide login information for private NuGet feeds:
 </tr>
 </table>
 
+<h3><a name="Specifying-multiple-targeting-options" class="anchor" href="#Specifying-multiple-targeting-options">Specifying multiple targeting options</a></h3>
+
+<p>It is possible to apply more than one of the options above to a particular package.  To do so, simply separate them by commas, like so:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+
+<span class="i">nuget</span> <span class="i">ClearScript</span><span class="o">.</span><span class="i">Installer</span> <span class="i">import_targets</span><span class="o">:</span> <span class="k">false</span>, <span class="i">content</span><span class="o">:</span> <span class="i">none</span> <span class="c">// we don&#39;t import .targets and .props, and also don&#39;t add any content</span>
+</code></pre></td>
+</tr>
+</table>
+
 <div class="tip" id="fs1">namespace Microsoft</div>
 
         </div>
