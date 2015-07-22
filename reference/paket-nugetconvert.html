@@ -102,12 +102,6 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="paket-nugetconvert-nugetpackage.html">NugetPackage</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="type-name">
             <a href="paket-nugetconvert-nugetpackagesconfig.html">NugetPackagesConfig</a>
           </td>
           <td class="xmldoc"><p>Represents NuGet packages.config file</p>
@@ -157,69 +151,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '115', 115)" onmouseover="showTip(event, '115', 115)">
+          <code onmouseout="hideTip(event, '118', 118)" onmouseover="showTip(event, '118', 118)">
             convertPackagesConfigToReferences (...)
           </code>
-          <div class="tip" id="115">
+          <div class="tip" id="118">
             <strong>Signature:</strong> projectFileName:string -&gt; packagesConfig:NugetPackagesConfig -&gt; ReferencesFile<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L316-316" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '116', 116)" onmouseover="showTip(event, '116', 116)">
-            convertProjects nugetEnv
-          </code>
-          <div class="tip" id="116">
-            <strong>Signature:</strong> nugetEnv:NugetEnv -&gt; (ProjectFile * ReferencesFile) list<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L324-324" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '117', 117)" onmouseover="showTip(event, '117', 117)">
-            convertR (...)
-          </code>
-          <div class="tip" id="117">
-            <strong>Signature:</strong> rootDirectory:DirectoryInfo -&gt; force:bool -&gt; credsMigrationMode:string option -&gt; Result&lt;ConvertResultR,DomainMessage&gt;<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L357-357" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '118', 118)" onmouseover="showTip(event, '118', 118)">
-            createDependenciesFileR (...)
-          </code>
-          <div class="tip" id="118">
-            <strong>Signature:</strong> rootDirectory:DirectoryInfo -&gt; nugetEnv:NugetEnv -&gt; mode:CredsMigrationMode -&gt; Result&lt;DependenciesFile,DomainMessage&gt;<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L237-237" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L304-304" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -230,10 +170,46 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '119', 119)" onmouseover="showTip(event, '119', 119)">
-            createPackageRequirement (...)
+            convertProjects nugetEnv
           </code>
           <div class="tip" id="119">
-            <strong>Signature:</strong> (packageName:string * version:string * restrictions:FrameworkRestrictions) -&gt; sources:PackageSource list -&gt; dependenciesFileName:string -&gt; PackageRequirement<br />
+            <strong>Signature:</strong> nugetEnv:NugetEnv -&gt; (ProjectFile * ReferencesFile) list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L312-312" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '120', 120)" onmouseover="showTip(event, '120', 120)">
+            convertR (...)
+          </code>
+          <div class="tip" id="120">
+            <strong>Signature:</strong> rootDirectory:DirectoryInfo -&gt; force:bool -&gt; credsMigrationMode:string option -&gt; Result&lt;ConvertResultR,DomainMessage&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L345-345" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '121', 121)" onmouseover="showTip(event, '121', 121)">
+            createDependenciesFileR (...)
+          </code>
+          <div class="tip" id="121">
+            <strong>Signature:</strong> rootDirectory:DirectoryInfo -&gt; nugetEnv:NugetEnv -&gt; mode:CredsMigrationMode -&gt; Result&lt;DependenciesFile,DomainMessage&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -247,51 +223,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '120', 120)" onmouseover="showTip(event, '120', 120)">
-            createPaketEnv (...)
-          </code>
-          <div class="tip" id="120">
-            <strong>Signature:</strong> rootDirectory:DirectoryInfo -&gt; nugetEnv:NugetEnv -&gt; credsMirationMode:CredsMigrationMode -&gt; Result&lt;PaketEnv,DomainMessage&gt;<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L331-331" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '121', 121)" onmouseover="showTip(event, '121', 121)">
-            createResult (...)
-          </code>
-          <div class="tip" id="121">
-            <strong>Signature:</strong> (rootDirectory:DirectoryInfo * nugetEnv:NugetEnv * credsMirationMode:CredsMigrationMode) -&gt; Result&lt;ConvertResultR,DomainMessage&gt;<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L351-351" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
           <code onmouseout="hideTip(event, '122', 122)" onmouseover="showTip(event, '122', 122)">
-            replaceNugetWithPaket (...)
+            createPackageRequirement (...)
           </code>
           <div class="tip" id="122">
-            <strong>Signature:</strong> initAutoRestore:bool -&gt; installAfter:bool -&gt; result:ConvertResultR -&gt; unit<br />
+            <strong>Signature:</strong> (packageName:string * version:string * restrictions:FrameworkRestrictions) -&gt; sources:PackageSource list -&gt; dependenciesFileName:string -&gt; PackageRequirement<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L373-373" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L213-213" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -302,14 +242,68 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '123', 123)" onmouseover="showTip(event, '123', 123)">
-            updateSolutions rootDirectory
+            createPaketEnv (...)
           </code>
           <div class="tip" id="123">
+            <strong>Signature:</strong> rootDirectory:DirectoryInfo -&gt; nugetEnv:NugetEnv -&gt; credsMirationMode:CredsMigrationMode -&gt; Result&lt;PaketEnv,DomainMessage&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L319-319" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '124', 124)" onmouseover="showTip(event, '124', 124)">
+            createResult (...)
+          </code>
+          <div class="tip" id="124">
+            <strong>Signature:</strong> (rootDirectory:DirectoryInfo * nugetEnv:NugetEnv * credsMirationMode:CredsMigrationMode) -&gt; Result&lt;ConvertResultR,DomainMessage&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L339-339" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '125', 125)" onmouseover="showTip(event, '125', 125)">
+            replaceNugetWithPaket (...)
+          </code>
+          <div class="tip" id="125">
+            <strong>Signature:</strong> initAutoRestore:bool -&gt; installAfter:bool -&gt; result:ConvertResultR -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L361-361" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '126', 126)" onmouseover="showTip(event, '126', 126)">
+            updateSolutions rootDirectory
+          </code>
+          <div class="tip" id="126">
             <strong>Signature:</strong> rootDirectory:DirectoryInfo -&gt; SolutionFile list<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L337-337" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NugetConvert.fs#L325-325" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
