@@ -128,7 +128,7 @@ There is no reasonable way to make this work – and even NuGet.exe can't do it 
 
 <p>If your <em>project is an application</em> you should always commit the <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
 
-<p>If your <em>project is a library</em> then you probably want to commit it as well. There are rare cases where you always want to test you lib against the latest version of your dependencies, 
+<p>If your <em>project is a library</em> then you probably want to commit it as well. There are rare cases where you always want to test your lib against the latest version of your dependencies, 
 but we recommend to set up a second CI build instead. This new build should be run regularly (maybe once a day) and execute <a href="paket-update.html"><code>paket update</code></a> at the beginning.
 This will ensure that you get notified whenever a dependency update breaks your library.</p>
 
@@ -147,7 +147,7 @@ This will ensure that you get notified whenever a dependency update breaks your 
 
 <h2><a name="Does-Paket-allow-groups-like-bundler-does" class="anchor" href="#Does-Paket-allow-groups-like-bundler-does">Does Paket allow groups like bundler does?</a></h2>
 
-<p>No at the moment we don't see the need for something like <a href="http://bundler.io/v1.7/groups.html">bundler's groups</a> in the .NET environment. Longer discussion can be found <a href="https://github.com/fsprojects/Paket/issues/116">here</a>.</p>
+<p>No, at the moment we don't see the need for something like <a href="http://bundler.io/v1.7/groups.html">bundler's groups</a> in the .NET environment. Longer discussion can be found <a href="https://github.com/fsprojects/Paket/issues/116">here</a>.</p>
 
 <h2><a name="Can-I-use-Paket-to-manage-npm-bower-whatever-dependencies" class="anchor" href="#Can-I-use-Paket-to-manage-npm-bower-whatever-dependencies">Can I use Paket to manage npm/bower/whatever dependencies?</a></h2>
 
