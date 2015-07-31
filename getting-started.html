@@ -58,19 +58,25 @@
           
 <h1><a name="Getting-Started" class="anchor" href="#Getting-Started">Getting Started</a></h1>
 
-<h2><a name="How-to-get-Paket" class="anchor" href="#How-to-get-Paket">How to get Paket</a></h2>
+<h2><a name="Creating-new-solutions" class="anchor" href="#Creating-new-solutions">Creating new solutions</a></h2>
 
-<p>Paket is available as:</p>
+<p>If you are starting a new solution from scratch then take a look at <a href="http://fsprojects.github.io/ProjectScaffold/">ProjectScaffold</a>. 
+This project helps you get started with a new .NET/Mono project solution with everything needed for successful organising of code, tools and publishing and includes Paket.</p>
+
+<p>If you don't want to use ProjectScaffold you can set up Paket easily with the following steps:</p>
+
+<h3><a name="Downloading-Paket-and-it-s-BootStrapper" class="anchor" href="#Downloading-Paket-and-it-s-BootStrapper">Downloading Paket and it's BootStrapper</a></h3>
 
 <ul>
-<li><a href="https://github.com/fsprojects/Paket/releases/latest">download from GitHub.com</a></li>
-<li>as a package <a href="https://www.nuget.org/packages/Paket/"><code>Paket</code> on nuget.org</a></li>
-<li><a href="editor-support.html">plugins for popular editors</a></li>
+<li>Create a <code>.paket</code> folder in the root of your solution</li>
+<li>Download the latest <a href="https://github.com/fsprojects/Paket/releases/latest">paket.bootstrapper.exe</a> into that folder</li>
+<li>Run <code>.paket/paket.bootstrapper.exe</code>. This will download the latest <code>paket.exe</code></li>
+<li>Commit <code>.paket/paket.bootstrapper.exe</code> into your repo and add <code>.paket/paket.exe</code> to your <code>.gitignore</code> file</li>
 </ul>
 
-<p><a href="https://www.nuget.org/packages/Paket/"><img src="http://img.shields.io/nuget/v/Paket.svg?style=flat" alt="NuGet Status" /></a></p>
+<h3><a name="Specifying-dependencies" class="anchor" href="#Specifying-dependencies">Specifying dependencies</a></h3>
 
-<p>Specify the version rules of all dependencies used in your application in a <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> in your project's root:</p>
+<p>Create a <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> in your project's root and specify the version rules of all your dependencies in it:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
@@ -92,70 +98,8 @@
 <td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket install
 </code></pre></td></tr></table>
 
-<p>The usage is to have a <a href="paket-folder.html"><code>.paket</code> folder</a> in the root of your solution to install packages.</p>
+<p>TBC</p>
 
-<p>The <a href="paket-install.html"><code>paket install</code> command</a> will analyze your dependencies and automatically generate a <a href="lock-file.html"><code>paket.lock</code> file</a> if it doesn't exist yet:</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
-<span class="l"> 2: </span>
-<span class="l"> 3: </span>
-<span class="l"> 4: </span>
-<span class="l"> 5: </span>
-<span class="l"> 6: </span>
-<span class="l"> 7: </span>
-<span class="l"> 8: </span>
-<span class="l"> 9: </span>
-<span class="l">10: </span>
-<span class="l">11: </span>
-<span class="l">12: </span>
-<span class="l">13: </span>
-<span class="l">14: </span>
-<span class="l">15: </span>
-<span class="l">16: </span>
-<span class="l">17: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">NUGET</span>
-  <span class="i">remote</span><span class="o">:</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
-  <span class="i">specs</span><span class="o">:</span>
-    <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Core</span> (<span class="n">3.3</span><span class="o">.</span><span class="n">1</span>)
-    <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 2)" onmouseover="showTip(event, 'fs1', 2)" class="i">Core</span><span class="o">-</span><span class="i">log4net</span> (<span class="n">3.3</span><span class="o">.</span><span class="n">1</span>)
-      <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">Core</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">1</span>)
-      <span class="i">log4net</span> (<span class="n">1.2</span><span class="o">.</span><span class="n">10</span>)
-    <span class="i">Castle</span><span class="o">.</span><span class="i">LoggingFacility</span> (<span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
-      <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 4)" onmouseover="showTip(event, 'fs1', 4)" class="i">Core</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
-      <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
-    <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span> (<span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
-      <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="i">Core</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
-    <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span><span class="o">-</span><span class="i">log4net</span> (<span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
-      <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 6)" onmouseover="showTip(event, 'fs1', 6)" class="i">Core</span><span class="o">-</span><span class="i">log4net</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
-      <span class="i">Castle</span><span class="o">.</span><span class="i">LoggingFacility</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
-    <span class="i">log4net</span> (<span class="n">1.2</span><span class="o">.</span><span class="n">10</span>)
-    <span class="i">NUnit</span> (<span class="n">2.6</span><span class="o">.</span><span class="n">3</span>)
-</code></pre></td>
-</tr>
-</table>
-
-<p>You can place <a href="references-files.html"><code>paket.references</code> files</a> alongside your Visual Studio project files to have Paket automatically sync references for the packages noted in that file whenever an <code>install</code> or <code>update</code> takes place.</p>
-
-<p>All of the <a href="faq.html#Why-should-I-commit-the-lock-file">files involved should be committed</a> to your version control system.</p>
-
-<p>Determine if there are package updates available:</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket outdated
-</code></pre></td></tr></table>
-
-<p>Download updated packages; update <a href="lock-file.html"><code>paket.lock</code> file</a> and re-install to reflect and changes:</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket update
-</code></pre></td></tr></table>
-
-<p>The <a href="paket-update.html"><code>paket update</code> command</a> will analyze your <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>, and update the <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
-
-<div class="tip" id="fs1">namespace Microsoft.FSharp.Core</div>
 
         </div>
         <div class="span3">
