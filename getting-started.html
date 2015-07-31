@@ -61,7 +61,9 @@
 <blockquote>If you are starting a new solution from scratch then take a look at [ProjectScaffold](http://fsprojects.github.io/ProjectScaffold/). 
 This project helps you get started with a new .NET/Mono project solution with everything needed for successful organising of code, tools and publishing and includes Paket.</blockquote>
 
-<h2><a name="Downloading-Paket-and-it-s-BootStrapper" class="anchor" href="#Downloading-Paket-and-it-s-BootStrapper">Downloading Paket and it's BootStrapper</a></h2>
+<h2><a name="Manual-setup" class="anchor" href="#Manual-setup">Manual setup</a></h2>
+
+<h3><a name="Downloading-Paket-and-it-s-BootStrapper" class="anchor" href="#Downloading-Paket-and-it-s-BootStrapper">Downloading Paket and it's BootStrapper</a></h3>
 
 <ul>
 <li>Create a <code>.paket</code> folder in the root of your solution</li>
@@ -70,7 +72,7 @@ This project helps you get started with a new .NET/Mono project solution with ev
 <li>Commit <code>.paket/paket.bootstrapper.exe</code> into your repo and add <code>.paket/paket.exe</code> to your <code>.gitignore</code> file</li>
 </ul>
 
-<h2><a name="Specifying-dependencies" class="anchor" href="#Specifying-dependencies">Specifying dependencies</a></h2>
+<h3><a name="Specifying-dependencies" class="anchor" href="#Specifying-dependencies">Specifying dependencies</a></h3>
 
 <p>Create a <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> in your project's root and specify all your dependencies in it.
 You can use <a href="nuget-dependencies.html">NuGet packages</a>, <a href="github-dependencies.html">GitHub files</a> and <a href="http-dependencies.html">HTTP dependencies</a>. 
@@ -95,7 +97,7 @@ The file might look like this:</p>
 
 <p>You can read more about the importance and the structure of the <code>paket.dependencies</code> file in the <a href="dependencies-file.html">docs</a>.</p>
 
-<h2><a name="Installing-dependencies" class="anchor" href="#Installing-dependencies">Installing dependencies</a></h2>
+<h3><a name="Installing-dependencies" class="anchor" href="#Installing-dependencies">Installing dependencies</a></h3>
 
 <p>Install all of the required packages from the specified sources:</p>
 
@@ -157,7 +159,7 @@ The file might look like this:</p>
 
 <p>You can read more about the <code>paket.lock</code> file in the <a href="lock-file.html">docs</a>.</p>
 
-<h2><a name="Installing-dependencies-into-projects" class="anchor" href="#Installing-dependencies-into-projects">Installing dependencies into projects</a></h2>
+<h3><a name="Installing-dependencies-into-projects" class="anchor" href="#Installing-dependencies-into-projects">Installing dependencies into projects</a></h3>
 
 <p>In the last paragraph you learned how to install packages into your repository, but usally you want to use the dependencies in your C#, VB or F# projects. 
 In order to do so you need a <a href="references-files.html"><code>paket.references</code> files</a> alongside your Visual Studio project files.
@@ -185,7 +187,7 @@ By listing the direct dependencies in a <code>paket.references</code> file, Pake
 
 <p>Like all of the files above, you should <a href="faq.html#Why-should-I-commit-the-lock-file">commit</a> <code>paket.references</code> files to your version control system.</p>
 
-<h2><a name="Updating-packages" class="anchor" href="#Updating-packages">Updating packages</a></h2>
+<h3><a name="Updating-packages" class="anchor" href="#Updating-packages">Updating packages</a></h3>
 
 <p>If you want to check if your dependencies have updates you can run the <a href="paket-outdated.html"><code>outdated</code> command</a>:</p>
 
@@ -203,7 +205,7 @@ By listing the direct dependencies in a <code>paket.references</code> file, Pake
 
 <p>This command will analyze your <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> and update the <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
 
-<p>TBC</p>
+<h2><a name="Automatic-NuGet-conversion" class="anchor" href="#Automatic-NuGet-conversion">Automatic NuGet conversion</a></h2>
 
 <div class="tip" id="fs1">namespace Microsoft.FSharp.Core</div>
 
