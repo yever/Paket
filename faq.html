@@ -142,7 +142,7 @@ This will ensure that you get notified whenever a dependency update breaks your 
 <li>Analyse your <code>packages.config</code> files and extract the referenced packages into a paket.dependencies file.</li>
 <li>Convert each <code>packages.config</code> file to a paket.references file. This is very easy - you just have to remove all the XML and keep the package names.</li>
 <li>Run <a href="paket-install.html">paket install</a> with the <code>--hard</code> flag. This will analyze the dependencies, generate a paket.lock file, remove all the old package references from your project files and replace them with equivalent <code>Reference</code>s in a syntax that can be managed automatically by Paket.</li>
-<li>(Optional) Raise corresponding issue <a href="https://github.com/fsprojects/Paket/issues">here</a> so that we can make the comand even better.</li>
+<li>(Optional) Raise corresponding issue <a href="https://github.com/fsprojects/Paket/issues">here</a> so that we can make the command even better.</li>
 </ol>
 
 <h2><a name="Does-Paket-allow-groups-like-bundler-does" class="anchor" href="#Does-Paket-allow-groups-like-bundler-does">Does Paket allow groups like bundler does?</a></h2>
