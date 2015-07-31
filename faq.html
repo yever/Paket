@@ -139,9 +139,9 @@ There is no reasonable way to make this work – and even NuGet.exe can't do it 
 
 <p>Committing the <a href="lock-file.html"><code>paket.lock</code> file</a> to your version control system guarantees that other developers and/or build servers will always end up with a reliable and consistent set of packages regardless of where or when <a href="paket-install.html"><code>paket install</code></a> is run.</p>
 
-<p>If your project is an application you should always commit the <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
+<p>If your <em>project is an application</em> you should always commit the <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
 
-<p>If your project is a library then you probably want to commit it as well. There are rare cases where you always want to test you lib against the latest version of your dependencies, 
+<p>If your <em>project is a library</em> then you probably want to commit it as well. There are rare cases where you always want to test you lib against the latest version of your dependencies, 
 but we recommend to set up a second CI build instead. This new build should be run regularly (maybe once a day) and execute <a href="paket-update.html"><code>paket update</code></a> at the beginning.
 This will ensure that you get notified whenever a dependency update breaks your library.</p>
 
