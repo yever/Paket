@@ -164,7 +164,15 @@ The file might look like this:</p>
 <h3><a name="Installing-dependencies-into-projects" class="anchor" href="#Installing-dependencies-into-projects">Installing dependencies into projects</a></h3>
 
 <p>In the last paragraph you learned how to install packages into your repository, but usally you want to use the dependencies in your C#, VB or F# projects. 
-In order to do so you need a <a href="references-files.html"><code>paket.references</code> files</a> alongside your Visual Studio project files to have Paket automatically sync references for the packages noted in that file.</p>
+In order to do so you need a <a href="references-files.html"><code>paket.references</code> files</a> alongside your Visual Studio project files.
+By listing the direct dependencies in a <code>paket.references</code> file, Paket will automatically sync references to the corresponding projects whenever an <code>install</code> or <code>update</code> takes place..</p>
+
+<p>Castle.Windsor-log4net
+   NUnit</p>
+
+<p>File:FsUnit.fs .</p>
+
+<p>Like all of the files above, you should <a href="faq.html#Why-should-I-commit-the-lock-file">commit</a> <code>paket.references</code> files to your version control system.</p>
 
 <p>TBC</p>
 
