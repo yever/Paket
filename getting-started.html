@@ -76,20 +76,30 @@ This project helps you get started with a new .NET/Mono project solution with ev
 
 <h3><a name="Specifying-dependencies" class="anchor" href="#Specifying-dependencies">Specifying dependencies</a></h3>
 
-<p>Create a <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> in your project's root and specify the version rules of all your dependencies in it:</p>
+<p>Create a <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> in your project's root and specify all your dependencies in it.
+You can use <a href="nuget-dependencies.html">NuGet packages</a>, <a href="github-dependencies.html">GitHub files</a> and <a href="http-dependencies.html">HTTP dependencies</a>. 
+The file might look like this:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
 <span class="i">nuget</span> <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span><span class="o">-</span><span class="i">log4net</span> <span class="o">~&gt;</span> <span class="n">3.2</span>
 <span class="i">nuget</span> <span class="i">NUnit</span>
+
+<span class="i">github</span> <span class="i">forki</span><span class="o">/</span><span class="i">FsUnit</span> <span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span>
 </code></pre></td>
 </tr>
 </table>
+
+<p>You can read more about the importance and the structure of the <code>paket.dependencies</code> file in the <a href="dependencies-file.html">docs</a>.</p>
+
+<h3><a name="Installing-dependencies" class="anchor" href="#Installing-dependencies">Installing dependencies</a></h3>
 
 <p>Install all of the required packages from the specified sources:</p>
 
