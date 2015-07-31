@@ -58,14 +58,14 @@
           
 <h1><a name="Getting-Started" class="anchor" href="#Getting-Started">Getting Started</a></h1>
 
-<h2><a name="Creating-new-solutions" class="anchor" href="#Creating-new-solutions">Creating new solutions</a></h2>
+<h2><a name="ProjectScaffold" class="anchor" href="#ProjectScaffold">ProjectScaffold</a></h2>
 
 <p>If you are starting a new solution from scratch then take a look at <a href="http://fsprojects.github.io/ProjectScaffold/">ProjectScaffold</a>. 
 This project helps you get started with a new .NET/Mono project solution with everything needed for successful organising of code, tools and publishing and includes Paket.</p>
 
 <p>If you don't want to use ProjectScaffold you can set up Paket easily with the following steps:</p>
 
-<h3><a name="Downloading-Paket-and-it-s-BootStrapper" class="anchor" href="#Downloading-Paket-and-it-s-BootStrapper">Downloading Paket and it's BootStrapper</a></h3>
+<h2><a name="Downloading-Paket-and-it-s-BootStrapper" class="anchor" href="#Downloading-Paket-and-it-s-BootStrapper">Downloading Paket and it's BootStrapper</a></h2>
 
 <ul>
 <li>Create a <code>.paket</code> folder in the root of your solution</li>
@@ -74,7 +74,7 @@ This project helps you get started with a new .NET/Mono project solution with ev
 <li>Commit <code>.paket/paket.bootstrapper.exe</code> into your repo and add <code>.paket/paket.exe</code> to your <code>.gitignore</code> file</li>
 </ul>
 
-<h3><a name="Specifying-dependencies" class="anchor" href="#Specifying-dependencies">Specifying dependencies</a></h3>
+<h2><a name="Specifying-dependencies" class="anchor" href="#Specifying-dependencies">Specifying dependencies</a></h2>
 
 <p>Create a <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> in your project's root and specify all your dependencies in it.
 You can use <a href="nuget-dependencies.html">NuGet packages</a>, <a href="github-dependencies.html">GitHub files</a> and <a href="http-dependencies.html">HTTP dependencies</a>. 
@@ -99,7 +99,7 @@ The file might look like this:</p>
 
 <p>You can read more about the importance and the structure of the <code>paket.dependencies</code> file in the <a href="dependencies-file.html">docs</a>.</p>
 
-<h3><a name="Installing-dependencies" class="anchor" href="#Installing-dependencies">Installing dependencies</a></h3>
+<h2><a name="Installing-dependencies" class="anchor" href="#Installing-dependencies">Installing dependencies</a></h2>
 
 <p>Install all of the required packages from the specified sources:</p>
 
@@ -161,16 +161,24 @@ The file might look like this:</p>
 
 <p>You can read more about the <code>paket.lock</code> file in the <a href="lock-file.html">docs</a>.</p>
 
-<h3><a name="Installing-dependencies-into-projects" class="anchor" href="#Installing-dependencies-into-projects">Installing dependencies into projects</a></h3>
+<h2><a name="Installing-dependencies-into-projects" class="anchor" href="#Installing-dependencies-into-projects">Installing dependencies into projects</a></h2>
 
 <p>In the last paragraph you learned how to install packages into your repository, but usally you want to use the dependencies in your C#, VB or F# projects. 
 In order to do so you need a <a href="references-files.html"><code>paket.references</code> files</a> alongside your Visual Studio project files.
 By listing the direct dependencies in a <code>paket.references</code> file, Paket will automatically sync references to the corresponding projects whenever an <code>install</code> or <code>update</code> takes place..</p>
 
-<p>Castle.Windsor-log4net
-   NUnit</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span><span class="o">-</span><span class="i">log4net</span>
+<span class="i">NUnit</span>
 
-<p>File:FsUnit.fs .</p>
+<span class="i">File</span><span class="o">:</span><span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span> <span class="o">.</span>
+</code></pre></td>
+</tr>
+</table>
 
 <p>Like all of the files above, you should <a href="faq.html#Why-should-I-commit-the-lock-file">commit</a> <code>paket.references</code> files to your version control system.</p>
 
