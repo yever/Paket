@@ -85,7 +85,7 @@ If you are already using NuGet for package restore in your solution then you can
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
-<span class="i">nuget</span> <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span><span class="o">-</span><span class="i">log4net</span> <span class="o">~&gt;</span> <span class="n">3.2</span>
+<span class="i">nuget</span> <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span><span class="o">-</span><span class="i">log4net</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">3.2</span>
 <span class="i">nuget</span> <span class="i">NUnit</span>
 </code></pre></td>
 </tr>
@@ -97,8 +97,6 @@ If you are already using NuGet for package restore in your solution then you can
 </pre></td>
 <td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket install
 </code></pre></td></tr></table>
-
-<p>The usage is to have a <a href="paket-folder.html"><code>.paket</code> folder</a> in the root of your solution to install packages.</p>
 
 <p>The <a href="paket-install.html"><code>paket install</code> command</a> will analyze your dependencies and automatically generate a <a href="lock-file.html"><code>paket.lock</code> file</a> if it doesn't exist yet:</p>
 

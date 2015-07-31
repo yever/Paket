@@ -89,7 +89,7 @@ The file might look like this:</p>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
-<span class="i">nuget</span> <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span><span class="o">-</span><span class="i">log4net</span> <span class="o">~&gt;</span> <span class="n">3.2</span>
+<span class="i">nuget</span> <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span><span class="o">-</span><span class="i">log4net</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">3.2</span>
 <span class="i">nuget</span> <span class="i">NUnit</span>
 
 <span class="i">github</span> <span class="i">forki</span><span class="o">/</span><span class="i">FsUnit</span> <span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span>
@@ -108,8 +108,58 @@ The file might look like this:</p>
 <td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket install
 </code></pre></td></tr></table>
 
+<p>The <a href="paket-install.html"><code>paket install</code> command</a> will analyze your dependencies and automatically generate a <a href="lock-file.html"><code>paket.lock</code> file</a> if it doesn't exist yet:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+<span class="l">17: </span>
+<span class="l">18: </span>
+<span class="l">19: </span>
+<span class="l">20: </span>
+<span class="l">21: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">NUGET</span>
+  <span class="i">remote</span><span class="o">:</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Core</span> (<span class="n">3.3</span><span class="o">.</span><span class="n">3</span>)
+    <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 2)" onmouseover="showTip(event, 'fs1', 2)" class="i">Core</span><span class="o">-</span><span class="i">log4net</span> (<span class="n">3.3</span><span class="o">.</span><span class="n">3</span>)
+      <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">Core</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">3</span>)
+      <span class="i">log4net</span> (<span class="n">1.2</span><span class="o">.</span><span class="n">10</span>)
+    <span class="i">Castle</span><span class="o">.</span><span class="i">LoggingFacility</span> (<span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
+      <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 4)" onmouseover="showTip(event, 'fs1', 4)" class="i">Core</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
+      <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
+    <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span> (<span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
+      <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="i">Core</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
+    <span class="i">Castle</span><span class="o">.</span><span class="i">Windsor</span><span class="o">-</span><span class="i">log4net</span> (<span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
+      <span class="i">Castle</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 6)" onmouseover="showTip(event, 'fs1', 6)" class="i">Core</span><span class="o">-</span><span class="i">log4net</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
+      <span class="i">Castle</span><span class="o">.</span><span class="i">LoggingFacility</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">3.3</span><span class="o">.</span><span class="n">0</span>)
+    <span class="i">log4net</span> (<span class="n">1.2</span><span class="o">.</span><span class="n">10</span>)
+    <span class="i">NUnit</span> (<span class="n">2.6</span><span class="o">.</span><span class="n">4</span>)
+<span class="i">GITHUB</span>
+  <span class="i">remote</span><span class="o">:</span> <span class="i">forki</span><span class="o">/</span><span class="i">FsUnit</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span> (<span class="n">81d27fd09575a32c4ed52eadb2eeac5f365b8348</span>)
+</code></pre></td>
+</tr>
+</table>
+
 <p>TBC</p>
 
+<div class="tip" id="fs1">namespace Microsoft.FSharp.Core</div>
 
         </div>
         <div class="span3">
