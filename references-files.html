@@ -60,8 +60,6 @@
 
 <p><code>paket.references</code> is used to specify which dependencies are to be installed into the MSBuild projects in your repository. Paket determines the set of dependencies that are to be referenced by each MSBuild project within a directory from its <code>paket.references</code> file.</p>
 
-<p>A repository may contain zero or more <code>paket.references</code> files.</p>
-
 <p>It acts a lot like NuGet's <code>packages.config</code> files but there are some key differences:</p>
 
 <ul>
@@ -136,7 +134,7 @@
 <span class="l">2: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span> <span class="i">framework</span><span class="o">:</span> <span class="i">net35</span>, <span class="i">net40</span>  <span class="c">// .NET 3.5 and .NET 4.0</span>
-<span class="i">DotNetZip</span> <span class="i">framework</span><span class="o">:</span> <span class="o">&gt;</span><span class="o">=</span> <span class="i">net45</span>      <span class="c">// .NET 4.5 and above</span>
+<span class="i">DotNetZip</span> <span class="i">framework</span><span class="o">:</span> <span class="o">&gt;</span><span class="o">=</span> <span class="i">net45</span>            <span class="c">// .NET 4.5 and above</span>
 </code></pre></td>
 </tr>
 </table>
