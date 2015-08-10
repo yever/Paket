@@ -65,11 +65,11 @@
 <li>and <a href="getting-started.html#Automatic-NuGet-conversion">how to use the automatic NuGet conversion</a>.</li>
 </ul>
 
-<blockquote>The following guide is assuming you are using the paket.exe command line tool. 
+<blockquote>The following guide is assuming you are using the paket.exe command line tool.
 There are editor plugins for Visual Studio, Atom and other which can make this process easier and provide additional tooling like syntax highlighting.
 Check our <a href="editor-support.html">editor support page</a> to see if your editor has a Paket plugin.</blockquote>
 
-<blockquote>If you are starting a new solution from scratch then take a look at <a href="http://fsprojects.github.io/ProjectScaffold/">ProjectScaffold</a>. 
+<blockquote>If you are starting a new solution from scratch then take a look at <a href="http://fsprojects.github.io/ProjectScaffold/">ProjectScaffold</a>.
 This project helps you get started with a new .NET/Mono project solution with everything needed for successful organising of code, tools and publishing and includes Paket.</blockquote>
 
 <h2><a name="Manual-setup" class="anchor" href="#Manual-setup">Manual setup</a></h2>
@@ -86,7 +86,7 @@ This project helps you get started with a new .NET/Mono project solution with ev
 <h3><a name="Specifying-dependencies" class="anchor" href="#Specifying-dependencies">Specifying dependencies</a></h3>
 
 <p>Create a <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> in your project's root and specify all your dependencies in it.
-You can use <a href="nuget-dependencies.html">NuGet packages</a>, <a href="github-dependencies.html">GitHub files</a> and <a href="http-dependencies.html">HTTP dependencies</a>. 
+You can use <a href="nuget-dependencies.html">NuGet packages</a>, <a href="github-dependencies.html">GitHub files</a> and <a href="http-dependencies.html">HTTP dependencies</a>.
 The file might look like this:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
@@ -108,7 +108,7 @@ The file might look like this:</p>
 
 <blockquote>If you use a <a href="editor-support.html">Paket plugin for your editor</a>, you may get autocompletion for paket.dependencies files.</blockquote>
 
-<p>You can read more about the importance and the structure of the <code>paket.dependencies</code> file in the <a href="dependencies-file.html">docs</a>.</p>
+<p>You can read more about the importance and the structure of the <code>paket.dependencies</code> file in the <a href="dependencies-file.html">docs</a>. This file should be committed to your version control system.</p>
 
 <h3><a name="Installing-dependencies" class="anchor" href="#Installing-dependencies">Installing dependencies</a></h3>
 
@@ -174,7 +174,7 @@ The file might look like this:</p>
 
 <h3><a name="Installing-dependencies-into-projects" class="anchor" href="#Installing-dependencies-into-projects">Installing dependencies into projects</a></h3>
 
-<p>In the last paragraph you learned how to install packages into your repository, but usally you want to use the dependencies in your C#, VB or F# projects. 
+<p>In the last paragraph you learned how to install packages into your repository, but usally you want to use the dependencies in your C#, VB or F# projects.
 In order to do so you need a <a href="references-files.html"><code>paket.references</code> files</a> alongside your Visual Studio project files.
 By listing the direct dependencies in a <code>paket.references</code> file, Paket will automatically sync references to the corresponding projects whenever an <code>install</code> or <code>update</code> takes place.</p>
 
@@ -220,7 +220,7 @@ By listing the direct dependencies in a <code>paket.references</code> file, Pake
 
 <h2><a name="Automatic-NuGet-conversion" class="anchor" href="#Automatic-NuGet-conversion">Automatic NuGet conversion</a></h2>
 
-<p>Paket comes with a command that helps to convert existing solution from NuGet's <code>packages.config</code> format to Paket's format. 
+<p>Paket comes with a command that helps to convert existing solution from NuGet's <code>packages.config</code> format to Paket's format.
 If you want to use the command then:</p>
 
 <ul>
