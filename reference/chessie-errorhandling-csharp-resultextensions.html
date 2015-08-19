@@ -76,10 +76,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '301', 301)" onmouseover="showTip(event, '301', 301)">
+          <code onmouseout="hideTip(event, '304', 304)" onmouseover="showTip(event, '304', 304)">
             new()
           </code>
-          <div class="tip" id="301">
+          <div class="tip" id="304">
             <strong>Signature:</strong> unit -&gt; ResultExtensions<br />
                       </div>
         </td>
@@ -102,10 +102,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '302', 302)" onmouseover="showTip(event, '302', 302)">
+          <code onmouseout="hideTip(event, '305', 305)" onmouseover="showTip(event, '305', 305)">
             Collect(values)
           </code>
-          <div class="tip" id="302">
+          <div class="tip" id="305">
             <strong>Signature:</strong> values:seq&lt;Result&lt;&#39;TSuccess,&#39;TMessage&gt;&gt; -&gt; Result&lt;&#39;TSuccess list,&#39;TMessage&gt;<br />
                           <strong>Type parameters:</strong> 'TSuccess, 'TMessage          </div>
         </td>
@@ -124,10 +124,10 @@ If the sequence contains an error the error will be propagated.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '303', 303)" onmouseover="showTip(event, '303', 303)">
+          <code onmouseout="hideTip(event, '306', 306)" onmouseover="showTip(event, '306', 306)">
             Either(this, ifSuccess, ifFailure)
           </code>
-          <div class="tip" id="303">
+          <div class="tip" id="306">
             <strong>Signature:</strong> (this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; * ifSuccess:Func&lt;&#39;TSuccess,&#39;TMessage list,&#39;TResult&gt; * ifFailure:Func&lt;&#39;TMessage list,&#39;TResult&gt;) -&gt; &#39;TResult<br />
                           <strong>Type parameters:</strong> 'TSuccess, 'TMessage, 'TResult          </div>
         </td>
@@ -145,10 +145,10 @@ If the sequence contains an error the error will be propagated.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '304', 304)" onmouseover="showTip(event, '304', 304)">
+          <code onmouseout="hideTip(event, '307', 307)" onmouseover="showTip(event, '307', 307)">
             FailedWith(this)
           </code>
-          <div class="tip" id="304">
+          <div class="tip" id="307">
             <strong>Signature:</strong> this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; -&gt; &#39;TMessage list<br />
                           <strong>Type parameters:</strong> 'TSuccess, 'TMessage          </div>
         </td>
@@ -166,10 +166,10 @@ If the sequence contains an error the error will be propagated.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '305', 305)" onmouseover="showTip(event, '305', 305)">
+          <code onmouseout="hideTip(event, '308', 308)" onmouseover="showTip(event, '308', 308)">
             Flatten(this)
           </code>
-          <div class="tip" id="305">
+          <div class="tip" id="308">
             <strong>Signature:</strong> this:Result&lt;seq&lt;Result&lt;&#39;TSuccess,&#39;TMessage&gt;&gt;,&#39;TMessage&gt; -&gt; Result&lt;seq&lt;&#39;TSuccess&gt;,&#39;TMessage&gt;<br />
                           <strong>Type parameters:</strong> 'TSuccess, 'TMessage          </div>
         </td>
@@ -188,10 +188,10 @@ If the sequence contains an error the error will be propagated.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '306', 306)" onmouseover="showTip(event, '306', 306)">
+          <code onmouseout="hideTip(event, '309', 309)" onmouseover="showTip(event, '309', 309)">
             Join(...)
           </code>
-          <div class="tip" id="306">
+          <div class="tip" id="309">
             <strong>Signature:</strong> (this:Result&lt;&#39;TOuter,&#39;TMessage&gt; * inner:Result&lt;&#39;TInner,&#39;TMessage&gt; * outerKeySelector:Func&lt;&#39;TOuter,&#39;TKey&gt; * innerKeySelector:Func&lt;&#39;TInner,&#39;TKey&gt; * resultSelector:Func&lt;&#39;TOuter,&#39;TInner,&#39;TResult&gt;) -&gt; Result&lt;&#39;TResult,&#39;TMessage&gt;<br />
                           <strong>Type parameters:</strong> 'TOuter, 'TMessage, 'TInner, 'TKey, 'TResult          </div>
         </td>
@@ -211,12 +211,12 @@ Otherwise the exisiting error messages are propagated.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '307', 307)" onmouseover="showTip(event, '307', 307)">
+          <code onmouseout="hideTip(event, '310', 310)" onmouseover="showTip(event, '310', 310)">
             Map(this, func)
           </code>
-          <div class="tip" id="307">
-            <strong>Signature:</strong> (this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; * func:Func&lt;&#39;TSuccess,&#39;?8668&gt;) -&gt; Result&lt;&#39;?8668,&#39;TMessage&gt;<br />
-                          <strong>Type parameters:</strong> 'TSuccess, 'TMessage, '?8668          </div>
+          <div class="tip" id="310">
+            <strong>Signature:</strong> (this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; * func:Func&lt;&#39;TSuccess,&#39;?8671&gt;) -&gt; Result&lt;&#39;?8671,&#39;TMessage&gt;<br />
+                          <strong>Type parameters:</strong> 'TSuccess, 'TMessage, '?8671          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L307-307" class="github-link">
@@ -232,10 +232,10 @@ Otherwise the exisiting error messages are propagated.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '308', 308)" onmouseover="showTip(event, '308', 308)">
+          <code onmouseout="hideTip(event, '311', 311)" onmouseover="showTip(event, '311', 311)">
             Match(this, ifSuccess, ifFailure)
           </code>
-          <div class="tip" id="308">
+          <div class="tip" id="311">
             <strong>Signature:</strong> (this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; * ifSuccess:Action&lt;&#39;TSuccess,&#39;TMessage list&gt; * ifFailure:Action&lt;&#39;TMessage list&gt;) -&gt; unit<br />
                           <strong>Type parameters:</strong> 'TSuccess, 'TMessage          </div>
         </td>
@@ -253,12 +253,12 @@ Otherwise the exisiting error messages are propagated.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '309', 309)" onmouseover="showTip(event, '309', 309)">
+          <code onmouseout="hideTip(event, '312', 312)" onmouseover="showTip(event, '312', 312)">
             Select(this, func)
           </code>
-          <div class="tip" id="309">
-            <strong>Signature:</strong> (this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; * func:Func&lt;&#39;TSuccess,&#39;?8687&gt;) -&gt; Result&lt;&#39;?8687,&#39;TMessage&gt;<br />
-                          <strong>Type parameters:</strong> 'TSuccess, 'TMessage, '?8687          </div>
+          <div class="tip" id="312">
+            <strong>Signature:</strong> (this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; * func:Func&lt;&#39;TSuccess,&#39;?8690&gt;) -&gt; Result&lt;&#39;?8690,&#39;TMessage&gt;<br />
+                          <strong>Type parameters:</strong> 'TSuccess, 'TMessage, '?8690          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L342-342" class="github-link">
@@ -274,12 +274,12 @@ Otherwise the exisiting error messages are propagated.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '310', 310)" onmouseover="showTip(event, '310', 310)">
+          <code onmouseout="hideTip(event, '313', 313)" onmouseover="showTip(event, '313', 313)">
             SelectMany(this, func, mapper)
           </code>
-          <div class="tip" id="310">
-            <strong>Signature:</strong> (this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; * func:Func&lt;&#39;TSuccess,Result&lt;&#39;?8682,&#39;TMessage&gt;&gt; * mapper:Func&lt;&#39;TSuccess,&#39;?8682,&#39;?8683&gt;) -&gt; Result&lt;&#39;?8683,&#39;TMessage&gt;<br />
-                          <strong>Type parameters:</strong> 'TSuccess, 'TMessage, '?8682, '?8683          </div>
+          <div class="tip" id="313">
+            <strong>Signature:</strong> (this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; * func:Func&lt;&#39;TSuccess,Result&lt;&#39;?8685,&#39;TMessage&gt;&gt; * mapper:Func&lt;&#39;TSuccess,&#39;?8685,&#39;?8686&gt;) -&gt; Result&lt;&#39;?8686,&#39;TMessage&gt;<br />
+                          <strong>Type parameters:</strong> 'TSuccess, 'TMessage, '?8685, '?8686          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L337-337" class="github-link">
@@ -297,12 +297,12 @@ Otherwise the exisiting failure is propagated.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '311', 311)" onmouseover="showTip(event, '311', 311)">
+          <code onmouseout="hideTip(event, '314', 314)" onmouseover="showTip(event, '314', 314)">
             SelectMany(this, func)
           </code>
-          <div class="tip" id="311">
-            <strong>Signature:</strong> (this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; * func:Func&lt;&#39;TSuccess,Result&lt;&#39;?8678,&#39;TMessage&gt;&gt;) -&gt; Result&lt;&#39;?8678,&#39;TMessage&gt;<br />
-                          <strong>Type parameters:</strong> 'TSuccess, 'TMessage, '?8678          </div>
+          <div class="tip" id="314">
+            <strong>Signature:</strong> (this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; * func:Func&lt;&#39;TSuccess,Result&lt;&#39;?8681,&#39;TMessage&gt;&gt;) -&gt; Result&lt;&#39;?8681,&#39;TMessage&gt;<br />
+                          <strong>Type parameters:</strong> 'TSuccess, 'TMessage, '?8681          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L330-330" class="github-link">
@@ -319,10 +319,10 @@ Otherwise the exisiting failure is propagated.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '312', 312)" onmouseover="showTip(event, '312', 312)">
+          <code onmouseout="hideTip(event, '315', 315)" onmouseover="showTip(event, '315', 315)">
             SucceededWith(this)
           </code>
-          <div class="tip" id="312">
+          <div class="tip" id="315">
             <strong>Signature:</strong> this:Result&lt;&#39;TSuccess,&#39;TMessage&gt; -&gt; &#39;TSuccess<br />
                           <strong>Type parameters:</strong> 'TSuccess, 'TMessage          </div>
         </td>
