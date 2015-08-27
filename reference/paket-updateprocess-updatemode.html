@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>UpdateProcess - Paket</title>
+    <title>UpdateMode - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -58,53 +58,31 @@
 
 
 
-<h1>UpdateProcess</h1>
+<h1>UpdateMode</h1>
 <p>
   <span>Namespace: Paket</span><br />
+  <span>Parent Module: <a href="paket-updateprocess.html">UpdateProcess</a></span>
 </p>
 <div class="xmldoc">
-<p>Contains methods for the update process.</p>
-
-
 </div>
-
-<!-- Render nested types and modules, if there are any -->
-  <h2>Nested types and modules</h2>
-  <div>
-      <table class="table table-bordered type-list">
-    <thead>
-      <tr><td>Type</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td class="type-name">
-            <a href="paket-updateprocess-updatemode.html">UpdateMode</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-  <h3>Functions and values</h3>
+  <h3>Union Cases</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Function or value</td><td>Description</td></tr>
+      <tr><td>Union Case</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '219', 219)" onmouseover="showTip(event, '219', 219)">
-            addPackagesFromReferenceFiles (...)
+          <code onmouseout="hideTip(event, '479', 479)" onmouseover="showTip(event, '479', 479)">
+            Install
           </code>
-          <div class="tip" id="219">
-            <strong>Signature:</strong> projects:seq&lt;&#39;?7567 * ReferencesFile&gt; -&gt; dependenciesFile:DependenciesFile -&gt; DependenciesFile<br />
-                          <strong>Type parameters:</strong> '?7567          </div>
+          <div class="tip" id="479">
+            <strong>Signature:</strong> <br />
+                      </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L13-13" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L52-52" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -114,15 +92,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '220', 220)" onmouseover="showTip(event, '220', 220)">
-            selectiveUpdate (...)
+          <code onmouseout="hideTip(event, '480', 480)" onmouseover="showTip(event, '480', 480)">
+            SelectiveUpdate(NormalizedPackageName)
           </code>
-          <div class="tip" id="220">
-            <strong>Signature:</strong> resolve:(DependenciesFile -&gt; PackageRequirement list option -&gt; Resolved) -&gt; lockFile:LockFile -&gt; dependenciesFile:DependenciesFile -&gt; updateAll:bool -&gt; package:NormalizedPackageName option -&gt; LockFile<br />
+          <div class="tip" id="480">
+            <strong>Signature:</strong> NormalizedPackageName<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L63-63" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L51-51" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -132,82 +110,45 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '221', 221)" onmouseover="showTip(event, '221', 221)">
-            SelectiveUpdate (...)
+          <code onmouseout="hideTip(event, '481', 481)" onmouseover="showTip(event, '481', 481)">
+            UpdateAll
           </code>
-          <div class="tip" id="221">
-            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * updateAll:bool * exclude:NormalizedPackageName option * force:bool) -&gt; LockFile<br />
+          <div class="tip" id="481">
+            <strong>Signature:</strong> <br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L111-111" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L53-53" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
         </td>
       </tr>
+    </tbody>
+  </table>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '222', 222)" onmouseover="showTip(event, '222', 222)">
-            SmartInstall (...)
+          <code onmouseout="hideTip(event, '482', 482)" onmouseover="showTip(event, '482', 482)">
+            Mode(updateAll package)
           </code>
-          <div class="tip" id="222">
-            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * updateAll:bool * exclude:NormalizedPackageName option * options:UpdaterOptions) -&gt; unit<br />
+          <div class="tip" id="482">
+            <strong>Signature:</strong> updateAll:bool -&gt; (package:NormalizedPackageName option) -&gt; UpdateMode<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L155-155" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L55-55" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Smart install command</p>
-
-
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '223', 223)" onmouseover="showTip(event, '223', 223)">
-            Update (dependenciesFileName, options)
-          </code>
-          <div class="tip" id="223">
-            <strong>Signature:</strong> (dependenciesFileName:string * options:UpdaterOptions) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L185-185" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Update command</p>
-
-
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '224', 224)" onmouseover="showTip(event, '224', 224)">
-            UpdatePackage (...)
-          </code>
-          <div class="tip" id="224">
-            <strong>Signature:</strong> (dependenciesFileName:string * packageName:PackageName * newVersion:string option * options:UpdaterOptions) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L167-167" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Update a single package command</p>
-
-
-
+          
         </td>
       </tr>
     </tbody>
