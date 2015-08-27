@@ -76,15 +76,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '214', 214)" onmouseover="showTip(event, '214', 214)">
+          <code onmouseout="hideTip(event, '219', 219)" onmouseover="showTip(event, '219', 219)">
             beforeAndAfter (...)
           </code>
-          <div class="tip" id="214">
+          <div class="tip" id="219">
             <strong>Signature:</strong> environment:PaketEnv -&gt; dependenciesFile:DependenciesFile -&gt; projects:(ProjectFile * ReferencesFile) list -&gt; PaketEnv * PaketEnv<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L54-54" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L56-56" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -94,15 +94,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '215', 215)" onmouseover="showTip(event, '215', 215)">
-            simplify interactive environment
+          <code onmouseout="hideTip(event, '220', 220)" onmouseover="showTip(event, '220', 220)">
+            simplify (...)
           </code>
-          <div class="tip" id="215">
-            <strong>Signature:</strong> interactive:bool -&gt; environment:PaketEnv -&gt; Result&lt;(PaketEnv * PaketEnv),DomainMessage&gt;<br />
+          <div class="tip" id="220">
+            <strong>Signature:</strong> groupName:NormalizedGroupName -&gt; interactive:bool -&gt; environment:PaketEnv -&gt; Result&lt;(PaketEnv * PaketEnv),DomainMessage&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L60-60" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L62-62" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -112,12 +112,12 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '216', 216)" onmouseover="showTip(event, '216', 216)">
+          <code onmouseout="hideTip(event, '221', 221)" onmouseover="showTip(event, '221', 221)">
             simplifyDependenciesFile (...)
           </code>
-          <div class="tip" id="216">
-            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * flatLookup:Map&lt;NormalizedPackageName,&#39;?7655&gt; * interactive:bool) -&gt; Result&lt;DependenciesFile,DomainMessage&gt;<br />
-                          <strong>Type parameters:</strong> '?7655          </div>
+          <div class="tip" id="221">
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * flatLookup:Map&lt;(NormalizedGroupName * NormalizedPackageName),&#39;?7680&gt; * interactive:bool) -&gt; Result&lt;DependenciesFile,DomainMessage&gt;<br />
+                          <strong>Type parameters:</strong> '?7680          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L30-30" class="github-link">
@@ -130,12 +130,12 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '217', 217)" onmouseover="showTip(event, '217', 217)">
+          <code onmouseout="hideTip(event, '222', 222)" onmouseover="showTip(event, '222', 222)">
             simplifyReferencesFile (...)
           </code>
-          <div class="tip" id="217">
-            <strong>Signature:</strong> (refFile:ReferencesFile * flatLookup:Map&lt;NormalizedPackageName,&#39;?7657&gt; * interactive:bool) -&gt; Result&lt;ReferencesFile,DomainMessage&gt;<br />
-                          <strong>Type parameters:</strong> '?7657          </div>
+          <div class="tip" id="222">
+            <strong>Signature:</strong> (refFile:ReferencesFile * groupName:NormalizedGroupName * flatLookup:Map&lt;(NormalizedGroupName * NormalizedPackageName),&#39;?7682&gt; * interactive:bool) -&gt; Result&lt;ReferencesFile,DomainMessage&gt;<br />
+                          <strong>Type parameters:</strong> '?7682          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L42-42" class="github-link">
@@ -148,15 +148,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '218', 218)" onmouseover="showTip(event, '218', 218)">
+          <code onmouseout="hideTip(event, '223', 223)" onmouseover="showTip(event, '223', 223)">
             updateEnvironment (before, after)
           </code>
-          <div class="tip" id="218">
+          <div class="tip" id="223">
             <strong>Signature:</strong> (before:PaketEnv * after:PaketEnv) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L77-77" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L79-79" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
