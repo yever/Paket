@@ -62,7 +62,7 @@
 <li>Only in Paket 2.0 - currently in alpha *</li>
 </ul>
 
-<p><em>Groups</em> allow for better organization of dependencies and also allows easier conflict resolutions. 
+<p><em>Groups</em> allow for better organization of dependencies and also enable <a href="groups.html#New-ways-for-conflict-resolution">easier conflict resolution</a>.
 Let's consider a small example:</p>
 
 <h3><a name="paket-dependencies" class="anchor" href="#paket-dependencies">paket.dependencies</a></h3>
@@ -121,7 +121,7 @@ Let's consider a small example:</p>
 </table>
 
 <p>As you can see we have 3 different groups. 
-The first one is the default group (internally called "Main") and represents the backwards-compatible case. So the main group is what you currently have in Paket 1.x. The other two groups contain dependencies that are used for <code>Build</code> and <code>Test</code>.</p>
+The first one is the default group (internally called "Main") and the other two groups contain dependencies that are used for <code>Build</code> and <code>Test</code>.</p>
 
 <p>Notice the indentation in groups is optional.</p>
 
