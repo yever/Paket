@@ -89,6 +89,8 @@ Let's consider a small example:</p>
 <span class="l">22: </span>
 <span class="l">23: </span>
 <span class="l">24: </span>
+<span class="l">25: </span>
+<span class="l">26: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
@@ -101,6 +103,7 @@ Let's consider a small example:</p>
 <span class="i">github</span> <span class="i">fsprojects</span><span class="o">/</span><span class="i">Chessie</span> <span class="i">src</span><span class="o">/</span><span class="i">Chessie</span><span class="o">/</span><span class="i">ErrorHandling</span><span class="o">.</span><span class="i">fs</span>
 
 <span class="i">group</span> <span class="i">Build</span>
+
     <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
     <span class="i">nuget</span> <span class="i">FAKE</span>
@@ -110,6 +113,7 @@ Let's consider a small example:</p>
     <span class="i">github</span> <span class="i">fsharp</span><span class="o">/</span><span class="i">FAKE</span> <span class="i">modules</span><span class="o">/</span><span class="i">Octokit</span><span class="o">/</span><span class="i">Octokit</span><span class="o">.</span><span class="i">fsx</span>
 
 <span class="i">group</span> <span class="i">Test</span>
+
     <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
     <span class="i">nuget</span> <span class="i">NUnit</span><span class="o">.</span><span class="i">Runners</span>
@@ -252,8 +256,7 @@ If you want to reference dependencies from projects you can do this via the foll
 
 <h2><a name="Conflict-resolution-with-groups" class="anchor" href="#Conflict-resolution-with-groups">Conflict resolution with groups</a></h2>
 
-<p>We got many requests to support multiple versions of the same package with Paket. This was not possible since we had no way to discriminate these.
-Now we can support that by using multiple groups:</p>
+<p>Paket's group feature allows you to use multiple versions of the same package. Let consider the following <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
@@ -276,7 +279,7 @@ Now we can support that by using multiple groups:</p>
 </tr>
 </table>
 
-<p>Every group will be resolved independently so that we get:</p>
+<p>Every group will be resolved independently to the following <a href="lock-file.html"><code>paket.lock</code> file</a>:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
@@ -303,14 +306,14 @@ Now we can support that by using multiple groups:</p>
 </tr>
 </table>
 
-<p>Paket is downloading both version. We will get <code>packages/Newtonsoft.Json</code> with version 7.0.1 and <code>packages/legacy/Newtonsoft.Json</code> with the 6.0.8 bits.
-In your references files you can now decide which version you want to use:</p>
+<p>Paket is downloading both version. You will get <code>packages/Newtonsoft.Json</code> with version 7.0.1 and <code>packages/legacy/Newtonsoft.Json</code> with the 6.0.8 bits.
+In your  <a href="references-files.html"><code>paket.references</code> file.</a> you can now decide which version you want to use:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">group</span> <span class="i">Legacy</span>
-<span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span>
+<span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span> <span class="c">// uses 6.0.8</span>
 </code></pre></td>
 </tr>
 </table>
