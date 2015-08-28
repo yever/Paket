@@ -62,6 +62,264 @@
 <li>Only in Paket 2.0 - currently in alpha *</li>
 </ul>
 
+<p>This new feature will allow us to organize our dependencies in groups and also allows easier conflict resolutions. Let's consider a small sample:</p>
+
+<h3><a name="paket-dependencies" class="anchor" href="#paket-dependencies">paket.dependencies</a></h3>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+<span class="l">17: </span>
+<span class="l">18: </span>
+<span class="l">19: </span>
+<span class="l">20: </span>
+<span class="l">21: </span>
+<span class="l">22: </span>
+<span class="l">23: </span>
+<span class="l">24: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+
+<span class="i">nuget</span> <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span>
+<span class="i">nuget</span> <span class="i">UnionArgParser</span>
+<span class="i">nuget</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Core</span>
+
+<span class="i">github</span> <span class="i">forki</span><span class="o">/</span><span class="i">FsUnit</span> <span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span>
+<span class="i">github</span> <span class="i">fsharp</span><span class="o">/</span><span class="i">FAKE</span> <span class="i">src</span><span class="o">/</span><span class="i">app</span><span class="o">/</span><span class="i">FakeLib</span><span class="o">/</span><span class="i">Globbing</span><span class="o">/</span><span class="i">Globbing</span><span class="o">.</span><span class="i">fs</span>
+<span class="i">github</span> <span class="i">fsprojects</span><span class="o">/</span><span class="i">Chessie</span> <span class="i">src</span><span class="o">/</span><span class="i">Chessie</span><span class="o">/</span><span class="i">ErrorHandling</span><span class="o">.</span><span class="i">fs</span>
+
+<span class="i">group</span> <span class="i">Build</span>
+    <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+
+    <span class="i">nuget</span> <span class="i">FAKE</span>
+    <span class="i">nuget</span> <span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">FSharp</span><span class="o">.</span><span class="i">Formatting</span>
+    <span class="i">nuget</span> <span class="i">ILRepack</span>
+
+    <span class="i">github</span> <span class="i">fsharp</span><span class="o">/</span><span class="i">FAKE</span> <span class="i">modules</span><span class="o">/</span><span class="i">Octokit</span><span class="o">/</span><span class="i">Octokit</span><span class="o">.</span><span class="i">fsx</span>
+
+<span class="i">group</span> <span class="i">Test</span>
+    <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+
+    <span class="i">nuget</span> <span class="i">NUnit</span><span class="o">.</span><span class="i">Runners</span>
+    <span class="i">nuget</span> <span class="i">NUnit</span>
+</code></pre></td>
+</tr>
+</table>
+
+<p>As you can see we have 3 different groups. The first one is the default group (currently called "Main") and represents the backwards-compatible case. So the main group is what you currently have in Paket 1.x. The other two groups contain dependencies that are used for <code>Build</code> and <code>Test</code>.</p>
+
+<p>Notice the indentation in groups is optional.</p>
+
+<p>After <code>paket update</code> the corresponding lock file looks the following:</p>
+
+<h3><a name="paket-lock" class="anchor" href="#paket-lock">paket.lock</a></h3>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+<span class="l">17: </span>
+<span class="l">18: </span>
+<span class="l">19: </span>
+<span class="l">20: </span>
+<span class="l">21: </span>
+<span class="l">22: </span>
+<span class="l">23: </span>
+<span class="l">24: </span>
+<span class="l">25: </span>
+<span class="l">26: </span>
+<span class="l">27: </span>
+<span class="l">28: </span>
+<span class="l">29: </span>
+<span class="l">30: </span>
+<span class="l">31: </span>
+<span class="l">32: </span>
+<span class="l">33: </span>
+<span class="l">34: </span>
+<span class="l">35: </span>
+<span class="l">36: </span>
+<span class="l">37: </span>
+<span class="l">38: </span>
+<span class="l">39: </span>
+<span class="l">40: </span>
+<span class="l">41: </span>
+<span class="l">42: </span>
+<span class="l">43: </span>
+<span class="l">44: </span>
+<span class="l">45: </span>
+<span class="l">46: </span>
+<span class="l">47: </span>
+<span class="l">48: </span>
+<span class="l">49: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">NUGET</span>
+  <span class="i">remote</span><span class="o">:</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span onmouseout="hideTip(event, 'fs1', 4)" onmouseover="showTip(event, 'fs1', 4)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 5)" onmouseover="showTip(event, 'fs2', 5)" class="i">Core</span> (<span class="n">4.0</span><span class="o">.</span><span class="n">0.1</span>)
+    <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span> (<span class="n">7.0</span><span class="o">.</span><span class="n">1</span>)
+    <span class="i">UnionArgParser</span> (<span class="n">0.6</span><span class="o">.</span><span class="n">3</span>)
+<span class="i">GITHUB</span>
+  <span class="i">remote</span><span class="o">:</span> <span class="i">forki</span><span class="o">/</span><span class="i">FsUnit</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span> (<span class="n">81d27fd09575a32c4ed52eadb2eeac5f365b8348</span>)
+  <span class="i">remote</span><span class="o">:</span> <span class="i">fsharp</span><span class="o">/</span><span class="i">FAKE</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">src</span><span class="o">/</span><span class="i">app</span><span class="o">/</span><span class="i">FakeLib</span><span class="o">/</span><span class="i">Globbing</span><span class="o">/</span><span class="i">Globbing</span><span class="o">.</span><span class="i">fs</span> (<span class="n">991bea743c5d5e8eec0defc7338a89281ed3f51a</span>)
+  <span class="i">remote</span><span class="o">:</span> <span class="i">fsprojects</span><span class="o">/</span><span class="i">Chessie</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">src</span><span class="o">/</span><span class="i">Chessie</span><span class="o">/</span><span class="i">ErrorHandling</span><span class="o">.</span><span class="i">fs</span> (<span class="n">1f23b1caeb1f87e750abc96a25109376771dd090</span>)
+
+<span class="i">GROUP</span> <span class="i">Build</span>
+<span class="i">NUGET</span>
+  <span class="i">remote</span><span class="o">:</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">FAKE</span> (<span class="n">4.3</span><span class="o">.</span><span class="n">1</span>)
+    <span onmouseout="hideTip(event, 'fs1', 6)" onmouseover="showTip(event, 'fs1', 6)" class="i">FSharp</span><span class="o">.</span><span class="i">Compiler</span><span class="o">.</span><span class="i">Service</span> (<span class="n">1.4</span><span class="o">.</span><span class="n">0.1</span>)
+    <span onmouseout="hideTip(event, 'fs1', 7)" onmouseover="showTip(event, 'fs1', 7)" class="i">FSharp</span><span class="o">.</span><span class="i">Formatting</span> (<span class="n">2.10</span><span class="o">.</span><span class="n">0</span>)
+      <span onmouseout="hideTip(event, 'fs1', 8)" onmouseover="showTip(event, 'fs1', 8)" class="i">FSharp</span><span class="o">.</span><span class="i">Compiler</span><span class="o">.</span><span class="i">Service</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">0.0</span><span class="o">.</span><span class="n">87</span>)
+      <span class="i">FSharpVSPowerTools</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 9)" onmouseover="showTip(event, 'fs2', 9)" class="i">Core</span> (<span class="n">1.8</span><span class="o">.</span><span class="n">0</span>)
+    <span class="i">FSharpVSPowerTools</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 10)" onmouseover="showTip(event, 'fs2', 10)" class="i">Core</span> (<span class="n">1.8</span><span class="o">.</span><span class="n">0</span>)
+      <span onmouseout="hideTip(event, 'fs1', 11)" onmouseover="showTip(event, 'fs1', 11)" class="i">FSharp</span><span class="o">.</span><span class="i">Compiler</span><span class="o">.</span><span class="i">Service</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">0.0</span><span class="o">.</span><span class="n">87</span>)
+    <span class="i">ILRepack</span> (<span class="n">2.0</span><span class="o">.</span><span class="n">5</span>)
+    <span onmouseout="hideTip(event, 'fs3', 12)" onmouseover="showTip(event, 'fs3', 12)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span> (<span class="n">1.1</span><span class="o">.</span><span class="n">10</span>)
+      <span onmouseout="hideTip(event, 'fs3', 13)" onmouseover="showTip(event, 'fs3', 13)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span><span class="o">.</span><span class="i">Build</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">1.0</span><span class="o">.</span><span class="n">14</span>)
+    <span onmouseout="hideTip(event, 'fs3', 14)" onmouseover="showTip(event, 'fs3', 14)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span><span class="o">.</span><span class="i">Build</span> (<span class="n">1.0</span><span class="o">.</span><span class="n">21</span>)
+    <span onmouseout="hideTip(event, 'fs3', 15)" onmouseover="showTip(event, 'fs3', 15)" class="i">Microsoft</span><span class="o">.</span><span class="i">Net</span><span class="o">.</span><span class="i">Http</span> (<span class="n">2.2</span><span class="o">.</span><span class="n">29</span>)
+      <span onmouseout="hideTip(event, 'fs3', 16)" onmouseover="showTip(event, 'fs3', 16)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">1.1</span><span class="o">.</span><span class="n">10</span>)
+      <span onmouseout="hideTip(event, 'fs3', 17)" onmouseover="showTip(event, 'fs3', 17)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span><span class="o">.</span><span class="i">Build</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">1.0</span><span class="o">.</span><span class="n">14</span>)
+    <span class="i">Octokit</span> (<span class="n">0.14</span><span class="o">.</span><span class="n">0</span>)
+      <span onmouseout="hideTip(event, 'fs3', 18)" onmouseover="showTip(event, 'fs3', 18)" class="i">Microsoft</span><span class="o">.</span><span class="i">Net</span><span class="o">.</span><span class="i">Http</span>
+<span class="i">GITHUB</span>
+  <span class="i">remote</span><span class="o">:</span> <span class="i">fsharp</span><span class="o">/</span><span class="i">FAKE</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">modules</span><span class="o">/</span><span class="i">Octokit</span><span class="o">/</span><span class="i">Octokit</span><span class="o">.</span><span class="i">fsx</span> (<span class="n">991bea743c5d5e8eec0defc7338a89281ed3f51a</span>)
+      <span class="i">Octokit</span>
+
+<span class="i">GROUP</span> <span class="i">Test</span>
+<span class="i">NUGET</span>
+  <span class="i">remote</span><span class="o">:</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">NUnit</span> (<span class="n">2.6</span><span class="o">.</span><span class="n">4</span>)
+    <span class="i">NUnit</span><span class="o">.</span><span class="i">Runners</span> (<span class="n">2.6</span><span class="o">.</span><span class="n">4</span>)
+</code></pre></td>
+</tr>
+</table>
+
+<p>As you can see every group is listed separately and we still have the backwards-compatible case for the "Main" group.
+If you want to reference dependencies from projects you can do this via the following syntax in references files:</p>
+
+<h2><a name="paket-references" class="anchor" href="#paket-references">paket.references</a></h2>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">File</span><span class="o">:</span><span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span> <span class="o">.</span>
+<span onmouseout="hideTip(event, 'fs1', 19)" onmouseover="showTip(event, 'fs1', 19)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 20)" onmouseover="showTip(event, 'fs2', 20)" class="i">Core</span>
+
+<span class="i">group</span> <span class="i">Test</span>
+  <span class="i">NUnit</span>
+  <span class="i">NUnit</span><span class="o">.</span><span class="i">Runners</span>
+</code></pre></td>
+</tr>
+</table>
+
+<h2><a name="New-ways-for-conflict-resolution" class="anchor" href="#New-ways-for-conflict-resolution">New ways for conflict resolution</a></h2>
+
+<p>We got many requests to support multiple versions of the same package with Paket. This was not possible since we had no way to discriminate these.
+Now we can support that by using multiple groups:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+<span class="l">7: </span>
+<span class="l">8: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+
+<span class="i">nuget</span> <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span>
+
+<span class="i">group</span> <span class="i">Legacy</span>
+    <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+
+    <span class="i">nuget</span> <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span> <span class="o">~&gt;</span> <span class="n">6</span>
+</code></pre></td>
+</tr>
+</table>
+
+<p>Every group will be resolved independently so that we get:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">NUGET</span>
+  <span class="i">remote</span><span class="o">:</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span> (<span class="n">7.0</span><span class="o">.</span><span class="n">1</span>)
+
+<span class="i">GROUP</span> <span class="i">Legacy</span>
+<span class="i">NUGET</span>
+  <span class="i">remote</span><span class="o">:</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+  <span class="i">specs</span><span class="o">:</span>
+    <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span> (<span class="n">6.0</span><span class="o">.</span><span class="n">8</span>)
+</code></pre></td>
+</tr>
+</table>
+
+<p>Paket is downloading both version. We will get <code>packages/Newtonsoft.Json</code> with version 7.0.1 and <code>packages/legacy/Newtonsoft.Json</code> with the 6.0.8 bits.
+In your references files you can now decide which version you want to use:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">group</span> <span class="i">Legacy</span>
+<span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span>
+</code></pre></td>
+</tr>
+</table>
+
+<div class="tip" id="fs1">namespace Microsoft.FSharp</div>
+<div class="tip" id="fs2">namespace Microsoft.FSharp.Core</div>
+<div class="tip" id="fs3">namespace Microsoft</div>
 
         </div>
         <div class="span3">
