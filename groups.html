@@ -232,20 +232,17 @@ The first one is the default group (internally called "Main") and the other two 
 </tr>
 </table>
 
-<p>As you can see every group is listed separately and we still have the backwards-compatible case for the "Main" group.
-If you want to reference dependencies from projects you can do this via the following syntax in references files:</p>
+<p>As you can see every group is listed separately. If you want to reference dependencies from projects you can do this via the following syntax in paket.references files:</p>
 
-<h2><a name="paket-references" class="anchor" href="#paket-references">paket.references</a></h2>
+<h3><a name="paket-references" class="anchor" href="#paket-references">paket.references</a></h3>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
 <span class="l">5: </span>
-<span class="l">6: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">File</span><span class="o">:</span><span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span> <span class="o">.</span>
-<span onmouseout="hideTip(event, 'fs1', 19)" onmouseover="showTip(event, 'fs1', 19)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 20)" onmouseover="showTip(event, 'fs2', 20)" class="i">Core</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span onmouseout="hideTip(event, 'fs1', 19)" onmouseover="showTip(event, 'fs1', 19)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 20)" onmouseover="showTip(event, 'fs2', 20)" class="i">Core</span>
 
 <span class="i">group</span> <span class="i">Test</span>
   <span class="i">NUnit</span>
@@ -254,7 +251,7 @@ If you want to reference dependencies from projects you can do this via the foll
 </tr>
 </table>
 
-<h2><a name="New-ways-for-conflict-resolution" class="anchor" href="#New-ways-for-conflict-resolution">New ways for conflict resolution</a></h2>
+<h2><a name="Conflict-resolution-with-groups" class="anchor" href="#Conflict-resolution-with-groups">Conflict resolution with groups</a></h2>
 
 <p>We got many requests to support multiple versions of the same package with Paket. This was not possible since we had no way to discriminate these.
 Now we can support that by using multiple groups:</p>
