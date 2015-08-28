@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Groups
+    <title>Dependency Groups
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
@@ -56,7 +56,7 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="Groups" class="anchor" href="#Groups">Groups</a></h1>
+<h1><a name="Dependency-Groups" class="anchor" href="#Dependency-Groups">Dependency Groups</a></h1>
 
 <blockquote>Only in Paket 2.0 - currently in alpha</blockquote>
 
@@ -234,7 +234,7 @@ The first one is the default group (internally called "Main") and the other two 
 </tr>
 </table>
 
-<p>As you can see every group is listed separately. 
+<p>As you can see every group is listed separately and it's possible to let Paket <a href="paket-restore.html">restore only specific groups</a>.
 If you want to reference dependencies from projects you can do this via the following syntax in the <a href="references-files.html"><code>paket.references</code> file.</a>:</p>
 
 <h3><a name="paket-references" class="anchor" href="#paket-references">paket.references</a></h3>
@@ -351,7 +351,7 @@ In your  <a href="references-files.html"><code>paket.references</code> file.</a>
             <li><a href="./bootstrapper.html">paket.bootstrapper.exe</a></li>
             <li class="divider"></li>
             <li><a href="./resolver.html">Package resolution algorithm</a></li>
-            <li><a href="./groups.html">Groups</a></li>
+            <li><a href="./groups.html">Dependency Groups</a></li>
             <li><a href="./nuget-dependencies.html">NuGet dependencies</a></li>
             <li><a href="./github-dependencies.html">GitHub dependencies</a></li>
             <li><a href="./http-dependencies.html">HTTP dependencies</a></li>
