@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Async - Paket</title>
+    <title>AnalyzerLib - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -58,42 +58,34 @@
 
 
 
-<h1>Async</h1>
+<h1>AnalyzerLib</h1>
 <p>
-  <span>Namespace: Chessie.ErrorHandling</span><br />
-  <span>Parent Module: <a href="chessie-errorhandling-asyncextensions.html">AsyncExtensions</a></span>
+  <span>Namespace: Paket</span><br />
 </p>
 <div class="xmldoc">
-<p>Useful functions for combining error handling computations with async computations.</p>
-
-
 </div>
-
-<!-- Render nested types and modules, if there are any -->
-
-  <h3>Functions and values</h3>
+  <h3>Record Fields</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Function or value</td><td>Description</td></tr>
+      <tr><td>Record Field</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1', 1)" onmouseover="showTip(event, '1', 1)">
-            bind(f x)
+          <code onmouseout="hideTip(event, '498', 498)" onmouseover="showTip(event, '498', 498)">
+            Language
           </code>
-          <div class="tip" id="1">
-            <strong>Signature:</strong> f:(&#39;?8896 -&gt; Async&lt;&#39;?8897&gt;) -&gt; x:Async&lt;&#39;?8896&gt; -&gt; Async&lt;&#39;?8897&gt;<br />
-                          <strong>Type parameters:</strong> '?8896, '?8897          </div>
+          <div class="tip" id="498">
+            <strong>Signature:</strong> AnalyzerLanguage<br />
+                      </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L222-222" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L103-103" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Creates an async computation that runs a computation and
-when it generates a result run a binding function on the said result</p>
+          <p>Target language for the analyzer</p>
 
 
 
@@ -102,64 +94,48 @@ when it generates a result run a binding function on the said result</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
-            map(f x)
+          <code onmouseout="hideTip(event, '499', 499)" onmouseover="showTip(event, '499', 499)">
+            Path
           </code>
-          <div class="tip" id="2">
-            <strong>Signature:</strong> f:(&#39;?8899 -&gt; &#39;?8900) -&gt; x:Async&lt;&#39;?8899&gt; -&gt; Async&lt;&#39;?8900&gt;<br />
-                          <strong>Type parameters:</strong> '?8899, '?8900          </div>
+          <div class="tip" id="499">
+            <strong>Signature:</strong> string<br />
+                      </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L225-225" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L101-101" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Creates an async computation that runs a mapping function on the result of an async computation</p>
+          <p>Path of the analyzer dll</p>
 
 
 
         </td>
       </tr>
+    </tbody>
+  </table>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
-            ofAsyncResult(arg1)
+          <code onmouseout="hideTip(event, '500', 500)" onmouseover="showTip(event, '500', 500)">
+            FromFile(file)
           </code>
-          <div class="tip" id="3">
-            <strong>Signature:</strong> AsyncResult&lt;&#39;?8902,&#39;?8903&gt; -&gt; Async&lt;Result&lt;&#39;?8902,&#39;?8903&gt;&gt;<br />
-                          <strong>Type parameters:</strong> '?8902, '?8903          </div>
+          <div class="tip" id="500">
+            <strong>Signature:</strong> file:FileInfo -&gt; AnalyzerLib<br />
+                      </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L228-228" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/InstallModel.fs#L105-105" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Creates an async computation from an asyncTrial computation</p>
-
-
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
-            singleton(value)
-          </code>
-          <div class="tip" id="4">
-            <strong>Signature:</strong> value:&#39;?8894 -&gt; Async&lt;&#39;?8894&gt;<br />
-                          <strong>Type parameters:</strong> '?8894          </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L218-218" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Creates an async computation that return the given value</p>
-
-
-
+          
         </td>
       </tr>
     </tbody>
