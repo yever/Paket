@@ -61,11 +61,36 @@
 <p>This guide will show you</p>
 
 <ul>
+<li>How to set up Paket for a specific repository.</li>
 <li>How to install Paket for Windows, Linux, or OS-X.</li>
 <li>How to ensure <code>paket</code> is available via commmand line and other methods of use.</li>
 </ul>
 
-<blockquote>The following guide provides the various installation methods for each of the three top developer operating systems.</blockquote>
+<h2><a name="Installation-per-repository" class="anchor" href="#Installation-per-repository">Installation per repository</a></h2>
+
+<p>The most common use of Paket is as a command line tool inside your project repostiory.</p>
+
+<ul>
+<li>Create a <code>.paket</code> folder in the root of your solution.</li>
+<li>Download the latest <a href="https://github.com/fsprojects/Paket/releases/latest">paket.bootstrapper.exe</a> into that folder.</li>
+<li>Run <code>.paket/paket.bootstrapper.exe</code>. This will download the latest <code>paket.exe</code>.</li>
+<li>Commit <code>.paket/paket.bootstrapper.exe</code> into your repo and add <code>.paket/paket.exe</code> to your <code>.gitignore</code> file.</li>
+</ul>
+
+<p>You can now run Paket from the command line:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">$</span> <span class="o">.</span><span class="i">paket</span><span class="o">/</span><span class="i">paket</span><span class="o">.</span><span class="i">exe</span> <span class="i">install</span>
+</code></pre></td>
+</tr>
+</table>
+
+<h2><a name="System-wide-Installation" class="anchor" href="#System-wide-Installation">System-wide Installation</a></h2>
+
+<p>If you want to install Paket as a system-wide tool then the following guide will help you to get started.</p>
+
+<h3><a name="Cloning-the-Paket-repository" class="anchor" href="#Cloning-the-Paket-repository">Cloning the Paket repository</a></h3>
 
 <p>The first step for any operating system is to clone the <a href="https://github.com/fsprojects/Paket">Paket repository</a> locally.</p>
 
