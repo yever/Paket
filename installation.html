@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>remove</title>
+    <title>Paket Installation Options
+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -55,16 +56,97 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h2><a name="Removing-from-a-single-project" class="anchor" href="#Removing-from-a-single-project">Removing from a single project</a></h2>
+<h1><a name="Paket-Installation-Options" class="anchor" href="#Paket-Installation-Options">Paket Installation Options</a></h1>
 
-<p>It's also possible to remove a package from a specified project only:</p>
+<p>This guide will show you</p>
+
+<ul>
+<li>How to install Paket for Windows, Linux, or OS-X.</li>
+<li>How to ensure <code>paket</code> is available via commmand line and other methods of use.</li>
+</ul>
+
+<blockquote>The following guide provides the various installation methods for each of the three top developer operating systems.</blockquote>
+
+<p>The first step for any operating system is to clone the <a href="https://github.com/fsprojects/Paket">Paket repository</a> locally.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">$ paket remove nuget PACKAGENAME [project PROJECT] [--force] [--hard]
-</code></pre></td></tr></table>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">git</span> <span class="i">clone</span> <span class="i">git</span><span class="o">@</span><span class="i">github</span><span class="o">.</span><span class="i">com</span><span class="o">:</span><span class="i">fsprojects</span><span class="o">/</span><span class="i">Paket</span><span class="o">.</span><span class="i">git</span>
+</code></pre></td>
+</tr>
+</table>
 
-<p>See also <a href="paket-add.html">paket add</a>.</p>
+<p>Then follow the instructions for building and installing for your preferred operating system.</p>
+
+<h3><a name="Installation-on-Linux" class="anchor" href="#Installation-on-Linux">Installation on Linux</a></h3>
+
+<p>For Linux the easiest way to get things installed is to clone the repository and run the build and install scripts as shown below.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">.</span><span class="o">/</span><span class="i">build</span><span class="o">.</span><span class="i">sh</span>
+</code></pre></td>
+</tr>
+</table>
+
+<p>After that completes execute the install, to install Paket as a command line utility.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">.</span><span class="o">/</span><span class="i">install</span><span class="o">.</span><span class="i">sh</span>
+</code></pre></td>
+</tr>
+</table>
+
+<p>The install.sh script will add Paket as a command line option into bash and most other shells available. If you are using a unique shell and run into problems, please post an issue so we can take a look.</p>
+
+<h3><a name="Installation-on-OS-X" class="anchor" href="#Installation-on-OS-X">Installation on OS-X</a></h3>
+
+<p>For OS-X the build and installation procecss is as follows.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">.</span><span class="o">/</span><span class="i">build</span><span class="o">.</span><span class="i">sh</span>
+</code></pre></td>
+</tr>
+</table>
+
+<p>After that completes execute the install, to install Paket as a command line utility.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">.</span><span class="o">/</span><span class="i">install</span><span class="o">.</span><span class="i">sh</span>
+</code></pre></td>
+</tr>
+</table>
+
+<h3><a name="Installation-on-Windows" class="anchor" href="#Installation-on-Windows">Installation on Windows</a></h3>
+
+<p>When using Windows, the previous installation methods work, just exchange the <code>*.sh</code> files for the <code>*.cmd</code> files.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">build</span><span class="o">.</span><span class="i">cmd</span>
+</code></pre></td>
+</tr>
+</table>
+
+<p>Then run the install script to install Paket for command line use.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">install</span><span class="o">.</span><span class="i">cmd</span>
+</code></pre></td>
+</tr>
+</table>
+
+<p>NOTE: If you use git-bash on Windows you can actually follow the Linux installation instructions and just use the <code>*.sh</code> files.</p>
+
+<h3><a name="Post-Installation" class="anchor" href="#Post-Installation">Post Installation</a></h3>
+
+<p>Once the basic installation is complete on your operating system of choice it is often very useful to add some tools to your IDE/Text Editor of choice. Here's some of the options that are available.</p>
+
+<p>For next steps check out the <a href="getting-started.html">Getting Started</a> section.</p>
 
 
         </div>
