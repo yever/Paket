@@ -80,7 +80,7 @@
             findChangesInDependenciesFile (...)
           </code>
           <div class="tip" id="73">
-            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * lockFile:LockFile) -&gt; Set&lt;PackageName&gt;<br />
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * lockFile:LockFile) -&gt; Set&lt;GroupName * PackageName&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -98,11 +98,11 @@
             PinUnchangedDependencies (...)
           </code>
           <div class="tip" id="74">
-            <strong>Signature:</strong> dependenciesFile:DependenciesFile -&gt; oldLockFile:LockFile -&gt; changedDependencies:Set&lt;PackageName&gt; -&gt; DependenciesFile<br />
+            <strong>Signature:</strong> dependenciesFile:DependenciesFile -&gt; oldLockFile:LockFile -&gt; changedDependencies:Set&lt;GroupName * PackageName&gt; -&gt; DependenciesFile<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/DependencyChangeDetection.fs#L44-44" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/DependencyChangeDetection.fs#L53-53" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
