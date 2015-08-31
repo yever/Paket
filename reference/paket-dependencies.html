@@ -106,7 +106,7 @@
             Add(...)
           </code>
           <div class="tip" id="502">
-            <strong>Signature:</strong> (package:string * version:string * force:bool * hard:bool * withBindingRedirects:bool * interactive:bool * installAfter:bool) -&gt; unit<br />
+            <strong>Signature:</strong> (groupName:string option * package:string * version:string * force:bool * hard:bool * withBindingRedirects:bool * interactive:bool * installAfter:bool) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -127,7 +127,7 @@
             Add(...)
           </code>
           <div class="tip" id="503">
-            <strong>Signature:</strong> (package:string * version:string * force:bool * hard:bool * interactive:bool * installAfter:bool) -&gt; unit<br />
+            <strong>Signature:</strong> (groupName:string option * package:string * version:string * force:bool * hard:bool * interactive:bool * installAfter:bool) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -145,10 +145,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '504', 504)" onmouseover="showTip(event, '504', 504)">
-            Add(package, version)
+            Add(groupName, package, version)
           </code>
           <div class="tip" id="504">
-            <strong>Signature:</strong> (package:string * version:string) -&gt; unit<br />
+            <strong>Signature:</strong> (groupName:string option * package:string * version:string) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -166,10 +166,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '505', 505)" onmouseover="showTip(event, '505', 505)">
-            Add(package)
+            Add(groupName, package)
           </code>
           <div class="tip" id="505">
-            <strong>Signature:</strong> package:string -&gt; unit<br />
+            <strong>Signature:</strong> (groupName:string option * package:string) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -211,7 +211,7 @@
             AddToProject(...)
           </code>
           <div class="tip" id="507">
-            <strong>Signature:</strong> (package:string * version:string * force:bool * hard:bool * withBindingRedirects:bool * projectName:string * installAfter:bool) -&gt; unit<br />
+            <strong>Signature:</strong> (groupName:string option * package:string * version:string * force:bool * hard:bool * withBindingRedirects:bool * projectName:string * installAfter:bool) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -232,7 +232,7 @@
             AddToProject(...)
           </code>
           <div class="tip" id="508">
-            <strong>Signature:</strong> (package:string * version:string * force:bool * hard:bool * projectName:string * installAfter:bool) -&gt; unit<br />
+            <strong>Signature:</strong> (groupName:string option * package:string * version:string * force:bool * hard:bool * projectName:string * installAfter:bool) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -649,7 +649,7 @@
             Remove(...)
           </code>
           <div class="tip" id="528">
-            <strong>Signature:</strong> (package:string * force:bool * hard:bool * interactive:bool * installAfter:bool) -&gt; unit<br />
+            <strong>Signature:</strong> (groupName:string option * package:string * force:bool * hard:bool * interactive:bool * installAfter:bool) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -667,10 +667,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '529', 529)" onmouseover="showTip(event, '529', 529)">
-            Remove(package)
+            Remove(groupName, package)
           </code>
           <div class="tip" id="529">
-            <strong>Signature:</strong> package:string -&gt; unit<br />
+            <strong>Signature:</strong> (groupName:string option * package:string) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -691,7 +691,7 @@
             RemoveFromProject(...)
           </code>
           <div class="tip" id="530">
-            <strong>Signature:</strong> (package:string * force:bool * hard:bool * projectName:string * installAfter:bool) -&gt; unit<br />
+            <strong>Signature:</strong> (groupName:string option * package:string * force:bool * hard:bool * projectName:string * installAfter:bool) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
