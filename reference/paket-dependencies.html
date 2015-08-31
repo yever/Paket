@@ -313,10 +313,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '510', 510)" onmouseover="showTip(event, '510', 510)">
-            FindProjectsFor(package)
+            FindProjectsFor(group, package)
           </code>
           <div class="tip" id="510">
-            <strong>Signature:</strong> package:string -&gt; ProjectFile list<br />
+            <strong>Signature:</strong> (group:string * package:string) -&gt; ProjectFile list<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -334,10 +334,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '511', 511)" onmouseover="showTip(event, '511', 511)">
-            FindReferencesFor(package)
+            FindReferencesFor(group, package)
           </code>
           <div class="tip" id="511">
-            <strong>Signature:</strong> package:string -&gt; string list<br />
+            <strong>Signature:</strong> (group:string * package:string) -&gt; string list<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -857,7 +857,7 @@
             ShowReferencesFor(packages)
           </code>
           <div class="tip" id="536">
-            <strong>Signature:</strong> (packages:string list) -&gt; unit<br />
+            <strong>Signature:</strong> (packages:(string * string) list) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
