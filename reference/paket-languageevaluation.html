@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>RestoreProcess - Paket</title>
+    <title>LanguageEvaluation - Paket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -58,14 +58,11 @@
 
 
 
-<h1>RestoreProcess</h1>
+<h1>LanguageEvaluation</h1>
 <p>
   <span>Namespace: Paket</span><br />
 </p>
 <div class="xmldoc">
-<p>Contains methods for the restore process.</p>
-
-
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -79,40 +76,22 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '211', 211)" onmouseover="showTip(event, '211', 211)">
-            ExtractPackage (...)
+          <code onmouseout="hideTip(event, '99', 99)" onmouseover="showTip(event, '99', 99)">
+            getProjectLanguage (...)
           </code>
-          <div class="tip" id="211">
-            <strong>Signature:</strong> (root:string * groupName:GroupName * sources:PackageSource list * force:bool * package:ResolvedPackage) -&gt; Async&lt;ResolvedPackage * FileInfo [] * FileInfo [] * FileInfo []&gt;<br />
+          <div class="tip" id="99">
+            <strong>Signature:</strong> projectDocument:XmlDocument -&gt; fileName:string -&gt; ProjectLanguage<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/RestoreProcess.fs#L13-13" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ProjectFile.fs#L93-93" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Downloads and extracts a package.</p>
+          <p>Get the programming language for a project file using the "ProjectTypeGuids"</p>
 
 
 
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '212', 212)" onmouseover="showTip(event, '212', 212)">
-            Restore (...)
-          </code>
-          <div class="tip" id="212">
-            <strong>Signature:</strong> (dependenciesFileName:string * force:bool * group:GroupName option * referencesFileNames:string list) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/RestoreProcess.fs#L62-62" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
         </td>
       </tr>
     </tbody>
