@@ -83,18 +83,15 @@
             Remove (...)
           </code>
           <div class="tip" id="206">
-            <strong>Signature:</strong> (dependenciesFileName:string * groupName:string option * packageName:PackageName * force:bool * hard:bool * interactive:bool * installAfter:bool) -&gt; unit<br />
+            <strong>Signature:</strong> (dependenciesFileName:string * package:PackageName * force:bool * hard:bool * interactive:bool * installAfter:bool) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/RemoveProcess.fs#L67-67" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/RemoveProcess.fs#L63-63" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Remove a package with the option to interactively remove it from multiple projects.</p>
-
-
-
+          
         </td>
       </tr>
       <tr>
@@ -104,7 +101,7 @@
             RemoveFromProject (...)
           </code>
           <div class="tip" id="207">
-            <strong>Signature:</strong> (dependenciesFileName:string * groupName:string option * packageName:PackageName * force:bool * hard:bool * projectName:string * installAfter:bool) -&gt; unit<br />
+            <strong>Signature:</strong> (dependenciesFileName:string * package:PackageName * force:bool * hard:bool * projectName:string * installAfter:bool) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -112,10 +109,7 @@
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Removes a package with the option to remove it from a specified project.</p>
-
-
-
+          
         </td>
       </tr>
     </tbody>
@@ -150,11 +144,9 @@
             <li><a href="..//bootstrapper.html">paket.bootstrapper.exe</a></li>
             <li class="divider"></li>
             <li><a href="..//resolver.html">Package resolution algorithm</a></li>
-            <li><a href="..//groups.html">Dependency Groups</a></li>            
             <li><a href="..//nuget-dependencies.html">NuGet dependencies</a></li>
             <li><a href="..//github-dependencies.html">GitHub dependencies</a></li>
             <li><a href="..//http-dependencies.html">HTTP dependencies</a></li>
-            <li><a href="..//analyzers.html">Analyzers</a></li>            
             <li class="divider"></li>
             <li><a href="..//installation.html">Installation</a></li>
             <li><a href="..//reference-from-repl.html">Using Paket from F# Interactive</a></li>

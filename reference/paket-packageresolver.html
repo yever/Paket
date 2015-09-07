@@ -153,7 +153,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L106-106" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L109-109" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -171,7 +171,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L169-169" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L172-172" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -189,7 +189,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L108-108" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L111-111" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -203,11 +203,11 @@
             createPackageRequirement (...)
           </code>
           <div class="tip" id="165">
-            <strong>Signature:</strong> parent:ResolvedPackage -&gt; (packageName:PackageName * version:VersionRequirement * restrictions:&#39;?7975) -&gt; PackageRequirement<br />
-                          <strong>Type parameters:</strong> '?7975          </div>
+            <strong>Signature:</strong> parent:ResolvedPackage -&gt; (packageName:PackageName * version:VersionRequirement * restrictions:&#39;?7899) -&gt; PackageRequirement<br />
+                          <strong>Type parameters:</strong> '?7899          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L63-63" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L65-65" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -221,11 +221,11 @@
             createPackageRequirements (...)
           </code>
           <div class="tip" id="166">
-            <strong>Signature:</strong> exclude:PackageName list -&gt; resolution:Map&lt;&#39;?7978,ResolvedPackage&gt; -&gt; PackageRequirement list<br />
-                          <strong>Type parameters:</strong> '?7978          </div>
+            <strong>Signature:</strong> exclude:NormalizedPackageName list -&gt; resolution:Map&lt;&#39;?7902,ResolvedPackage&gt; -&gt; PackageRequirement list<br />
+                          <strong>Type parameters:</strong> '?7902          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L85-85" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L87-87" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -243,7 +243,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L72-72" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L74-74" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -257,11 +257,11 @@
             Resolve (...)
           </code>
           <div class="tip" id="168">
-            <strong>Signature:</strong> (groupName:GroupName * getVersionsF:(PackageSource list * PackageName * VersionRange -&gt; SemVerInfo list) * getPackageDetailsF:(PackageSource list -&gt; PackageName -&gt; SemVerInfo -&gt; PackageDetails) * globalFrameworkRestrictions:FrameworkRestriction list * rootDependencies:PackageRequirement list * requirements:Set&lt;PackageRequirement&gt;) -&gt; Resolution<br />
+            <strong>Signature:</strong> (getVersionsF:(PackageSource list * PackageName -&gt; SemVerInfo list) * getPackageDetailsF:(PackageSource list -&gt; PackageName -&gt; SemVerInfo -&gt; PackageDetails) * globalFrameworkRestrictions:FrameworkRestriction list * rootDependencies:PackageRequirement list * requirements:Set&lt;PackageRequirement&gt;) -&gt; Resolution<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L205-205" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L208-208" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -303,11 +303,9 @@
             <li><a href="..//bootstrapper.html">paket.bootstrapper.exe</a></li>
             <li class="divider"></li>
             <li><a href="..//resolver.html">Package resolution algorithm</a></li>
-            <li><a href="..//groups.html">Dependency Groups</a></li>            
             <li><a href="..//nuget-dependencies.html">NuGet dependencies</a></li>
             <li><a href="..//github-dependencies.html">GitHub dependencies</a></li>
             <li><a href="..//http-dependencies.html">HTTP dependencies</a></li>
-            <li><a href="..//analyzers.html">Analyzers</a></li>            
             <li class="divider"></li>
             <li><a href="..//installation.html">Installation</a></li>
             <li><a href="..//reference-from-repl.html">Using Paket from F# Interactive</a></li>

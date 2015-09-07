@@ -84,7 +84,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L59-59" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L54-54" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -102,7 +102,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L65-65" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L60-60" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -116,8 +116,8 @@
             simplifyDependenciesFile (...)
           </code>
           <div class="tip" id="217">
-            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * groupName:GroupName * flatLookup:Map&lt;(GroupName * PackageName),&#39;?7728&gt; * interactive:bool) -&gt; Result&lt;DependenciesFile,DomainMessage&gt;<br />
-                          <strong>Type parameters:</strong> '?7728          </div>
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * flatLookup:Map&lt;NormalizedPackageName,&#39;?7656&gt; * interactive:bool) -&gt; Result&lt;DependenciesFile,DomainMessage&gt;<br />
+                          <strong>Type parameters:</strong> '?7656          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L30-30" class="github-link">
@@ -134,8 +134,8 @@
             simplifyReferencesFile (...)
           </code>
           <div class="tip" id="218">
-            <strong>Signature:</strong> (refFile:ReferencesFile * groupName:GroupName * flatLookup:Map&lt;(GroupName * PackageName),&#39;?7730&gt; * interactive:bool) -&gt; Result&lt;ReferencesFile,DomainMessage&gt;<br />
-                          <strong>Type parameters:</strong> '?7730          </div>
+            <strong>Signature:</strong> (refFile:ReferencesFile * flatLookup:Map&lt;NormalizedPackageName,&#39;?7658&gt; * interactive:bool) -&gt; Result&lt;ReferencesFile,DomainMessage&gt;<br />
+                          <strong>Type parameters:</strong> '?7658          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L42-42" class="github-link">
@@ -156,7 +156,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L89-89" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Simplifier.fs#L77-77" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -195,11 +195,9 @@
             <li><a href="..//bootstrapper.html">paket.bootstrapper.exe</a></li>
             <li class="divider"></li>
             <li><a href="..//resolver.html">Package resolution algorithm</a></li>
-            <li><a href="..//groups.html">Dependency Groups</a></li>            
             <li><a href="..//nuget-dependencies.html">NuGet dependencies</a></li>
             <li><a href="..//github-dependencies.html">GitHub dependencies</a></li>
             <li><a href="..//http-dependencies.html">HTTP dependencies</a></li>
-            <li><a href="..//analyzers.html">Analyzers</a></li>            
             <li class="divider"></li>
             <li><a href="..//installation.html">Installation</a></li>
             <li><a href="..//reference-from-repl.html">Using Paket from F# Interactive</a></li>

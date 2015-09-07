@@ -125,11 +125,11 @@
             ( ++ ) x y
           </code>
           <div class="tip" id="226">
-            <strong>Signature:</strong> x:&#39;?7598 option -&gt; y:&#39;?7598 option -&gt; &#39;?7598 option<br />
-                          <strong>Type parameters:</strong> '?7598          </div>
+            <strong>Signature:</strong> x:&#39;?7528 option -&gt; y:&#39;?7528 option -&gt; &#39;?7528 option<br />
+                          <strong>Type parameters:</strong> '?7528          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L319-319" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L315-315" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -265,7 +265,7 @@ Until the user pressed y or n.</p>
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L346-346" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L342-342" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -283,7 +283,7 @@ Until the user pressed y or n.</p>
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L340-340" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L336-336" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -408,8 +408,8 @@ Until the user pressed y or n.</p>
             getTargetFolder (...)
           </code>
           <div class="tip" id="241">
-            <strong>Signature:</strong> root:string -&gt; groupName:GroupName -&gt; packageName:&#39;?7594 -&gt; version:SemVerInfo -&gt; includeVersionInPath:bool -&gt; string<br />
-                          <strong>Type parameters:</strong> '?7594          </div>
+            <strong>Signature:</strong> root:string -&gt; name:string -&gt; version:SemVerInfo -&gt; includeVersionInPath:bool -&gt; string<br />
+                      </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L246-246" class="github-link">
@@ -441,14 +441,14 @@ Until the user pressed y or n.</p>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '243', 243)" onmouseover="showTip(event, '243', 243)">
-            normalizeLineEndings text
+            isMonoRuntime 
           </code>
           <div class="tip" id="243">
-            <strong>Signature:</strong> text:string -&gt; string<br />
+            <strong>Signature:</strong> bool<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L369-369" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L368-368" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -459,9 +459,27 @@ Until the user pressed y or n.</p>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '244', 244)" onmouseover="showTip(event, '244', 244)">
-            normalizeLocalPath path
+            normalizeLineEndings text
           </code>
           <div class="tip" id="244">
+            <strong>Signature:</strong> text:string -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L365-365" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '245', 245)" onmouseover="showTip(event, '245', 245)">
+            normalizeLocalPath path
+          </code>
+          <div class="tip" id="245">
             <strong>Signature:</strong> path:string -&gt; PathReference<br />
                       </div>
         </td>
@@ -476,10 +494,10 @@ Until the user pressed y or n.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '245', 245)" onmouseover="showTip(event, '245', 245)">
+          <code onmouseout="hideTip(event, '246', 246)" onmouseover="showTip(event, '246', 246)">
             normalizePath path
           </code>
-          <div class="tip" id="245">
+          <div class="tip" id="246">
             <strong>Signature:</strong> path:string -&gt; string<br />
                       </div>
         </td>
@@ -494,10 +512,10 @@ Until the user pressed y or n.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '246', 246)" onmouseover="showTip(event, '246', 246)">
+          <code onmouseout="hideTip(event, '247', 247)" onmouseover="showTip(event, '247', 247)">
             notNullOrEmpty 
           </code>
-          <div class="tip" id="246">
+          <div class="tip" id="247">
             <strong>Signature:</strong> string -&gt; bool<br />
                       </div>
         </td>
@@ -512,15 +530,15 @@ Until the user pressed y or n.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '247', 247)" onmouseover="showTip(event, '247', 247)">
+          <code onmouseout="hideTip(event, '248', 248)" onmouseover="showTip(event, '248', 248)">
             parseKeyValuePairs s
           </code>
-          <div class="tip" id="247">
+          <div class="tip" id="248">
             <strong>Signature:</strong> s:string -&gt; Dictionary&lt;string,string&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L324-324" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L320-320" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -530,10 +548,10 @@ Until the user pressed y or n.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '248', 248)" onmouseover="showTip(event, '248', 248)">
+          <code onmouseout="hideTip(event, '249', 249)" onmouseover="showTip(event, '249', 249)">
             readKey ()
           </code>
-          <div class="tip" id="248">
+          <div class="tip" id="249">
             <strong>Signature:</strong> unit -&gt; string<br />
                       </div>
         </td>
@@ -548,33 +566,15 @@ Until the user pressed y or n.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '249', 249)" onmouseover="showTip(event, '249', 249)">
+          <code onmouseout="hideTip(event, '250', 250)" onmouseover="showTip(event, '250', 250)">
             removeFile fileName
           </code>
-          <div class="tip" id="249">
+          <div class="tip" id="250">
             <strong>Signature:</strong> fileName:string -&gt; Result&lt;unit,DomainMessage&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L360-360" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '250', 250)" onmouseover="showTip(event, '250', 250)">
-            RunInLockedAccessMode (...)
-          </code>
-          <div class="tip" id="250">
-            <strong>Signature:</strong> (rootFolder:string * action:(unit -&gt; &#39;?7596)) -&gt; &#39;?7596<br />
-                          <strong>Type parameters:</strong> '?7596          </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L253-253" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L356-356" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -585,14 +585,14 @@ Until the user pressed y or n.</p>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '251', 251)" onmouseover="showTip(event, '251', 251)">
-            saveFile fileName contents
+            RunInLockedAccessMode (...)
           </code>
           <div class="tip" id="251">
-            <strong>Signature:</strong> fileName:string -&gt; contents:string -&gt; Result&lt;unit,DomainMessage&gt;<br />
-                      </div>
+            <strong>Signature:</strong> (rootFolder:string * action:(unit -&gt; &#39;?7526)) -&gt; &#39;?7526<br />
+                          <strong>Type parameters:</strong> '?7526          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L353-353" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L249-249" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -603,9 +603,27 @@ Until the user pressed y or n.</p>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '252', 252)" onmouseover="showTip(event, '252', 252)">
-            TimeSpanToReadableString span
+            saveFile fileName contents
           </code>
           <div class="tip" id="252">
+            <strong>Signature:</strong> fileName:string -&gt; contents:string -&gt; Result&lt;unit,DomainMessage&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/Utils.fs#L349-349" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '253', 253)" onmouseover="showTip(event, '253', 253)">
+            TimeSpanToReadableString span
+          </code>
+          <div class="tip" id="253">
             <strong>Signature:</strong> span:TimeSpan -&gt; string<br />
                       </div>
         </td>
@@ -649,11 +667,9 @@ Until the user pressed y or n.</p>
             <li><a href="..//bootstrapper.html">paket.bootstrapper.exe</a></li>
             <li class="divider"></li>
             <li><a href="..//resolver.html">Package resolution algorithm</a></li>
-            <li><a href="..//groups.html">Dependency Groups</a></li>            
             <li><a href="..//nuget-dependencies.html">NuGet dependencies</a></li>
             <li><a href="..//github-dependencies.html">GitHub dependencies</a></li>
             <li><a href="..//http-dependencies.html">HTTP dependencies</a></li>
-            <li><a href="..//analyzers.html">Analyzers</a></li>            
             <li class="divider"></li>
             <li><a href="..//installation.html">Installation</a></li>
             <li><a href="..//reference-from-repl.html">Using Paket from F# Interactive</a></li>
