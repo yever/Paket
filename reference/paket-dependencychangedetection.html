@@ -76,11 +76,11 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '74', 74)" onmouseover="showTip(event, '74', 74)">
+          <code onmouseout="hideTip(event, '73', 73)" onmouseover="showTip(event, '73', 73)">
             findChangesInDependenciesFile (...)
           </code>
-          <div class="tip" id="74">
-            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * lockFile:LockFile) -&gt; Set&lt;GroupName * PackageName&gt;<br />
+          <div class="tip" id="73">
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * lockFile:LockFile) -&gt; Set&lt;NormalizedPackageName&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -94,15 +94,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '75', 75)" onmouseover="showTip(event, '75', 75)">
+          <code onmouseout="hideTip(event, '74', 74)" onmouseover="showTip(event, '74', 74)">
             PinUnchangedDependencies (...)
           </code>
-          <div class="tip" id="75">
-            <strong>Signature:</strong> dependenciesFile:DependenciesFile -&gt; oldLockFile:LockFile -&gt; changedDependencies:Set&lt;GroupName * PackageName&gt; -&gt; DependenciesFile<br />
+          <div class="tip" id="74">
+            <strong>Signature:</strong> dependenciesFile:DependenciesFile -&gt; oldLockFile:LockFile -&gt; changedDependencies:Set&lt;NormalizedPackageName&gt; -&gt; DependenciesFile<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/DependencyChangeDetection.fs#L54-54" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/DependencyChangeDetection.fs#L44-44" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -141,11 +141,9 @@
             <li><a href="..//bootstrapper.html">paket.bootstrapper.exe</a></li>
             <li class="divider"></li>
             <li><a href="..//resolver.html">Package resolution algorithm</a></li>
-            <li><a href="..//groups.html">Dependency Groups</a></li>            
             <li><a href="..//nuget-dependencies.html">NuGet dependencies</a></li>
             <li><a href="..//github-dependencies.html">GitHub dependencies</a></li>
             <li><a href="..//http-dependencies.html">HTTP dependencies</a></li>
-            <li><a href="..//analyzers.html">Analyzers</a></li>            
             <li class="divider"></li>
             <li><a href="..//installation.html">Installation</a></li>
             <li><a href="..//reference-from-repl.html">Using Paket from F# Interactive</a></li>
