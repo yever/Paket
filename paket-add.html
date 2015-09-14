@@ -62,7 +62,7 @@
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket add nuget &lt;string&gt; [version &lt;string&gt;] [project &lt;string&gt;] [group &lt;string&gt;] [--force|-f] [--interactive|-i] [--hard] [--redirects] [--no-install]
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket add nuget &lt;string&gt; [version &lt;string&gt;] [project &lt;string&gt;] [group &lt;string&gt;] [--force|-f] [--interactive|-i] [--hard] [--redirects] [--createnewbindingfiles] [--no-install]
 </code></pre></td></tr></table>
 
 <h3><a name="Options" class="anchor" href="#Options">Options:</a></h3>
@@ -82,6 +82,8 @@
 <p><code>--hard</code>: Replaces package references within project files even if they are not yet adhering to the Paket's conventions (and hence considered manually managed).</p>
 
 <p><code>--redirects</code>: Creates binding redirects for the NuGet packages.</p>
+
+<p><code>--createnewbindingfiles</code>: Creates binding redirect files if needed.</p>
 
 <p><code>--no-install</code>: Skips paket install --hard process afterward generation of dependencies / references files.</p>
 
