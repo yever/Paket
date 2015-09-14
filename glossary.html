@@ -60,23 +60,25 @@
 
 <h3><a name="paket-dependencies" class="anchor" href="#paket-dependencies">paket.dependencies</a></h3>
 
-<p>The file is used to specify rules regarding your application's dependencies.</p>
+<p>The <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> is used to specify rules regarding your application's dependencies.</p>
 
 <h3><a name="paket-lock" class="anchor" href="#paket-lock">paket.lock</a></h3>
 
-<p>The file records the concrete dependency resolution of all direct and indirect dependencies of your project.</p>
+<p>The <a href="lock-file.html"><code>paket.lock</code> file</a> records the concrete dependency resolution of all direct and indirect dependencies of your project.</p>
 
 <h3><a name="paket-references" class="anchor" href="#paket-references">paket.references</a></h3>
 
-<p>The file used to specify which dependencies are to be added to installed into the MSBuild projects in your repository.</p>
+<p>The <a href="references-files.html"><code>paket.references</code> files</a> are used to specify which dependencies are to be installed into the MSBuild projects in your repository.</p>
 
 <h3><a name="paket-template" class="anchor" href="#paket-template">paket.template</a></h3>
 
-<p>These files are used to specify rules to create nupkgs by using the paket pack command.</p>
+<p>Thee <a href="template-files.html"><code>paket.template</code> files</a> are used to specify rules to create new NuGet packages by using the <a href="paket-pack.html"><code>paket pack</code> command</a>.</p>
 
 <h3><a name="paket-folder" class="anchor" href="#paket-folder">.paket folder</a></h3>
 
-<p>This folder is used the same way a .nuget folder is used for the NuGet package restore. Place this folder into the root of your solution. It should include the paket.targets and paket.bootstrapper.exe files which can be downloaded from GitHub. The bootstrapper.exe will always download the latest version of the paket.exe file into this folder.</p>
+<p>This folder is used the same way a <code>.nuget</code> folder is used for the NuGet package restore. Place this folder into the root of your solution. 
+It should include the paket.targets and <a href="https://github.com/fsprojects/Paket/releases/latest">paket.bootstrapper.exe</a> files which can be downloaded from GitHub. 
+The bootstrapper.exe will always download the latest version of the paket.exe file into this folder.</p>
 
 
         </div>
