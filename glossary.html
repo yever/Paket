@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>find-packages</title>
+    <title>Glossary
+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
     <meta name="author" content="Steffen Forkmann, Alexander Gross"/>
@@ -55,29 +56,27 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h2><a name="Sample" class="anchor" href="#Sample">Sample</a></h2>
+<h1><a name="Glossary" class="anchor" href="#Glossary">Glossary</a></h1>
 
-<p>Running the command:</p>
+<h3><a name="paket-dependencies" class="anchor" href="#paket-dependencies">paket.dependencies</a></h3>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">paket find-packages
-</code></pre></td></tr></table>
+<p>The file is used to specify rules regarding your application's dependencies.</p>
 
-<p>and then enter search text and press enter:</p>
+<h3><a name="paket-lock" class="anchor" href="#paket-lock">paket.lock</a></h3>
 
-<p><img src="img/paket-find-packages.png" alt="alt text" title="paket find-packages command" /></p>
+<p>The file records the concrete dependency resolution of all direct and indirect dependencies of your project.</p>
 
-<h2><a name="Silent-mode" class="anchor" href="#Silent-mode">Silent mode</a></h2>
+<h3><a name="paket-references" class="anchor" href="#paket-references">paket.references</a></h3>
 
-<p>The silent mode can be used for additional tooling support in various editors. It allows to create suggestions for <code>paket add</code>:</p>
+<p>The file used to specify which dependencies are to be added to installed into the MSBuild projects in your repository.</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="batchfile">paket find-packages -s
-</code></pre></td></tr></table>
+<h3><a name="paket-template" class="anchor" href="#paket-template">paket.template</a></h3>
 
-<p>The command allows runs to suggest package names. It will keep running in a loop until it receives the text ":q".</p>
+<p>These files are used to specify rules to create nupkgs by using the paket pack command.</p>
+
+<h3><a name="paket-folder" class="anchor" href="#paket-folder">.paket folder</a></h3>
+
+<p>This folder is used the same way a .nuget folder is used for the NuGet package restore. Place this folder into the root of your solution. It should include the paket.targets and paket.bootstrapper.exe files which can be downloaded from GitHub. The bootstrapper.exe will always download the latest version of the paket.exe file into this folder.</p>
 
 
         </div>

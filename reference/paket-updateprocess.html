@@ -97,14 +97,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '221', 221)" onmouseover="showTip(event, '221', 221)">
-            addPackagesFromReferenceFiles (...)
+            selectiveUpdate (...)
           </code>
           <div class="tip" id="221">
-            <strong>Signature:</strong> projects:seq&lt;&#39;?7640 * ReferencesFile&gt; -&gt; dependenciesFile:DependenciesFile -&gt; groupName:GroupName -&gt; DependenciesFile<br />
-                          <strong>Type parameters:</strong> '?7640          </div>
+            <strong>Signature:</strong> resolve:(DependenciesFile -&gt; Map&lt;GroupName,RequirementsGroup&gt; -&gt; Map&lt;GroupName,Resolved&gt;) -&gt; lockFile:LockFile -&gt; dependenciesFile:DependenciesFile -&gt; updateAll:bool -&gt; package:(GroupName * PackageName) option -&gt; LockFile<br />
+                      </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L12-12" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L25-25" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -115,14 +115,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '222', 222)" onmouseover="showTip(event, '222', 222)">
-            selectiveUpdate (...)
+            SelectiveUpdate (...)
           </code>
           <div class="tip" id="222">
-            <strong>Signature:</strong> resolve:(DependenciesFile -&gt; Map&lt;GroupName,RequirementsGroup&gt; -&gt; Map&lt;GroupName,Resolved&gt;) -&gt; lockFile:LockFile -&gt; dependenciesFile:DependenciesFile -&gt; updateAll:bool -&gt; package:(GroupName * PackageName) option -&gt; LockFile<br />
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * updateAll:bool * exclude:(GroupName * PackageName) option * force:bool) -&gt; LockFile<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L62-62" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L130-130" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -133,32 +133,14 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '223', 223)" onmouseover="showTip(event, '223', 223)">
-            SelectiveUpdate (...)
-          </code>
-          <div class="tip" id="223">
-            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * updateAll:bool * exclude:(GroupName * PackageName) option * force:bool) -&gt; LockFile<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L167-167" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '224', 224)" onmouseover="showTip(event, '224', 224)">
             SmartInstall (...)
           </code>
-          <div class="tip" id="224">
+          <div class="tip" id="223">
             <strong>Signature:</strong> (dependenciesFile:DependenciesFile * updateAll:bool * exclude:(GroupName * PackageName) option * options:UpdaterOptions) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L195-195" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L158-158" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -171,15 +153,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '225', 225)" onmouseover="showTip(event, '225', 225)">
+          <code onmouseout="hideTip(event, '224', 224)" onmouseover="showTip(event, '224', 224)">
             Update (dependenciesFileName, options)
           </code>
-          <div class="tip" id="225">
+          <div class="tip" id="224">
             <strong>Signature:</strong> (dependenciesFileName:string * options:UpdaterOptions) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L221-221" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L184-184" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -192,15 +174,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '226', 226)" onmouseover="showTip(event, '226', 226)">
+          <code onmouseout="hideTip(event, '225', 225)" onmouseover="showTip(event, '225', 225)">
             UpdatePackage (...)
           </code>
-          <div class="tip" id="226">
+          <div class="tip" id="225">
             <strong>Signature:</strong> (dependenciesFileName:string * groupName:GroupName * packageName:PackageName * newVersion:string option * options:UpdaterOptions) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L205-205" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L168-168" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -221,6 +203,7 @@
             <li><a href="..//index.html">Home page</a></li>
             <li><a href="..//getting-started.html">Getting started</a></li>
             <li><a href="..//faq.html">FAQ</a></li>
+            <li><a href="..//glossary.html">Glossary</a></li>
             <li><a href="..//release-notes.html">Release Notes</a></li>
             <li><a href="..//testimonials.html">Testimonials</a></li>
             <li><a href="..//license.html">License</a></li>
