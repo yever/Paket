@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Paket Installation Options
+    <title>Literate sample
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="A package dependency manager for .NET with support for NuGet packages and GitHub repositories."/>
@@ -56,105 +56,126 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="Paket-Installation-Options" class="anchor" href="#Paket-Installation-Options">Paket Installation Options</a></h1>
+<h1><a name="Literate-sample" class="anchor" href="#Literate-sample">Literate sample</a></h1>
 
-<p>This guide will show you</p>
+<p>This file demonstrates how to write literate F# script
+files (<code>*.fsx</code>) that can be transformed into nice HTML
+using the <code>literate.fsx</code> script from the <a href="http://tpetricek.github.com/FSharp.Formatting">F# Formatting
+package</a>.</p>
 
-<ul>
-<li>How to set up Paket for a specific repository.</li>
-<li>How to install Paket for Windows, Linux, or OS-X.</li>
-<li>How to ensure <code>paket</code> is available via commmand line and other methods of use.</li>
-</ul>
-
-<h2><a name="Installation-per-repository" class="anchor" href="#Installation-per-repository">Installation per repository</a></h2>
-
-<p>The most common use of Paket is as a command line tool inside your project repostiory.</p>
+<p>As you can see, a comment starting with double asterisk
+is treated as part of the document and is transformed 
+using Markdown, which means that you can use:</p>
 
 <ul>
-<li>Create a <code>.paket</code> folder in the root of your solution.</li>
-<li>Download the latest <a href="https://github.com/fsprojects/Paket/releases/latest">paket.bootstrapper.exe</a> into that folder.</li>
-<li>Run <code>.paket/paket.bootstrapper.exe</code>. This will download the latest <code>paket.exe</code>.</li>
-<li>Commit <code>.paket/paket.bootstrapper.exe</code> into your repo and add <code>.paket/paket.exe</code> to your <code>.gitignore</code> file.</li>
+<li>Unordered or ordered lists</li>
+<li>Text formatting including <strong>bold</strong> and <em>emphasis</em></li>
 </ul>
 
-<p>You can now run Paket from the command line:</p>
+<p>And numerous other <a href="http://daringfireball.net/projects/markdown">Markdown</a> features.</p>
+
+<h2><a name="Writing-F-code" class="anchor" href="#Writing-F-code">Writing F# code</a></h2>
+
+<p>Code that is not inside comment will be formatted as
+a sample snippet (which also means that you can 
+run it in Visual Studio or MonoDevelop).</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">$</span> <span class="o">.</span><span class="i">paket</span><span class="o">/</span><span class="i">paket</span><span class="o">.</span><span class="i">exe</span> <span class="i">install</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="c">/// The Hello World of functional languages!</span>
+<span class="k">let</span> <span class="k">rec</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="f">factorial</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">x</span> <span class="o">=</span> 
+  <span class="k">if</span> <span onmouseout="hideTip(event, 'fs2', 3)" onmouseover="showTip(event, 'fs2', 3)" class="i">x</span> <span class="o">=</span> <span class="n">0</span> <span class="k">then</span> <span class="n">1</span> 
+  <span class="k">else</span> <span onmouseout="hideTip(event, 'fs2', 4)" onmouseover="showTip(event, 'fs2', 4)" class="i">x</span> <span class="o">*</span> (<span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="f">factorial</span> (<span onmouseout="hideTip(event, 'fs2', 6)" onmouseover="showTip(event, 'fs2', 6)" class="i">x</span> <span class="o">-</span> <span class="n">1</span>))
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 7)" onmouseover="showTip(event, 'fs3', 7)" class="i">f10</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs1', 8)" onmouseover="showTip(event, 'fs1', 8)" class="f">factorial</span> <span class="n">10</span>
 </code></pre></td>
 </tr>
 </table>
 
-<h2><a name="System-wide-Installation" class="anchor" href="#System-wide-Installation">System-wide Installation</a></h2>
+<h2><a name="Hiding-code" class="anchor" href="#Hiding-code">Hiding code</a></h2>
 
-<p>If you want to install Paket as a system-wide tool then the following guide will help you to get started.</p>
+<p>If you want to include some code in the source code, 
+but omit it from the output, you can use the <code>hide</code> 
+command.</p>
 
-<h3><a name="Cloning-the-Paket-repository" class="anchor" href="#Cloning-the-Paket-repository">Cloning the Paket repository</a></h3>
-
-<p>The first step for any operating system is to clone the <a href="https://github.com/fsprojects/Paket">Paket repository</a> locally.</p>
+<p>The value will be deffined in the F# code and so you
+can use it from other (visible) code and get correct
+tool tips:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">git</span> <span class="i">clone</span> <span class="i">git</span><span class="o">@</span><span class="i">github</span><span class="o">.</span><span class="i">com</span><span class="o">:</span><span class="i">fsprojects</span><span class="o">/</span><span class="i">Paket</span><span class="o">.</span><span class="i">git</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs5', 10)" onmouseover="showTip(event, 'fs5', 10)" class="i">answer</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs4', 11)" onmouseover="showTip(event, 'fs4', 11)" class="i">hidden</span>
 </code></pre></td>
 </tr>
 </table>
 
-<p>Then follow the instructions for building and installing for your preferred operating system.</p>
+<h2><a name="Moving-code-around" class="anchor" href="#Moving-code-around">Moving code around</a></h2>
 
-<h3><a name="Installation-on-Linux" class="anchor" href="#Installation-on-Linux">Installation on Linux</a></h3>
+<p>Sometimes, it is useful to first explain some code that
+has to be located at the end of the snippet (perhaps 
+because it uses some definitions discussed in the middle).
+This can be done using <code>include</code> and <code>define</code> commands.</p>
 
-<p>For Linux the easiest way to get things installed is to clone the repository and run the build and install scripts as shown below.</p>
+<p>The following snippet gets correct tool tips, even though
+it uses <code>laterFunction</code>:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">.</span><span class="o">/</span><span class="i">build</span><span class="o">.</span><span class="i">sh</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs7', 13)" onmouseover="showTip(event, 'fs7', 13)" class="i">sample</span> <span class="o">=</span> 
+  <span onmouseout="hideTip(event, 'fs6', 14)" onmouseover="showTip(event, 'fs6', 14)" class="f">laterFunction</span>()
+  <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs8', 15)" onmouseover="showTip(event, 'fs8', 15)" class="f">printfn</span> <span class="s">&quot;Got: </span><span class="pf">%s</span><span class="s">&quot;</span>
 </code></pre></td>
 </tr>
 </table>
 
-<p>After that completes execute the install, to install Paket as a command line utility.</p>
+<p>Then we can explain how <code>laterFunction</code> is defined:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">.</span><span class="o">/</span><span class="i">install</span><span class="o">.</span><span class="i">sh</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs6', 12)" onmouseover="showTip(event, 'fs6', 12)" class="f">laterFunction</span>() <span class="o">=</span> 
+  <span class="s">&quot;Not very difficult, is it?&quot;</span>
 </code></pre></td>
 </tr>
 </table>
 
-<p>The install.sh script will add Paket as a command line option into bash and most other shells available. If you are using a unique shell and run into problems, please post an issue so we can take a look.</p>
+<p>This example covers pretty much all features that are 
+currently implemented in <code>literate.fsx</code>, but feel free 
+to <a href="https://github.com/tpetricek/FSharp.Formatting">fork the project on GitHub</a> and add more 
+features or report bugs!</p>
 
-<h3><a name="Installation-on-OS-X" class="anchor" href="#Installation-on-OS-X">Installation on OS-X</a></h3>
+<h2><a name="Other-features" class="anchor" href="#Other-features">Other features</a></h2>
 
-<p>For OS-X the build and installation procecss is as follows.</p>
+<p>The tool-tips also work for double-backtick identifiers.
+This might be useful to generate nice documents from tests:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">.</span><span class="o">/</span><span class="i">build</span><span class="o">.</span><span class="i">sh</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs9', 16)" onmouseover="showTip(event, 'fs9', 16)" class="f">``1 + 1 should be equal to 2``</span>() <span class="o">=</span>
+  <span class="n">1</span> <span class="o">+</span> <span class="n">1</span> <span class="o">=</span> <span class="n">2</span>
 </code></pre></td>
 </tr>
 </table>
 
-<p>After that completes execute the install, to install Paket as a command line utility.</p>
+<p>Others examples follow here.</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">.</span><span class="o">/</span><span class="i">install</span><span class="o">.</span><span class="i">sh</span>
-</code></pre></td>
-</tr>
-</table>
-
-<h3><a name="Installation-on-Windows" class="anchor" href="#Installation-on-Windows">Installation on Windows</a></h3>
-
-<p>Please use the <a href="installation.html#Installation-per-repository">Installation per repository</a> option.</p>
-
-<h3><a name="Post-Installation" class="anchor" href="#Post-Installation">Post Installation</a></h3>
-
-<p>Once the basic installation is complete on your operating system of choice it is often very useful to add some tools to your IDE/Text Editor of choice. Here's some of the options that are available.</p>
-
-<p>For next steps check out the <a href="getting-started.html">Getting Started</a> section.</p>
-
+<div class="tip" id="fs1">val factorial : x:int -&gt; int<br /><br />Full name: Demo.factorial<br /><em><br /><br />&#160;The Hello World of functional languages!</em></div>
+<div class="tip" id="fs2">val x : int</div>
+<div class="tip" id="fs3">val f10 : int<br /><br />Full name: Demo.f10</div>
+<div class="tip" id="fs4">val hidden : int<br /><br />Full name: Demo.hidden<br /><em><br /><br />&#160;This is a hidden answer</em></div>
+<div class="tip" id="fs5">val answer : int<br /><br />Full name: Demo.answer</div>
+<div class="tip" id="fs6">val laterFunction : unit -&gt; string<br /><br />Full name: Demo.laterFunction</div>
+<div class="tip" id="fs7">val sample : unit<br /><br />Full name: Demo.sample</div>
+<div class="tip" id="fs8">val printfn : format:Printf.TextWriterFormat&lt;&#39;T&gt; -&gt; &#39;T<br /><br />Full name: Microsoft.FSharp.Core.ExtraTopLevelOperators.printfn</div>
+<div class="tip" id="fs9">val ( 1 + 1 should be equal to 2 ) : unit -&gt; bool<br /><br />Full name: Demo.( 1 + 1 should be equal to 2 )</div>
 
         </div>
         <div class="span3">
