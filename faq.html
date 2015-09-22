@@ -87,7 +87,7 @@ This makes it much easier to reference files in the package and you don't have t
 
 <p>Paket adds references to all of them, but with <code>Condition</code> attributes filtering them based on the currently selected <code>TargetFramework</code> and other relevant MSBuild properties.</p>
 
-<p>See <a href="references-files.html"><code>paket.references</code></a> for more information.</p>
+<p>If you only want to use a subset of the target frameworks you can use <a href="http://fsprojects.github.io/Paket/nuget-dependencies.html#Framework-restrictions">framework restrictions</a>.</p>
 
 <h2><a name="Why-does-Paket-use-a-different-package-resolution-strategy-than-NuGet" class="anchor" href="#Why-does-Paket-use-a-different-package-resolution-strategy-than-NuGet">Why does Paket use a different package resolution strategy than NuGet?</a></h2>
 
@@ -145,9 +145,9 @@ This will ensure that you get notified whenever a dependency update breaks your 
 <li>(Optional) Raise corresponding issue <a href="https://github.com/fsprojects/Paket/issues">here</a> so that we can make the command even better.</li>
 </ol>
 
-<h2><a name="How-do-I-convert-a-new-NuGet-Project-to-Paket-in-a-Solution-already-using-Paket" class="anchor" href="#How-do-I-convert-a-new-NuGet-Project-to-Paket-in-a-Solution-already-using-Paket">How do I convert a new NuGet Project to Paket in a Solution already using Paket</a></h2>
+<h2><a name="How-do-I-convert-a-new-project-to-Paket-when-my-solution-is-already-using-Paket" class="anchor" href="#How-do-I-convert-a-new-project-to-Paket-when-my-solution-is-already-using-Paket">How do I convert a new project to Paket when my solution is already using Paket</a></h2>
 
-<p>In this case it's okay to use the <code>--force</code> flag for <code>convert-from-nuget</code> as described in <a href="getting-started.html#Partial-NuGet-conversion">Partial Nuget conversion</a>. Paket will then go through your Solution and convert the new NuGet Project to Paket.</p>
+<p>In this case it's okay to use the <code>--force</code> flag for the <code>convert-from-nuget</code> command as described in <a href="getting-started.html#Partial-NuGet-conversion">partial NuGet conversion</a>. Paket will then go through your solution and convert all new NuGet projects to Paket.</p>
 
 <h2><a name="Can-I-use-Paket-to-manage-npm-bower-whatever-dependencies" class="anchor" href="#Can-I-use-Paket-to-manage-npm-bower-whatever-dependencies">Can I use Paket to manage npm/bower/whatever dependencies?</a></h2>
 
