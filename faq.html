@@ -145,6 +145,10 @@ This will ensure that you get notified whenever a dependency update breaks your 
 <li>(Optional) Raise corresponding issue <a href="https://github.com/fsprojects/Paket/issues">here</a> so that we can make the command even better.</li>
 </ol>
 
+<h2><a name="How-do-I-convert-a-new-NuGet-Project-to-Paket-in-a-Solution-already-using-Paket" class="anchor" href="#How-do-I-convert-a-new-NuGet-Project-to-Paket-in-a-Solution-already-using-Paket">How do I convert a new NuGet Project to Paket in a Solution already using Paket</a></h2>
+
+<p>In this case it's okay to use the <code>--force</code> flag for <code>convert-from-nuget</code> as described in <a href="getting-started.html#Partial-NuGet-conversion">Partial Nuget conversion</a>. Paket will then go through your Solution and convert the new NuGet Project to Paket.</p>
+
 <h2><a name="Can-I-use-Paket-to-manage-npm-bower-whatever-dependencies" class="anchor" href="#Can-I-use-Paket-to-manage-npm-bower-whatever-dependencies">Can I use Paket to manage npm/bower/whatever dependencies?</a></h2>
 
 <p><a href="https://github.com/fsprojects/Paket/issues/61">No.</a> We don't believe in reinventing the wheel.</p>
