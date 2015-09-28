@@ -60,7 +60,7 @@
 
 <p>The <a href="https://github.com/fsprojects/Paket/tree/master/.paket"><code>.paket</code> folder</a> is used the same way a <code>.nuget</code> folder is used for the <a href="http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages">NuGet package restore</a>.</p>
 
-<p>Place this folder into the root of your solution. It should include the <code>paket.targets</code> and <code>paket.bootstrapper.exe</code> files which can be downloaded from <a href="https://github.com/fsprojects/Paket/releases/latest">GitHub</a>. 
+<p>Place this folder into the root of your repository. It should include the <code>paket.targets</code> and <code>paket.bootstrapper.exe</code> files which can be downloaded from <a href="https://github.com/fsprojects/Paket/releases/latest">GitHub</a>. 
 The <a href="http://fsprojects.github.io/Paket/bootstrapper.html">bootstrapper</a> will always download the latest version of the <code>paket.exe</code> file and it will be placed into the same folder.</p>
 
 <p>Now, to install all the packages from the <code>paket.dependencies</code> files, just run the following command.</p>
@@ -71,6 +71,13 @@ The <a href="http://fsprojects.github.io/Paket/bootstrapper.html">bootstrapper</
 </code></pre></td>
 </tr>
 </table>
+
+<p>The location of .paket folder and Paket related files is not bound to location of Visual Studio solution file. Paket does not read or look for any solution files.
+In case you have multiple solutions in subfolders of some root folder, then that root folder would be a good place to put .paket folder and the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a> there. 
+<code>.paket/paket.exe install</code> command processes all folders under the root recursively and touch only those projects which have <code>paket.references</code> file in their folder.
+When Paket encounters <a href="dependencies-file.html"><code>paket.dependencies</code> files</a> in subfolder it ignores that subfolder (and everything under it) completely, 
+implying that they use an independent <a href="lock-file.html"><code>paket.lock</code> file</a> and <code>packages</code> folder. 
+<code>packages</code> folder would also be created at the root level for all projects under it.</p>
 
 
         </div>

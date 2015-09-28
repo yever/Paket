@@ -155,6 +155,32 @@ This will ensure that you get notified whenever a dependency update breaks your 
 
 <p>On top of that, such a "meta package manager" abstraction is likely to be less flexible and behind on what native tools have to offer. Paket serves a specific need, that is <a href="http://semver.org">SemVer-compatible</a> NuGet.</p>
 
+<h2><a name="I-am-behind-a-proxy-Can-I-use-Paket" class="anchor" href="#I-am-behind-a-proxy-Can-I-use-Paket">I am behind a proxy. Can I use Paket?</a></h2>
+
+<p>If your proxy uses default (Active Directory) credentials, you have nothing to do, Paket will handle it automatically.</p>
+
+<p>If your proxy uses custom credentials, you need to set the following environment variables:</p>
+
+<ul>
+<li><code>HTTP_PROXY</code>: http proxy to use for all connections</li>
+<li><code>HTTPS_PROXY</code>: https proxy to use for all connections</li>
+<li><code>NO_PROXY</code>: hosts that should bypass the proxy</li>
+</ul>
+
+<p>For example:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="f">set</span> <span class="i">HTTP_PROXY</span><span class="o">=</span><span class="i">http</span><span class="o">:</span><span class="c">//user:password@proxy.company.com:port/</span>
+<span onmouseout="hideTip(event, 'fs1', 2)" onmouseover="showTip(event, 'fs1', 2)" class="i">set</span> <span class="i">HTTPS_PROXY</span><span class="o">=</span><span class="i">https</span><span class="o">:</span><span class="c">//user:password@proxy.company.com:port/</span>
+<span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">set</span> <span class="i">NO_PROXY</span><span class="o">=.</span><span class="i">company</span><span class="o">.</span><span class="i">com</span>,<span class="i">localhost</span>
+</code></pre></td>
+</tr>
+</table>
+
+<div class="tip" id="fs1">val set : elements:seq&lt;&#39;T&gt; -&gt; Set&lt;&#39;T&gt; (requires comparison)<br /><br />Full name: Microsoft.FSharp.Core.ExtraTopLevelOperators.set</div>
 
         </div>
         <div class="span3">
