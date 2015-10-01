@@ -318,10 +318,14 @@ It's also possible to provide login information for private NuGet feeds:
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
-<span class="i">nuget</span> <span class="i">jQuery</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">0</span> <span class="i">content</span><span class="o">:</span> <span class="i">none</span> <span class="c">// we don&#39;t install jQuery content files</span>
+<span class="i">nuget</span> <span class="i">jQuery</span> <span class="i">content</span><span class="o">:</span> <span class="i">none</span> <span class="c">// we don&#39;t install jQuery content files</span>
+<span class="i">nuget</span> <span class="i">Fody</span>   <span class="i">content</span><span class="o">:</span> <span class="i">once</span> <span class="c">// install content files but don&#39;t overwrite</span>
+<span class="i">nuget</span> <span class="i">ServiceStack</span><span class="o">.</span><span class="i">Swagger</span> <span class="i">content</span><span class="o">:</span> <span class="k">true</span> <span class="c">// install content and always override</span>
 <span class="i">nuget</span> <span class="i">UnionArgParser</span> <span class="o">~&gt;</span> <span class="n">0.7</span>
 </code></pre></td>
 </tr>
