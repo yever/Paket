@@ -103,8 +103,8 @@
             ( &lt;!&gt; ) f result
           </code>
           <div class="tip" id="6">
-            <strong>Signature:</strong> f:(&#39;?8659 -&gt; &#39;?8660) -&gt; result:Result&lt;&#39;?8659,&#39;?8661&gt; -&gt; Result&lt;&#39;?8660,&#39;?8661&gt;<br />
-                          <strong>Type parameters:</strong> '?8659, '?8660, '?8661          </div>
+            <strong>Signature:</strong> f:(&#39;?8942 -&gt; &#39;?8943) -&gt; result:Result&lt;&#39;?8942,&#39;?8944&gt; -&gt; Result&lt;&#39;?8943,&#39;?8944&gt;<br />
+                          <strong>Type parameters:</strong> '?8942, '?8943, '?8944          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L119-119" class="github-link">
@@ -125,8 +125,8 @@ This is the infix operator version of ErrorHandling.lift</p>
             ( &lt;*&gt; ) wrappedFunction result
           </code>
           <div class="tip" id="7">
-            <strong>Signature:</strong> wrappedFunction:Result&lt;(&#39;?8651 -&gt; &#39;?8652),&#39;?8653&gt; -&gt; result:Result&lt;&#39;?8651,&#39;?8653&gt; -&gt; Result&lt;&#39;?8652,&#39;?8653&gt;<br />
-                          <strong>Type parameters:</strong> '?8651, '?8652, '?8653          </div>
+            <strong>Signature:</strong> wrappedFunction:Result&lt;(&#39;?8934 -&gt; &#39;?8935),&#39;?8936&gt; -&gt; result:Result&lt;&#39;?8934,&#39;?8936&gt; -&gt; Result&lt;&#39;?8935,&#39;?8936&gt;<br />
+                          <strong>Type parameters:</strong> '?8934, '?8935, '?8936          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L112-112" class="github-link">
@@ -148,8 +148,8 @@ This is the infix operator version of ErrorHandling.apply</p>
             ( &gt;&gt;= ) result f
           </code>
           <div class="tip" id="8">
-            <strong>Signature:</strong> result:Result&lt;&#39;?8643,&#39;?8644&gt; -&gt; f:(&#39;?8643 -&gt; Result&lt;&#39;?8645,&#39;?8644&gt;) -&gt; Result&lt;&#39;?8645,&#39;?8644&gt;<br />
-                          <strong>Type parameters:</strong> '?8643, '?8644, '?8645          </div>
+            <strong>Signature:</strong> result:Result&lt;&#39;?8926,&#39;?8927&gt; -&gt; f:(&#39;?8926 -&gt; Result&lt;&#39;?8928,&#39;?8927&gt;) -&gt; Result&lt;&#39;?8928,&#39;?8927&gt;<br />
+                          <strong>Type parameters:</strong> '?8926, '?8927, '?8928          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L98-98" class="github-link">
@@ -171,8 +171,8 @@ This is the infix operator version of ErrorHandling.bind</p>
             apply wrappedFunction result
           </code>
           <div class="tip" id="9">
-            <strong>Signature:</strong> wrappedFunction:Result&lt;(&#39;?8647 -&gt; &#39;?8648),&#39;?8649&gt; -&gt; result:Result&lt;&#39;?8647,&#39;?8649&gt; -&gt; Result&lt;&#39;?8648,&#39;?8649&gt;<br />
-                          <strong>Type parameters:</strong> '?8647, '?8648, '?8649          </div>
+            <strong>Signature:</strong> wrappedFunction:Result&lt;(&#39;?8930 -&gt; &#39;?8931),&#39;?8932&gt; -&gt; result:Result&lt;&#39;?8930,&#39;?8932&gt; -&gt; Result&lt;&#39;?8931,&#39;?8932&gt;<br />
+                          <strong>Type parameters:</strong> '?8930, '?8931, '?8932          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L102-102" class="github-link">
@@ -193,8 +193,8 @@ Otherwise the exisiting error messages are propagated.</p>
             bind f result
           </code>
           <div class="tip" id="10">
-            <strong>Signature:</strong> f:(&#39;?8636 -&gt; Result&lt;&#39;?8637,&#39;?8638&gt;) -&gt; result:Result&lt;&#39;?8636,&#39;?8638&gt; -&gt; Result&lt;&#39;?8637,&#39;?8638&gt;<br />
-                          <strong>Type parameters:</strong> '?8636, '?8637, '?8638          </div>
+            <strong>Signature:</strong> f:(&#39;?8919 -&gt; Result&lt;&#39;?8920,&#39;?8921&gt;) -&gt; result:Result&lt;&#39;?8919,&#39;?8921&gt; -&gt; Result&lt;&#39;?8920,&#39;?8921&gt;<br />
+                          <strong>Type parameters:</strong> '?8919, '?8920, '?8921          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L86-86" class="github-link">
@@ -215,8 +215,8 @@ Otherwise the exisiting failure is propagated.</p>
             collect xs
           </code>
           <div class="tip" id="11">
-            <strong>Signature:</strong> xs:seq&lt;Result&lt;&#39;?8677,&#39;?8678&gt;&gt; -&gt; Result&lt;&#39;?8677 list,&#39;?8678&gt;<br />
-                          <strong>Type parameters:</strong> '?8677, '?8678          </div>
+            <strong>Signature:</strong> xs:seq&lt;Result&lt;&#39;?8960,&#39;?8961&gt;&gt; -&gt; Result&lt;&#39;?8960 list,&#39;?8961&gt;<br />
+                          <strong>Type parameters:</strong> '?8960, '?8961          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L143-143" class="github-link">
@@ -237,8 +237,8 @@ If the sequence contains an error the error will be propagated.</p>
             either fSuccess fFailure trialResult
           </code>
           <div class="tip" id="12">
-            <strong>Signature:</strong> fSuccess:(&#39;?8626 * &#39;?8627 list -&gt; &#39;?8628) -&gt; fFailure:(&#39;?8627 list -&gt; &#39;?8628) -&gt; trialResult:Result&lt;&#39;?8626,&#39;?8627&gt; -&gt; &#39;?8628<br />
-                          <strong>Type parameters:</strong> '?8626, '?8627, '?8628          </div>
+            <strong>Signature:</strong> fSuccess:(&#39;?8909 * &#39;?8910 list -&gt; &#39;?8911) -&gt; fFailure:(&#39;?8910 list -&gt; &#39;?8911) -&gt; trialResult:Result&lt;&#39;?8909,&#39;?8910&gt; -&gt; &#39;?8911<br />
+                          <strong>Type parameters:</strong> '?8909, '?8910, '?8911          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L63-63" class="github-link">
@@ -258,8 +258,8 @@ If the sequence contains an error the error will be propagated.</p>
             eitherTee fSuccess fFailure result
           </code>
           <div class="tip" id="13">
-            <strong>Signature:</strong> fSuccess:(&#39;?8668 * &#39;?8669 list -&gt; unit) -&gt; fFailure:(&#39;?8669 list -&gt; unit) -&gt; result:Result&lt;&#39;?8668,&#39;?8669&gt; -&gt; Result&lt;&#39;?8668,&#39;?8669&gt;<br />
-                          <strong>Type parameters:</strong> '?8668, '?8669          </div>
+            <strong>Signature:</strong> fSuccess:(&#39;?8951 * &#39;?8952 list -&gt; unit) -&gt; fFailure:(&#39;?8952 list -&gt; unit) -&gt; result:Result&lt;&#39;?8951,&#39;?8952&gt; -&gt; Result&lt;&#39;?8951,&#39;?8952&gt;<br />
+                          <strong>Type parameters:</strong> '?8951, '?8952          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L127-127" class="github-link">
@@ -302,8 +302,8 @@ Result is propagated unchanged.</p>
             failed result
           </code>
           <div class="tip" id="15">
-            <strong>Signature:</strong> result:Result&lt;&#39;?8623,&#39;?8624&gt; -&gt; bool<br />
-                          <strong>Type parameters:</strong> '?8623, '?8624          </div>
+            <strong>Signature:</strong> result:Result&lt;&#39;?8906,&#39;?8907&gt; -&gt; bool<br />
+                          <strong>Type parameters:</strong> '?8906, '?8907          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L57-57" class="github-link">
@@ -323,8 +323,8 @@ Result is propagated unchanged.</p>
             failIfNone message result
           </code>
           <div class="tip" id="16">
-            <strong>Signature:</strong> message:&#39;?8680 -&gt; result:&#39;?8681 option -&gt; Result&lt;&#39;?8681,&#39;?8680&gt;<br />
-                          <strong>Type parameters:</strong> '?8680, '?8681          </div>
+            <strong>Signature:</strong> message:&#39;?8963 -&gt; result:&#39;?8964 option -&gt; Result&lt;&#39;?8964,&#39;?8963&gt;<br />
+                          <strong>Type parameters:</strong> '?8963, '?8964          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L152-152" class="github-link">
@@ -344,8 +344,8 @@ Result is propagated unchanged.</p>
             failOnWarnings result
           </code>
           <div class="tip" id="17">
-            <strong>Signature:</strong> result:Result&lt;&#39;?8686,&#39;?8687&gt; -&gt; Result&lt;&#39;?8686,&#39;?8687&gt;<br />
-                          <strong>Type parameters:</strong> '?8686, '?8687          </div>
+            <strong>Signature:</strong> result:Result&lt;&#39;?8969,&#39;?8970&gt; -&gt; Result&lt;&#39;?8969,&#39;?8970&gt;<br />
+                          <strong>Type parameters:</strong> '?8969, '?8970          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L164-164" class="github-link">
@@ -362,8 +362,8 @@ Result is propagated unchanged.</p>
             failureTee f result
           </code>
           <div class="tip" id="18">
-            <strong>Signature:</strong> f:(&#39;?8674 list -&gt; unit) -&gt; result:Result&lt;&#39;?8675,&#39;?8674&gt; -&gt; Result&lt;&#39;?8675,&#39;?8674&gt;<br />
-                          <strong>Type parameters:</strong> '?8674, '?8675          </div>
+            <strong>Signature:</strong> f:(&#39;?8957 list -&gt; unit) -&gt; result:Result&lt;&#39;?8958,&#39;?8957&gt; -&gt; Result&lt;&#39;?8958,&#39;?8957&gt;<br />
+                          <strong>Type parameters:</strong> '?8957, '?8958          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L138-138" class="github-link">
@@ -384,8 +384,8 @@ Result is propagated unchanged.</p>
             flatten result
           </code>
           <div class="tip" id="19">
-            <strong>Signature:</strong> result:Result&lt;Result&lt;&#39;?8640,&#39;?8641&gt;,&#39;?8641&gt; -&gt; Result&lt;&#39;?8640,&#39;?8641&gt;<br />
-                          <strong>Type parameters:</strong> '?8640, '?8641          </div>
+            <strong>Signature:</strong> result:Result&lt;Result&lt;&#39;?8923,&#39;?8924&gt;,&#39;?8924&gt; -&gt; Result&lt;&#39;?8923,&#39;?8924&gt;<br />
+                          <strong>Type parameters:</strong> '?8923, '?8924          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L92-92" class="github-link">
@@ -405,8 +405,8 @@ Result is propagated unchanged.</p>
             lift f result
           </code>
           <div class="tip" id="20">
-            <strong>Signature:</strong> f:(&#39;?8655 -&gt; &#39;?8656) -&gt; result:Result&lt;&#39;?8655,&#39;?8657&gt; -&gt; Result&lt;&#39;?8656,&#39;?8657&gt;<br />
-                          <strong>Type parameters:</strong> '?8655, '?8656, '?8657          </div>
+            <strong>Signature:</strong> f:(&#39;?8938 -&gt; &#39;?8939) -&gt; result:Result&lt;&#39;?8938,&#39;?8940&gt; -&gt; Result&lt;&#39;?8939,&#39;?8940&gt;<br />
+                          <strong>Type parameters:</strong> '?8938, '?8939, '?8940          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L115-115" class="github-link">
@@ -426,8 +426,8 @@ Result is propagated unchanged.</p>
             lift2 f a b
           </code>
           <div class="tip" id="21">
-            <strong>Signature:</strong> f:(&#39;?8663 -&gt; &#39;?8664 -&gt; &#39;?8665) -&gt; a:Result&lt;&#39;?8663,&#39;?8666&gt; -&gt; b:Result&lt;&#39;?8664,&#39;?8666&gt; -&gt; Result&lt;&#39;?8665,&#39;?8666&gt;<br />
-                          <strong>Type parameters:</strong> '?8663, '?8664, '?8665, '?8666          </div>
+            <strong>Signature:</strong> f:(&#39;?8946 -&gt; &#39;?8947 -&gt; &#39;?8948) -&gt; a:Result&lt;&#39;?8946,&#39;?8949&gt; -&gt; b:Result&lt;&#39;?8947,&#39;?8949&gt; -&gt; Result&lt;&#39;?8948,&#39;?8949&gt;<br />
+                          <strong>Type parameters:</strong> '?8946, '?8947, '?8948, '?8949          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L122-122" class="github-link">
@@ -447,8 +447,8 @@ Result is propagated unchanged.</p>
             mergeMessages msgs result
           </code>
           <div class="tip" id="22">
-            <strong>Signature:</strong> msgs:&#39;?8633 list -&gt; result:Result&lt;&#39;?8634,&#39;?8633&gt; -&gt; Result&lt;&#39;?8634,&#39;?8633&gt;<br />
-                          <strong>Type parameters:</strong> '?8633, '?8634          </div>
+            <strong>Signature:</strong> msgs:&#39;?8916 list -&gt; result:Result&lt;&#39;?8917,&#39;?8916&gt; -&gt; Result&lt;&#39;?8917,&#39;?8916&gt;<br />
+                          <strong>Type parameters:</strong> '?8916, '?8917          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L79-79" class="github-link">
@@ -510,8 +510,8 @@ Result is propagated unchanged.</p>
             returnOrFail result
           </code>
           <div class="tip" id="25">
-            <strong>Signature:</strong> result:Result&lt;&#39;?8630,&#39;?8631&gt; -&gt; &#39;?8630<br />
-                          <strong>Type parameters:</strong> '?8630, '?8631          </div>
+            <strong>Signature:</strong> result:Result&lt;&#39;?8913,&#39;?8914&gt; -&gt; &#39;?8913<br />
+                          <strong>Type parameters:</strong> '?8913, '?8914          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L70-70" class="github-link">
@@ -532,8 +532,8 @@ Otherwise the function throws an exception with Failure message of the result.</
             successTee f result
           </code>
           <div class="tip" id="26">
-            <strong>Signature:</strong> f:(&#39;?8671 * &#39;?8672 list -&gt; unit) -&gt; result:Result&lt;&#39;?8671,&#39;?8672&gt; -&gt; Result&lt;&#39;?8671,&#39;?8672&gt;<br />
-                          <strong>Type parameters:</strong> '?8671, '?8672          </div>
+            <strong>Signature:</strong> f:(&#39;?8954 * &#39;?8955 list -&gt; unit) -&gt; result:Result&lt;&#39;?8954,&#39;?8955&gt; -&gt; Result&lt;&#39;?8954,&#39;?8955&gt;<br />
+                          <strong>Type parameters:</strong> '?8954, '?8955          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L133-133" class="github-link">
@@ -604,8 +604,8 @@ Result is propagated unchanged.</p>
             ( |Pass|Warn|Fail| ) result
           </code>
           <div class="tip" id="29">
-            <strong>Signature:</strong> result:Result&lt;&#39;?8683,&#39;?8684&gt; -&gt; Choice&lt;&#39;?8683,(&#39;?8683 * &#39;?8684 list),&#39;?8684 list&gt;<br />
-                          <strong>Type parameters:</strong> '?8683, '?8684          </div>
+            <strong>Signature:</strong> result:Result&lt;&#39;?8966,&#39;?8967&gt; -&gt; Choice&lt;&#39;?8966,(&#39;?8966 * &#39;?8967 list),&#39;?8967 list&gt;<br />
+                          <strong>Type parameters:</strong> '?8966, '?8967          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/paket-files/fsprojects/Chessie/src/Chessie/ErrorHandling.fs#L158-158" class="github-link">
