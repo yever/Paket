@@ -112,11 +112,11 @@
             resolve getDependencies getSha1 file
           </code>
           <div class="tip" id="123">
-            <strong>Signature:</strong> getDependencies:(ResolvedSourceFile -&gt; PackageRequirement list) -&gt; getSha1:(SingleSourceFileOrigin -&gt; string -&gt; string -&gt; string -&gt; string) -&gt; file:UnresolvedSourceFile -&gt; ResolvedSourceFile<br />
+            <strong>Signature:</strong> getDependencies:(ResolvedSourceFile -&gt; PackageRequirement list) -&gt; getSha1:(SingleSourceFileOrigin -&gt; string -&gt; string -&gt; string -&gt; string option -&gt; string) -&gt; file:UnresolvedSourceFile -&gt; ResolvedSourceFile<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ModuleResolver.fs#L61-61" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ModuleResolver.fs#L63-63" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -130,11 +130,11 @@
             Resolve (...)
           </code>
           <div class="tip" id="124">
-            <strong>Signature:</strong> (getDependencies:(ResolvedSourceFile -&gt; PackageRequirement list) * getSha1:(SingleSourceFileOrigin -&gt; string -&gt; string -&gt; string -&gt; string) * remoteFiles:UnresolvedSourceFile list) -&gt; ResolvedSourceFile list<br />
+            <strong>Signature:</strong> (getDependencies:(ResolvedSourceFile -&gt; PackageRequirement list) * getSha1:(SingleSourceFileOrigin -&gt; string -&gt; string -&gt; string -&gt; string option -&gt; string) * remoteFiles:UnresolvedSourceFile list) -&gt; ResolvedSourceFile list<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ModuleResolver.fs#L103-103" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/ModuleResolver.fs#L106-106" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>

@@ -212,6 +212,20 @@ Let's look at a sample:</p>
 
 <p>As you can see Paket also resolved the Octokit dependency.</p>
 
+<h2><a name="Referencing-a-private-github-repository" class="anchor" href="#Referencing-a-private-github-repository">Referencing a private github repository</a></h2>
+
+<p>To reference a private github repository the syntax is identical to
+above and supports the same branch and file definitions the only extra
+item to add is an identifier which defines which credential key to
+use (see <a href="commands/config.html"><code>paket config</code></a>).</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"> <span class="i">github</span> <span class="i">fsharp</span><span class="o">/</span><span class="k">private</span> <span class="i">src</span><span class="o">/</span><span class="i">myprivate</span><span class="o">/</span><span class="i">file</span><span class="o">.</span><span class="i">fs</span> <span class="i">githubAuthKey</span>
+</code></pre></td>
+</tr>
+</table>
+
 <h2><a name="Gist" class="anchor" href="#Gist">Gist</a></h2>
 
 <p>Gist works the same way. You can fetch single files or multi-file-gists as well:</p>
