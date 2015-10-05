@@ -62,12 +62,14 @@
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket config [add-credentials &lt;string&gt;]
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket config [add-credentials &lt;string&gt;] [add-token &lt;string&gt; &lt;string&gt;]
 </code></pre></td></tr></table>
 
 <h3><a name="Options" class="anchor" href="#Options">Options:</a></h3>
 
 <p><code>add-credentials &lt;string&gt;</code>: Add credentials for the specified NuGet feed.</p>
+
+<p><code>add-token &lt;string&gt; &lt;string&gt;</code>: Add token for the specified source.</p>
 
 <h2><a name="Adding-credentials" class="anchor" href="#Adding-credentials">Adding credentials</a></h2>
 
@@ -79,6 +81,22 @@
 <p>Paket will then ask you for the username and password that will be used for the specified <code>SOURCEURL</code>.</p>
 
 <p>The credentials you enter here will then be used if no username and password for the source are configured in the <a href="nuget-dependencies.html"><code>paket.dependencies</code> file</a>.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket config add-credentials TAG
+</code></pre></td></tr></table>
+
+<p>Paket will then ask you for the username and password that will be used for the specified <code>TAG</code>.</p>
+
+<p>The credentials you enter here will then be used to access any Github files specified in the <a href="github-dependencies.html"><code>paket.dependencies</code> file</a> with the specified <code>TAG</code>.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket config add-token TAG TOKEN
+</code></pre></td></tr></table>
+
+<p>The token you enter here will then be used to access any Github files specified in the <a href="github-dependencies.html"><code>paket.dependencies</code> file</a> with the specified <code>TAG</code>.</p>
 
 <p>The configuration file can be found at:</p>
 
