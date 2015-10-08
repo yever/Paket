@@ -118,12 +118,6 @@
 
 </td>
         </tr>
-        <tr>
-          <td class="type-name">
-            <a href="paket-packageresolver-updatemode.html">UpdateMode</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
     </tbody>
   </table>
   <table class="table table-bordered module-list">
@@ -151,10 +145,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '174', 174)" onmouseover="showTip(event, '174', 174)">
+          <code onmouseout="hideTip(event, '171', 171)" onmouseover="showTip(event, '171', 171)">
             allPrereleases versions
           </code>
-          <div class="tip" id="174">
+          <div class="tip" id="171">
             <strong>Signature:</strong> versions:SemVerInfo list -&gt; bool<br />
                       </div>
         </td>
@@ -169,10 +163,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '175', 175)" onmouseover="showTip(event, '175', 175)">
+          <code onmouseout="hideTip(event, '172', 172)" onmouseover="showTip(event, '172', 172)">
             calcOpenRequirements (...)
           </code>
-          <div class="tip" id="175">
+          <div class="tip" id="172">
             <strong>Signature:</strong> (exploredPackage:ResolvedPackage * globalFrameworkRestrictions:FrameworkRestrictions * versionToExplore:SemVerInfo * dependency:PackageRequirement * closed:Set&lt;PackageRequirement&gt; * stillOpen:Set&lt;PackageRequirement&gt;) -&gt; Set&lt;PackageRequirement&gt;<br />
                       </div>
         </td>
@@ -187,10 +181,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '176', 176)" onmouseover="showTip(event, '176', 176)">
+          <code onmouseout="hideTip(event, '173', 173)" onmouseover="showTip(event, '173', 173)">
             cleanupNames model
           </code>
-          <div class="tip" id="176">
+          <div class="tip" id="173">
             <strong>Signature:</strong> model:PackageResolution -&gt; PackageResolution<br />
                       </div>
         </td>
@@ -205,12 +199,12 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '177', 177)" onmouseover="showTip(event, '177', 177)">
+          <code onmouseout="hideTip(event, '174', 174)" onmouseover="showTip(event, '174', 174)">
             createPackageRequirement (...)
           </code>
-          <div class="tip" id="177">
-            <strong>Signature:</strong> parent:ResolvedPackage -&gt; (packageName:PackageName * version:VersionRequirement * restrictions:&#39;?8260) -&gt; PackageRequirement<br />
-                          <strong>Type parameters:</strong> '?8260          </div>
+          <div class="tip" id="174">
+            <strong>Signature:</strong> parent:ResolvedPackage -&gt; (packageName:PackageName * version:VersionRequirement * restrictions:&#39;?8270) -&gt; PackageRequirement<br />
+                          <strong>Type parameters:</strong> '?8270          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L63-63" class="github-link">
@@ -223,12 +217,12 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '178', 178)" onmouseover="showTip(event, '178', 178)">
+          <code onmouseout="hideTip(event, '175', 175)" onmouseover="showTip(event, '175', 175)">
             createPackageRequirements (...)
           </code>
-          <div class="tip" id="178">
-            <strong>Signature:</strong> exclude:PackageName list -&gt; resolution:Map&lt;&#39;?8263,ResolvedPackage&gt; -&gt; PackageRequirement list<br />
-                          <strong>Type parameters:</strong> '?8263          </div>
+          <div class="tip" id="175">
+            <strong>Signature:</strong> exclude:PackageName list -&gt; resolution:Map&lt;&#39;?8273,ResolvedPackage&gt; -&gt; PackageRequirement list<br />
+                          <strong>Type parameters:</strong> '?8273          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L83-83" class="github-link">
@@ -241,10 +235,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '179', 179)" onmouseover="showTip(event, '179', 179)">
+          <code onmouseout="hideTip(event, '176', 176)" onmouseover="showTip(event, '176', 176)">
             getDependencyGraph packages package
           </code>
-          <div class="tip" id="179">
+          <div class="tip" id="176">
             <strong>Signature:</strong> packages:ResolvedPackage list -&gt; package:ResolvedPackage -&gt; PackageRequirement list<br />
                       </div>
         </td>
@@ -259,15 +253,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '180', 180)" onmouseover="showTip(event, '180', 180)">
+          <code onmouseout="hideTip(event, '177', 177)" onmouseover="showTip(event, '177', 177)">
             Resolve (...)
           </code>
-          <div class="tip" id="180">
-            <strong>Signature:</strong> (groupName:GroupName * sources:&#39;?8299 * getVersionsF:(&#39;?8299 -&gt; ResolverStrategy -&gt; GroupName -&gt; PackageName -&gt; seq&lt;SemVerInfo&gt;) * getPackageDetailsF:(&#39;?8299 -&gt; PackageName -&gt; SemVerInfo -&gt; PackageDetails) * globalFrameworkRestrictions:FrameworkRestrictions * rootDependencies:Set&lt;PackageRequirement&gt; * updateMode:UpdateMode) -&gt; Resolution<br />
+          <div class="tip" id="177">
+            <strong>Signature:</strong> (groupName:GroupName * sources:&#39;?8299 * getVersionsF:(&#39;?8299 * PackageName -&gt; SemVerInfo list) * getPackageDetailsF:(&#39;?8299 -&gt; PackageName -&gt; SemVerInfo -&gt; PackageDetails) * globalFrameworkRestrictions:FrameworkRestrictions * rootDependencies:Set&lt;PackageRequirement&gt;) -&gt; Resolution<br />
                           <strong>Type parameters:</strong> '?8299          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L204-204" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/PackageResolver.fs#L198-198" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
