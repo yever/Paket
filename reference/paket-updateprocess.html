@@ -83,7 +83,7 @@
             selectiveUpdate (...)
           </code>
           <div class="tip" id="237">
-            <strong>Signature:</strong> force:bool -&gt; getSha1:(SingleSourceFileOrigin -&gt; string -&gt; string -&gt; string -&gt; string option -&gt; string) -&gt; getSortedVersionsF:(PackageSource list -&gt; ResolverStrategy -&gt; GroupName -&gt; PackageName -&gt; SemVerInfo list) -&gt; getPackageDetailsF:(PackageSource list -&gt; PackageName -&gt; SemVerInfo -&gt; PackageDetails) -&gt; lockFile:LockFile -&gt; dependenciesFile:DependenciesFile -&gt; updateMode:UpdateMode -&gt; LockFile<br />
+            <strong>Signature:</strong> force:bool -&gt; getSha1:(SingleSourceFileOrigin -&gt; string -&gt; string -&gt; string -&gt; string option -&gt; string) -&gt; getSortedVersionsF:(PackageSource list -&gt; ResolverStrategy -&gt; GroupName -&gt; PackageName -&gt; SemVerInfo list) -&gt; getPackageDetailsF:(PackageSource list -&gt; PackageName -&gt; SemVerInfo -&gt; PackageDetails) -&gt; lockFile:LockFile -&gt; dependenciesFile:DependenciesFile -&gt; updateMode:UpdateMode -&gt; semVerUpdateMode:SemVerUpdateMode -&gt; LockFile<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -101,11 +101,11 @@
             SelectiveUpdate (...)
           </code>
           <div class="tip" id="238">
-            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * updateMode:UpdateMode * force:bool) -&gt; LockFile<br />
+            <strong>Signature:</strong> (dependenciesFile:DependenciesFile * updateMode:UpdateMode * semVerUpdateMode:SemVerUpdateMode * force:bool) -&gt; LockFile<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L120-120" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L135-135" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -123,7 +123,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L149-149" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L165-165" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -144,7 +144,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L186-186" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L202-202" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -165,7 +165,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L175-175" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L191-191" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -186,7 +186,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L159-159" class="github-link">
+            <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/UpdateProcess.fs#L175-175" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>

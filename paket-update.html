@@ -62,7 +62,7 @@
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket update [nuget &lt;string&gt;] [version &lt;string&gt;] [group &lt;string&gt;] [--force|-f] [--hard] [--redirects] [--createnewbindingfiles] [--no-install]
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket update [nuget &lt;string&gt;] [version &lt;string&gt;] [group &lt;string&gt;] [--force|-f] [--hard] [--redirects] [--createnewbindingfiles] [--no-install] [--keep-major] [--keep-minor] [--keep-patch]
 </code></pre></td></tr></table>
 
 <h3><a name="Options" class="anchor" href="#Options">Options:</a></h3>
@@ -82,6 +82,12 @@
 <p><code>--createnewbindingfiles</code>: Creates binding redirect files if needed.</p>
 
 <p><code>--no-install</code>: Skips paket install --hard process afterward generation of <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
+
+<p><code>--keep-major</code>: Allows only updates that are not changing the major version of the NuGet packages.</p>
+
+<p><code>--keep-minor</code>: Allows only updates that are not changing the minor version of the NuGet packages.</p>
+
+<p><code>--keep-patch</code>: Allows only updates that are not changing the patch version of the NuGet packages.</p>
 
 <h2><a name="Updating-all-packages" class="anchor" href="#Updating-all-packages">Updating all packages</a></h2>
 
