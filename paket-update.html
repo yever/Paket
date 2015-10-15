@@ -120,7 +120,7 @@ It then proceeds to download the packages and to install them into the projects.
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket update nuget PACKAGENAME [version VERSION] [--force|-f] [--hard] [--redirects] [--no-install]
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket update nuget PACKAGENAME [version VERSION] [group GROUPNAME] [--force|-f] [--hard] [--redirects] [--no-install]
 </code></pre></td></tr></table>
 
 <h3><a name="Options-2" class="anchor" href="#Options-2">Options:</a></h3>
@@ -128,6 +128,29 @@ It then proceeds to download the packages and to install them into the projects.
 <p><code>nuget &lt;string&gt;</code>: Nuget package id</p>
 
 <p><code>version &lt;string&gt;</code>: Allows to specify version of the package.</p>
+
+<p><code>group &lt;string&gt;</code>: Allows to specify the group where the package is located. If omitted then Paket defaults to the Main group.</p>
+
+<p><code>--force [-f]</code>: Forces the download and reinstallation of all packages.</p>
+
+<p><code>--hard</code>: Replaces package references within project files even if they are not yet adhering to the Paket's conventions (and hence considered manually managed). See <a href="paket-convert-from-nuget.html">convert from NuGet</a>.</p>
+
+<p><code>--redirects</code>: Creates binding redirects for the NuGet packages.</p>
+
+<p><code>--no-install</code>: Skips paket install --hard process afterward generation of <a href="lock-file.html"><code>paket.lock</code> file</a>.</p>
+
+<h2><a name="Updating-a-single-group" class="anchor" href="#Updating-a-single-group">Updating a single group</a></h2>
+
+<p>If you want to update a single group you can use the following command:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="msh">paket update group GROUPNAME [--force|-f] [--hard] [--redirects] [--no-install]
+</code></pre></td></tr></table>
+
+<h3><a name="Options-3" class="anchor" href="#Options-3">Options:</a></h3>
+
+<p><code>group &lt;string&gt;</code>: Group name</p>
 
 <p><code>--force [-f]</code>: Forces the download and reinstallation of all packages.</p>
 
