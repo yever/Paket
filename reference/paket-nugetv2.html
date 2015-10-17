@@ -178,8 +178,8 @@
             DownloadLicense (...)
           </code>
           <div class="tip" id="145">
-            <strong>Signature:</strong> (root:&#39;?8448 * force:bool * packageName:PackageName * version:SemVerInfo * licenseUrl:string * targetFileName:string) -&gt; Async&lt;unit&gt;<br />
-                          <strong>Type parameters:</strong> '?8448          </div>
+            <strong>Signature:</strong> (root:&#39;?8423 * force:bool * packageName:PackageName * version:SemVerInfo * licenseUrl:string * targetFileName:string) -&gt; Async&lt;unit&gt;<br />
+                          <strong>Type parameters:</strong> '?8423          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NuGetV2.fs#L445-445" class="github-link">
@@ -292,7 +292,7 @@
             getAllVersionsFromLocalPath (...)
           </code>
           <div class="tip" id="151">
-            <strong>Signature:</strong> (localNugetPath:string * package:string * root:string) -&gt; Async&lt;string [] option&gt;<br />
+            <strong>Signature:</strong> (localNugetPath:string * package:PackageName * root:string) -&gt; Async&lt;string [] option&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -473,10 +473,10 @@ Caches calls into json file</p>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '160', 160)" onmouseover="showTip(event, '160', 160)">
-            GetVersions root (sources, arg3)
+            GetVersions root (sources, packageName)
           </code>
           <div class="tip" id="160">
-            <strong>Signature:</strong> root:string -&gt; (sources:seq&lt;PackageSource&gt; * PackageName) -&gt; SemVerInfo list<br />
+            <strong>Signature:</strong> root:string -&gt; (sources:seq&lt;PackageSource&gt; * packageName:PackageName) -&gt; SemVerInfo list<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -497,8 +497,8 @@ Caches calls into json file</p>
             getVersionsCached (...)
           </code>
           <div class="tip" id="161">
-            <strong>Signature:</strong> key:string -&gt; f:(Auth option * string * &#39;?8457 -&gt; Async&lt;&#39;?8458 option&gt;) -&gt; (auth:Auth option * nugetURL:string * package:&#39;?8457) -&gt; Async&lt;&#39;?8458 option&gt;<br />
-                          <strong>Type parameters:</strong> '?8457, '?8458          </div>
+            <strong>Signature:</strong> key:string -&gt; f:(Auth option * string * &#39;?8432 -&gt; Async&lt;&#39;?8433 option&gt;) -&gt; (auth:Auth option * nugetURL:string * package:&#39;?8432) -&gt; Async&lt;&#39;?8433 option&gt;<br />
+                          <strong>Type parameters:</strong> '?8432, '?8433          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NuGetV2.fs#L615-615" class="github-link">
@@ -551,8 +551,8 @@ Caches calls into json file</p>
             parseODataDetails (...)
           </code>
           <div class="tip" id="164">
-            <strong>Signature:</strong> (nugetURL:string * packageName:PackageName * version:&#39;?8431 * raw:string) -&gt; NugetPackageCache<br />
-                          <strong>Type parameters:</strong> '?8431          </div>
+            <strong>Signature:</strong> (nugetURL:string * packageName:PackageName * version:&#39;?8406 * raw:string) -&gt; NugetPackageCache<br />
+                          <strong>Type parameters:</strong> '?8406          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Paket/tree/master/src/Paket.Core/NuGetV2.fs#L129-129" class="github-link">
@@ -587,7 +587,7 @@ Caches calls into json file</p>
             tryGetAllVersionsFromNugetODataWithFilter (...)
           </code>
           <div class="tip" id="166">
-            <strong>Signature:</strong> (auth:Auth option * nugetURL:string * package:string) -&gt; Async&lt;string [] option&gt;<br />
+            <strong>Signature:</strong> (auth:Auth option * nugetURL:string * package:PackageName) -&gt; Async&lt;string [] option&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -605,7 +605,7 @@ Caches calls into json file</p>
             tryGetPackageVersionsViaJson (...)
           </code>
           <div class="tip" id="167">
-            <strong>Signature:</strong> (auth:Auth option * nugetURL:string * package:string) -&gt; Async&lt;string [] option&gt;<br />
+            <strong>Signature:</strong> (auth:Auth option * nugetURL:string * package:PackageName) -&gt; Async&lt;string [] option&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -623,7 +623,7 @@ Caches calls into json file</p>
             tryGetPackageVersionsViaOData (...)
           </code>
           <div class="tip" id="168">
-            <strong>Signature:</strong> (auth:Auth option * nugetURL:string * package:string) -&gt; Async&lt;string [] option&gt;<br />
+            <strong>Signature:</strong> (auth:Auth option * nugetURL:string * package:PackageName) -&gt; Async&lt;string [] option&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -641,7 +641,7 @@ Caches calls into json file</p>
             tryNuGetV3 (auth, nugetV3Url, package)
           </code>
           <div class="tip" id="169">
-            <strong>Signature:</strong> (auth:Auth option * nugetV3Url:string * package:string) -&gt; Async&lt;string [] option&gt;<br />
+            <strong>Signature:</strong> (auth:Auth option * nugetV3Url:string * package:PackageName) -&gt; Async&lt;string [] option&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
