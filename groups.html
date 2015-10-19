@@ -92,7 +92,7 @@ Let's consider a small example:</p>
 
 <span class="i">nuget</span> <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span>
 <span class="i">nuget</span> <span class="i">UnionArgParser</span>
-<span class="i">nuget</span> <span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Core</span>
+<span class="i">nuget</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Core</span>
 
 <span class="i">github</span> <span class="i">forki</span><span class="o">/</span><span class="i">FsUnit</span> <span class="i">FsUnit</span><span class="o">.</span><span class="i">fs</span>
 <span class="i">github</span> <span class="i">fsharp</span><span class="o">/</span><span class="i">FAKE</span> <span class="i">src</span><span class="o">/</span><span class="i">app</span><span class="o">/</span><span class="i">FakeLib</span><span class="o">/</span><span class="i">Globbing</span><span class="o">/</span><span class="i">Globbing</span><span class="o">.</span><span class="i">fs</span>
@@ -103,7 +103,7 @@ Let's consider a small example:</p>
     <span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
 
     <span class="i">nuget</span> <span class="i">FAKE</span>
-    <span class="i">nuget</span> <span class="i">FSharp</span><span class="o">.</span><span class="i">Formatting</span>
+    <span class="i">nuget</span> <span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">FSharp</span><span class="o">.</span><span class="i">Formatting</span>
     <span class="i">nuget</span> <span class="i">ILRepack</span>
 
     <span class="i">github</span> <span class="i">fsharp</span><span class="o">/</span><span class="i">FAKE</span> <span class="i">modules</span><span class="o">/</span><span class="i">Octokit</span><span class="o">/</span><span class="i">Octokit</span><span class="o">.</span><span class="i">fsx</span>
@@ -178,7 +178,7 @@ The first one is the default group (internally called "Main") and the other two 
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">NUGET</span>
   <span class="i">remote</span><span class="o">:</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
   <span class="i">specs</span><span class="o">:</span>
-    <span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 2)" onmouseover="showTip(event, 'fs1', 2)" class="i">Core</span> (<span class="n">4.0</span><span class="o">.</span><span class="n">0.1</span>)
+    <span onmouseout="hideTip(event, 'fs1', 4)" onmouseover="showTip(event, 'fs1', 4)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 5)" onmouseover="showTip(event, 'fs2', 5)" class="i">Core</span> (<span class="n">4.0</span><span class="o">.</span><span class="n">0.1</span>)
     <span class="i">Newtonsoft</span><span class="o">.</span><span class="i">Json</span> (<span class="n">7.0</span><span class="o">.</span><span class="n">1</span>)
     <span class="i">UnionArgParser</span> (<span class="n">0.6</span><span class="o">.</span><span class="n">3</span>)
 <span class="i">GITHUB</span>
@@ -197,21 +197,21 @@ The first one is the default group (internally called "Main") and the other two 
   <span class="i">remote</span><span class="o">:</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
   <span class="i">specs</span><span class="o">:</span>
     <span class="i">FAKE</span> (<span class="n">4.3</span><span class="o">.</span><span class="n">1</span>)
-    <span class="i">FSharp</span><span class="o">.</span><span class="i">Compiler</span><span class="o">.</span><span class="i">Service</span> (<span class="n">1.4</span><span class="o">.</span><span class="n">0.1</span>)
-    <span class="i">FSharp</span><span class="o">.</span><span class="i">Formatting</span> (<span class="n">2.10</span><span class="o">.</span><span class="n">0</span>)
-      <span class="i">FSharp</span><span class="o">.</span><span class="i">Compiler</span><span class="o">.</span><span class="i">Service</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">0.0</span><span class="o">.</span><span class="n">87</span>)
-      <span class="i">FSharpVSPowerTools</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">Core</span> (<span class="n">1.8</span><span class="o">.</span><span class="n">0</span>)
-    <span class="i">FSharpVSPowerTools</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 4)" onmouseover="showTip(event, 'fs1', 4)" class="i">Core</span> (<span class="n">1.8</span><span class="o">.</span><span class="n">0</span>)
-      <span class="i">FSharp</span><span class="o">.</span><span class="i">Compiler</span><span class="o">.</span><span class="i">Service</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">0.0</span><span class="o">.</span><span class="n">87</span>)
+    <span onmouseout="hideTip(event, 'fs1', 6)" onmouseover="showTip(event, 'fs1', 6)" class="i">FSharp</span><span class="o">.</span><span class="i">Compiler</span><span class="o">.</span><span class="i">Service</span> (<span class="n">1.4</span><span class="o">.</span><span class="n">0.1</span>)
+    <span onmouseout="hideTip(event, 'fs1', 7)" onmouseover="showTip(event, 'fs1', 7)" class="i">FSharp</span><span class="o">.</span><span class="i">Formatting</span> (<span class="n">2.10</span><span class="o">.</span><span class="n">0</span>)
+      <span onmouseout="hideTip(event, 'fs1', 8)" onmouseover="showTip(event, 'fs1', 8)" class="i">FSharp</span><span class="o">.</span><span class="i">Compiler</span><span class="o">.</span><span class="i">Service</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">0.0</span><span class="o">.</span><span class="n">87</span>)
+      <span class="i">FSharpVSPowerTools</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 9)" onmouseover="showTip(event, 'fs2', 9)" class="i">Core</span> (<span class="n">1.8</span><span class="o">.</span><span class="n">0</span>)
+    <span class="i">FSharpVSPowerTools</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 10)" onmouseover="showTip(event, 'fs2', 10)" class="i">Core</span> (<span class="n">1.8</span><span class="o">.</span><span class="n">0</span>)
+      <span onmouseout="hideTip(event, 'fs1', 11)" onmouseover="showTip(event, 'fs1', 11)" class="i">FSharp</span><span class="o">.</span><span class="i">Compiler</span><span class="o">.</span><span class="i">Service</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">0.0</span><span class="o">.</span><span class="n">87</span>)
     <span class="i">ILRepack</span> (<span class="n">2.0</span><span class="o">.</span><span class="n">5</span>)
-    <span onmouseout="hideTip(event, 'fs2', 5)" onmouseover="showTip(event, 'fs2', 5)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span> (<span class="n">1.1</span><span class="o">.</span><span class="n">10</span>)
-      <span onmouseout="hideTip(event, 'fs2', 6)" onmouseover="showTip(event, 'fs2', 6)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span><span class="o">.</span><span class="i">Build</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">1.0</span><span class="o">.</span><span class="n">14</span>)
-    <span onmouseout="hideTip(event, 'fs2', 7)" onmouseover="showTip(event, 'fs2', 7)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span><span class="o">.</span><span class="i">Build</span> (<span class="n">1.0</span><span class="o">.</span><span class="n">21</span>)
-    <span onmouseout="hideTip(event, 'fs2', 8)" onmouseover="showTip(event, 'fs2', 8)" class="i">Microsoft</span><span class="o">.</span><span class="i">Net</span><span class="o">.</span><span class="i">Http</span> (<span class="n">2.2</span><span class="o">.</span><span class="n">29</span>)
-      <span onmouseout="hideTip(event, 'fs2', 9)" onmouseover="showTip(event, 'fs2', 9)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">1.1</span><span class="o">.</span><span class="n">10</span>)
-      <span onmouseout="hideTip(event, 'fs2', 10)" onmouseover="showTip(event, 'fs2', 10)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span><span class="o">.</span><span class="i">Build</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">1.0</span><span class="o">.</span><span class="n">14</span>)
+    <span onmouseout="hideTip(event, 'fs3', 12)" onmouseover="showTip(event, 'fs3', 12)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span> (<span class="n">1.1</span><span class="o">.</span><span class="n">10</span>)
+      <span onmouseout="hideTip(event, 'fs3', 13)" onmouseover="showTip(event, 'fs3', 13)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span><span class="o">.</span><span class="i">Build</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">1.0</span><span class="o">.</span><span class="n">14</span>)
+    <span onmouseout="hideTip(event, 'fs3', 14)" onmouseover="showTip(event, 'fs3', 14)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span><span class="o">.</span><span class="i">Build</span> (<span class="n">1.0</span><span class="o">.</span><span class="n">21</span>)
+    <span onmouseout="hideTip(event, 'fs3', 15)" onmouseover="showTip(event, 'fs3', 15)" class="i">Microsoft</span><span class="o">.</span><span class="i">Net</span><span class="o">.</span><span class="i">Http</span> (<span class="n">2.2</span><span class="o">.</span><span class="n">29</span>)
+      <span onmouseout="hideTip(event, 'fs3', 16)" onmouseover="showTip(event, 'fs3', 16)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">1.1</span><span class="o">.</span><span class="n">10</span>)
+      <span onmouseout="hideTip(event, 'fs3', 17)" onmouseover="showTip(event, 'fs3', 17)" class="i">Microsoft</span><span class="o">.</span><span class="i">Bcl</span><span class="o">.</span><span class="i">Build</span> (<span class="o">&gt;</span><span class="o">=</span> <span class="n">1.0</span><span class="o">.</span><span class="n">14</span>)
     <span class="i">Octokit</span> (<span class="n">0.14</span><span class="o">.</span><span class="n">0</span>)
-      <span onmouseout="hideTip(event, 'fs2', 11)" onmouseover="showTip(event, 'fs2', 11)" class="i">Microsoft</span><span class="o">.</span><span class="i">Net</span><span class="o">.</span><span class="i">Http</span>
+      <span onmouseout="hideTip(event, 'fs3', 18)" onmouseover="showTip(event, 'fs3', 18)" class="i">Microsoft</span><span class="o">.</span><span class="i">Net</span><span class="o">.</span><span class="i">Http</span>
 <span class="i">GITHUB</span>
   <span class="i">remote</span><span class="o">:</span> <span class="i">fsharp</span><span class="o">/</span><span class="i">FAKE</span>
   <span class="i">specs</span><span class="o">:</span>
@@ -237,7 +237,7 @@ If you want to reference dependencies from projects you can do this via the foll
 <span class="l">4: </span>
 <span class="l">5: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 12)" onmouseover="showTip(event, 'fs1', 12)" class="i">Core</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span onmouseout="hideTip(event, 'fs1', 19)" onmouseover="showTip(event, 'fs1', 19)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 20)" onmouseover="showTip(event, 'fs2', 20)" class="i">Core</span>
 
 <span class="i">group</span> <span class="i">Test</span>
   <span class="i">NUnit</span>
@@ -310,8 +310,9 @@ In your  <a href="references-files.html"><code>paket.references</code> file.</a>
 </tr>
 </table>
 
-<div class="tip" id="fs1">namespace Microsoft.FSharp.Core</div>
-<div class="tip" id="fs2">namespace Microsoft</div>
+<div class="tip" id="fs1">namespace Microsoft.FSharp</div>
+<div class="tip" id="fs2">namespace Microsoft.FSharp.Core</div>
+<div class="tip" id="fs3">namespace Microsoft</div>
 
         </div>
         <div class="span3">
