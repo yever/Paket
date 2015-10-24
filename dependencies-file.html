@@ -240,7 +240,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 
 <p>This option tells Paket what resolver strategy it will use by default.</p>
 
-<p>NuGet's dependency syntax led to a lot of incompatible packages on Nuget.org (read more). To make your transition to Paket easier and to allow package authors to correct their version constraints you can have Paket behave like NuGet when resolving transitive dependencies (i.e. defaulting to lowest matching versions).</p>
+<p>NuGet's dependency syntax led to a lot of incompatible packages on Nuget.org. To make your transition to Paket easier and to allow package authors to correct their version constraints you can have Paket behave like NuGet when resolving transitive dependencies (i.e. defaulting to lowest matching versions).</p>
 
 <p>The strategy can be either <code>min</code> or <code>max</code>.</p>
 
@@ -261,7 +261,7 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 
 <p>Note, however, that all direct dependencies still get their <em>lastest matching versions</em>, no matter the value of the <code>strategy</code> option.</p>
 
-<p>The only exception is when you are updating a single package and one of your direct dependencies is a transitive dependency for that specific package. In this case, only the updating package will get its <em>lastest matching version</em> and the dependency is treated as transitive.</p>
+<p>The only exception is when you are updating a single package and one of your direct dependencies is a transitive dependency for that specific package. In this case, only the updating package will get its <em>latest matching version</em> and the dependency is treated as transitive.</p>
 
 <p>To override a strategy, you can use the one of the <a href="nuget-dependencies.html#Strategy-modifiers">strategy modifiers</a>.</p>
 
