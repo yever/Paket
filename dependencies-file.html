@@ -236,11 +236,41 @@ In <code>strict</code> mode it will <strong>only</strong> reference <em>direct</
 </tr>
 </table>
 
+<h3><a name="Strategy-option" class="anchor" href="#Strategy-option">Strategy option</a></h3>
+
+<p>This option tells Paket what resolver strategy it will use by default.</p>
+
+<p>NuGet's dependency syntax led to a lot of incompatible packages on Nuget.org (read more). To make your transition to Paket easier and to allow package authors to correct their version constraints you can have Paket behave like NuGet when resolving transitive dependencies (i.e. defaulting to lowest matching versions).</p>
+
+<p>The strategy can be either <code>min</code> or <code>max</code>.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">strategy</span><span class="o">:</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">min</span>
+<span class="i">source</span> <span class="i">https</span><span class="o">:</span><span class="c">//nuget.org/api/v2</span>
+
+<span class="i">nuget</span> <span class="i">UnionArgParser</span> <span class="o">~&gt;</span> <span class="n">0.7</span>
+</code></pre></td>
+</tr>
+</table>
+
+<p>A <code>min</code> strategy means you get the <em>lowest matching version</em> of your transitive dependencies (i.e. NuGet-style). In constrast, a <code>max</code> strategy will get you the <em>highest matching version</em>.</p>
+
+<p>Note, however, that all direct dependencies still get their <em>lastest matching versions</em>, no matter the value of the <code>strategy</code> option.</p>
+
+<p>The only exception is when you are updating a single package and one of your direct dependencies is a transitive dependency for that specific package. In this case, only the updating package will get its <em>lastest matching version</em> and the dependency is treated as transitive.</p>
+
+<p>To override a strategy, you can use the one of the <a href="nuget-dependencies.html#Strategy-modifiers">strategy modifiers</a>.</p>
+
 <h2><a name="Comments" class="anchor" href="#Comments">Comments</a></h2>
 
 <p>All lines starting with with <code>//</code> or <code>#</code> are considered comments.</p>
 
 <div class="tip" id="fs1">namespace Microsoft</div>
+<div class="tip" id="fs2">val min : e1:&#39;T -&gt; e2:&#39;T -&gt; &#39;T (requires comparison)<br /><br />Full name: Microsoft.FSharp.Core.Operators.min</div>
 
         </div>
         <div class="span3">
