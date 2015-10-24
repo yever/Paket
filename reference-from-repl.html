@@ -58,10 +58,13 @@
           
 <h1><a name="Using-Paket-from-F-Interactive" class="anchor" href="#Using-Paket-from-F-Interactive">Using Paket from F# Interactive</a></h1>
 
-<h2><a name="Configure-which-paket-dependencies-file-to-use" class="anchor" href="#Configure-which-paket-dependencies-file-to-use">Configure which paket.dependencies file to use</a></h2>
+<p>This page demonstrates how to use <code>Paket</code> from the F# Interactive.</p>
 
-<p>This page demonstrates how to use <code>Paket</code> from the F# Interactive. 
-First we have to download and reference the paket tool, open the Paket namespace and to tell Paket which <a href="dependencies-file.html"><code>paket.dependencies</code></a> file to use.</p>
+<h2><a name="Download-latest-paket-exe-optional" class="anchor" href="#Download-latest-paket-exe-optional">Download latest paket.exe (optional)</a></h2>
+
+<p>The first part is boilerplate to download and reference the latest paket tool.
+This allows F# scripts to work self-contained without an installed paket.exe.
+Alternativly you can just reference any paket.exe that you have on your system.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
@@ -78,21 +81,8 @@ First we have to download and reference the paket tool, open the Paket namespace
 <span class="l">13: </span>
 <span class="l">14: </span>
 <span class="l">15: </span>
-<span class="l">16: </span>
-<span class="l">17: </span>
-<span class="l">18: </span>
-<span class="l">19: </span>
-<span class="l">20: </span>
-<span class="l">21: </span>
-<span class="l">22: </span>
-<span class="l">23: </span>
-<span class="l">24: </span>
-<span class="l">25: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="c">//------------------------------------------</span>
-<span class="c">// Step 0. Boilerplate to get the paket.exe tool</span>
-
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">System</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">System</span>
 <span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 2)" onmouseover="showTip(event, 'fs1', 2)" class="i">System</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 3)" onmouseover="showTip(event, 'fs2', 3)" class="i">IO</span>
  
 <span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="t">Environment</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 5)" onmouseover="showTip(event, 'fs4', 5)" class="i">CurrentDirectory</span> <span class="o">&lt;-</span> <span class="k">__SOURCE_DIRECTORY__</span>
@@ -104,12 +94,24 @@ First we have to download and reference the paket tool, open the Paket namespace
     <span class="k">let</span> <span onmouseout="hideTip(event, 'fs15', 16)" onmouseover="showTip(event, 'fs15', 16)" class="i">stable</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs9', 17)" onmouseover="showTip(event, 'fs9', 17)" class="i">wc</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 18)" onmouseover="showTip(event, 'fs16', 18)" class="f">DownloadString</span>(<span onmouseout="hideTip(event, 'fs8', 19)" onmouseover="showTip(event, 'fs8', 19)" class="i">url</span>) 
     <span onmouseout="hideTip(event, 'fs9', 20)" onmouseover="showTip(event, 'fs9', 20)" class="i">wc</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 21)" onmouseover="showTip(event, 'fs17', 21)" class="f">DownloadFile</span>(<span onmouseout="hideTip(event, 'fs15', 22)" onmouseover="showTip(event, 'fs15', 22)" class="i">stable</span>, <span onmouseout="hideTip(event, 'fs12', 23)" onmouseover="showTip(event, 'fs12', 23)" class="i">tmp</span>)
     <span onmouseout="hideTip(event, 'fs6', 24)" onmouseover="showTip(event, 'fs6', 24)" class="t">File</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs18', 25)" onmouseover="showTip(event, 'fs18', 25)" class="f">Move</span>(<span onmouseout="hideTip(event, 'fs12', 26)" onmouseover="showTip(event, 'fs12', 26)" class="i">tmp</span>,<span onmouseout="hideTip(event, 'fs13', 27)" onmouseover="showTip(event, 'fs13', 27)" class="t">Path</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs19', 28)" onmouseover="showTip(event, 'fs19', 28)" class="f">GetFileName</span> <span onmouseout="hideTip(event, 'fs15', 29)" onmouseover="showTip(event, 'fs15', 29)" class="i">stable</span>)
- 
-<span class="c">// Step 1. Resolve and install the packages </span>
 
 <span class="prep">#r</span> <span class="s">&quot;paket.exe&quot;</span>
+ 
+</code></pre></td>
+</tr>
+</table>
 
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs20', 30)" onmouseover="showTip(event, 'fs20', 30)" class="i">Paket</span>
+<h2><a name="Configure-which-paket-dependencies-file-to-use" class="anchor" href="#Configure-which-paket-dependencies-file-to-use">Configure which paket.dependencies file to use</a></h2>
+
+<p>Now we need open the Paket namespace and to tell Paket which <a href="dependencies-file.html"><code>paket.dependencies</code></a> file to use.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs20', 30)" onmouseover="showTip(event, 'fs20', 30)" class="i">Paket</span>
 
 <span class="c">// locate the paket.dependencies file</span>
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs21', 31)" onmouseover="showTip(event, 'fs21', 31)" class="i">dependencies</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs22', 32)" onmouseover="showTip(event, 'fs22', 32)" class="t">Dependencies</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs23', 33)" onmouseover="showTip(event, 'fs23', 33)" class="f">Locate</span>(<span class="k">__SOURCE_DIRECTORY__</span>)
