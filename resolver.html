@@ -68,10 +68,11 @@ These versions are then persisted to the <a href="lock-file.html"><code>paket.lo
 <p>In order to figure out the concrete versions Paket needs to solve the following constraint satisfaction problem:</p>
 
 <ul>
-<li>Select the highest version for each of the packages in the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>, plus all their transitive dependencies, such that all version constraints are satisfied.</li>
+<li>Select the latest version for each of the packages in the <a href="dependencies-file.html"><code>paket.dependencies</code> file</a>, plus all their transitive dependencies, such that all version constraints are satisfied.</li>
 </ul>
 
-<p>Note: In general, more than one solution to this problem can exist and the solver will take the first solution that it finds.</p>
+<blockquote>Note: In general, more than one solution to this problem can exist and the solver will take the first solution that it finds.
+If you change the [resolution strategy](dependencies-file.html#Strategy-option) then Paket needs to find the *oldest matching version*.</blockquote>
 
 <h2><a name="Getting-data" class="anchor" href="#Getting-data">Getting data</a></h2>
 
