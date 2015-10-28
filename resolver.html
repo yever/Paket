@@ -241,12 +241,17 @@ Therefore, it orders the requirements based on:</p>
 <p>Whenever Paket encounters a package version conflict in the search tree it increases a boost factor for the involved packages. 
 This heuristic influences the <a href="resolver.html#Sorting-package-requirements">package evaluation order</a> and forces the resolver to deal with conflicts much earlier in the search tree.</p>
 
-<h2><a name="Caching" class="anchor" href="#Caching">Caching</a></h2>
+<h2><a name="Branch-and-bound" class="anchor" href="#Branch-and-bound">Branch and bound</a></h2>
 
-<p>Paket tries to cache as much as possible since HTTP requests to NuGet are very expensive:</p>
+<p>Every known resolution conflict is stored in a HashSet. At every step Paket will always check if the current requirement set (union of <em>open</em> requirements and <em>closed</em> requirements) is
+a superset of a known conflict. In this case Paket can stop evaluating that part of the search tree.</p>
+
+<h2><a name="Caching-and-lazy-evaluation" class="anchor" href="#Caching-and-lazy-evaluation">Caching and lazy evaluation</a></h2>
+
+<p>Since HTTP requests to NuGet are very expensive Paket tries to reduce these calls as much as possible:</p>
 
 <ul>
-<li>The function <code>getAllVersionsFromNuget</code> will only call the NuGet API once per package and Paket run.</li>
+<li>The function <code>getAllVersionsFromNuget</code> will call the NuGet API at most once per package and Paket run.</li>
 <li>The function <code>getPackageDetails</code> will only call the NuGet API if package details are not found in the RAM or on disk.</li>
 </ul>
 
@@ -254,7 +259,7 @@ This heuristic influences the <a href="resolver.html#Sorting-package-requirement
 
 <h2><a name="Error-reporting" class="anchor" href="#Error-reporting">Error reporting</a></h2>
 
-<p>If the resolver can't find a valid solution, then it needs to report an error to the user.
+<p>If the resolver can't find a valid resolution, then it needs to report an error to the user.
 Since the search tree can be very large and might contain lots of different kinds of failures, reporting a good error message is difficult.
 Paket will only report the last conflict that it can't resolve and also some information about the origin of this conflict.</p>
 
